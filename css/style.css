@@ -1,0 +1,353 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background: rgba(0, 0, 0, 0.85);
+    color: white;
+    text-align: center;
+    padding: 1.5rem 1rem;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+header h1 {
+    font-size: 1.6rem;
+    margin-bottom: 0.5rem;
+    letter-spacing: 1px;
+}
+
+header h1 i {
+    margin-right: 10px;
+    color: #f5b042;
+}
+
+header h1 span {
+    font-size: 0.9rem;
+    color: #f5b042;
+}
+
+header p {
+    font-size: 0.85rem;
+    opacity: 0.9;
+}
+
+main {
+    flex: 1;
+    max-width: 1400px;
+    margin: 1.5rem auto;
+    padding: 0 1.5rem;
+}
+
+/* KANA DASHBOARD - SIDE BY SIDE */
+.kana-dashboard {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+    flex-wrap: wrap;
+}
+
+.kana-column {
+    flex: 1;
+    background: white;
+    border-radius: 20px;
+    padding: 1.2rem;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    transition: transform 0.3s;
+}
+
+.kana-column:hover {
+    transform: translateY(-3px);
+}
+
+.kana-header h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    color: #2c3e50;
+    border-bottom: 2px solid #f5b042;
+    display: inline-block;
+    width: 100%;
+    padding-bottom: 0.3rem;
+}
+
+.kana-header h2 span {
+    font-size: 0.8rem;
+    color: #7f8c8d;
+    margin-left: 8px;
+}
+
+/* EXACTLY 5 CARDS PER ROW - SMALLER SIZE */
+.flashcard-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 0.8rem;
+}
+
+/* FLASHCARD STYLES - COMPACT SIZE */
+.kana-card {
+    background: linear-gradient(145deg, #ffffff, #f8f9fa);
+    border-radius: 12px;
+    cursor: pointer;
+    perspective: 1000px;
+    height: 100px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: all 0.2s;
+    position: relative;
+}
+
+.kana-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.5s;
+    transform-style: preserve-3d;
+    border-radius: 12px;
+}
+
+.kana-card.flipped .card-inner {
+    transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-front {
+    background: linear-gradient(135deg, #ecf0f1, #dfe6e9);
+    font-size: 2rem;
+    font-weight: bold;
+    color: #e67e22;
+}
+
+.card-back {
+    background: #34495e;
+    color: white;
+    transform: rotateY(180deg);
+    font-size: 0.75rem;
+    padding: 0.5rem;
+    text-align: center;
+    font-family: 'Noto Sans Myanmar', 'Segoe UI', sans-serif;
+}
+
+.card-back p {
+    margin: 0.2rem 0;
+    font-size: 0.7rem;
+}
+
+.card-back strong {
+    color: #f5b042;
+    font-size: 0.65rem;
+}
+
+/* LEVEL CARDS SECTION */
+.levels-section {
+    background: white;
+    border-radius: 20px;
+    padding: 1.5rem;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.levels-section h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #2c3e50;
+    font-size: 1.6rem;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.card {
+    width: 150px;
+    padding: 1rem 0.5rem;
+    background: linear-gradient(145deg, #ffffff, #f0f0f0);
+    border-radius: 15px;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+}
+
+.card i {
+    font-size: 2rem;
+    color: #e67e22;
+    margin-bottom: 0.3rem;
+}
+
+.card h3 {
+    font-size: 1.5rem;
+    margin: 0.3rem 0;
+    color: #2c3e50;
+}
+
+.card p {
+    font-size: 0.75rem;
+    color: #7f8c8d;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    background: linear-gradient(145deg, #e67e22, #d35400);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+}
+
+.card:hover i,
+.card:hover h3,
+.card:hover p {
+    color: white;
+}
+
+/* FOOTER */
+footer {
+    background: rgba(0, 0, 0, 0.9);
+    color: white;
+    text-align: center;
+    padding: 1.2rem;
+    margin-top: 2rem;
+}
+
+.footer-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    margin-bottom: 0.8rem;
+}
+
+.footer-tabs a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 0.8rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.footer-tabs a:hover {
+    color: #f5b042;
+    transform: translateY(-2px);
+}
+
+footer p {
+    font-size: 0.7rem;
+}
+
+footer p i {
+    color: #e74c3c;
+    margin-right: 5px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+    .flashcard-grid {
+        grid-template-columns: repeat(5, 1fr);
+        gap: 0.6rem;
+    }
+    
+    .kana-card {
+        height: 90px;
+    }
+    
+    .card-front {
+        font-size: 1.6rem;
+    }
+    
+    .card-back {
+        font-size: 0.65rem;
+        padding: 0.3rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .kana-dashboard {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .flashcard-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0.6rem;
+    }
+    
+    .kana-card {
+        height: 85px;
+    }
+    
+    .card-front {
+        font-size: 1.4rem;
+    }
+    
+    .card {
+        width: 120px;
+        padding: 0.8rem 0.3rem;
+    }
+    
+    .card i {
+        font-size: 1.5rem;
+    }
+    
+    .card h3 {
+        font-size: 1.2rem;
+    }
+    
+    header h1 {
+        font-size: 1.2rem;
+    }
+    
+    header h1 span {
+        font-size: 0.7rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .flashcard-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .kana-card {
+        height: 80px;
+    }
+    
+    .card-front {
+        font-size: 1.2rem;
+    }
+    
+    .card-back {
+        font-size: 0.6rem;
+        padding: 0.3rem;
+    }
+    
+    .card-back p {
+        font-size: 0.55rem;
+    }
+}

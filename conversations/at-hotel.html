@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>At the Hotel - Next Gen Learning Myanmar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Myanmar:wght@400;500;700&family=Noto+Sans+JP:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/conversations.css">
+    <style>
+        .hotel-icon {
+            font-size: 1.2rem;
+            margin-right: 5px;
+            color: #e67e22;
+        }
+        .room-card {
+            background: #eef4ff;
+            border-radius: 10px;
+            padding: 0.8rem;
+            margin: 0.5rem 0;
+        }
+        .tip-box {
+            background: #e8f8f5;
+            border-left: 4px solid #1abc9c;
+            padding: 1rem;
+            border-radius: 10px;
+            margin-top: 1rem;
+        }
+        .amenities-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 8px;
+            margin-top: 10px;
+        }
+        .amenity-item {
+            background: white;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <a href="daily-conversations.html" class="back-btn">
+                <i class="fas fa-arrow-left"></i> All Conversations
+            </a>
+            <h1>
+                <i class="fas fa-hotel"></i>
+                At the Hotel
+            </h1>
+            <p>ホテルで - Learn how to check in and interact at a hotel in Japanese</p>
+        </header>
+
+        <!-- Dialogue 1: Checking In -->
+        <div class="conversation-section">
+            <h2>🏨 Checking In</h2>
+            <div class="dialogue-box">
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Staff:</div>
+                    <div class="japanese">いらっしゃいませ。ごよやくは ありますか。</div>
+                    <div class="romaji">Irasshaimase. Goyoyaku wa arimasu ka.</div>
+                    <div class="english">Welcome. Do you have a reservation?</div>
+                    <div class="burmese">ကြိုဆိုပါတယ်။ အကြိုဘွတ်ခ်လုပ်ထားလား။</div>
+                    <button class="audio-btn" onclick="speakJapanese('いらっしゃいませ。ごよやくは ありますか')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Guest:</div>
+                    <div class="japanese">はい、あります。ヤン です。</div>
+                    <div class="romaji">Hai, arimasu. Yan desu.</div>
+                    <div class="english">Yes, I do. It's under Yan.</div>
+                    <div class="burmese">ဟုတ်ကဲ့ရှိပါတယ်။ ရန်ပါ။</div>
+                    <button class="audio-btn" onclick="speakJapanese('はい、あります。ヤン です')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Staff:</div>
+                    <div class="japanese">かしこまりました。ごていでんわばんごうを おねがいします。</div>
+                    <div class="romaji">Kashikomarimashita. Goteidenwabangou o onegai shimasu.</div>
+                    <div class="english">Certainly. Please give me your phone number.</div>
+                    <div class="burmese">ကောင်းပါပြီ။ ဖုန်းနံပါတ်ပေးပါ။</div>
+                    <button class="audio-btn" onclick="speakJapanese('かしこまりました。ごていでんわばんごうを おねがいします')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Guest:</div>
+                    <div class="japanese">はい、090-1234-5678です。</div>
+                    <div class="romaji">Hai, zero kyuu zero ichi ni san yon go nana hachi desu.</div>
+                    <div class="english">Yes, it's 090-1234-5678.</div>
+                    <div class="burmese">090-1234-5678 ပါ။</div>
+                    <button class="audio-btn" onclick="speakJapanese('はい、090-1234-5678です')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Staff:</div>
+                    <div class="japanese">ごていでんわばんごうを かくにんします。おまちください。</div>
+                    <div class="romaji">Goteidenwabangou o kakunin shimasu. Omachi kudasai.</div>
+                    <div class="english">Let me confirm your phone number. Please wait a moment.</div>
+                    <div class="burmese">ဖုန်းနံပါတ်ကို အတည်ပြုပါမယ်။ ခဏစောင့်ပါ။</div>
+                    <button class="audio-btn" onclick="speakJapanese('ごていでんわばんごうを かくにんします。おまちください')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Staff:</div>
+                    <div class="japanese">はい、ごよやくを かくにんしました。どうぞ こちらに ごめいしを おかきください。</div>
+                    <div class="romaji">Hai, goyoyaku o kakunin shimashita. Douzo kochira ni gomeishi o okaki kudasai.</div>
+                    <div class="english">Yes, I have confirmed your reservation. Please write your name here.</div>
+                    <div class="burmese">ဟုတ်ကဲ့၊ အကြိုဘွတ်ခ်ကို အတည်ပြုပြီးပါပြီ။ ကျေးဇူးပြု၍ ဒီမှာ နာမည်ရေးပါ။</div>
+                    <button class="audio-btn" onclick="speakJapanese('はい、ごよやくを かくにんしました。どうぞ こちらに ごめいしを おかきください')"><i class="fas fa-volume-up"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dialogue 2: Room Type and Key -->
+        <div class="conversation-section">
+            <h2>🔑 Room Type and Key</h2>
+            <div class="dialogue-box">
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Staff:</div>
+                    <div class="japanese">シングルルームを ごよやく されています。</div>
+                    <div class="romaji">Shinguru ruumu o goyoyaku sarete imasu.</div>
+                    <div class="english">You have reserved a single room.</div>
+                    <div class="burmese">တစ်ခန်းတည်းအခန်း ဘွတ်ခ်ထားပါတယ်။</div>
+                    <button class="audio-btn" onclick="speakJapanese('シングルルームを ごよやく されています')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Guest:</div>
+                    <div class="japanese">はい、そうです。ダブルルームは ありますか。</div>
+                    <div class="romaji">Hai, sou desu. Daburu ruumu wa arimasu ka.</div>
+                    <div class="english">Yes, that's right. Do you have a double room?</div>
+                    <div class="burmese">ဟုတ်ပါတယ်။ နှစ်ယောက်တည်းခန်း ရှိလား။</div>
+                    <button class="audio-btn" onclick="speakJapanese('はい、そうです。ダブルルームは ありますか')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Staff:</div>
+                    <div class="japanese">もうしわけございませんが、きょうは みっしりです。</div>
+                    <div class="romaji">Moushiwake gozaimasen ga, kyou wa misshiri desu.</div>
+                    <div class="english">I'm sorry, we are fully booked today.</div>
+                    <div class="burmese">တောင်းပန်ပါတယ်၊ ဒီနေ့ အခန်းအပြည့်ပါ။</div>
+                    <button class="audio-btn" onclick="speakJapanese('もうしわけございませんが、きょうは みっしりです')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Staff:</div>
+                    <div class="japanese">こちらが へやの カギです。へやばんごうは さんじゅういちです。</div>
+                    <div class="romaji">Kochira ga heya no kagi desu. Heyabangou wa sanjuuichi desu.</div>
+                    <div class="english">Here is your room key. Your room number is 301.</div>
+                    <div class="burmese">ဒါက အခန်းသော့ပါ။ အခန်းနံပါတ် ၃၀၁ ပါ။</div>
+                    <button class="audio-btn" onclick="speakJapanese('こちらが へやの カギです。へやばんごうは さんじゅういちです')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Guest:</div>
+                    <div class="japanese">ありがとうございます。エレベーターは どこですか。</div>
+                    <div class="romaji">Arigatou gozaimasu. Erebeetaa wa doko desu ka.</div>
+                    <div class="english">Thank you. Where is the elevator?</div>
+                    <div class="burmese">ကျေးဇူးတင်ပါတယ်။ ဓာတ်လှေကားက ဘယ်မှာလဲ။</div>
+                    <button class="audio-btn" onclick="speakJapanese('ありがとうございます。エレベーターは どこですか')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Staff:</div>
+                    <div class="japanese">エレベーターは かどを みぎに まがったところです。</div>
+                    <div class="romaji">Erebeetaa wa kado o migi ni magatta tokoro desu.</div>
+                    <div class="english">The elevator is just around the corner to the right.</div>
+                    <div class="burmese">ဓာတ်လှေကားက ထောင့်ကိုညာဘက်ကွေ့လိုက်ရင်ရောက်ပါတယ်။</div>
+                    <button class="audio-btn" onclick="speakJapanese('エレベーターは かどを みぎに まがったところです')"><i class="fas fa-volume-up"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dialogue 3: Asking About Amenities -->
+        <div class="conversation-section">
+            <h2>🛁 Asking About Amenities</h2>
+            <div class="dialogue-box">
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Guest:</div>
+                    <div class="japanese">へやに バスタブは ありますか。</div>
+                    <div class="romaji">Heya ni basutabu wa arimasu ka.</div>
+                    <div class="english">Is there a bathtub in the room?</div>
+                    <div class="burmese">အခန်းထဲမှာ ရေချိုးကန်ရှိလား။</div>
+                    <button class="audio-btn" onclick="speakJapanese('へやに バスタブは ありますか')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Staff:</div>
+                    <div class="japanese">はい、あります。バスタオルと シャンプーも よういしてあります。</div>
+                    <div class="romaji">Hai, arimasu. Basutawaru to shampuu mo youi shite arimasu.</div>
+                    <div class="english">Yes, there is. Bath towels and shampoo are also prepared.</div>
+                    <div class="burmese">ဟုတ်ကဲ့ရှိပါတယ်။ ရေချိုးသုတ်ပဝါနဲ့ ခေါင်းလျှော်ရည်လည်းပါတယ်။</div>
+                    <button class="audio-btn" onclick="speakJapanese('はい、あります。バスタオルと シャンプーも よういしてあります')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Guest:</div>
+                    <div class="japanese">Wi-Fiは つかえますか。</div>
+                    <div class="romaji">Wai-Fai wa tsukaemasu ka.</div>
+                    <div class="english">Can I use Wi-Fi?</div>
+                    <div class="burmese">ဝိုင်ဖိုင်သုံးလို့ရမလား။</div>
+                    <button class="audio-btn" onclick="speakJapanese('Wi-Fiは つかえますか')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Staff:</div>
+                    <div class="japanese">はい、むりょうです。パスワードは こちらです。</div>
+                    <div class="romaji">Hai, muryou desu. Pasawaado wa kochira desu.</div>
+                    <div class="english">Yes, it's free. Here is the password.</div>
+                    <div class="burmese">ဟုတ်ကဲ့၊ အခမဲ့ပါ။ စကားဝှက်ကဒီမှာပါ။</div>
+                    <button class="audio-btn" onclick="speakJapanese('はい、むりょうです。パスワードは こちらです')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Guest:</div>
+                    <div class="japanese">ちこくチェックアウトは できますか。</div>
+                    <div class="romaji">Chikoku chekkuauto wa dekimasu ka.</div>
+                    <div class="english">Can I do a late checkout?</div>
+                    <div class="burmese">နောက်ကျပြီးထွက်လို့ရမလား။</div>
+                    <button class="audio-btn" onclick="speakJapanese('ちこくチェックアウトは できますか')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Staff:</div>
+                    <div class="japanese">じゅういちじまで でしたら できますが、よていは みっしりしています。</div>
+                    <div class="romaji">Juuichiji made deshitara dekimasu ga, yotei wa misshiri shite imasu.</div>
+                    <div class="english">Until 11 AM is possible, but we are fully booked.</div>
+                    <div class="burmese">မနက် ၁၁ နာရီအထိ လုပ်လို့ရပါတယ်။</div>
+                    <button class="audio-btn" onclick="speakJapanese('じゅういちじまで でしたら できますが、よていは みっしりしています')"><i class="fas fa-volume-up"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dialogue 4: Making a Request -->
+        <div class="conversation-section">
+            <h2>📝 Making a Request</h2>
+            <div class="dialogue-box">
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Guest:</div>
+                    <div class="japanese">もうふを もういちまい おねがいします。</div>
+                    <div class="romaji">Moufu o mou ichimai onegai shimasu.</div>
+                    <div class="english">One more blanket, please.</div>
+                    <div class="burmese">နောက်ထပ်စောင် တစ်ထည်ထပ်ပေးပါ။</div>
+                    <button class="audio-btn" onclick="speakJapanese('もうふを もういちまい おねがいします')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Staff:</div>
+                    <div class="japanese">かしこまりました。すぐ おとどけします。</div>
+                    <div class="romaji">Kashikomarimashita. Sugu otodoke shimasu.</div>
+                    <div class="english">Certainly. I will bring it right away.</div>
+                    <div class="burmese">ကောင်းပါပြီ။ ချက်ချင်းပို့ပေးပါမယ်။</div>
+                    <button class="audio-btn" onclick="speakJapanese('かしこまりました。すぐ おとどけします')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Guest:</div>
+                    <div class="japanese">もうひとつ まくらも おねがいします。</div>
+                    <div class="romaji">Mou hitotsu makura mo onegai shimasu.</div>
+                    <div class="english">One more pillow as well, please.</div>
+                    <div class="burmese">နောက်ထပ်ခေါင်းအုံးတစ်လုံးလည်းပေးပါ။</div>
+                    <button class="audio-btn" onclick="speakJapanese('もうひとつ まくらも おねがいします')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Staff:</div>
+                    <div class="japanese">はい、かしこまりました。</div>
+                    <div class="romaji">Hai, kashikomarimashita.</div>
+                    <div class="english">Yes, certainly.</div>
+                    <div class="burmese">ဟုတ်ကဲ့၊ ကောင်းပါပြီ။</div>
+                    <button class="audio-btn" onclick="speakJapanese('はい、かしこまりました')"><i class="fas fa-volume-up"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dialogue 5: Room Service -->
+        <div class="conversation-section">
+            <h2>🍽️ Room Service</h2>
+            <div class="dialogue-box">
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Guest:</div>
+                    <div class="japanese">ルームサービスは ありますか。</div>
+                    <div class="romaji">Ruumu saabisu wa arimasu ka.</div>
+                    <div class="english">Do you have room service?</div>
+                    <div class="burmese">အခန်းထဲပို့တဲ့ဝန်ဆောင်မှုရှိလား။</div>
+                    <button class="audio-btn" onclick="speakJapanese('ルームサービスは ありますか')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Staff:</div>
+                    <div class="japanese">はい、ございます。メニューは へやの つくえの うえに あります。</div>
+                    <div class="romaji">Hai, gozaimasu. Menyuu wa heya no tsukue no ue ni arimasu.</div>
+                    <div class="english">Yes, we do. The menu is on the desk in your room.</div>
+                    <div class="burmese">ဟုတ်ကဲ့ရှိပါတယ်။ မီနူးက အခန်းထဲက စားပွဲပေါ်မှာပါ။</div>
+                    <button class="audio-btn" onclick="speakJapanese('はい、ございます。メニューは へやの つくえの うえに あります')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Guest:</div>
+                    <div class="japanese">こんばん よる じゅういちじまで ちゅうもんできますか。</div>
+                    <div class="romaji">Konban yoru juuichiji made chuumon dekimasu ka.</div>
+                    <div class="english">Can I order until 11 PM tonight?</div>
+                    <div class="burmese">ဒီည ၁၁ နာရီအထိ မှာလို့ရမလား။</div>
+                    <button class="audio-btn" onclick="speakJapanese('こんばん よる じゅういちじまで ちゅうもんできますか')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Staff:</div>
+                    <div class="japanese">はい、じゅういちじまで うけつけています。</div>
+                    <div class="romaji">Hai, juuichiji made uketsukete imasu.</div>
+                    <div class="english">Yes, we accept orders until 11 PM.</div>
+                    <div class="burmese">ဟုတ်ကဲ့၊ ၁၁ နာရီအထိ လက်ခံပါတယ်။</div>
+                    <button class="audio-btn" onclick="speakJapanese('はい、じゅういちじまで うけつけています')"><i class="fas fa-volume-up"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dialogue 6: Checking Out -->
+        <div class="conversation-section">
+            <h2>💳 Checking Out</h2>
+            <div class="dialogue-box">
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Guest:</div>
+                    <div class="japanese">チェックアウト おねがいします。</div>
+                    <div class="romaji">Chekkuauto onegai shimasu.</div>
+                    <div class="english">I'd like to check out, please.</div>
+                    <div class="burmese">ထွက်ပါမယ်။</div>
+                    <button class="audio-btn" onclick="speakJapanese('チェックアウト おねがいします')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Staff:</div>
+                    <div class="japanese">はい、かしこまりました。おへやばんごうは なんばんですか。</div>
+                    <div class="romaji">Hai, kashikomarimashita. Oheyabangou wa nanban desu ka.</div>
+                    <div class="english">Yes, certainly. What is your room number?</div>
+                    <div class="burmese">ဟုတ်ကဲ့။ အခန်းနံပါတ်ဘယ်လောက်လဲ။</div>
+                    <button class="audio-btn" onclick="speakJapanese('はい、かしこまりました。おへやばんごうは なんばんですか')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Guest:</div>
+                    <div class="japanese">さんじゅういちです。</div>
+                    <div class="romaji">Sanjuuichi desu.</div>
+                    <div class="english">301.</div>
+                    <div class="burmese">၃၀၁ ပါ။</div>
+                    <button class="audio-btn" onclick="speakJapanese('さんじゅういちです')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Staff:</div>
+                    <div class="japanese">おへんきんは ぜんぶで にまんはっせんえんです。いかが なさいますか。</div>
+                    <div class="romaji">Ohenkin wa zenbu de niman hassen en desu. Ikaga nasaimasu ka.</div>
+                    <div class="english">Your total is 28,000 yen. How would you like to pay?</div>
+                    <div class="burmese">စုစုပေါင်းငွေက ၂၈၀၀၀ ယန်းပါ။ ဘယ်လိုပေးမလဲ။</div>
+                    <button class="audio-btn" onclick="speakJapanese('おへんきんは ぜんぶで にまんはっせんえんです。いかが なさいますか')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Guest:</div>
+                    <div class="japanese">カードで おねがいします。</div>
+                    <div class="romaji">Kaado de onegai shimasu.</div>
+                    <div class="english">By card, please.</div>
+                    <div class="burmese">ကတ်နဲ့ပေးပါမယ်။</div>
+                    <button class="audio-btn" onclick="speakJapanese('カードで おねがいします')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Staff:</div>
+                    <div class="japanese">ありがとうございます。こちらに サインを おねがいします。</div>
+                    <div class="romaji">Arigatou gozaimasu. Kochira ni sain o onegai shimasu.</div>
+                    <div class="english">Thank you. Please sign here.</div>
+                    <div class="burmese">ကျေးဇူးတင်ပါတယ်။ ဒီမှာ လက်မှတ်ထိုးပေးပါ။</div>
+                    <button class="audio-btn" onclick="speakJapanese('ありがとうございます。こちらに サインを おねがいします')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Staff:</div>
+                    <div class="japanese">こちら おつりと りせいとです。ありがとうございました。</div>
+                    <div class="romaji">Kochira otsuri to riseito desu. Arigatou gozaimashita.</div>
+                    <div class="english">Here is your change and receipt. Thank you very much.</div>
+                    <div class="burmese">ဒါကပြန်ငွေနဲ့ ပြေစာပါ။ ကျေးဇူးတင်ပါတယ်။</div>
+                    <button class="audio-btn" onclick="speakJapanese('こちら おつりと りせいとです。ありがとうございました')"><i class="fas fa-volume-up"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dialogue 7: Complaints -->
+        <div class="conversation-section">
+            <h2>⚠️ Making a Complaint</h2>
+            <div class="dialogue-box">
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Guest:</div>
+                    <div class="japanese">すみません、エアコンが つきません。</div>
+                    <div class="romaji">Sumimasen, eakon ga tsukimasen.</div>
+                    <div class="english">Excuse me, the air conditioner doesn't turn on.</div>
+                    <div class="burmese">လေအေးပေးစက်မဖွင့်ဘူး။</div>
+                    <button class="audio-btn" onclick="speakJapanese('すみません、エアコンが つきません')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Staff:</div>
+                    <div class="japanese">もうしわけございません。すぐ スタッフを おくります。</div>
+                    <div class="romaji">Moushiwake gozaimasen. Sugu sutaffu o okurimasu.</div>
+                    <div class="english">I'm very sorry. I will send someone right away.</div>
+                    <div class="burmese">တောင်းပန်ပါတယ်။ ချက်ချင်းဝန်ထမ်းလွှတ်ပေးပါမယ်။</div>
+                    <button class="audio-btn" onclick="speakJapanese('もうしわけございません。すぐ スタッフを おくります')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Guest:</div>
+                    <div class="japanese">それから、となりが うるさいです。</div>
+                    <div class="romaji">Sorekara, tonari ga urusai desu.</div>
+                    <div class="english">Also, the room next door is noisy.</div>
+                    <div class="burmese">ပြီးတော့ ဘေးခန်းက ဆူညံတယ်။</div>
+                    <button class="audio-btn" onclick="speakJapanese('それから、となりが うるさいです')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Staff:</div>
+                    <div class="japanese">かしこまりました。ちゅういします。ごめんください。</div>
+                    <div class="romaji">Kashikomarimashita. Chuui shimasu. Gomen kudasai.</div>
+                    <div class="english">Certainly. I will remind them. I apologize.</div>
+                    <div class="burmese">ကောင်းပါပြီ။ သတိပေးပါမယ်။ ခွင့်လွှတ်ပါ။</div>
+                    <button class="audio-btn" onclick="speakJapanese('かしこまりました。ちゅういします。ごめんください')"><i class="fas fa-volume-up"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Amenities List -->
+        <div class="room-card">
+            <h3><i class="fas fa-concierge-bell hotel-icon"></i> Common Hotel Amenities</h3>
+            <div class="amenities-list">
+                <div class="amenity-item">🛏️ ベッド - Bed</div>
+                <div class="amenity-item">🛋️ ソファ - Sofa</div>
+                <div class="amenity-item">📺 テレビ - TV</div>
+                <div class="amenity-item">🚿 シャワー - Shower</div>
+                <div class="amenity-item">🛁 バスタブ - Bathtub</div>
+                <div class="amenity-item">🧴 シャンプー - Shampoo</div>
+                <div class="amenity-item">🧼 ボディソープ - Body soap</div>
+                <div class="amenity-item">🪥 はぶらし - Toothbrush</div>
+                <div class="amenity-item">🩴 スリッパ - Slippers</div>
+                <div class="amenity-item">👘 ゆかた - Yukata</div>
+                <div class="amenity-item">🔌 コンセント - Outlet</div>
+                <div class="amenity-item">💻 Wi-Fi - Wi-Fi</div>
+                <div class="amenity-item">☕ やかん - Kettle</div>
+                <div class="amenity-item">🧊 れいぞうこ - Fridge</div>
+                <div class="amenity-item">💨 エアコン - A/C</div>
+                <div class="amenity-item">🔑 カギ - Key</div>
+            </div>
+        </div>
+
+        <!-- Tips Box -->
+        <div class="tip-box">
+            <h4><i class="fas fa-lightbulb"></i> Hotel Tips</h4>
+            <p><strong>Helpful Tips for Hotels in Japan:</strong></p>
+            <ul style="margin-left: 20px; margin-top: 5px;">
+                <li>Japanese hotels often provide pajamas (パジャマ) and yukata (ゆかた) for guests.</li>
+                <li>Tipping is not customary in Japan. Good service is already included.</li>
+                <li>Many hotels have public baths (おんせん / おふろ) - tattoos may need to be covered.</li>
+                <li>Check-out is usually 10:00 or 11:00 AM. Late check-out may cost extra.</li>
+                <li>Business hotels (ビジネスホテル) are cheaper and convenient for short stays.</li>
+                <li>Capsule hotels (カプセルホテル) are unique Japanese budget accommodations.</li>
+            </ul>
+            <p style="margin-top: 10px;">日本のホテルでは、チップは必要ありません。サービスは料金に含まれています。</p>
+        </div>
+
+        <!-- Vocabulary Section -->
+        <div class="vocab-box">
+            <h3>📚 Key Hotel Vocabulary</h3>
+            <div class="vocab-grid">
+                <div class="vocab-item"><span class="vocab-jp">よやく</span><span class="vocab-en">Reservation</span></div>
+                <div class="vocab-item"><span class="vocab-jp">チェックイン</span><span class="vocab-en">Check-in</span></div>
+                <div class="vocab-item"><span class="vocab-jp">チェックアウト</span><span class="vocab-en">Check-out</span></div>
+                <div class="vocab-item"><span class="vocab-jp">カギ</span><span class="vocab-en">Key</span></div>
+                <div class="vocab-item"><span class="vocab-jp">フロント</span><span class="vocab-en">Front desk</span></div>
+                <div class="vocab-item"><span class="vocab-jp">へや</span><span class="vocab-en">Room</span></div>
+                <div class="vocab-item"><span class="vocab-jp">シングル</span><span class="vocab-en">Single room</span></div>
+                <div class="vocab-item"><span class="vocab-jp">ダブル</span><span class="vocab-en">Double room</span></div>
+                <div class="vocab-item"><span class="vocab-jp">ツイン</span><span class="vocab-en">Twin room</span></div>
+                <div class="vocab-item"><span class="vocab-jp">スイート</span><span class="vocab-en">Suite</span></div>
+                <div class="vocab-item"><span class="vocab-jp">むりょう</span><span class="vocab-en">Free</span></div>
+                <div class="vocab-item"><span class="vocab-jp">よてい</span><span class="vocab-en">Schedule/Plan</span></div>
+            </div>
+        </div>
+
+        <!-- Practice Section -->
+        <div class="practice-section">
+            <h3>✏️ Practice Questions</h3>
+            
+            <div class="quiz-question">
+                <p>1. How do you say "I have a reservation" in Japanese?</p>
+                <div class="quiz-options">
+                    <div class="quiz-option" onclick="checkAnswer(this, 'よやくが あります')">よやくが ありません</div>
+                    <div class="quiz-option" onclick="checkAnswer(this, 'よやくが あります')">よやくが あります</div>
+                    <div class="quiz-option" onclick="checkAnswer(this, 'よやくが あります')">よやくが すきです</div>
+                    <div class="quiz-option" onclick="checkAnswer(this, 'よやくが あります')">よやくが いります</div>
+                </div>
+            </div>
+            
+            <div class="quiz-question">
+                <p>2. What does "チェックアウト" mean?</p>
+                <div class="quiz-options">
+                    <div class="quiz-option" onclick="checkAnswer(this, 'Check-out')">Check-in</div>
+                    <div class="quiz-option" onclick="checkAnswer(this, 'Check-out')">Reservation</div>
+                    <div class="quiz-option" onclick="checkAnswer(this, 'Check-out')">Check-out</div>
+                    <div class="quiz-option" onclick="checkAnswer(this, 'Check-out')">Room key</div>
+                </div>
+            </div>
+            
+            <div class="quiz-question">
+                <p>3. How do you ask "Is there a bathtub in the room?"</p>
+                <div class="quiz-options">
+                    <div class="quiz-option" onclick="checkAnswer(this, 'へやに バスタブは ありますか')">へやに テレビは ありますか</div>
+                    <div class="quiz-option" onclick="checkAnswer(this, 'へやに バスタブは ありますか')">へやに バスタブは ありますか</div>
+                    <div class="quiz-option" onclick="checkAnswer(this, 'へやに バスタブは ありますか')">へやに ベッドは ありますか</div>
+                    <div class="quiz-option" onclick="checkAnswer(this, 'へやに バスタブは ありますか')">へやに まどは ありますか</div>
+                </div>
+            </div>
+            
+
+            
+            <div class="quiz-question">
+                <p>5. How do you say "I'd like to check out, please"?</p>
+                <div class="quiz-options">
+                    <div class="quiz-option" onclick="checkAnswer(this, 'チェックアウト おねがいします')">チェックイン おねがいします</div>
+                    <div class="quiz-option" onclick="checkAnswer(this, 'チェックアウト おねがいします')">チェックアウト おねがいします</div>
+                    <div class="quiz-option" onclick="checkAnswer(this, 'チェックアウト おねがいします')">よやく おねがいします</div>
+                    <div class="quiz-option" onclick="checkAnswer(this, 'チェックアウト おねがいします')">カギ おねがいします</div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <div class="footer-links">
+                <a href="../pages/privacy.html"><i class="fas fa-shield-alt"></i> Privacy Policy</a>
+                <a href="../pages/about.html"><i class="fas fa-info-circle"></i> About</a>
+                <a href="../pages/contact.html"><i class="fas fa-envelope"></i> Contact</a>
+                <a href="../pages/terms.html"><i class="fas fa-file-contract"></i> Terms & Policy</a>
+            </div>
+            <p><i class="fas fa-heart"></i> Next Gen Learning Myanmar - Daily Conversations</p>
+        </footer>
+    </div>
+
+    <script>
+        // Speech function for Japanese
+        function speakJapanese(text) {
+            if (!window.speechSynthesis) {
+                console.log("Browser doesn't support speech synthesis");
+                return;
+            }
+            window.speechSynthesis.cancel();
+            const utterance = new SpeechSynthesisUtterance(text);
+            utterance.lang = 'ja-JP';
+            utterance.rate = 0.8;
+            utterance.pitch = 1.0;
+            
+            function setVoice() {
+                const voices = window.speechSynthesis.getVoices();
+                const japaneseVoice = voices.find(voice => voice.lang === 'ja-JP' || voice.lang === 'ja');
+                if (japaneseVoice) utterance.voice = japaneseVoice;
+                window.speechSynthesis.speak(utterance);
+            }
+            
+            if (window.speechSynthesis.getVoices().length > 0) {
+                setVoice();
+            } else {
+                window.speechSynthesis.onvoiceschanged = setVoice;
+            }
+        }
+
+        // Quiz answer checker
+        function checkAnswer(element, correctAnswer) {
+            const options = element.parentElement.querySelectorAll('.quiz-option');
+            const isCorrect = element.innerText === correctAnswer;
+            
+            if (isCorrect) {
+                element.style.background = '#2ecc71';
+                element.style.color = 'white';
+                speakJapanese(correctAnswer);
+                setTimeout(() => {
+                    options.forEach(opt => {
+                        opt.style.background = '';
+                        opt.style.color = '';
+                    });
+                }, 1500);
+            } else {
+                element.style.background = '#e74c3c';
+                element.style.color = 'white';
+                setTimeout(() => {
+                    element.style.background = '';
+                    element.style.color = '';
+                }, 500);
+            }
+        }
+
+        // Back to Top Button
+        function addBackToTopButton() {
+            if (document.querySelector('.back-to-top-btn')) return;
+            const btn = document.createElement('button');
+            btn.className = 'back-to-top-btn';
+            btn.innerHTML = '<i class="fas fa-arrow-up"></i><span>TOP</span>';
+            document.body.appendChild(btn);
+            
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 300) {
+                    btn.classList.add('show');
+                } else {
+                    btn.classList.remove('show');
+                }
+            });
+            
+            btn.addEventListener('click', () => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        }
+        
+        addBackToTopButton();
+    </script>
+</body>
+</html>

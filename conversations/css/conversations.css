@@ -1,0 +1,329 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 1rem;
+}
+
+.app-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header Styles */
+header {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.back-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #e67e22;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: 0.3s;
+    margin-bottom: 1rem;
+}
+
+.back-btn:hover {
+    background: #d35400;
+    transform: translateX(-3px);
+}
+
+header h1 {
+    text-align: center;
+    font-size: 1.8rem;
+    color: #2c3e50;
+}
+
+header h1 i {
+    color: #e67e22;
+    margin-right: 10px;
+}
+
+header p {
+    text-align: center;
+    color: #7f8c8d;
+    margin-top: 0.5rem;
+}
+
+/* Conversation Section */
+.conversation-section {
+    background: white;
+    border-radius: 20px;
+    padding: 2rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.conversation-section h2 {
+    color: #e67e22;
+    border-left: 4px solid #e67e22;
+    padding-left: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Dialogue Box */
+.dialogue-box {
+    background: #f8f9fa;
+    border-radius: 15px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+.dialogue-line {
+    display: flex;
+    margin-bottom: 1rem;
+    padding: 0.8rem;
+    background: white;
+    border-radius: 12px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.dialogue-line:hover {
+    background: #fff3e0;
+    transform: translateX(5px);
+}
+
+.speaker {
+    min-width: 100px;
+    font-weight: bold;
+    color: #e67e22;
+}
+
+.japanese {
+    flex: 2;
+    font-family: 'Noto Sans JP', 'Segoe UI', sans-serif;
+    font-size: 1rem;
+}
+
+.romaji {
+    flex: 2;
+    font-style: italic;
+    color: #7f8c8d;
+    font-size: 0.9rem;
+}
+
+.english {
+    flex: 2;
+    font-size: 0.9rem;
+}
+
+.burmese {
+    flex: 2;
+    font-family: 'Noto Sans Myanmar', sans-serif;
+    font-size: 0.9rem;
+}
+
+/* Vocabulary Box */
+.vocab-box {
+    background: #e8f4f8;
+    border-radius: 15px;
+    padding: 1rem;
+    margin-top: 1rem;
+}
+
+.vocab-box h3 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+}
+
+.vocab-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 0.8rem;
+}
+
+.vocab-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem;
+    background: white;
+    border-radius: 8px;
+}
+
+.vocab-jp {
+    font-weight: bold;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+.vocab-en {
+    color: #7f8c8d;
+}
+
+/* Audio Button */
+.audio-btn {
+    background: #e67e22;
+    border: none;
+    color: white;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.7rem;
+    margin-left: 0.5rem;
+    transition: 0.3s;
+}
+
+.audio-btn:hover {
+    background: #d35400;
+}
+
+/* Practice Section */
+.practice-section {
+    background: linear-gradient(135deg, #f5f7fa, #e9ecef);
+    border-radius: 15px;
+    padding: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.practice-section h3 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+}
+
+.quiz-question {
+    margin-bottom: 1rem;
+    padding: 1rem;
+    background: white;
+    border-radius: 10px;
+}
+
+.quiz-question p {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.quiz-options {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.quiz-option {
+    padding: 0.5rem 1rem;
+    background: #ecf0f1;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.quiz-option:hover {
+    background: #e67e22;
+    color: white;
+}
+
+/* Footer */
+footer {
+    background: rgba(0, 0, 0, 0.85);
+    border-radius: 20px;
+    padding: 1.2rem;
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.8rem;
+    transition: 0.3s;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.footer-links a:hover {
+    color: #f5b042;
+}
+
+footer p {
+    color: #7f8c8d;
+    font-size: 0.7rem;
+}
+
+/* Back to Top Button */
+.back-to-top-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, #e67e22, #d35400);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1000;
+}
+
+.back-to-top-btn.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.back-to-top-btn:hover {
+    transform: translateY(-3px);
+    background: linear-gradient(135deg, #d35400, #e67e22);
+}
+
+.back-to-top-btn i {
+    font-size: 1.2rem;
+}
+
+.back-to-top-btn span {
+    font-size: 0.6rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .dialogue-line {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .speaker {
+        min-width: auto;
+    }
+    
+    header h1 {
+        font-size: 1.3rem;
+    }
+    
+    .back-to-top-btn {
+        bottom: 20px;
+        right: 20px;
+        width: 45px;
+        height: 45px;
+    }
+}

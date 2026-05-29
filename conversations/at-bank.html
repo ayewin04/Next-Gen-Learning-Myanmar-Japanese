@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>At the Bank - Next Gen Learning Myanmar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Myanmar:wght@400;500;700&family=Noto+Sans+JP:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/conversations.css">
+    <style>
+        .bank-icon {
+            font-size: 1.2rem;
+            margin-right: 5px;
+            color: #e67e22;
+        }
+        .service-card {
+            background: #fff3e0;
+            border-radius: 10px;
+            padding: 0.8rem;
+            margin: 0.5rem 0;
+        }
+        .tip-box {
+            background: #e8f8f5;
+            border-left: 4px solid #1abc9c;
+            padding: 1rem;
+            border-radius: 10px;
+            margin-top: 1rem;
+        }
+        .bank-services {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 8px;
+            margin-top: 10px;
+        }
+        .service-item {
+            background: white;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <a href="daily-conversations.html" class="back-btn">
+                <i class="fas fa-arrow-left"></i> All Conversations
+            </a>
+            <h1>
+                <i class="fas fa-building-columns"></i>
+                At the Bank
+            </h1>
+            <p>ぎんこうで - Learn how to handle banking transactions in Japanese</p>
+        </header>
+
+        <!-- Dialogue 1: Exchanging Money -->
+        <div class="conversation-section">
+            <h2>💱 Exchanging Money</h2>
+            <div class="dialogue-box">
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Customer:</div>
+                    <div class="japanese">すみません、りょがえを したいです。</div>
+                    <div class="romaji">Sumimasen, ryogae o shitai desu.</div>
+                    <div class="english">Excuse me, I want to exchange money.</div>
+                    <div class="burmese">ငွေလဲလှယ်ချင်ပါတယ်။</div>
+                    <button class="audio-btn" onclick="speakJapanese('すみません、りょがえを したいです')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Staff:</div>
+                    <div class="japanese">なんの つうかに しますか。</div>
+                    <div class="romaji">Nan no tsuuka ni shimasu ka.</div>
+                    <div class="english">Which currency do you want?</div>
+                    <div class="burmese">ဘယ်ငွေကြေးလဲ။</div>
+                    <button class="audio-btn" onclick="speakJapanese('なんの つうかに しますか')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Customer:</div>
+                    <div class="japanese">アメリカドルを えんに かえたいです。</div>
+                    <div class="romaji">Amerika doru o en ni kaetai desu.</div>
+                    <div class="english">I want to exchange US dollars to yen.</div>
+                    <div class="burmese">အမေရိကန်ဒေါ်လာကို ယန်းလဲချင်တယ်။</div>
+                    <button class="audio-btn" onclick="speakJapanese('アメリカドルを えんに かえたいです')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Staff:</div>
+                    <div class="japanese">きょうの レートは いちドル ひゃくさんじゅうえん です。</div>
+                    <div class="romaji">Kyou no reeto wa ichi doru hyakusanjuu en desu.</div>
+                    <div class="english">Today's rate is 1 dollar = 130 yen.</div>
+                    <div class="burmese">ဒီနေ့နှုန်းက ၁ ဒေါ်လာ ၁၃၀ ယန်းပါ။</div>
+                    <button class="audio-btn" onclick="speakJapanese('きょうの レートは いちドル ひゃくさんじゅうえん です')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Customer:</div>
+                    <div class="japanese">わかりました。せんドル おねがいします。</div>
+                    <div class="romaji">Wakarimashita. Sen doru onegai shimasu.</div>
+                    <div class="english">I see. 1000 dollars, please.</div>
+                    <div class="burmese">နားလည်ပါတယ်။ ၁၀၀၀ ဒေါ်လာလဲပေးပါ။</div>
+                    <button class="audio-btn" onclick="speakJapanese('わかりました。せんドル おねがいします')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Staff:</div>
+                    <div class="japanese">では、じゅうさんまんえん です。ご かくにん ください。</div>
+                    <div class="romaji">De wa, juusanman en desu. Go kakunin kudasai.</div>
+                    <div class="english">Then, 130,000 yen. Please confirm.</div>
+                    <div class="burmese">ဒါဆို ၁၃၀၀၀၀ ယန်းပါ။ အတည်ပြုပါ။</div>
+                    <button class="audio-btn" onclick="speakJapanese('では、じゅうさんまんえん です。ご かくにん ください')"><i class="fas fa-volume-up"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dialogue 2: Opening an Account -->
+        <div class="conversation-section">
+            <h2>🏦 Opening an Account</h2>
+            <div class="dialogue-box">
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Customer:</div>
+                    <div class="japanese">こうざを つくりたいです。</div>
+                    <div class="romaji">Kouza o tsukuritai desu.</div>
+                    <div class="english">I want to open an account.</div>
+                    <div class="burmese">အကောင့်ဖွင့်ချင်ပါတယ်။</div>
+                    <button class="audio-btn" onclick="speakJapanese('こうざを つくりたいです')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Staff:</div>
+                    <div class="japanese">どんな こうざに なさいますか。ふつう よきんですか。</div>
+                    <div class="romaji">Donna kouza ni nasaimasu ka. Futsuu yokin desu ka.</div>
+                    <div class="english">What type of account? A regular savings account?</div>
+                    <div class="burmese">ဘယ်အကောင့်အမျိုးအစားလဲ။ ပုံမှန်စုငွေအကောင့်လား။</div>
+                    <button class="audio-btn" onclick="speakJapanese('どんな こうざに なさいますか。ふつう よきんですか')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Customer:</div>
+                    <div class="japanese">はい、ふつう よきんこうざが いいです。</div>
+                    <div class="romaji">Hai, futsuu yokinkouza ga ii desu.</div>
+                    <div class="english">Yes, a regular savings account is fine.</div>
+                    <div class="burmese">ဟုတ်ကဲ့၊ ပုံမှန်စုငွေအကောင့်ကောင်းပါတယ်။</div>
+                    <button class="audio-btn" onclick="speakJapanese('はい、ふつう よきんこうざが いいです')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Staff:</div>
+                    <div class="japanese">ごじゅうしょと おなまえ、それから みほん いんしょうを おねがいします。</div>
+                    <div class="romaji">Gojuusho to onamae, sorekara mihon inshou o onegai shimasu.</div>
+                    <div class="english">Please give me your address, name, and also your seal/stamp.</div>
+                    <div class="burmese">လိပ်စာ၊ နာမည်နဲ့ တံဆိပ်တုံးပေးပါ။</div>
+                    <button class="audio-btn" onclick="speakJapanese('ごじゅうしょと おなまえ、それから みほん いんしょうを おねがいします')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Customer:</div>
+                    <div class="japanese">はい、どうぞ。サインポも いりますか。</div>
+                    <div class="romaji">Hai, douzo. Sainpo mo irimasu ka.</div>
+                    <div class="english">Yes, here you go. Do you also need my signature?</div>
+                    <div class="burmese">ဟုတ်ကဲ့။ လက်မှတ်လည်းလိုလား။</div>
+                    <button class="audio-btn" onclick="speakJapanese('はい、どうぞ。サインポも いりますか')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Staff:</div>
+                    <div class="japanese">はい、こちらに サインを おねがいします。</div>
+                    <div class="romaji">Hai, kochira ni sain o onegai shimasu.</div>
+                    <div class="english">Yes, please sign here.</div>
+                    <div class="burmese">ဟုတ်ကဲ့၊ ဒီမှာ လက်မှတ်ထိုးပေးပါ။</div>
+                    <button class="audio-btn" onclick="speakJapanese('はい、こちらに サインを おねがいします')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Staff:</div>
+                    <div class="japanese">では、あす キャッシュカードが できます。</div>
+                    <div class="romaji">De wa, asu kyasshukaado ga dekimasu.</div>
+                    <div class="english">Then, your cash card will be ready tomorrow.</div>
+                    <div class="burmese">မနက်ဖြန် ငွေထုတ်ကတ်အဆင်သင့်ဖြစ်မယ်။</div>
+                    <button class="audio-btn" onclick="speakJapanese('では、あす キャッシュカードが できます')"><i class="fas fa-volume-up"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dialogue 3: Withdrawing Money -->
+        <div class="conversation-section">
+            <h2>💰 Withdrawing Money</h2>
+            <div class="dialogue-box">
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Customer:</div>
+                    <div class="japanese">げんきんを おろしたいです。</div>
+                    <div class="romaji">Genkin o oroshitai desu.</div>
+                    <div class="english">I want to withdraw cash.</div>
+                    <div class="burmese">ငွေထုတ်ချင်ပါတယ်။</div>
+                    <button class="audio-btn" onclick="speakJapanese('げんきんを おろしたいです')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Staff:</div>
+                    <div class="japanese">つうちょうと キャッシュカードを おもちですか。</div>
+                    <div class="romaji">Tsuuchou to kyasshukaado o omochi desu ka.</div>
+                    <div class="english">Do you have your bankbook and cash card?</div>
+                    <div class="burmese">ဘဏ်စာအုပ်နဲ့ ငွေထုတ်ကတ်ပါလား။</div>
+                    <button class="audio-btn" onclick="speakJapanese('つうちょうと キャッシュカードを おもちですか')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Customer:</div>
+                    <div class="japanese">はい、これです。</div>
+                    <div class="romaji">Hai, kore desu.</div>
+                    <div class="english">Yes, here it is.</div>
+                    <div class="burmese">ဟုတ်ကဲ့၊ ဒီမှာပါ။</div>
+                    <button class="audio-btn" onclick="speakJapanese('はい、これです')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Staff:</div>
+                    <div class="japanese">いくら おろしますか。</div>
+                    <div class="romaji">Ikura oroshimasu ka.</div>
+                    <div class="english">How much would you like to withdraw?</div>
+                    <div class="burmese">ဘယ်လောက်ထုတ်မလဲ။</div>
+                    <button class="audio-btn" onclick="speakJapanese('いくら おろしますか')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Customer:</div>
+                    <div class="japanese">ごまんえん おねがいします。</div>
+                    <div class="romaji">Goman en onegai shimasu.</div>
+                    <div class="english">50,000 yen, please.</div>
+                    <div class="burmese">၅၀၀၀၀ ယန်းပေးပါ။</div>
+                    <button class="audio-btn" onclick="speakJapanese('ごまんえん おねがいします')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Staff:</div>
+                    <div class="japanese">まいど ありがとうございます。ごかくにん ください。</div>
+                    <div class="romaji">Maido arigatou gozaimasu. Go kakunin kudasai.</div>
+                    <div class="english">Thank you. Please confirm.</div>
+                    <div class="burmese">နောက်လည်းရောက်ပါစေ။ အတည်ပြုပါ။</div>
+                    <button class="audio-btn" onclick="speakJapanese('まいど ありがとうございます。ごかくにん ください')"><i class="fas fa-volume-up"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dialogue 4: Depositing Money -->
+        <div class="conversation-section">
+            <h2>📥 Depositing Money</h2>
+            <div class="dialogue-box">
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Customer:</div>
+                    <div class="japanese">おかねを よきんしたいです。</div>
+                    <div class="romaji">Okane o yokin shitai desu.</div>
+                    <div class="english">I want to deposit money.</div>
+                    <div class="burmese">ငွေသွင်းချင်ပါတယ်။</div>
+                    <button class="audio-btn" onclick="speakJapanese('おかねを よきんしたいです')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Staff:</div>
+                    <div class="japanese">つうちょうと キャッシュカードを おもちですか。</div>
+                    <div class="romaji">Tsuuchou to kyasshukaado o omochi desu ka.</div>
+                    <div class="english">Do you have your bankbook and cash card?</div>
+                    <div class="burmese">ဘဏ်စာအုပ်နဲ့ ငွေထုတ်ကတ်ပါလား။</div>
+                    <button class="audio-btn" onclick="speakJapanese('つうちょうと キャッシュカードを おもちですか')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Customer:</div>
+                    <div class="japanese">つうちょうしか もっていません。</div>
+                    <div class="romaji">Tsuuchou shika motte imasen.</div>
+                    <div class="english">I only have my bankbook.</div>
+                    <div class="burmese">ဘဏ်စာအုပ်ပဲရှိတယ်။</div>
+                    <button class="audio-btn" onclick="speakJapanese('つうちょうしか もっていません')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Staff:</div>
+                    <div class="japanese">だいじょうぶです。よきん ようしに ごきにゅう ください。</div>
+                    <div class="romaji">Daijoubu desu. Yokin youshi ni gokinyuu kudasai.</div>
+                    <div class="english">That's fine. Please fill out this deposit slip.</div>
+                    <div class="burmese">ရပါတယ်။ သွင်းငွေပုံစံဖြည့်ပါ။</div>
+                    <button class="audio-btn" onclick="speakJapanese('だいじょうぶです。よきん ようしに ごきにゅう ください')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Customer:</div>
+                    <div class="japanese">ごまんえん よきんします。</div>
+                    <div class="romaji">Goman en yokin shimasu.</div>
+                    <div class="english">I will deposit 50,000 yen.</div>
+                    <div class="burmese">၅၀၀၀၀ ယန်းသွင်းမယ်။</div>
+                    <button class="audio-btn" onclick="speakJapanese('ごまんえん よきんします')"><i class="fas fa-volume-up"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dialogue 5: Transferring Money -->
+        <div class="conversation-section">
+            <h2>💸 Transferring Money</h2>
+            <div class="dialogue-box">
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Customer:</div>
+                    <div class="japanese">そうきんを したいです。</div>
+                    <div class="romaji">Soukin o shitai desu.</div>
+                    <div class="english">I want to make a transfer.</div>
+                    <div class="burmese">ငွေလွှဲချင်ပါတယ်။</div>
+                    <button class="audio-btn" onclick="speakJapanese('そうきんを したいです')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Staff:</div>
+                    <div class="japanese">さきに こうざの ばんごうを おねがいします。</div>
+                    <div class="romaji">Saki ni kouza no bangou o onegai shimasu.</div>
+                    <div class="english">First, please give me the account number.</div>
+                    <div class="burmese">အကောင့်နံပါတ်အရင်ပေးပါ။</div>
+                    <button class="audio-btn" onclick="speakJapanese('さきに こうざの ばんごうを おねがいします')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Customer:</div>
+                    <div class="japanese">はい、１２３４５６７です。おなまえは さとう です。</div>
+                    <div class="romaji">Hai, ichi ni san yon go roku nana desu. Onamae wa Satou desu.</div>
+                    <div class="english">Yes, it's 1234567. The name is Sato.</div>
+                    <div class="burmese">၁၂၃၄၅၆၇ ပါ။ နာမည်က ဆာတိုပါ။</div>
+                    <button class="audio-btn" onclick="speakJapanese('はい、１２３４５６７です。おなまえは さとう です')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Staff:</div>
+                    <div class="japanese">いくら そうきんしますか。</div>
+                    <div class="romaji">Ikura soukin shimasu ka.</div>
+                    <div class="english">How much will you transfer?</div>
+                    <div class="burmese">ဘယ်လောက်လွှဲမလဲ။</div>
+                    <button class="audio-btn" onclick="speakJapanese('いくら そうきんしますか')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Customer:</div>
+                    <div class="japanese">いちまんえん おねがいします。</div>
+                    <div class="romaji">Ichiman en onegai shimasu.</div>
+                    <div class="english">10,000 yen, please.</div>
+                    <div class="burmese">၁၀၀၀၀ ယန်းပေးပါ။</div>
+                    <button class="audio-btn" onclick="speakJapanese('いちまんえん おねがいします')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Staff:</div>
+                    <div class="japanese">そうきん りょうきんは ごひゃくえん かかります。</div>
+                    <div class="romaji">Soukin ryoukin wa gohyaku en kakarimasu.</div>
+                    <div class="english">The transfer fee will be 500 yen.</div>
+                    <div class="burmese">လွှဲခက ၅၀၀ ယန်းကျမယ်။</div>
+                    <button class="audio-btn" onclick="speakJapanese('そうきん りょうきんは ごひゃくえん かかります')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Customer:</div>
+                    <div class="japanese">わかりました。それで おねがいします。</div>
+                    <div class="romaji">Wakarimashita. Sore de onegai shimasu.</div>
+                    <div class="english">I understand. Please do that.</div>
+                    <div class="burmese">နားလည်ပါတယ်။ ဒါနဲ့ပဲလုပ်ပါ။</div>
+                    <button class="audio-btn" onclick="speakJapanese('わかりました。それで おねがいします')"><i class="fas fa-volume-up"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dialogue 6: Using ATM -->
+        <div class="conversation-section">
+            <h2>🏧 Using ATM</h2>
+            <div class="dialogue-box">
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Customer:</div>
+                    <div class="japanese">こんにちは。ATMの つかいかたを おしえてください。</div>
+                    <div class="romaji">Konnichiwa. Eicho no tsukaikata o oshiete kudasai.</div>
+                    <div class="english">Hello. Please tell me how to use the ATM.</div>
+                    <div class="burmese">ငွေထုတ်စက်သုံးနည်းပြောပြပါ။</div>
+                    <button class="audio-btn" onclick="speakJapanese('こんにちは。ATMの つかいかたを おしえてください')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Staff:</div>
+                    <div class="japanese">まず、カードを いれて、あんしょうばんごうを おしてください。</div>
+                    <div class="romaji">Mazu, kaado o irete, anshou bangou o oshite kudasai.</div>
+                    <div class="english">First, insert your card, then enter your PIN number.</div>
+                    <div class="burmese">အရင်ကတ်ထည့်ပြီး ကုဒ်နံပါတ်ရိုက်ပါ။</div>
+                    <button class="audio-btn" onclick="speakJapanese('まず、カードを いれて、あんしょうばんごうを おしてください')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Staff:</div>
+                    <div class="japanese">それから、おひきだし または およきんを えらびます。</div>
+                    <div class="romaji">Sorekara, ohikidashi mata wa oyokin o erabimasu.</div>
+                    <div class="english">Then choose withdraw or deposit.</div>
+                    <div class="burmese">ပြီးရင် ထုတ်မလား သွင်းမလားရွေးပါ။</div>
+                    <button class="audio-btn" onclick="speakJapanese('それから、おひきだし または およきんを えらびます')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Staff:</div>
+                    <div class="japanese">きんがくを にゅうりょくして、かくにんしたら おわりです。</div>
+                    <div class="romaji">Kingaku o nyuuryoku shite, kakunin shitara owari desu.</div>
+                    <div class="english">Enter the amount, confirm, and that's it.</div>
+                    <div class="burmese">ပမာဏထည့်ပြီးအတည်ပြုရင် ပြီးပါပြီ။</div>
+                    <button class="audio-btn" onclick="speakJapanese('きんがくを にゅうりょくして、かくにんしたら おわりです')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Customer:</div>
+                    <div class="japanese">ありがとう。ちょっと むずかしそうですね。</div>
+                    <div class="romaji">Arigatou. Chotto muzukashisou desu ne.</div>
+                    <div class="english">Thank you. It seems a little difficult.</div>
+                    <div class="burmese">ကျေးဇူးပါ။ နည်းနည်းခက်ပုံရတယ်။</div>
+                    <button class="audio-btn" onclick="speakJapanese('ありがとう。ちょっと むずかしそうですね')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Staff:</div>
+                    <div class="japanese">だいじょうぶです。やってみると かんたんですよ。</div>
+                    <div class="romaji">Daijoubu desu. Yatte miru to kantan desu yo.</div>
+                    <div class="english">It's okay. It's easy once you try it.</div>
+                    <div class="burmese">ရပါတယ်။ လုပ်ကြည့်ရင် လွယ်ပါတယ်။</div>
+                    <button class="audio-btn" onclick="speakJapanese('だいじょうぶです。やってみると かんたんですよ')"><i class="fas fa-volume-up"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dialogue 7: Lost Card -->
+        <div class="conversation-section">
+            <h2>🔒 Lost Card</h2>
+            <div class="dialogue-box">
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Customer:</div>
+                    <div class="japanese">キャッシュカードを なくしました。</div>
+                    <div class="romaji">Kyasshukaado o nakushimashita.</div>
+                    <div class="english">I lost my cash card.</div>
+                    <div class="burmese">ငွေထုတ်ကတ်ပျောက်သွားတယ်။</div>
+                    <button class="audio-btn" onclick="speakJapanese('キャッシュカードを なくしました')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Staff:</div>
+                    <div class="japanese">すぐに ていし てつづきを します。</div>
+                    <div class="romaji">Sugu ni teishi tetsuduki o shimasu.</div>
+                    <div class="english">I will immediately block the card.</div>
+                    <div class="burmese">ချက်ချင်းကတ်ပိတ်ပေးပါမယ်။</div>
+                    <button class="audio-btn" onclick="speakJapanese('すぐに ていし てつづきを します')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Staff:</div>
+                    <div class="japanese">おなまえと こうざばんごうを おしえてください。</div>
+                    <div class="romaji">Onamae to kouza bangou o oshiete kudasai.</div>
+                    <div class="english">Please tell me your name and account number.</div>
+                    <div class="burmese">နာမည်နဲ့ အကောင့်နံပါတ်ပြောပြပါ။</div>
+                    <button class="audio-btn" onclick="speakJapanese('おなまえと こうざばんごうを おしえてください')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Customer:</div>
+                    <div class="japanese">ヤンです。こうざばんごうは ９８７６５４です。</div>
+                    <div class="romaji">Yan desu. Kouza bangou wa kyuu hachi nana roku go yon desu.</div>
+                    <div class="english">I'm Yan. My account number is 987654.</div>
+                    <div class="burmese">ရန်ပါ။ အကောင့်နံပါတ် ၉၈၇၆၅၄ ပါ။</div>
+                    <button class="audio-btn" onclick="speakJapanese('ヤンです。こうざばんごうは ９８７６５４です')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Staff:</div>
+                    <div class="japanese">かしこまりました。さいしゅつせん カードを おだしします。</div>
+                    <div class="romaji">Kashikomarimashita. Saishutsusen kaado o odashi shimasu.</div>
+                    <div class="english">Certainly. I will issue a reissue card.</div>
+                    <div class="burmese">ကောင်းပါပြီ။ ကတ်အသစ်ထုတ်ပေးပါမယ်။</div>
+                    <button class="audio-btn" onclick="speakJapanese('かしこまりました。さいしゅつせん カードを おだしします')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Staff:</div>
+                    <div class="japanese">いちしゅうかん ぐらい かかります。おみとおし ください。</div>
+                    <div class="romaji">Isshuukan gurai kakarimasu. Omitooshi kudasai.</div>
+                    <div class="english">It will take about a week. Please be patient.</div>
+                    <div class="burmese">တစ်ပတ်လောက်ကြာပါမယ်။ သည်းခံပေးပါ။</div>
+                    <button class="audio-btn" onclick="speakJapanese('いちしゅうかん ぐらい かかります。おみとおし ください')"><i class="fas fa-volume-up"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bank Services -->
+        <div class="service-card">
+            <h3><i class="fas fa-university bank-icon"></i> Bank Services</h3>
+            <div class="bank-services">
+                <div class="service-item">💰 よきん - Deposit</div>
+                <div class="service-item">💵 ひきだし - Withdrawal</div>
+                <div class="service-item">💸 そうきん - Transfer</div>
+                <div class="service-item">💱 りょがえ - Currency exchange</div>
+                <div class="service-item">🏦 こうざかいせつ - Account opening</div>
+                <div class="service-item">🔒 キャッシュカード - Cash card</div>
+                <div class="service-item">📘 つうちょう - Bankbook</div>
+                <div class="service-item">💳 クレジットカード - Credit card</div>
+                <div class="service-item">📈 とうし - Investment</div>
+                <div class="service-item">💰 ろうきん - Loan</div>
+            </div>
+        </div>
+
+        <!-- Tips Box -->
+        <div class="tip-box">
+            <h4><i class="fas fa-lightbulb"></i> Banking Tips</h4>
+            <ul style="margin-left: 20px; margin-top: 5px;">
+                <li><strong>Bank Hours:</strong> Monday to Friday, 9:00 AM - 3:00 PM (closed weekends and holidays).</li>
+                <li><strong>ATMs:</strong> Many ATMs have English menus. Convenience stores have ATMs open 24/7.</li>
+                <li><strong>Hanko (Personal Seal):</strong> Traditional Japanese banks often require a registered personal seal.</li>
+                <li><strong>Cash Card (キャッシュカード):</strong> Used for ATMs. Keep your PIN (暗証番号) secure.</li>
+                <li><strong>Bankbook (通帳):</strong> Records all transactions. Can be updated at ATMs.</li>
+                <li><strong>International Transfers:</strong> May require additional paperwork and fees.</li>
+            </ul>
+            <p style="margin-top: 10px;">日本の銀行は平日の午前9時から午後3時までです。ATMはコンビニにあります。</p>
+        </div>
+
+        <!-- Vocabulary Section -->
+        <div class="vocab-box">
+            <h3>📚 Banking Vocabulary</h3>
+            <div class="vocab-grid">
+                <div class="vocab-item"><span class="vocab-jp">ぎんこう</span><span class="vocab-en">Bank</span></div>
+                <div class="vocab-item"><span class="vocab-jp">こうざ</span><span class="vocab-en">Account</span></div>
+                <div class="vocab-item"><span class="vocab-jp">つうちょう</span><span class="vocab-en">Bankbook</span></div>
+                <div class="vocab-item"><span class="vocab-jp">キャッシュカード</span><span class="vocab-en">Cash card</span></div>
+                <div class="vocab-item"><span class="vocab-jp">あんしょうばんごう</span><span class="vocab-en">PIN number</span></div>
+                <div class="vocab-item"><span class="vocab-jp">よきん</span><span class="vocab-en">Deposit</span></div>
+                <div class="vocab-item"><span class="vocab-jp">ひきだし</span><span class="vocab-en">Withdrawal</span></div>
+                <div class="vocab-item"><span class="vocab-jp">そうきん</span><span class="vocab-en">Transfer</span></div>
+                <div class="vocab-item"><span class="vocab-jp">りょがえ</span><span class="vocab-en">Exchange</span></div>
+                <div class="vocab-item"><span class="vocab-jp">レート</span><span class="vocab-en">Exchange rate</span></div>
+                <div class="vocab-item"><span class="vocab-jp">げんきん</span><span class="vocab-en">Cash</span></div>
+                <div class="vocab-item"><span class="vocab-jp">こうかん</span><span class="vocab-en">Exchange</span></div>
+            </div>
+        </div>
+
+        <!-- Practice Section -->
+        <div class="practice-section">
+            <h3>✏️ Practice Questions</h3>
+            
+            <div class="quiz-question">
+                <p>1. How do you say "I want to exchange money" in Japanese?</p>
+                <div class="quiz-options">
+                    <div class="quiz-option" onclick="checkAnswer(this, 'りょがえを したいです')">よきんを したいです</div>
+                    <div class="quiz-option" onclick="checkAnswer(this, 'りょがえを したいです')">ひきだしを したいです</div>
+                    <div class="quiz-option" onclick="checkAnswer(this, 'りょがえを したいです')">りょがえを したいです</div>
+                    <div class="quiz-option" onclick="checkAnswer(this, 'りょがえを したいです')">そうきんを したいです</div>
+                </div>
+            </div>
+            
+            <div class="quiz-question">
+                <p>2. What does "こうざを つくる" mean?</p>
+                <div class="quiz-options">
+                    <div class="quiz-option" onclick="checkAnswer(this, 'Open an account')">Close an account</div>
+                    <div class="quiz-option" onclick="checkAnswer(this, 'Open an account')">Open an account</div>
+                    <div class="quiz-option" onclick="checkAnswer(this, 'Open an account')">Deposit money</div>
+                    <div class="quiz-option" onclick="checkAnswer(this, 'Open an account')">Withdraw money</div>
+                </div>
+            </div>
+            
+            <div class="quiz-question">
+                <p>3. How do you ask "How much would you like to withdraw?"</p>
+                <div class="quiz-options">
+                    <div class="quiz-option" onclick="checkAnswer(this, 'いくら おろしますか')">いくら よきんしますか</div>
+                    <div class="quiz-option" onclick="checkAnswer(this, 'いくら おろしますか')">いくら おろしますか</div>
+                    <div class="quiz-option" onclick="checkAnswer(this, 'いくら おろしますか')">いくら そうきんしますか</div>
+                    <div class="quiz-option" onclick="checkAnswer(this, 'いくら おろしますか')">いくら かえりますか</div>
+                </div>
+            </div>
+            
+            <div class="quiz-question">
+                <p>4. What does "キャッシュカード" mean?</p>
+                <div class="quiz-options">
+                    <div class="quiz-option" onclick="checkAnswer(this, 'Cash card')">Credit card</div>
+                    <div class="quiz-option" onclick="checkAnswer(this, 'Cash card')">Bankbook</div>
+                    <div class="quiz-option" onclick="checkAnswer(this, 'Cash card')">Cash card</div>
+                    <div class="quiz-option" onclick="checkAnswer(this, 'Cash card')">ID card</div>
+                </div>
+            </div>
+            
+            <div class="quiz-question">
+                <p>5. How do you say "I want to make a transfer" in Japanese?</p>
+                <div class="quiz-options">
+                    <div class="quiz-option" onclick="checkAnswer(this, 'そうきんを したいです')">よきんを したいです</div>
+                    <div class="quiz-option" onclick="checkAnswer(this, 'そうきんを したいです')">ひきだしを したいです</div>
+                    <div class="quiz-option" onclick="checkAnswer(this, 'そうきんを したいです')">りょがえを したいです</div>
+                    <div class="quiz-option" onclick="checkAnswer(this, 'そうきんを したいです')">そうきんを したいです</div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <div class="footer-links">
+                <a href="../pages/privacy.html"><i class="fas fa-shield-alt"></i> Privacy Policy</a>
+                <a href="../pages/about.html"><i class="fas fa-info-circle"></i> About</a>
+                <a href="../pages/contact.html"><i class="fas fa-envelope"></i> Contact</a>
+                <a href="../pages/terms.html"><i class="fas fa-file-contract"></i> Terms & Policy</a>
+            </div>
+            <p><i class="fas fa-heart"></i> Next Gen Learning Myanmar - Daily Conversations</p>
+        </footer>
+    </div>
+
+    <script>
+        // Speech function for Japanese
+        function speakJapanese(text) {
+            if (!window.speechSynthesis) {
+                console.log("Browser doesn't support speech synthesis");
+                return;
+            }
+            window.speechSynthesis.cancel();
+            const utterance = new SpeechSynthesisUtterance(text);
+            utterance.lang = 'ja-JP';
+            utterance.rate = 0.8;
+            utterance.pitch = 1.0;
+            
+            function setVoice() {
+                const voices = window.speechSynthesis.getVoices();
+                const japaneseVoice = voices.find(voice => voice.lang === 'ja-JP' || voice.lang === 'ja');
+                if (japaneseVoice) utterance.voice = japaneseVoice;
+                window.speechSynthesis.speak(utterance);
+            }
+            
+            if (window.speechSynthesis.getVoices().length > 0) {
+                setVoice();
+            } else {
+                window.speechSynthesis.onvoiceschanged = setVoice;
+            }
+        }
+
+        // Quiz answer checker
+        function checkAnswer(element, correctAnswer) {
+            const options = element.parentElement.querySelectorAll('.quiz-option');
+            const isCorrect = element.innerText === correctAnswer;
+            
+            if (isCorrect) {
+                element.style.background = '#2ecc71';
+                element.style.color = 'white';
+                speakJapanese(correctAnswer);
+                setTimeout(() => {
+                    options.forEach(opt => {
+                        opt.style.background = '';
+                        opt.style.color = '';
+                    });
+                }, 1500);
+            } else {
+                element.style.background = '#e74c3c';
+                element.style.color = 'white';
+                setTimeout(() => {
+                    element.style.background = '';
+                    element.style.color = '';
+                }, 500);
+            }
+        }
+
+        // Back to Top Button
+        function addBackToTopButton() {
+            if (document.querySelector('.back-to-top-btn')) return;
+            const btn = document.createElement('button');
+            btn.className = 'back-to-top-btn';
+            btn.innerHTML = '<i class="fas fa-arrow-up"></i><span>TOP</span>';
+            document.body.appendChild(btn);
+            
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 300) {
+                    btn.classList.add('show');
+                } else {
+                    btn.classList.remove('show');
+                }
+            });
+            
+            btn.addEventListener('click', () => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        }
+        
+        addBackToTopButton();
+    </script>
+</body>
+</html>

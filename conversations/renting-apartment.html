@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Renting an Apartment - Next Gen Learning Myanmar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Myanmar:wght@400;500;700&family=Noto+Sans+JP:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/conversations.css">
+    <style>
+        .apt-icon { font-size: 1.2rem; margin-right: 5px; color: #e67e22; }
+        .tip-box { background: #e8f8f5; border-left: 4px solid #1abc9c; padding: 1rem; border-radius: 10px; margin-top: 1rem; }
+        .feature-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 8px; margin-top: 10px; }
+        .feature-item { background: white; padding: 5px 10px; border-radius: 20px; font-size: 0.8rem; }
+    </style>
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <a href="daily-conversations.html" class="back-btn">
+                <i class="fas fa-arrow-left"></i> All Conversations
+            </a>
+            <h1>
+                <i class="fas fa-building"></i>
+                Renting an Apartment
+            </h1>
+            <p>ちんたい - Learn how to rent an apartment in Japanese</p>
+        </header>
+
+        <!-- Dialogue 1: At the Real Estate Agency -->
+        <div class="conversation-section">
+            <h2>🏢 At the Real Estate Agency</h2>
+            <div class="dialogue-box">
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Customer:</div>
+                    <div class="japanese">アパートを さがしているんですが。</div>
+                    <div class="romaji">Apaato o sagashite irun desu ga.</div>
+                    <div class="english">I'm looking for an apartment.</div>
+                    <div class="burmese">တိုက်ခန်းရှာနေပါတယ်။</div>
+                    <button class="audio-btn" onclick="speakJapanese('アパートを さがしているんですが')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Agent:</div>
+                    <div class="japanese">かしこまりました。どんな へやが おこのみですか。</div>
+                    <div class="romaji">Kashikomarimashita. Donna heya ga okonomi desu ka.</div>
+                    <div class="english">Certainly. What kind of room do you prefer?</div>
+                    <div class="burmese">ကောင်းပါပြီ။ ဘယ်လိုအခန်းမျိုးကြိုက်လဲ။</div>
+                    <button class="audio-btn" onclick="speakJapanese('かしこまりました。どんな へやが おこのみですか')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Customer:</div>
+                    <div class="japanese">１ＬＤＫで、せんげつ ごまんえん いないが いいです。</div>
+                    <div class="romaji">Ichi erudike de, sengetsu goman en inai ga ii desu.</div>
+                    <div class="english">A 1LDK, with rent under 50,000 yen.</div>
+                    <div class="burmese">အခန်းတစ်ခန်း အိပ်ခန်းတစ်ခန်း ပါတဲ့ ၁ LDK နဲ့ လစဉ်ငှားခ ၅၀၀၀၀ ယန်းအောက်ပါ။</div>
+                    <button class="audio-btn" onclick="speakJapanese('１ＬＤＫで、せんげつ ごまんえん いないが いいです')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Agent:</div>
+                    <div class="japanese">わかりました。ちかい えきは どこが いいですか。</div>
+                    <div class="romaji">Wakarimashita. Chikai eki wa doko ga ii desu ka.</div>
+                    <div class="english">Understood. Which nearby station is good?</div>
+                    <div class="burmese">နားလည်ပါတယ်။ အနီးဆုံးဘူတာကဘယ်ဟာလဲ။</div>
+                    <button class="audio-btn" onclick="speakJapanese('わかりました。ちかい えきは どこが いいですか')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Customer:</div>
+                    <div class="japanese">しんじゅくえきの ちかくが いいです。</div>
+                    <div class="romaji">Shinjuku eki no chikaku ga ii desu.</div>
+                    <div class="english">Near Shinjuku Station would be good.</div>
+                    <div class="burmese">ရှင်ဂျူကူဘူတာအနီးကောင်းပါတယ်။</div>
+                    <button class="audio-btn" onclick="speakJapanese('しんじゅくえきの ちかくが いいです')"><i class="fas fa-volume-up"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dialogue 2: Looking at an Apartment -->
+        <div class="conversation-section">
+            <h2>🔑 Looking at an Apartment</h2>
+            <div class="dialogue-box">
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Agent:</div>
+                    <div class="japanese">こちらが おすすめの へやです。どうぞ ごらんください。</div>
+                    <div class="romaji">Kochira ga osusume no heya desu. Douzo goran kudasai.</div>
+                    <div class="english">This is the recommended room. Please take a look.</div>
+                    <div class="burmese">ဒါက အကြံပြုထားတဲ့အခန်းပါ။ ကြည့်ပါ။</div>
+                    <button class="audio-btn" onclick="speakJapanese('こちらが おすすめの へやです。どうぞ ごらんください')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Customer:</div>
+                    <div class="japanese">まどが おおきくて あかるいですね。</div>
+                    <div class="romaji">Mado ga ookikute akarui desu ne.</div>
+                    <div class="english">The windows are big and bright.</div>
+                    <div class="burmese">ပြတင်းပေါက်တွေကြီးပြီး တောက်ပတယ်။</div>
+                    <button class="audio-btn" onclick="speakJapanese('まどが おおきくて あかるいですね')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Agent:</div>
+                    <div class="japanese">そうですね。そして おふろと トイレは べつです。</div>
+                    <div class="romaji">Sou desu ne. Soshite ofuro to toire wa betsu desu.</div>
+                    <div class="english">Yes. Also, the bath and toilet are separate.</div>
+                    <div class="burmese">ဟုတ်ပါတယ်။ ပြီးတော့ ရေချိုးခန်းနဲ့ အိမ်သာခွဲထားပါတယ်။</div>
+                    <button class="audio-btn" onclick="speakJapanese('そうですね。そして おふろと トイレは べつです')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Customer:</div>
+                    <div class="japanese">だいすきです。エアコンは ついていますか。</div>
+                    <div class="romaji">Daisuki desu. Eakon wa tsuite imasu ka.</div>
+                    <div class="english">I love it. Is there air conditioning?</div>
+                    <div class="burmese">သိပ်ကြိုက်တယ်။ လေအေးပေးစက်ပါလား။</div>
+                    <button class="audio-btn" onclick="speakJapanese('だいすきです。エアコンは ついていますか')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Agent:</div>
+                    <div class="japanese">はい、ついています。そして バルコニーも あります。</div>
+                    <div class="romaji">Hai, tsuite imasu. Soshite barukonii mo arimasu.</div>
+                    <div class="english">Yes, it has it. Also, there is a balcony.</div>
+                    <div class="burmese">ဟုတ်ကဲ့ပါတယ်။ လသာဆောင်လည်းရှိတယ်။</div>
+                    <button class="audio-btn" onclick="speakJapanese('はい、ついています。そして バルコニーも あります')"><i class="fas fa-volume-up"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dialogue 3: Costs and Fees -->
+        <div class="conversation-section">
+            <h2>💰 Costs and Fees</h2>
+            <div class="dialogue-box">
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Customer:</div>
+                    <div class="japanese">ちんりょうは いくらですか。</div>
+                    <div class="romaji">Chinryou wa ikura desu ka.</div>
+                    <div class="english">How much is the rent?</div>
+                    <div class="burmese">အိမ်ငှားခ ဘယ်လောက်လဲ။</div>
+                    <button class="audio-btn" onclick="speakJapanese('ちんりょうは いくらですか')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Agent:</div>
+                    <div class="japanese">ちんりょうは よんまんえんです。</div>
+                    <div class="romaji">Chinryou wa yonman en desu.</div>
+                    <div class="english">The rent is 40,000 yen.</div>
+                    <div class="burmese">အိမ်ငှားခ ၄၀၀၀၀ ယန်းပါ။</div>
+                    <button class="audio-btn" onclick="speakJapanese('ちんりょうは よんまんえんです')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Customer:</div>
+                    <div class="japanese">しききんと たいきんは ありますか。</div>
+                    <div class="romaji">Shikikin to taikin wa arimasu ka.</div>
+                    <div class="english">Is there a deposit and key money?</div>
+                    <div class="burmese">အပ်ငွေနဲ့ သော့ငွေရှိလား။</div>
+                    <button class="audio-btn" onclick="speakJapanese('しききんと たいきんは ありますか')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Agent:</div>
+                    <div class="japanese">しききんは ちんりょうの いっかげつ、たいきんは ありません。</div>
+                    <div class="romaji">Shikikin wa chinryou no ikkagetsu, taikin wa arimasen.</div>
+                    <div class="english">The deposit is one month's rent, no key money.</div>
+                    <div class="burmese">အပ်ငွေက တစ်လစာ၊ သော့ငွေမရှိပါ။</div>
+                    <button class="audio-btn" onclick="speakJapanese('しききんは ちんりょうの いっかげつ、たいきんは ありません')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Customer:</div>
+                    <div class="japanese">わかりました。ふくきんも ありますか。</div>
+                    <div class="romaji">Wakarimashita. Fukukin mo arimasu ka.</div>
+                    <div class="english">I see. Is there also a management fee?</div>
+                    <div class="burmese">နားလည်ပါတယ်။ စီမံခန့်ခွဲမှုကြေးလည်းရှိလား။</div>
+                    <button class="audio-btn" onclick="speakJapanese('わかりました。ふくきんも ありますか')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Agent:</div>
+                    <div class="japanese">はい、げっきん ごせんえん かかります。</div>
+                    <div class="romaji">Hai, gekkin gosen en kakarimasu.</div>
+                    <div class="english">Yes, it costs 5000 yen per month.</div>
+                    <div class="burmese">ဟုတ်ကဲ့၊ တစ်လ ၅၀၀၀ ယန်းကျပါတယ်။</div>
+                    <button class="audio-btn" onclick="speakJapanese('はい、げっきん ごせんえん かかります')"><i class="fas fa-volume-up"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dialogue 4: Contract and Documents -->
+        <div class="conversation-section">
+            <h2>📝 Contract and Documents</h2>
+            <div class="dialogue-box">
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Agent:</div>
+                    <div class="japanese">けいやくの まえに しょるいが いります。</div>
+                    <div class="romaji">Keiyaku no mae ni shorui ga irimasu.</div>
+                    <div class="english">You need documents before the contract.</div>
+                    <div class="burmese">စာချုပ်မချုပ်ခင်စာရွက်စာတမ်းတွေလိုအပ်တယ်။</div>
+                    <button class="audio-btn" onclick="speakJapanese('けいやくの まえに しょるいが いります')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Customer:</div>
+                    <div class="japanese">どんな しょるいですか。</div>
+                    <div class="romaji">Donna shorui desu ka.</div>
+                    <div class="english">What kind of documents?</div>
+                    <div class="burmese">ဘယ်လိုစာရွက်စာတမ်းတွေလဲ။</div>
+                    <button class="audio-btn" onclick="speakJapanese('どんな しょるいですか')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Agent:</div>
+                    <div class="japanese">みほんいんしょうと しゅうにゅうしょうめい です。</div>
+                    <div class="romaji">Mihon inshou to shuunyuu shoumei desu.</div>
+                    <div class="english">A registered seal and proof of income.</div>
+                    <div class="burmese">တံဆိပ်တုံးနဲ့ ၀င်ငွေအထောက်အထားပါ။</div>
+                    <button class="audio-btn" onclick="speakJapanese('みほんいんしょうと しゅうにゅうしょうめい です')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Customer:</div>
+                    <div class="japanese">わかりました。もってきます。</div>
+                    <div class="romaji">Wakarimashita. Motte kimasu.</div>
+                    <div class="english">Understood. I'll bring them.</div>
+                    <div class="burmese">နားလည်ပါတယ်။ ယူလာပါမယ်။</div>
+                    <button class="audio-btn" onclick="speakJapanese('わかりました。もってきます')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Agent:</div>
+                    <div class="japanese">それから、ほけんにも はいらなければ なりません。</div>
+                    <div class="romaji">Sorekara, hoken ni mo hairanakereba narimasen.</div>
+                    <div class="english">Also, you must get insurance.</div>
+                    <div class="burmese">ပြီးတော့ အာမခံလည်းဝင်ရမယ်။</div>
+                    <button class="audio-btn" onclick="speakJapanese('それから、ほけんにも はいらなければ なりません')"><i class="fas fa-volume-up"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dialogue 5: Signing the Contract -->
+        <div class="conversation-section">
+            <h2>✍️ Signing the Contract</h2>
+            <div class="dialogue-box">
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Agent:</div>
+                    <div class="japanese">こちらが けいやくしょです。よく よんで から サイン してください。</div>
+                    <div class="romaji">Kochira ga keiyakusho desu. Yoku yonde kara sain shite kudasai.</div>
+                    <div class="english">This is the contract. Please read it carefully before signing.</div>
+                    <div class="burmese">ဒါကစာချုပ်ပါ။ သေချာဖတ်ပြီးမှ လက်မှတ်ထိုးပါ။</div>
+                    <button class="audio-btn" onclick="speakJapanese('こちらが けいやくしょです。よく よんで から サイン してください')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Customer:</div>
+                    <div class="japanese">だいじな ことは なんですか。</div>
+                    <div class="romaji">Daiji na koto wa nan desu ka.</div>
+                    <div class="english">What are the important points?</div>
+                    <div class="burmese">အရေးကြီးတဲ့အချက်တွေကဘာလဲ။</div>
+                    <button class="audio-btn" onclick="speakJapanese('だいじな ことは なんですか')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Agent:</div>
+                    <div class="japanese">やちんを まいげつ まいにちまでに はらうこと。</div>
+                    <div class="romaji">Yachin o maigen mainichi made ni harau koto.</div>
+                    <div class="english">Paying the rent by the 25th of each month.</div>
+                    <div class="burmese">လစဉ် ၂၅ ရက်နေ့အထိ အိမ်ငှားခ ပေးဆောင်ရမယ်။</div>
+                    <button class="audio-btn" onclick="speakJapanese('やちんを まいげつ まいにちまでに はらうこと')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Agent:</div>
+                    <div class="japanese">それから、きんえんの へやは すえつけ できません。</div>
+                    <div class="romaji">Sorekara, kinen no heya wa suetsuke dekimasen.</div>
+                    <div class="english">Also, smoking is not allowed in the room.</div>
+                    <div class="burmese">ပြီးတော့ အခန်းထဲမှာ ဆေးလိပ်မသောက်ရဘူး။</div>
+                    <button class="audio-btn" onclick="speakJapanese('それから、きんえんの へやは すえつけ できません')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Customer:</div>
+                    <div class="japanese">わかりました。サインは ここですか。</div>
+                    <div class="romaji">Wakarimashita. Sain wa koko desu ka.</div>
+                    <div class="english">I understand. Do I sign here?</div>
+                    <div class="burmese">နားလည်ပါတယ်။ လက်မှတ်ထိုးရမှာ ဒီမှာလား။</div>
+                    <button class="audio-btn" onclick="speakJapanese('わかりました。サインは ここですか')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Agent:</div>
+                    <div class="japanese">はい、そこに おねがいします。</div>
+                    <div class="romaji">Hai, soko ni onegai shimasu.</div>
+                    <div class="english">Yes, there please.</div>
+                    <div class="burmese">ဟုတ်ကဲ့၊ အဲဒီမှာ ကျေးဇူးပြု၍။</div>
+                    <button class="audio-btn" onclick="speakJapanese('はい、そこに おねがいします')"><i class="fas fa-volume-up"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dialogue 6: Moving In -->
+        <div class="conversation-section">
+            <h2>🚚 Moving In</h2>
+            <div class="dialogue-box">
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Customer:</div>
+                    <div class="japanese">いつから すめるんですか。</div>
+                    <div class="romaji">Itsu kara sumerun desu ka.</div>
+                    <div class="english">When can I move in?</div>
+                    <div class="burmese">ဘယ်တော့စပြီးနေလို့ရမလဲ။</div>
+                    <button class="audio-btn" onclick="speakJapanese('いつから すめるんですか')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Agent:</div>
+                    <div class="japanese">らいしゅうの どようびから できます。</div>
+                    <div class="romaji">Raishuu no doyoubi kara dekimasu.</div>
+                    <div class="english">You can move in from next Saturday.</div>
+                    <div class="burmese">လာမယ့်စနေနေ့ကစပြီးရပါတယ်။</div>
+                    <button class="audio-btn" onclick="speakJapanese('らいしゅうの どようびから できます')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Customer:</div>
+                    <div class="japanese">ひっこしやさんを よぶ ことは できますか。</div>
+                    <div class="romaji">Hikkoshiya san o yobu koto wa dekimasu ka.</div>
+                    <div class="english">Can I call a moving company?</div>
+                    <div class="burmese">ပစ္စည်းရွှေ့ပြောင်းရေးကုမ္ပဏီကိုခေါ်လို့ရမလား။</div>
+                    <button class="audio-btn" onclick="speakJapanese('ひっこしやさんを よぶ ことは できますか')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Agent:</div>
+                    <div class="japanese">はい、もちろんです。でも、じかんの よやくが ひつようです。</div>
+                    <div class="romaji">Hai, mochiron desu. Demo, jikan no yoyaku ga hitsuyou desu.</div>
+                    <div class="english">Yes, of course. But you need to schedule a time.</div>
+                    <div class="burmese">ဟုတ်ကဲ့ရပါတယ်။ ဒါပေမယ့် အချိန်ကြိုဘွတ်ခ်လုပ်ရမယ်။</div>
+                    <button class="audio-btn" onclick="speakJapanese('はい、もちろんです。でも、じかんの よやくが ひつようです')"><i class="fas fa-volume-up"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dialogue 7: Moving Out -->
+        <div class="conversation-section">
+            <h2>📦 Moving Out</h2>
+            <div class="dialogue-box">
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Customer:</div>
+                    <div class="japanese">たいしょくするときは どうすれば いいですか。</div>
+                    <div class="romaji">Taishoku suru toki wa dou sureba ii desu ka.</div>
+                    <div class="english">What should I do when moving out?</div>
+                    <div class="burmese">ထွက်တဲ့အခါ ဘယ်လိုလုပ်ရမလဲ။</div>
+                    <button class="audio-btn" onclick="speakJapanese('たいしょくするときは どうすれば いいですか')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Agent:</div>
+                    <div class="japanese">いっかげつ まえに れんらく してください。</div>
+                    <div class="romaji">Ikkagetsu mae ni renraku shite kudasai.</div>
+                    <div class="english">Please contact us one month in advance.</div>
+                    <div class="burmese">တစ်လအလိုမှာ ဆက်သွယ်ပေးပါ။</div>
+                    <button class="audio-btn" onclick="speakJapanese('いっかげつ まえに れんらく してください')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Agent:</div>
+                    <div class="japanese">へやを げんじょうに もどす ことが ひつようです。</div>
+                    <div class="romaji">Heya o genjou ni modosu koto ga hitsuyou desu.</div>
+                    <div class="english">You need to restore the room to its original condition.</div>
+                    <div class="burmese">အခန်းကို မူလအတိုင်း ပြန်ဖြစ်အောင်လုပ်ဖို့လိုတယ်။</div>
+                    <button class="audio-btn" onclick="speakJapanese('へやを げんじょうに もどす ことが ひつようです')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Customer:</div>
+                    <div class="japanese">しききんは もどりますか。</div>
+                    <div class="romaji">Shikikin wa modorimasu ka.</div>
+                    <div class="english">Will the deposit be returned?</div>
+                    <div class="burmese">အပ်ငွေပြန်ရမလား။</div>
+                    <button class="audio-btn" onclick="speakJapanese('しききんは もどりますか')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Agent:</div>
+                    <div class="japanese">そしょう ひが あれば さしひかれますが、のこりは もどります。</div>
+                    <div class="romaji">Sosou hi ga areba sashihikaremasu ga, nokori wa modorimasu.</div>
+                    <div class="english">If there are repair costs, it will be deducted, but the rest will be returned.</div>
+                    <div class="burmese">ပြုပြင်စရိတ်ရှိရင် နုတ်ပါမယ်၊ ကျန်တာပြန်ရမယ်။</div>
+                    <button class="audio-btn" onclick="speakJapanese('そしょう ひが あれば さしひかれますが、のこりは もどります')"><i class="fas fa-volume-up"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Apartment Features -->
+        <div class="tip-box">
+            <h3><i class="fas fa-home apt-icon"></i> Common Apartment Features</h3>
+            <div class="feature-list">
+                <div class="feature-item">🛏️ 1K - 1 room + kitchen</div>
+                <div class="feature-item">🛋️ 1DK - Dining + kitchen</div>
+                <div class="feature-item">🏠 1LDK - Living + dining + kitchen</div>
+                <div class="feature-item">🚽 トイレべつ - Separate toilet</div>
+                <div class="feature-item">🛁 おふろ - Bath</div>
+                <div class="feature-item">❄️ エアコン - A/C</div>
+                <div class="feature-item">🌞 バルコニー - Balcony</div>
+                <div class="feature-item">📦 クローゼット - Closet</div>
+            </div>
+        </div>
+
+        <div class="tip-box">
+            <h4><i class="fas fa-lightbulb"></i> Renting Tips in Japan</h4>
+            <ul style="margin-left: 20px; margin-top: 5px;">
+                <li><strong>Key Money (礼金 - reikin):</strong> A non-refundable gift to the landlord (1-2 months' rent).</li>
+                <li><strong>Deposit (敷金 - shikikin):</strong> Refundable, but deductions may apply for damages.</li>
+                <li><strong>Guarantor (連帯保証人 - rentai hoshounin):</strong> Often required, or use a guarantor company.</li>
+                <li><strong>Fire Insurance (火災保険 - kasai hoken):</strong> Mandatory for most apartments.</li>
+                <li><strong>Monthly Fees (共益費 - kyouekihi):</strong> Common area maintenance fees.</li>
+                <li><strong>No pets or smoking:</strong> Many apartments prohibit them (ペット不可, 禁煙).</li>
+            </ul>
+        </div>
+
+        <footer>
+            <div class="footer-links">
+                <a href="../pages/privacy.html"><i class="fas fa-shield-alt"></i> Privacy Policy</a>
+                <a href="../pages/about.html"><i class="fas fa-info-circle"></i> About</a>
+                <a href="../pages/contact.html"><i class="fas fa-envelope"></i> Contact</a>
+                <a href="../pages/terms.html"><i class="fas fa-file-contract"></i> Terms & Policy</a>
+            </div>
+            <p><i class="fas fa-heart"></i> Next Gen Learning Myanmar - Daily Conversations</p>
+        </footer>
+    </div>
+    <script>
+        function speakJapanese(text) {
+            if (!window.speechSynthesis) return;
+            window.speechSynthesis.cancel();
+            const utterance = new SpeechSynthesisUtterance(text);
+            utterance.lang = 'ja-JP';
+            utterance.rate = 0.8;
+            function setVoice() {
+                const voices = window.speechSynthesis.getVoices();
+                const jpVoice = voices.find(v => v.lang === 'ja-JP' || v.lang === 'ja');
+                if (jpVoice) utterance.voice = jpVoice;
+                window.speechSynthesis.speak(utterance);
+            }
+            if (window.speechSynthesis.getVoices().length) setVoice();
+            else window.speechSynthesis.onvoiceschanged = setVoice;
+        }
+        function addBackToTopButton() {
+            if (document.querySelector('.back-to-top-btn')) return;
+            const btn = document.createElement('button');
+            btn.className = 'back-to-top-btn';
+            btn.innerHTML = '<i class="fas fa-arrow-up"></i><span>TOP</span>';
+            document.body.appendChild(btn);
+            window.addEventListener('scroll', () => btn.classList.toggle('show', window.scrollY > 300));
+            btn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+        }
+        addBackToTopButton();
+    </script>
+</body>
+</html>

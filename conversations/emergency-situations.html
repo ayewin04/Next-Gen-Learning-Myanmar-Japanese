@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Emergency Situations - Next Gen Learning Myanmar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Myanmar:wght@400;500;700&family=Noto+Sans+JP:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/conversations.css">
+    <style>
+        .emergency-icon { font-size: 1.2rem; margin-right: 5px; color: #e74c3c; }
+        .tip-box { background: #ffe8e8; border-left: 4px solid #e74c3c; padding: 1rem; border-radius: 10px; margin-top: 1rem; }
+        .numbers-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 8px; margin-top: 10px; }
+        .number-item { background: white; padding: 8px 12px; border-radius: 20px; font-size: 0.9rem; font-weight: bold; }
+        .phrases-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 8px; margin-top: 10px; }
+        .phrase-item { background: white; padding: 5px 10px; border-radius: 20px; font-size: 0.8rem; }
+    </style>
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <a href="daily-conversations.html" class="back-btn">
+                <i class="fas fa-arrow-left"></i> All Conversations
+            </a>
+            <h1>
+                <i class="fas fa-ambulance"></i>
+                Emergency Situations
+            </h1>
+            <p>きんきゅうじ - Learn how to handle emergencies in Japanese</p>
+        </header>
+
+        <!-- Dialogue 1: Calling an Ambulance -->
+        <div class="conversation-section">
+            <h2>🚑 Calling an Ambulance</h2>
+            <div class="dialogue-box">
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Caller:</div>
+                    <div class="japanese">きゅうきゅうしゃを おねがいします！</div>
+                    <div class="romaji">Kyuukyuusha o onegai shimasu!</div>
+                    <div class="english">Please send an ambulance!</div>
+                    <div class="burmese">လူနာတင်ယာဉ်လွှတ်ပေးပါ။</div>
+                    <button class="audio-btn" onclick="speakJapanese('きゅうきゅうしゃを おねがいします')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Operator:</div>
+                    <div class="japanese">どうしましたか。おちついて はなしてください。</div>
+                    <div class="romaji">Dou shimashita ka. Ochitsuite hanashite kudasai.</div>
+                    <div class="english">What happened? Please speak calmly.</div>
+                    <div class="burmese">ဘာဖြစ်လို့လဲ။ စိတ်အေးအေးနဲ့ပြောပါ။</div>
+                    <button class="audio-btn" onclick="speakJapanese('どうしましたか。おちついて はなしてください')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Caller:</div>
+                    <div class="japanese">ともだちが きゅうに たおれました。</div>
+                    <div class="romaji">Tomodachi ga kyuu ni taoremashita.</div>
+                    <div class="english">My friend suddenly collapsed.</div>
+                    <div class="burmese">သူငယ်ချင်းရုတ်တရက်လဲသွားတယ်။</div>
+                    <button class="audio-btn" onclick="speakJapanese('ともだちが きゅうに たおれました')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Operator:</div>
+                    <div class="japanese">いしきは ありますか。</div>
+                    <div class="romaji">Ishiki wa arimasu ka.</div>
+                    <div class="english">Is he conscious?</div>
+                    <div class="burmese">သတိရှိလား။</div>
+                    <button class="audio-btn" onclick="speakJapanese('いしきは ありますか')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Caller:</div>
+                    <div class="japanese">いいえ、ありません！はやく きてください！</div>
+                    <div class="romaji">Iie, arimasen! Hayaku kite kudasai!</div>
+                    <div class="english">No, he's not! Please come quickly!</div>
+                    <div class="burmese">မဟုတ်ဘူး၊ မရှိဘူး။ မြန်မြန်လာပါ။</div>
+                    <button class="audio-btn" onclick="speakJapanese('いいえ、ありません！はやく きてください')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Operator:</div>
+                    <div class="japanese">じゅうしょを おしえてください。</div>
+                    <div class="romaji">Juusho o oshiete kudasai.</div>
+                    <div class="english">Please tell me the address.</div>
+                    <div class="burmese">လိပ်စာပြောပြပါ။</div>
+                    <button class="audio-btn" onclick="speakJapanese('じゅうしょを おしえてください')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Caller:</div>
+                    <div class="japanese">しんじゅくく にじゅうさんばんちです！</div>
+                    <div class="romaji">Shinjukuku nijuusanbanchi desu!</div>
+                    <div class="english">It's 23, Shinjuku!</div>
+                    <div class="burmese">ရှင်ဂျူကူ ၂၃ ပါ။</div>
+                    <button class="audio-btn" onclick="speakJapanese('しんじゅくく にじゅうさんばんちです')"><i class="fas fa-volume-up"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dialogue 2: Calling the Police -->
+        <div class="conversation-section">
+            <h2>🚔 Calling the Police</h2>
+            <div class="dialogue-box">
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Caller:</div>
+                    <div class="japanese">１１０ばん ですか。どろぼうが はいりました！</div>
+                    <div class="romaji">Hyakutoban desu ka. Dorobou ga hairimashita!</div>
+                    <div class="english">Is this 110? A thief broke in!</div>
+                    <div class="burmese">၁၁၀ လား။ သူခိုးဝင်လာတယ်။</div>
+                    <button class="audio-btn" onclick="speakJapanese('１１０ばん ですか。どろぼうが はいりました')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Police:</div>
+                    <div class="japanese">おちついて ください。いま どこですか。</div>
+                    <div class="romaji">Ochitsuite kudasai. Ima doko desu ka.</div>
+                    <div class="english">Please calm down. Where are you now?</div>
+                    <div class="burmese">စိတ်အေးအေးထားပါ။ အခုဘယ်မှာလဲ။</div>
+                    <button class="audio-btn" onclick="speakJapanese('おちついて ください。いま どこですか')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Caller:</div>
+                    <div class="japanese">うちです。しんじゅくくの アパートです。</div>
+                    <div class="romaji">Uchi desu. Shinjukuku no apaato desu.</div>
+                    <div class="english">At home. An apartment in Shinjuku.</div>
+                    <div class="burmese">အိမ်မှာပါ။ ရှင်ဂျူကူက တိုက်ခန်းပါ။</div>
+                    <button class="audio-btn" onclick="speakJapanese('うちです。しんじゅくくの アパートです')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Police:</div>
+                    <div class="japanese">いま どろぼうは まだ いますか。</div>
+                    <div class="romaji">Ima dorobou wa mada imasu ka.</div>
+                    <div class="english">Is the thief still there now?</div>
+                    <div class="burmese">သူခိုးအခုထိရှိသေးလား။</div>
+                    <button class="audio-btn" onclick="speakJapanese('いま どろぼうは まだ いますか')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Caller:</div>
+                    <div class="japanese">はい、にげません！はやく きてください！</div>
+                    <div class="romaji">Hai, nigemasen! Hayaku kite kudasai!</div>
+                    <div class="english">Yes, he hasn't run away! Please come quickly!</div>
+                    <div class="burmese">ဟုတ်ကဲ့၊ မထွက်ပြေးသေးဘူး။ မြန်မြန်လာပါ။</div>
+                    <button class="audio-btn" onclick="speakJapanese('はい、にげません！はやく きてください')"><i class="fas fa-volume-up"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dialogue 3: Fire Emergency -->
+        <div class="conversation-section">
+            <h2>🔥 Fire Emergency</h2>
+            <div class="dialogue-box">
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Caller:</div>
+                    <div class="japanese">かじです！１１９ばん ですか。</div>
+                    <div class="romaji">Kaji desu! Hyakujuukyuban desu ka.</div>
+                    <div class="english">It's a fire! Is this 119?</div>
+                    <div class="burmese">မီးလောင်နေပြီ။ ၁၁၉ လား။</div>
+                    <button class="audio-btn" onclick="speakJapanese('かじです！１１９ばん ですか')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Operator:</div>
+                    <div class="japanese">はい、こちらは しょうぼうです。どこで おこりましたか。</div>
+                    <div class="romaji">Hai, kochira wa shoubou desu. Doko de okorimashita ka.</div>
+                    <div class="english">Yes, this is the fire department. Where did it happen?</div>
+                    <div class="burmese">ဟုတ်ကဲ့၊ ဒါမီးသတ်ဌာနပါ။ ဘယ်မှာဖြစ်လဲ။</div>
+                    <button class="audio-btn" onclick="speakJapanese('はい、こちらは しょうぼうです。どこで おこりましたか')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Caller:</div>
+                    <div class="japanese">となり の いえから けむりが でています！</div>
+                    <div class="romaji">Tonari no ie kara kemuri ga dete imasu!</div>
+                    <div class="english">Smoke is coming from the neighbor's house!</div>
+                    <div class="burmese">အိမ်နီးချင်းအိမ်ကနေ မီးခိုးထွက်နေတယ်။</div>
+                    <button class="audio-btn" onclick="speakJapanese('となり の いえから けむりが でています')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Operator:</div>
+                    <div class="japanese">わかりました。すぐに むかいます。あなたは そとに にげてください。</div>
+                    <div class="romaji">Wakarimashita. Sugu ni mukaimasu. Anata wa soto ni nigete kudasai.</div>
+                    <div class="english">Understood. We'll head there immediately. Please evacuate outside.</div>
+                    <div class="burmese">နားလည်ပါတယ်။ ချက်ချင်းသွားပါမယ်။ အပြင်ကိုထွက်ပြေးပါ။</div>
+                    <button class="audio-btn" onclick="speakJapanese('わかりました。すぐに むかいます。あなたは そとに にげてください')"><i class="fas fa-volume-up"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dialogue 4: Lost Child -->
+        <div class="conversation-section">
+            <h2>👶 Lost Child</h2>
+            <div class="dialogue-box">
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Parent:</div>
+                    <div class="japanese">すみません、こどもが まいごに なりました。</div>
+                    <div class="romaji">Sumimasen, kodomo ga maigo ni narimashita.</div>
+                    <div class="english">Excuse me, my child is lost.</div>
+                    <div class="burmese">ကလေးပျောက်သွားတယ်။</div>
+                    <button class="audio-btn" onclick="speakJapanese('すみません、こどもが まいごに なりました')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Staff:</div>
+                    <div class="japanese">どんな ふくを きていますか。</div>
+                    <div class="romaji">Donna fuku o kite imasu ka.</div>
+                    <div class="english">What clothes is he wearing?</div>
+                    <div class="burmese">ဘယ်အဝတ်အစားဝတ်ထားလဲ။</div>
+                    <button class="audio-btn" onclick="speakJapanese('どんな ふくを きていますか')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Parent:</div>
+                    <div class="japanese">あかい Tシャツと あおい ズボンです。なまえは たろうです。</div>
+                    <div class="romaji">Akai T-shatsu to aoi zubon desu. Namae wa Tarou desu.</div>
+                    <div class="english">A red T-shirt and blue pants. His name is Taro.</div>
+                    <div class="burmese">အနီရောင်တီရှပ်နဲ့ အပြာရောင်ဘောင်းဘီပါ။ နာမည်က တာရိုပါ။</div>
+                    <button class="audio-btn" onclick="speakJapanese('あかい Tシャツと あおい ズボンです。なまえは たろうです')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Staff:</div>
+                    <div class="japanese">わかりました。みなさま、おさがしの おこさまが います。あかい Tシャツの おとこのこです。</div>
+                    <div class="romaji">Wakarimashita. Minasama, osagashi no okosama ga imasu. Akai T-shatsu no otoko no ko desu.</div>
+                    <div class="english">Understood. Everyone, there is a lost child. A boy in a red T-shirt.</div>
+                    <div class="burmese">နားလည်ပါတယ်။ အားလုံး၊ ပျောက်နေတဲ့ကလေးရှိတယ်။ အနီရောင်တီရှပ်နဲ့ ကောင်လေးပါ။</div>
+                    <button class="audio-btn" onclick="speakJapanese('わかりました。みなさま、おさがしの おこさまが います。あかい Tシャツの おとこのこです')"><i class="fas fa-volume-up"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dialogue 5: Lost Item -->
+        <div class="conversation-section">
+            <h2>🔍 Lost Item</h2>
+            <div class="dialogue-box">
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Tourist:</div>
+                    <div class="japanese">さいふを なくしました。</div>
+                    <div class="romaji">Saifu o nakushimashita.</div>
+                    <div class="english">I lost my wallet.</div>
+                    <div class="burmese">ပိုက်ဆံအိတ်ပျောက်သွားတယ်။</div>
+                    <button class="audio-btn" onclick="speakJapanese('さいふを なくしました')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Staff:</div>
+                    <div class="japanese">どこで なくしましたか。</div>
+                    <div class="romaji">Doko de nakushimashita ka.</div>
+                    <div class="english">Where did you lose it?</div>
+                    <div class="burmese">ဘယ်မှာပျောက်တာလဲ။</div>
+                    <button class="audio-btn" onclick="speakJapanese('どこで なくしましたか')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Tourist:</div>
+                    <div class="japanese">たぶん この ちかくの カフェです。</div>
+                    <div class="romaji">Tabun kono chikaku no kafe desu.</div>
+                    <div class="english">Probably at a cafe near here.</div>
+                    <div class="burmese">ဒီအနီးက ကာဖီဆိုင်မှာပါ။</div>
+                    <button class="audio-btn" onclick="speakJapanese('たぶん この ちかくの カフェです')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Staff:</div>
+                    <div class="japanese">みほん いんしょうは ありますか。</div>
+                    <div class="romaji">Mihon inshou wa arimasu ka.</div>
+                    <div class="english">Do you have a registered seal?</div>
+                    <div class="burmese">တံဆိပ်တုံးရှိလား။</div>
+                    <button class="audio-btn" onclick="speakJapanese('みほん いんしょうは ありますか')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Tourist:</div>
+                    <div class="japanese">いいえ、パスポートしか ありません。</div>
+                    <div class="romaji">Iie, pasupooto shika arimasen.</div>
+                    <div class="english">No, I only have my passport.</div>
+                    <div class="burmese">မဟုတ်ဘူး၊ နိုင်ငံကူးလက်မှတ်ပဲရှိတယ်။</div>
+                    <button class="audio-btn" onclick="speakJapanese('いいえ、パスポートしか ありません')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Staff:</div>
+                    <div class="japanese">では、こうばんで もうしこんで ください。</div>
+                    <div class="romaji">De wa, kouban de moushikonde kudasai.</div>
+                    <div class="english">Then, please report it at the police box.</div>
+                    <div class="burmese">ဒါဆို ရဲဂိတ်မှာ အကြောင်းကြားပါ။</div>
+                    <button class="audio-btn" onclick="speakJapanese('では、こうばんで もうしこんで ください')"><i class="fas fa-volume-up"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dialogue 6: Accident -->
+        <div class="conversation-section">
+            <h2>💥 Accident</h2>
+            <div class="dialogue-box">
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Person A:</div>
+                    <div class="japanese">じこです！だれか きゅうきゅうしゃを よんでください！</div>
+                    <div class="romaji">Jiko desu! Dareka kyuukyuusha o yonde kudasai!</div>
+                    <div class="english">It's an accident! Someone call an ambulance!</div>
+                    <div class="burmese">မတော်တဆမှုပါ။ တစ်ယောက်ယောက်က လူနာတင်ယာဉ်ခေါ်ပေးပါ။</div>
+                    <button class="audio-btn" onclick="speakJapanese('じこです！だれか きゅうきゅうしゃを よんでください')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Person B:</div>
+                    <div class="japanese">だいじょうぶですか。どこが いたいですか。</div>
+                    <div class="romaji">Daijoubu desu ka. Doko ga itai desu ka.</div>
+                    <div class="english">Are you okay? Where does it hurt?</div>
+                    <div class="burmese">အဆင်ပြေရဲ့လား။ ဘယ်မှာနာလဲ။</div>
+                    <button class="audio-btn" onclick="speakJapanese('だいじょうぶですか。どこが いたいですか')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Victim:</div>
+                    <div class="japanese">あしが いたいです。うごけません。</div>
+                    <div class="romaji">Ashi ga itai desu. Ugokemasen.</div>
+                    <div class="english">My leg hurts. I can't move.</div>
+                    <div class="burmese">ခြေထောက်နာတယ်။ မလှုပ်နိုင်ဘူး။</div>
+                    <button class="audio-btn" onclick="speakJapanese('あしが いたいです。うごけません')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Person B:</div>
+                    <div class="japanese">うごかないで ください。すぐに たすけを よびます。</div>
+                    <div class="romaji">Ugokanaide kudasai. Sugu ni tasuke o yobimasu.</div>
+                    <div class="english">Please don't move. I'll call for help right away.</div>
+                    <div class="burmese">မလှုပ်ပါနဲ့။ ချက်ချင်းအကူအညီခေါ်ပါမယ်။</div>
+                    <button class="audio-btn" onclick="speakJapanese('うごかないで ください。すぐに たすけを よびます')"><i class="fas fa-volume-up"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dialogue 7: Earthquake -->
+        <div class="conversation-section">
+            <h2>🌊 Earthquake</h2>
+            <div class="dialogue-box">
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Person A:</div>
+                    <div class="japanese">じしんだ！テーブルの したに かくれましょう！</div>
+                    <div class="romaji">Jishin da! Teeburu no shita ni kakuremashou!</div>
+                    <div class="english">It's an earthquake! Let's hide under the table!</div>
+                    <div class="burmese">မြေငလျင်လှုပ်တယ်။ စားပွဲအောက်မှာ ပုန်းကြရအောင်။</div>
+                    <button class="audio-btn" onclick="speakJapanese('じしんだ！テーブルの したに かくれましょう')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Person B:</div>
+                    <div class="japanese">ガラスから はなれましょう！</div>
+                    <div class="romaji">Garasu kara hanaremashou!</div>
+                    <div class="english">Let's move away from the glass!</div>
+                    <div class="burmese">ဖန်တွေကနေ ဝေးရာကိုရွှေ့ကြရအောင်။</div>
+                    <button class="audio-btn" onclick="speakJapanese('ガラスから はなれましょう')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Person A:</div>
+                    <div class="japanese">ゆれが おさまったら、そとに にげましょう。</div>
+                    <div class="romaji">Yure ga osamattara, soto ni nigemashou.</div>
+                    <div class="english">When the shaking stops, let's evacuate outside.</div>
+                    <div class="burmese">လှုပ်ခြင်းရပ်သွားရင် အပြင်ကိုထွက်ပြေးကြရအောင်။</div>
+                    <button class="audio-btn" onclick="speakJapanese('ゆれが おさまったら、そとに にげましょう')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Person B:</div>
+                    <div class="japanese">テレビで じょうほうを チェックしましょう。</div>
+                    <div class="romaji">Terebi de jouhou o chekku shimashou.</div>
+                    <div class="english">Let's check the information on TV.</div>
+                    <div class="burmese">တီဗီမှာ သတင်းစစ်ကြည့်ရအောင်။</div>
+                    <button class="audio-btn" onclick="speakJapanese('テレビで じょうほうを チェックしましょう')"><i class="fas fa-volume-up"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Emergency Numbers -->
+        <div class="tip-box">
+            <h3><i class="fas fa-phone-alt emergency-icon"></i> Emergency Numbers in Japan</h3>
+            <div class="numbers-list">
+                <div class="number-item">🚑 119 - Ambulance / Fire (救急・消防)</div>
+                <div class="number-item">🚔 110 - Police (警察)</div>
+                <div class="number-item">🌊 118 - Coast Guard (海上保安庁)</div>
+                <div class="number-item">🏥 #7119 - Medical Advice (医療相談)</div>
+                <div class="number-item">🐕 0570-000-911 - Lost Pet (迷子ペット)</div>
+            </div>
+        </div>
+
+        <!-- Emergency Phrases -->
+        <div class="tip-box">
+            <h3><i class="fas fa-comment-dots emergency-icon"></i> Emergency Phrases</h3>
+            <div class="phrases-list">
+                <div class="phrase-item">🆘 たすけて - Help!</div>
+                <div class="phrase-item">🆘 きゅうきゅうしゃ - Ambulance</div>
+                <div class="phrase-item">🆘 けいさつ - Police</div>
+                <div class="phrase-item">🆘 かじ - Fire</div>
+                <div class="phrase-item">🆘 どろぼう - Thief</div>
+                <div class="phrase-item">🆘 じこ - Accident</div>
+                <div class="phrase-item">🆘 まいご - Lost child</div>
+                <div class="phrase-item">🆘 なくしました - I lost ~</div>
+                <div class="phrase-item">🆘 いたい - It hurts</div>
+                <div class="phrase-item">🆘 たおれた - Collapsed</div>
+            </div>
+        </div>
+
+        <div class="tip-box">
+            <h4><i class="fas fa-lightbulb"></i> Emergency Tips in Japan</h4>
+            <ul style="margin-left: 20px; margin-top: 5px;">
+                <li><strong>119:</strong> For both ambulance and fire. Say "Kyuukyuusha" (ambulance) or "Kaji" (fire).</li>
+                <li><strong>110:</strong> For police. Report crimes, accidents, lost items.</li>
+                <li><strong>English Support:</strong> Many operators have English-speaking staff available.</li>
+                <li><strong>Kouban (Police Box):</strong> Found throughout cities. They can help with directions, lost items, minor issues.</li>
+                <li><strong>Earthquake Preparedness:</strong> Always know the nearest evacuation area (避難所 - hinanjo).</li>
+                <li><strong>Emergency App:</strong> Download "Safety Tips" app for disaster alerts in multiple languages.</li>
+                <li><strong>Insurance:</strong> Always carry your health insurance card (保険証 - hokenshou).</li>
+            </ul>
+        </div>
+
+        <footer>
+            <div class="footer-links">
+                <a href="../pages/privacy.html"><i class="fas fa-shield-alt"></i> Privacy Policy</a>
+                <a href="../pages/about.html"><i class="fas fa-info-circle"></i> About</a>
+                <a href="../pages/contact.html"><i class="fas fa-envelope"></i> Contact</a>
+                <a href="../pages/terms.html"><i class="fas fa-file-contract"></i> Terms & Policy</a>
+            </div>
+            <p><i class="fas fa-heart"></i> Next Gen Learning Myanmar - Daily Conversations</p>
+        </footer>
+    </div>
+    <script>
+        function speakJapanese(text) {
+            if (!window.speechSynthesis) return;
+            window.speechSynthesis.cancel();
+            const utterance = new SpeechSynthesisUtterance(text);
+            utterance.lang = 'ja-JP';
+            utterance.rate = 0.8;
+            function setVoice() {
+                const voices = window.speechSynthesis.getVoices();
+                const jpVoice = voices.find(v => v.lang === 'ja-JP' || v.lang === 'ja');
+                if (jpVoice) utterance.voice = jpVoice;
+                window.speechSynthesis.speak(utterance);
+            }
+            if (window.speechSynthesis.getVoices().length) setVoice();
+            else window.speechSynthesis.onvoiceschanged = setVoice;
+        }
+        function addBackToTopButton() {
+            if (document.querySelector('.back-to-top-btn')) return;
+            const btn = document.createElement('button');
+            btn.className = 'back-to-top-btn';
+            btn.innerHTML = '<i class="fas fa-arrow-up"></i><span>TOP</span>';
+            document.body.appendChild(btn);
+            window.addEventListener('scroll', () => btn.classList.toggle('show', window.scrollY > 300));
+            btn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+        }
+        addBackToTopButton();
+    </script>
+</body>
+</html>

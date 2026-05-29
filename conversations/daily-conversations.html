@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Daily Conversations - Next Gen Learning Myanmar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Myanmar:wght@400;500;700&family=Noto+Sans+JP:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 1rem;
+        }
+        
+        .app-container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+        
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #e67e22;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: 0.3s;
+            margin-bottom: 1rem;
+        }
+        
+        .back-btn:hover {
+            background: #d35400;
+            transform: translateX(-3px);
+        }
+        
+        header h1 {
+            text-align: center;
+            font-size: 1.8rem;
+            color: #2c3e50;
+        }
+        
+        header h1 i {
+            color: #e67e22;
+            margin-right: 10px;
+        }
+        
+        header p {
+            text-align: center;
+            color: #7f8c8d;
+            margin-top: 0.5rem;
+        }
+        
+        .topics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .topic-card {
+            background: white;
+            border-radius: 20px;
+            padding: 1.5rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        
+        .topic-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(230, 126, 34, 0.2);
+            border: 1px solid #e67e22;
+        }
+        
+        .topic-card i {
+            font-size: 2.5rem;
+            color: #e67e22;
+            margin-bottom: 1rem;
+        }
+        
+        .topic-card h3 {
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+        }
+        
+        .topic-card p {
+            color: #7f8c8d;
+            font-size: 0.85rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .topic-jp {
+            font-family: 'Noto Sans JP', sans-serif;
+            color: #e67e22;
+            font-size: 0.8rem;
+        }
+        
+        footer {
+            background: rgba(0, 0, 0, 0.85);
+            border-radius: 20px;
+            padding: 1.2rem;
+            margin-top: 2rem;
+            text-align: center;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+        }
+        
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 0.8rem;
+            transition: 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .footer-links a:hover {
+            color: #f5b042;
+        }
+        
+        footer p {
+            color: #7f8c8d;
+            font-size: 0.7rem;
+        }
+        
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.3rem;
+            }
+            
+            .topics-grid {
+                grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <a href="../index.html" class="back-btn">
+                <i class="fas fa-arrow-left"></i> Back to Home
+            </a>
+            <h1>
+                <i class="fas fa-comments"></i>
+                Daily Conversations
+            </h1>
+            <p>にちじょうのかいわ - Master real-life Japanese conversations</p>
+        </header>
+        
+        <div class="topics-grid">
+            <div class="topic-card" onclick="location.href='greetings.html'">
+                <i class="fas fa-hand-peace"></i>
+                <h3>Greetings</h3>
+                <p>Basic greetings for different times of day</p>
+                <div class="topic-jp">あいさつ</div>
+            </div>
+            
+            <div class="topic-card" onclick="location.href='self-introduction.html'">
+                <i class="fas fa-user"></i>
+                <h3>Self Introduction</h3>
+                <p>Introduce yourself, your job, and where you're from</p>
+                <div class="topic-jp">じこしょうかい</div>
+            </div>
+            
+            <div class="topic-card" onclick="location.href='shopping.html'">
+                <i class="fas fa-bag-shopping"></i>
+                <h3>Shopping</h3>
+                <p>Ask prices, try clothes, buy items</p>
+                <div class="topic-jp">かいもの</div>
+            </div>
+            
+            <div class="topic-card" onclick="location.href='restaurant.html'">
+                <i class="fas fa-utensils"></i>
+                <h3>Restaurant</h3>
+                <p>Order food, ask for recommendations, pay the bill</p>
+                <div class="topic-jp">レストラン</div>
+            </div>
+            
+            <div class="topic-card" onclick="location.href='travel.html'">
+                <i class="fas fa-train"></i>
+                <h3>Travel & Transportation</h3>
+                <p>Buy tickets, ask for directions, take trains</p>
+                <div class="topic-jp">りょこう</div>
+            </div>
+            
+            <div class="topic-card" onclick="location.href='daily-routine.html'">
+                <i class="fas fa-calendar-day"></i>
+                <h3>Daily Routine</h3>
+                <p>Talk about your daily activities</p>
+                <div class="topic-jp">にちじょう</div>
+            </div>
+            
+            <div class="topic-card" onclick="location.href='asking-directions.html'">
+                <i class="fas fa-map-marker-alt"></i>
+                <h3>Asking Directions</h3>
+                <p>Ask "where is...", understand directions</p>
+                <div class="topic-jp">みちをきく</div>
+            </div>
+            
+            <div class="topic-card" onclick="location.href='at-hotel.html'">
+                <i class="fas fa-hotel"></i>
+                <h3>At the Hotel</h3>
+                <p>Check-in, ask for amenities, check-out</p>
+                <div class="topic-jp">ホテルで</div>
+            </div>
+            
+            <div class="topic-card" onclick="location.href='at-hospital.html'">
+                <i class="fas fa-hospital"></i>
+                <h3>At the Hospital</h3>
+                <p>Describe symptoms, see a doctor, get medicine</p>
+                <div class="topic-jp">びょういんで</div>
+            </div>
+            
+            <div class="topic-card" onclick="location.href='making-phone-calls.html'">
+                <i class="fas fa-phone"></i>
+                <h3>Making Phone Calls</h3>
+                <p>Make appointments, leave messages</p>
+                <div class="topic-jp">でんわ</div>
+            </div>
+            
+            <div class="topic-card" onclick="location.href='at-post-office.html'">
+                <i class="fas fa-envelope"></i>
+                <h3>At the Post Office</h3>
+                <p>Send letters, buy stamps, ship packages</p>
+                <div class="topic-jp">ゆうびんきょく</div>
+            </div>
+            
+            <div class="topic-card" onclick="location.href='at-bank.html'">
+                <i class="fas fa-building-columns"></i>
+                <h3>At the Bank</h3>
+                <p>Exchange money, open account, withdraw cash</p>
+                <div class="topic-jp">ぎんこう</div>
+            </div>
+            
+            <div class="topic-card" onclick="location.href='job-interview.html'">
+                <i class="fas fa-briefcase"></i>
+                <h3>Job Interview</h3>
+                <p>Talk about skills, experience, and goals</p>
+                <div class="topic-jp">しゅうしょくめんせつ</div>
+            </div>
+            
+            <div class="topic-card" onclick="location.href='school-life.html'">
+                <i class="fas fa-school"></i>
+                <h3>School Life</h3>
+                <p>Talk about classes, homework, and teachers</p>
+                <div class="topic-jp">がっこうせいかつ</div>
+            </div>
+            
+            <div class="topic-card" onclick="location.href='weather-talk.html'">
+                <i class="fas fa-sun"></i>
+                <h3>Weather Talk</h3>
+                <p>Discuss weather, seasons, and temperature</p>
+                <div class="topic-jp">てんき</div>
+            </div>
+            
+            <div class="topic-card" onclick="location.href='hobbies.html'">
+                <i class="fas fa-music"></i>
+                <h3>Hobbies & Interests</h3>
+                <p>Talk about free time activities</p>
+                <div class="topic-jp">しゅみ</div>
+            </div>
+            
+            <div class="topic-card" onclick="location.href='inviting-friends.html'">
+                <i class="fas fa-calendar-alt"></i>
+                <h3>Inviting Friends</h3>
+                <p>Make plans, accept/decline invitations</p>
+                <div class="topic-jp">さそう</div>
+            </div>
+            
+            <div class="topic-card" onclick="location.href='apologizing.html'">
+                <i class="fas fa-hand-peace"></i>
+                <h3>Apologizing</h3>
+                <p>Say sorry, explain mistakes, ask for forgiveness</p>
+                <div class="topic-jp">あやまる</div>
+            </div>
+            
+            <div class="topic-card" onclick="location.href='giving-reasons.html'">
+                <i class="fas fa-question-circle"></i>
+                <h3>Giving Reasons</h3>
+                <p>Explain why with "because"</p>
+                <div class="topic-jp">りゆう</div>
+            </div>
+            
+            <div class="topic-card" onclick="location.href='making-requests.html'">
+                <i class="fas fa-hand-peace"></i>
+                <h3>Making Requests</h3>
+                <p>Ask politely for help or favors</p>
+                <div class="topic-jp">いらいする</div>
+            </div>
+       
+                    <div class="topic-card" onclick="location.href='at-the-beauty-salon.html'">
+                <i class="fas fa-cut"></i>
+                <h3>At the Beauty Salon</h3>
+                <p>Haircuts, styling, and beauty services</p>
+                <div class="topic-jp">びよういんで</div>
+            </div>
+            
+            <div class="topic-card" onclick="location.href='renting-apartment.html'">
+                <i class="fas fa-building"></i>
+                <h3>Renting an Apartment</h3>
+                <p>Looking for apartments, contracts, and moving</p>
+                <div class="topic-jp">ちんたい</div>
+            </div>
+            
+            <div class="topic-card" onclick="location.href='using-public-transport.html'">
+                <i class="fas fa-subway"></i>
+                <h3>Using Public Transport</h3>
+                <p>Buses, trains, and IC cards</p>
+                <div class="topic-jp">こうつうきかん</div>
+            </div>
+            
+            <div class="topic-card" onclick="location.href='emergency-situations.html'">
+                <i class="fas fa-ambulance"></i>
+                <h3>Emergency Situations</h3>
+                <p>Accidents, lost items, and urgent help</p>
+                <div class="topic-jp">きんきゅうじ</div>
+            </div>
+            
+            <div class="topic-card" onclick="location.href='celebrations.html'">
+                <i class="fas fa-birthday-cake"></i>
+                <h3>Celebrations</h3>
+                <p>Birthdays, weddings, and special occasions</p>
+                <div class="topic-jp">おいわい</div>
+            </div>
+            
+            <div class="topic-card" onclick="location.href='technology-internet.html'">
+                <i class="fas fa-laptop"></i>
+                <h3>Technology & Internet</h3>
+                <p>Computers, smartphones, and social media</p>
+                <div class="topic-jp">テクノロジー</div>
+            </div>
+            
+            <div class="topic-card" onclick="location.href='environment-nature.html'">
+                <i class="fas fa-tree"></i>
+                <h3>Environment & Nature</h3>
+                <p>Recycling, pollution, and conservation</p>
+                <div class="topic-jp">かんきょう</div>
+            </div>
+            
+            <div class="topic-card" onclick="location.href='shopping-online.html'">
+                <i class="fas fa-shopping-cart"></i>
+                <h3>Online Shopping</h3>
+                <p>Ordering online, delivery, returns</p>
+                <div class="topic-jp">ネットかいもの</div>
+            </div>
+            
+            <div class="topic-card" onclick="location.href='cultural-events.html'">
+                <i class="fas fa-drumstick-bite"></i>
+                <h3>Cultural Events</h3>
+                <p>Festivals, temples, and traditions</p>
+                <div class="topic-jp">ぶんかイベント</div>
+            </div>
+            
+            <div class="topic-card" onclick="location.href='workplace-etiquette.html'">
+                <i class="fas fa-users"></i>
+                <h3>Workplace Etiquette</h3>
+                <p>Office manners, meetings, and business culture</p>
+                <div class="topic-jp">しょくばのルール</div>
+            </div>
+         </div>
+        <footer>
+            <div class="footer-links">
+                <a href="../pages/privacy.html"><i class="fas fa-shield-alt"></i> Privacy Policy</a>
+                <a href="../pages/about.html"><i class="fas fa-info-circle"></i> About</a>
+                <a href="../pages/contact.html"><i class="fas fa-envelope"></i> Contact</a>
+                <a href="../pages/terms.html"><i class="fas fa-file-contract"></i> Terms & Policy</a>
+            </div>
+            <p><i class="fas fa-heart"></i> Next Gen Learning Myanmar - Daily Conversations</p>
+        </footer>
+    </div>
+    
+    <script>
+        // Back to Top Button
+        function addBackToTopButton() {
+            if (document.querySelector('.back-to-top-btn')) return;
+            const btn = document.createElement('button');
+            btn.className = 'back-to-top-btn';
+            btn.innerHTML = '<i class="fas fa-arrow-up"></i><span>TOP</span>';
+            document.body.appendChild(btn);
+            
+            window.addEventListener('scroll', () => {
+                btn.classList.toggle('show', window.scrollY > 300);
+            });
+            
+            btn.addEventListener('click', () => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        }
+        addBackToTopButton();
+    </script>
+</body>
+</html>

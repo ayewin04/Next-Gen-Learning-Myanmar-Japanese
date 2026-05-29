@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Daily Routine - Next Gen Learning Myanmar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Myanmar:wght@400;500;700&family=Noto+Sans+JP:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/conversations.css">
+    <style>
+        .time-badge {
+            background: #e67e22;
+            color: white;
+            padding: 2px 10px;
+            border-radius: 20px;
+            font-size: 0.7rem;
+            display: inline-block;
+            margin-right: 10px;
+        }
+        .routine-card {
+            background: #fff3e0;
+            border-radius: 10px;
+            padding: 0.8rem;
+            margin: 0.5rem 0;
+        }
+        .tip-box {
+            background: #e8f8f5;
+            border-left: 4px solid #1abc9c;
+            padding: 1rem;
+            border-radius: 10px;
+            margin-top: 1rem;
+        }
+        .tip-box h4 {
+            color: #1abc9c;
+            margin-bottom: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <a href="daily-conversations.html" class="back-btn">
+                <i class="fas fa-arrow-left"></i> All Conversations
+            </a>
+            <h1>
+                <i class="fas fa-calendar-day"></i>
+                Daily Routine
+            </h1>
+            <p>にちじょうせいかつ - Learn to talk about your daily activities in Japanese</p>
+        </header>
+
+        <!-- Dialogue 1: Morning Routine -->
+        <div class="conversation-section">
+            <h2>🌅 Morning Routine</h2>
+            <div class="dialogue-box">
+                <div class="dialogue-line">
+                    <div class="speaker">👤 A:</div>
+                    <div class="japanese">まいにち なんじに おきますか。</div>
+                    <div class="romaji">Mainichi nanji ni okimasu ka.</div>
+                    <div class="english">What time do you wake up every day?</div>
+                    <div class="burmese">နေ့တိုင်း ဘယ်နာရီမှာ နိုးလဲ။</div>
+                    <button class="audio-btn" onclick="speakJapanese('まいにち なんじに おきますか')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 B:</div>
+                    <div class="japanese">たいてい ろくじに おきます。</div>
+                    <div class="romaji">Taitei rokuji ni okimasu.</div>
+                    <div class="english">I usually wake up at 6 o'clock.</div>
+                    <div class="burmese">များသောအားဖြင့် ၆ နာရီမှာ နိုးတယ်။</div>
+                    <button class="audio-btn" onclick="speakJapanese('たいてい ろくじに おきます')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 A:</div>
+                    <div class="japanese">そうなんですね。それから なにを しますか。</div>
+                    <div class="romaji">Sou nan desu ne. Sorekara nani o shimasu ka.</div>
+                    <div class="english">I see. What do you do after that?</div>
+                    <div class="burmese">ဟုတ်လား။ ပြီးရင်ဘာလုပ်လဲ။</div>
+                    <button class="audio-btn" onclick="speakJapanese('そうなんですね。それから なにを しますか')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 B:</div>
+                    <div class="japanese">はを みがいて、かおを あらいます。</div>
+                    <div class="romaji">Ha o migaite, kao o araimasu.</div>
+                    <div class="english">I brush my teeth and wash my face.</div>
+                    <div class="burmese">သွားတိုက်တယ်၊ မျက်နှာသစ်တယ်။</div>
+                    <button class="audio-btn" onclick="speakJapanese('はを みがいて、かおを あらいます')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 B:</div>
+                    <div class="japanese">それから あさごはんを たべます。</div>
+                    <div class="romaji">Sorekara asagohan o tabemasu.</div>
+                    <div class="english">Then I eat breakfast.</div>
+                    <div class="burmese">ပြီးရင် မနက်စာစားတယ်။</div>
+                    <button class="audio-btn" onclick="speakJapanese('それから あさごはんを たべます')"><i class="fas fa-volume-up"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dialogue 2: Going to Work/School -->
+        <div class="conversation-section">
+            <h2>🏫 Going to Work / School</h2>
+            <div class="dialogue-box">
+                <div class="dialogue-line">
+                    <div class="speaker">👤 A:</div>
+                    <div class="japanese">なんじに うちを でますか。</div>
+                    <div class="romaji">Nanji ni uchi o demasu ka.</div>
+                    <div class="english">What time do you leave home?</div>
+                    <div class="burmese">ဘယ်နာရီမှာ အိမ်ကထွက်လဲ။</div>
+                    <button class="audio-btn" onclick="speakJapanese('なんじに うちを でますか')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 B:</div>
+                    <div class="japanese">しちじはんごろ うちを でます。</div>
+                    <div class="romaji">Shichiji han goro uchi o demasu.</div>
+                    <div class="english">I leave home around 7:30.</div>
+                    <div class="burmese">၇ နာရီခွဲလောက်မှာ အိမ်ကထွက်တယ်။</div>
+                    <button class="audio-btn" onclick="speakJapanese('しちじはんごろ うちを でます')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 A:</div>
+                    <div class="japanese">どうやって がっこうに いきますか。</div>
+                    <div class="romaji">Douyatte gakkou ni ikimasu ka.</div>
+                    <div class="english">How do you go to school?</div>
+                    <div class="burmese">ကျောင်းကို ဘယ်လိုသွားလဲ။</div>
+                    <button class="audio-btn" onclick="speakJapanese('どうやって がっこうに いきますか')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 B:</div>
+                    <div class="japanese">じてんしゃで いきます。ときどき バスも つかいます。</div>
+                    <div class="romaji">Jitensha de ikimasu. Tokidoki basu mo tsukaimasu.</div>
+                    <div class="english">I go by bicycle. Sometimes I also take the bus.</div>
+                    <div class="burmese">စက်ဘီးနဲ့သွားတယ်။ တစ်ခါတစ်ရံ ဘတ်စ်လည်းစီးတယ်။</div>
+                    <button class="audio-btn" onclick="speakJapanese('じてんしゃで いきます。ときどき バスも つかいます')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 B:</div>
+                    <div class="japanese">がっこうまで さんじゅっぷん かかります。</div>
+                    <div class="romaji">Gakkou made sanjuppun kakarimasu.</div>
+                    <div class="english">It takes 30 minutes to school.</div>
+                    <div class="burmese">ကျောင်းကို ၃၀ မိနစ်ကြာတယ်။</div>
+                    <button class="audio-btn" onclick="speakJapanese('がっこうまで さんじゅっぷん かかります')"><i class="fas fa-volume-up"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dialogue 3: During the Day -->
+        <div class="conversation-section">
+            <h2>📚 During the Day</h2>
+            <div class="dialogue-box">
+                <div class="dialogue-line">
+                    <div class="speaker">👤 A:</div>
+                    <div class="japanese">ひるごはんは どこで たべますか。</div>
+                    <div class="romaji">Hirugohan wa doko de tabemasu ka.</div>
+                    <div class="english">Where do you eat lunch?</div>
+                    <div class="burmese">နေ့လည်စာ ဘယ်မှာစားလဲ။</div>
+                    <button class="audio-btn" onclick="speakJapanese('ひるごはんは どこで たべますか')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 B:</div>
+                    <div class="japanese">たいてい がっこうの しょくどうで たべます。</div>
+                    <div class="romaji">Taitei gakkou no shokudou de tabemasu.</div>
+                    <div class="english">I usually eat at the school cafeteria.</div>
+                    <div class="burmese">များသောအားဖြင့် ကျောင်းထမင်းစားခန်းမှာစားတယ်။</div>
+                    <button class="audio-btn" onclick="speakJapanese('たいてい がっこうの しょくどうで たべます')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 A:</div>
+                    <div class="japanese">なんじに じゅぎょうが おわりますか。</div>
+                    <div class="romaji">Nanji ni jugyou ga owarimasu ka.</div>
+                    <div class="english">What time do your classes end?</div>
+                    <div class="burmese">ဘယ်နာရီမှာ အတန်းပြီးလဲ။</div>
+                    <button class="audio-btn" onclick="speakJapanese('なんじに じゅぎょうが おわりますか')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 B:</div>
+                    <div class="japanese">ごご さんじに おわります。</div>
+                    <div class="romaji">Gogo sanji ni owarimasu.</div>
+                    <div class="english">They end at 3 PM.</div>
+                    <div class="burmese">ညနေ ၃ နာရီမှာပြီးတယ်။</div>
+                    <button class="audio-btn" onclick="speakJapanese('ごご さんじに おわります')"><i class="fas fa-volume-up"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dialogue 4: After School / Work -->
+        <div class="conversation-section">
+            <h2>🏠 After School / Work</h2>
+            <div class="dialogue-box">
+                <div class="dialogue-line">
+                    <div class="speaker">👤 A:</div>
+                    <div class="japanese">じゅぎょうの あと なにを しますか。</div>
+                    <div class="romaji">Jugyou no ato nani o shimasu ka.</div>
+                    <div class="english">What do you do after class?</div>
+                    <div class="burmese">အတန်းပြီးရင် ဘာလုပ်လဲ။</div>
+                    <button class="audio-btn" onclick="speakJapanese('じゅぎょうの あと なにを しますか')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 B:</div>
+                    <div class="japanese">ときどき ともだちと カフェに いきます。</div>
+                    <div class="romaji">Tokidoki tomodachi to kafe ni ikimasu.</div>
+                    <div class="english">Sometimes I go to a café with friends.</div>
+                    <div class="burmese">တစ်ခါတစ်ရံ သူငယ်ချင်းတွေနဲ့ ကာဖီဆိုင်သွားတယ်။</div>
+                    <button class="audio-btn" onclick="speakJapanese('ときどき ともだちと カフェに いきます')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 B:</div>
+                    <div class="japanese">たいてい うちに かえって、しゅくだいを します。</div>
+                    <div class="romaji">Taitei uchi ni kaette, shukudai o shimasu.</div>
+                    <div class="english">I usually go home and do homework.</div>
+                    <div class="burmese">များသောအားဖြင့် အိမ်ပြန်ပြီး အိမ်စာလုပ်တယ်။</div>
+                    <button class="audio-btn" onclick="speakJapanese('たいてい うちに かえって、しゅくだいを します')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 A:</div>
+                    <div class="japanese">なんじごろ うちに かえりますか。</div>
+                    <div class="romaji">Nanji goro uchi ni kaerimasu ka.</div>
+                    <div class="english">What time do you usually return home?</div>
+                    <div class="burmese">ဘယ်နာရီလောက်မှာ အိမ်ပြန်လဲ။</div>
+                    <button class="audio-btn" onclick="speakJapanese('なんじごろ うちに かえりますか')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 B:</div>
+                    <div class="japanese">ごご よじごろに かえります。</div>
+                    <div class="romaji">Gogo yoji goro ni kaerimasu.</div>
+                    <div class="english">I return home around 4 PM.</div>
+                    <div class="burmese">ညနေ ၄ နာရီလောက်မှာ အိမ်ပြန်တယ်။</div>
+                    <button class="audio-btn" onclick="speakJapanese('ごご よじごろに かえります')"><i class="fas fa-volume-up"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dialogue 5: Evening Activities -->
+        <div class="conversation-section">
+            <h2>🌙 Evening Activities</h2>
+            <div class="dialogue-box">
+                <div class="dialogue-line">
+                    <div class="speaker">👤 A:</div>
+                    <div class="japanese">よるは いつも なにを していますか。</div>
+                    <div class="romaji">Yoru wa itsumo nani o shite imasu ka.</div>
+                    <div class="english">What do you usually do in the evening?</div>
+                    <div class="burmese">ညဘက်မှာ ဘာလုပ်လေ့ရှိလဲ။</div>
+                    <button class="audio-btn" onclick="speakJapanese('よるは いつも なにを していますか')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 B:</div>
+                    <div class="japanese">ばんごはんを つくったり、テレビを みたりします。</div>
+                    <div class="romaji">Bangohan o tsukuttari, terebi o mitari shimasu.</div>
+                    <div class="english">I cook dinner and watch TV.</div>
+                    <div class="burmese">ညစာချက်တယ်၊ တီဗီကြည့်တယ်။</div>
+                    <button class="audio-btn" onclick="speakJapanese('ばんごはんを つくったり、テレビを みたりします')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 B:</div>
+                    <div class="japanese">ときどき ほんを よみます。</div>
+                    <div class="romaji">Tokidoki hon o yomimasu.</div>
+                    <div class="english">Sometimes I read a book.</div>
+                    <div class="burmese">တစ်ခါတစ်ရံ စာအုပ်ဖတ်တယ်။</div>
+                    <button class="audio-btn" onclick="speakJapanese('ときどき ほんを よみます')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 A:</div>
+                    <div class="japanese">なんじに ねますか。</div>
+                    <div class="romaji">Nanji ni nemasu ka.</div>
+                    <div class="english">What time do you sleep?</div>
+                    <div class="burmese">ဘယ်နာရီမှာ အိပ်လဲ။</div>
+                    <button class="audio-btn" onclick="speakJapanese('なんじに ねますか')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 B:</div>
+                    <div class="japanese">じゅういちじごろ ねます。</div>
+                    <div class="romaji">Juuichiji goro nemasu.</div>
+                    <div class="english">I sleep around 11 PM.</div>
+                    <div class="burmese">ည ၁၁ နာရီလောက်မှာ အိပ်တယ်။</div>
+                    <button class="audio-btn" onclick="speakJapanese('じゅういちじごろ ねます')"><i class="fas fa-volume-up"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dialogue 6: Weekend Routine -->
+        <div class="conversation-section">
+            <h2>🎉 Weekend Routine</h2>
+            <div class="dialogue-box">
+                <div class="dialogue-line">
+                    <div class="speaker">👤 A:</div>
+                    <div class="japanese">しゅうまつは たいてい なにを しますか。</div>
+                    <div class="romaji">Shuumatsu wa taitei nani o shimasu ka.</div>
+                    <div class="english">What do you usually do on weekends?</div>
+                    <div class="burmese">အားလပ်ရက်တွေမှာ ဘာလုပ်လေ့ရှိလဲ။</div>
+                    <button class="audio-btn" onclick="speakJapanese('しゅうまつは たいてい なにを しますか')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 B:</div>
+                    <div class="japanese">どようびは ともだちと あそびます。</div>
+                    <div class="romaji">Doyoubi wa tomodachi to asobimasu.</div>
+                    <div class="english">On Saturdays, I hang out with friends.</div>
+                    <div class="burmese">စနေနေ့တွေမှာ သူငယ်ချင်းတွေနဲ့ လည်တယ်။</div>
+                    <button class="audio-btn" onclick="speakJapanese('どようびは ともだちと あそびます')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 B:</div>
+                    <div class="japanese">にちようびは かぞくと いっしょに すごします。</div>
+                    <div class="romaji">Nichiyoubi wa kazoku to issho ni sugoshimasu.</div>
+                    <div class="english">On Sundays, I spend time with my family.</div>
+                    <div class="burmese">တနင်္ဂနွေနေ့မှာ မိသားစုနဲ့ အတူနေတယ်။</div>
+                    <button class="audio-btn" onclick="speakJapanese('にちようびは かぞくと いっしょに すごします')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 A:</div>
+                    <div class="japanese">いいですね。わたしも たまに りょこうに いきます。</div>
+                    <div class="romaji">Ii desu ne. Watashi mo tamani ryokou ni ikimasu.</div>
+                    <div class="english">That's nice. Sometimes I also go on trips.</div>
+                    <div class="burmese">ကောင်းပါတယ်။ ကျွန်တော်လည်း ခရီးသွားဖြစ်တယ်။</div>
+                    <button class="audio-btn" onclick="speakJapanese('いいですね。わたしも たまに りょこうに いきます')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 B:</div>
+                    <div class="japanese">そうですか。どこへ いきますか。</div>
+                    <div class="romaji">Sou desu ka. Doko e ikimasu ka.</div>
+                    <div class="english">Is that so? Where do you go?</div>
+                    <div class="burmese">ဟုတ်လား။ ဘယ်ကိုသွားလဲ။</div>
+                    <button class="audio-btn" onclick="speakJapanese('そうですか。どこへ いきますか')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 A:</div>
+                    <div class="japanese">やまや うみに いきます。とても たのしいです。</div>
+                    <div class="romaji">Yama ya umi ni ikimasu. Totemo tanoshii desu.</div>
+                    <div class="english">I go to mountains or the sea. It's very fun.</div>
+                    <div class="burmese">တောင် ဒါမှမဟုတ် ပင်လယ်ကိုသွားတယ်။ အရမ်းပျော်ဖို့ကောင်းတယ်။</div>
+                    <button class="audio-btn" onclick="speakJapanese('やまや うみに いきます。とても たのしいです')"><i class="fas fa-volume-up"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dialogue 7: Healthy Habits -->
+        <div class="conversation-section">
+            <h2>🏃‍♂️ Healthy Habits</h2>
+            <div class="dialogue-box">
+                <div class="dialogue-line">
+                    <div class="speaker">👤 A:</div>
+                    <div class="japanese">まいにち うんどうを しますか。</div>
+                    <div class="romaji">Mainichi undou o shimasu ka.</div>
+                    <div class="english">Do you exercise every day?</div>
+                    <div class="burmese">နေ့တိုင်း လေ့ကျင့်ခန်းလုပ်လား။</div>
+                    <button class="audio-btn" onclick="speakJapanese('まいにち うんどうを しますか')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 B:</div>
+                    <div class="japanese">はい、あさ さんぽを します。</div>
+                    <div class="romaji">Hai, asa sanpo o shimasu.</div>
+                    <div class="english">Yes, I take a walk in the morning.</div>
+                    <div class="burmese">ဟုတ်ကဲ့၊ မနက်ခင်းမှာ လမ်းလျှောက်တယ်။</div>
+                    <button class="audio-btn" onclick="speakJapanese('はい、あさ さんぽを します')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 A:</div>
+                    <div class="japanese">けんこうに いいですね。</div>
+                    <div class="romaji">Kenkou ni ii desu ne.</div>
+                    <div class="english">That's good for health.</div>
+                    <div class="burmese">ကျန်းမာရေးအတွက်ကောင်းတယ်နော်။</div>
+                    <button class="audio-btn" onclick="speakJapanese('けんこうに いいですね')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 B:</div>
+                    <div class="japanese">やさいも よく たべます。おすしも すきです。</div>
+                    <div class="romaji">Yasai mo yoku tabemasu. Osushi mo suki desu.</div>
+                    <div class="english">I also eat a lot of vegetables. I also like sushi.</div>
+                    <div class="burmese">ဟင်းသီးဟင်းရွက်လည်း များများစားတယ်။ ဆူရှီလည်းကြိုက်တယ်။</div>
+                    <button class="audio-btn" onclick="speakJapanese('やさいも よく たべます。おすしも すきです')"><i class="fas fa-volume-up"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Daily Routine Sample Schedule -->
+        <div class="routine-card">
+            <h3><i class="fas fa-clock"></i> Sample Daily Schedule</h3>
+            <div style="display: grid; grid-template-columns: auto 1fr; gap: 8px; margin-top: 10px;">
+                <span class="time-badge">6:00</span><span>起床 (起床) - Wake up</span>
+                <span class="time-badge">6:30</span><span>朝ごはん (あさごはん) - Breakfast</span>
+                <span class="time-badge">7:30</span><span>家を出る (いえをでる) - Leave home</span>
+                <span class="time-badge">8:00</span><span>学校/仕事 (がっこう/しごと) - School/Work</span>
+                <span class="time-badge">12:00</span><span>昼ごはん (ひるごはん) - Lunch</span>
+                <span class="time-badge">15:00</span><span>授業終了 (じゅぎょうしゅうりょう) - Class ends</span>
+                <span class="time-badge">16:00</span><span>帰宅 (きたく) - Return home</span>
+                <span class="time-badge">18:00</span><span>晩ごはん (ばんごはん) - Dinner</span>
+                <span class="time-badge">21:00</span><span>勉強/趣味 (べんきょう/しゅみ) - Study/Hobby</span>
+                <span class="time-badge">23:00</span><span>就寝 (しゅうしん) - Sleep</span>
+            </div>
+        </div>
+
+        <!-- Tips Box -->
+        <div class="tip-box">
+            <h4><i class="fas fa-lightbulb"></i> Cultural Tip</h4>
+            <p><strong>Daily Routine in Japan:</strong></p>
+            <ul style="margin-left: 20px; margin-top: 5px;">
+                <li>Many Japanese people start their day with a bath (お風呂) in the evening rather than morning.</li>
+                <li>Breakfast often includes rice, miso soup, and grilled fish.</li>
+                <li>Working hours can be long, with after-work gatherings (飲み会 - nomikai) being common.</li>
+                <li>Students often have club activities (部活 - bukatsu) after school.</li>
+            </ul>
+            <p style="margin-top: 10px;">日本の多くの人は、朝ではなく夜にお風呂に入ります。</p>
+        </div>
+
+        <!-- Vocabulary Section -->
+        <div class="vocab-box">
+            <h3>📚 Daily Routine Vocabulary</h3>
+            <div class="vocab-grid">
+                <div class="vocab-item"><span class="vocab-jp">おきる</span><span class="vocab-en">To wake up</span></div>
+                <div class="vocab-item"><span class="vocab-jp">あさごはん</span><span class="vocab-en">Breakfast</span></div>
+                <div class="vocab-item"><span class="vocab-jp">ひるごはん</span><span class="vocab-en">Lunch</span></div>
+                <div class="vocab-item"><span class="vocab-jp">ばんごはん</span><span class="vocab-en">Dinner</span></div>
+                <div class="vocab-item"><span class="vocab-jp">がっこう</span><span class="vocab-en">School</span></div>
+                <div class="vocab-item"><span class="vocab-jp">しごと</span><span class="vocab-en">Work</span></div>
+                <div class="vocab-item"><span class="vocab-jp">しゅくだい</span><span class="vocab-en">Homework</span></div>
+                <div class="vocab-item"><span class="vocab-jp">ねる</span><span class="vocab-en">To sleep</span></div>
+                <div class="vocab-item"><span class="vocab-jp">さんぽ</span><span class="vocab-en">Walk</span></div>
+                <div class="vocab-item"><span class="vocab-jp">うんどう</span><span class="vocab-en">Exercise</span></div>
+                <div class="vocab-item"><span class="vocab-jp">しゅうまつ</span><span class="vocab-en">Weekend</span></div>
+                <div class="vocab-item"><span class="vocab-jp">たいてい</span><span class="vocab-en">Usually</span></div>
+                <div class="vocab-item"><span class="vocab-jp">ときどき</span><span class="vocab-en">Sometimes</span></div>
+                <div class="vocab-item"><span class="vocab-jp">たまに</span><span class="vocab-en">Occasionally</span></div>
+            </div>
+        </div>
+
+        <!-- Time Expressions -->
+        <div class="vocab-box">
+            <h3>⏰ Time Expressions</h3>
+            <div class="vocab-grid">
+                <div class="vocab-item"><span class="vocab-jp">いつも</span><span class="vocab-en">Always</span></div>
+                <div class="vocab-item"><span class="vocab-jp">よく</span><span class="vocab-en">Often</span></div>
+                <div class="vocab-item"><span class="vocab-jp">ときどき</span><span class="vocab-en">Sometimes</span></div>
+                <div class="vocab-item"><span class="vocab-jp">あまり</span><span class="vocab-en">Not much</span></div>
+                <div class="vocab-item"><span class="vocab-jp">ぜんぜん</span><span class="vocab-en">Never</span></div>
+                <div class="vocab-item"><span class="vocab-jp">まいにち</span><span class="vocab-en">Every day</span></div>
+                <div class="vocab-item"><span class="vocab-jp">まいあさ</span><span class="vocab-en">Every morning</span></div>
+                <div class="vocab-item"><span class="vocab-jp">まいばん</span><span class="vocab-en">Every evening</span></div>
+            </div>
+        </div>
+
+        <!-- Practice Section -->
+        <div class="practice-section">
+            <h3>✏️ Practice Questions</h3>
+            
+            <div class="quiz-question">
+                <p>1. How do you ask "What time do you wake up?"</p>
+                <div class="quiz-options">
+                    <div class="quiz-option" onclick="checkAnswer(this, 'なんじに おきますか')">なんじに ねますか</div>
+                    <div class="quiz-option" onclick="checkAnswer(this, 'なんじに おきますか')">なんじに おきますか</div>
+                    <div class="quiz-option" onclick="checkAnswer(this, 'なんじに おきますか')">なんじに たべますか</div>
+                    <div class="quiz-option" onclick="checkAnswer(this, 'なんじに おきますか')">なんじに いきますか</div>
+                </div>
+            </div>
+            
+            <div class="quiz-question">
+                <p>2. What does "あさごはん" mean?</p>
+                <div class="quiz-options">
+                    <div class="quiz-option" onclick="checkAnswer(this, 'Breakfast')">Lunch</div>
+                    <div class="quiz-option" onclick="checkAnswer(this, 'Breakfast')">Dinner</div>
+                    <div class="quiz-option" onclick="checkAnswer(this, 'Breakfast')">Breakfast</div>
+                    <div class="quiz-option" onclick="checkAnswer(this, 'Breakfast')">Snack</div>
+                </div>
+            </div>
+            
+            <div class="quiz-question">
+                <p>3. How do you say "I usually go home and do homework"?</p>
+                <div class="quiz-options">
+                    <div class="quiz-option" onclick="checkAnswer(this, 'たいてい うちに かえって、しゅくだいを します')">ときどき がいしゃに いきます</div>
+                    <div class="quiz-option" onclick="checkAnswer(this, 'たいてい うちに かえって、しゅくだいを します')">たいてい うちに かえって、しゅくだいを します</div>
+                    <div class="quiz-option" onclick="checkAnswer(this, 'たいてい うちに かえって、しゅくだいを します')">まいにち がっこうに いきます</div>
+                    <div class="quiz-option" onclick="checkAnswer(this, 'たいてい うちに かえって、しゅくだいを します')">よる テレビを みます</div>
+                </div>
+            </div>
+            
+            <div class="quiz-question">
+                <p>4. What does "しゅうまつ" mean?</p>
+                <div class="quiz-options">
+                    <div class="quiz-option" onclick="checkAnswer(this, 'Weekend')">Weekday</div>
+                    <div class="quiz-option" onclick="checkAnswer(this, 'Weekend')">Morning</div>
+                    <div class="quiz-option" onclick="checkAnswer(this, 'Weekend')">Weekend</div>
+                    <div class="quiz-option" onclick="checkAnswer(this, 'Weekend')">Evening</div>
+                </div>
+            </div>
+            
+            <div class="quiz-question">
+                <p>5. How do you ask "What do you do on weekends?"</p>
+                <div class="quiz-options">
+                    <div class="quiz-option" onclick="checkAnswer(this, 'しゅうまつは なにを しますか')">しゅうまつは どこに いきますか</div>
+                    <div class="quiz-option" onclick="checkAnswer(this, 'しゅうまつは なにを しますか')">しゅうまつは なんじに おきますか</div>
+                    <div class="quiz-option" onclick="checkAnswer(this, 'しゅうまつは なにを しますか')">しゅうまつは なにを しますか</div>
+                    <div class="quiz-option" onclick="checkAnswer(this, 'しゅうまつは なにを しますか')">しゅうまつは だれと あいますか</div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <div class="footer-links">
+                <a href="../pages/privacy.html"><i class="fas fa-shield-alt"></i> Privacy Policy</a>
+                <a href="../pages/about.html"><i class="fas fa-info-circle"></i> About</a>
+                <a href="../pages/contact.html"><i class="fas fa-envelope"></i> Contact</a>
+                <a href="../pages/terms.html"><i class="fas fa-file-contract"></i> Terms & Policy</a>
+            </div>
+            <p><i class="fas fa-heart"></i> Next Gen Learning Myanmar - Daily Conversations</p>
+        </footer>
+    </div>
+
+    <script>
+        // Speech function for Japanese
+        function speakJapanese(text) {
+            if (!window.speechSynthesis) {
+                console.log("Browser doesn't support speech synthesis");
+                return;
+            }
+            window.speechSynthesis.cancel();
+            const utterance = new SpeechSynthesisUtterance(text);
+            utterance.lang = 'ja-JP';
+            utterance.rate = 0.8;
+            utterance.pitch = 1.0;
+            
+            function setVoice() {
+                const voices = window.speechSynthesis.getVoices();
+                const japaneseVoice = voices.find(voice => voice.lang === 'ja-JP' || voice.lang === 'ja');
+                if (japaneseVoice) utterance.voice = japaneseVoice;
+                window.speechSynthesis.speak(utterance);
+            }
+            
+            if (window.speechSynthesis.getVoices().length > 0) {
+                setVoice();
+            } else {
+                window.speechSynthesis.onvoiceschanged = setVoice;
+            }
+        }
+
+        // Quiz answer checker
+        function checkAnswer(element, correctAnswer) {
+            const options = element.parentElement.querySelectorAll('.quiz-option');
+            const isCorrect = element.innerText === correctAnswer;
+            
+            if (isCorrect) {
+                element.style.background = '#2ecc71';
+                element.style.color = 'white';
+                speakJapanese(correctAnswer);
+                setTimeout(() => {
+                    options.forEach(opt => {
+                        opt.style.background = '';
+                        opt.style.color = '';
+                    });
+                }, 1500);
+            } else {
+                element.style.background = '#e74c3c';
+                element.style.color = 'white';
+                setTimeout(() => {
+                    element.style.background = '';
+                    element.style.color = '';
+                }, 500);
+            }
+        }
+
+        // Back to Top Button
+        function addBackToTopButton() {
+            if (document.querySelector('.back-to-top-btn')) return;
+            const btn = document.createElement('button');
+            btn.className = 'back-to-top-btn';
+            btn.innerHTML = '<i class="fas fa-arrow-up"></i><span>TOP</span>';
+            document.body.appendChild(btn);
+            
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 300) {
+                    btn.classList.add('show');
+                } else {
+                    btn.classList.remove('show');
+                }
+            });
+            
+            btn.addEventListener('click', () => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        }
+        
+        addBackToTopButton();
+    </script>
+</body>
+</html>

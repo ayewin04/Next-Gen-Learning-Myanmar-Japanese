@@ -113,6 +113,40 @@ function createFlashcard(item, type) {
     return card;
 }
 
+// ========== BACK TO TOP FUNCTIONALITY ==========
+function addBackToTopButton() {
+    // Check if button already exists
+    if (document.querySelector('.back-to-top-btn')) return;
+    
+    const backToTopBtn = document.createElement('button');
+    backToTopBtn.className = 'back-to-top-btn';
+    backToTopBtn.innerHTML = '<i class="fas fa-arrow-up"></i><span>TOP</span>';
+    backToTopBtn.setAttribute('aria-label', 'Back to top');
+    document.body.appendChild(backToTopBtn);
+    
+    // Show/hide button based on scroll position
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 300) {
+            backToTopBtn.classList.add('show');
+        } else {
+            backToTopBtn.classList.remove('show');
+        }
+    });
+    
+    // Scroll to top when clicked
+    backToTopBtn.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+}
+
+// Call the function when DOM is loaded
+document.addEventListener('DOMContentLoaded', function() {
+    addBackToTopButton();
+});
+
 // Render both grids
 function renderKanaGrids() {
     const hiraganaGrid = document.getElementById('hiraganaGrid');
@@ -144,9 +178,18 @@ function setupLevelCards() {
     });
 }
 
+    // ========== DAILY CONVERSATIONS CARD NAVIGATION ==========
+    const conversationCard = document.querySelector('.conversation-card');
+    if (conversationCard) {
+        conversationCard.addEventListener('click', () => {
+            window.location.href = 'conversations/daily-conversations.html';
+        });
+    }
+
 // Initialize everything when DOM loads
 document.addEventListener('DOMContentLoaded', () => {
     renderKanaGrids();
     setupLevelCards();
+    addBackToTopButton();
     console.log('Next Gen Learning Myanmar - Ready! Click any card to hear Japanese pronunciation and see translation.');
 });

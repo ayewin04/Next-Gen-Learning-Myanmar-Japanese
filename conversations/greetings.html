@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Greetings - Next Gen Learning Myanmar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Myanmar:wght@400;500;700&family=Noto+Sans+JP:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/conversations.css">
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <a href="daily-conversations.html" class="back-btn">
+                <i class="fas fa-arrow-left"></i> All Conversations
+            </a>
+            <h1>
+                <i class="fas fa-hand-peace"></i>
+                Greetings
+            </h1>
+            <p>あいさつ - Learn how to greet people in Japanese</p>
+        </header>
+
+        <!-- Dialogue 1: Morning Greeting -->
+        <div class="conversation-section">
+            <h2>🌅 Morning Greeting</h2>
+            <div class="dialogue-box">
+                <div class="dialogue-line">
+                    <div class="speaker">👤 A:</div>
+                    <div class="japanese">おはようございます。</div>
+                    <div class="romaji">Ohayou gozaimasu.</div>
+                    <div class="english">Good morning.</div>
+                    <div class="burmese">မင်္ဂလာနံနက်ခင်းပါ။</div>
+                    <button class="audio-btn" onclick="speakJapanese('おはようございます')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 B:</div>
+                    <div class="japanese">おはようございます。よくおやすみましたか？</div>
+                    <div class="romaji">Ohayou gozaimasu. Yoku oyasumi mashita ka?</div>
+                    <div class="english">Good morning. Did you sleep well?</div>
+                    <div class="burmese">မင်္ဂလာနံနက်ခင်းပါ။ ကောင်းကောင်းအိပ်ပျော်သလား။</div>
+                    <button class="audio-btn" onclick="speakJapanese('おはようございます。よくおやすみましたか？')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 A:</div>
+                    <div class="japanese">はい、おかげさまで。あなたは？</div>
+                    <div class="romaji">Hai, okagesamade. Anata wa?</div>
+                    <div class="english">Yes, thanks to you. And you?</div>
+                    <div class="burmese">ဟုတ်ကဲ့၊ ကျေးဇူးပါ။ မင်းကရော။</div>
+                    <button class="audio-btn" onclick="speakJapanese('はい、おかげさまで。あなたは？')"><i class="fas fa-volume-up"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dialogue 2: Afternoon Greeting -->
+        <div class="conversation-section">
+            <h2>☀️ Afternoon Greeting</h2>
+            <div class="dialogue-box">
+                <div class="dialogue-line">
+                    <div class="speaker">👤 A:</div>
+                    <div class="japanese">こんにちは。</div>
+                    <div class="romaji">Konnichiwa.</div>
+                    <div class="english">Hello / Good afternoon.</div>
+                    <div class="burmese">မင်္ဂလာပါ။</div>
+                    <button class="audio-btn" onclick="speakJapanese('こんにちは')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 B:</div>
+                    <div class="japanese">こんにちは。おげんきですか？</div>
+                    <div class="romaji">Konnichiwa. Ogenki desu ka?</div>
+                    <div class="english">Hello. How are you?</div>
+                    <div class="burmese">မင်္ဂလာပါ။ နေကောင်းလား။</div>
+                    <button class="audio-btn" onclick="speakJapanese('こんにちは。おげんきですか？')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 A:</div>
+                    <div class="japanese">はい、げんきです。ありがとうございます。</div>
+                    <div class="romaji">Hai, genki desu. Arigatou gozaimasu.</div>
+                    <div class="english">Yes, I'm fine. Thank you.</div>
+                    <div class="burmese">ဟုတ်ကဲ့၊ နေကောင်းပါတယ်။ ကျေးဇူးတင်ပါတယ်။</div>
+                    <button class="audio-btn" onclick="speakJapanese('はい、げんきです。ありがとうございます')"><i class="fas fa-volume-up"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dialogue 3: Evening Greeting -->
+        <div class="conversation-section">
+            <h2>🌙 Evening Greeting</h2>
+            <div class="dialogue-box">
+                <div class="dialogue-line">
+                    <div class="speaker">👤 A:</div>
+                    <div class="japanese">こんばんは。</div>
+                    <div class="romaji">Konbanwa.</div>
+                    <div class="english">Good evening.</div>
+                    <div class="burmese">မင်္ဂလာညနေခင်းပါ။</div>
+                    <button class="audio-btn" onclick="speakJapanese('こんばんは')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 B:</div>
+                    <div class="japanese">こんばんは。おつかれさまです。</div>
+                    <div class="romaji">Konbanwa. Otsukaresama desu.</div>
+                    <div class="english">Good evening. Thank you for your hard work.</div>
+                    <div class="burmese">မင်္ဂလာညနေခင်းပါ။ ပင်ပန်းတာနားပါ။</div>
+                    <button class="audio-btn" onclick="speakJapanese('こんばんは。おつかれさまです')"><i class="fas fa-volume-up"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dialogue 4: Leaving and Returning -->
+        <div class="conversation-section">
+            <h2>🚪 Leaving & Returning Home</h2>
+            <div class="dialogue-box">
+                <div class="dialogue-line">
+                    <div class="speaker">👤 A:</div>
+                    <div class="japanese">いってきます。</div>
+                    <div class="romaji">Ittekimasu.</div>
+                    <div class="english">I'm leaving (home).</div>
+                    <div class="burmese">သွားခဲ့ပါမယ်။</div>
+                    <button class="audio-btn" onclick="speakJapanese('いってきます')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 B:</div>
+                    <div class="japanese">いってらっしゃい。</div>
+                    <div class="romaji">Itterasshai.</div>
+                    <div class="english">Have a good day (response).</div>
+                    <div class="burmese">သွားလာပါ။</div>
+                    <button class="audio-btn" onclick="speakJapanese('いってらっしゃい')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 A:</div>
+                    <div class="japanese">ただいま。</div>
+                    <div class="romaji">Tadaima.</div>
+                    <div class="english">I'm home.</div>
+                    <div class="burmese">အိမ်ပြန်ရောက်ပြီ။</div>
+                    <button class="audio-btn" onclick="speakJapanese('ただいま')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 B:</div>
+                    <div class="japanese">おかえりなさい。</div>
+                    <div class="romaji">Okaerinasai.</div>
+                    <div class="english">Welcome home.</div>
+                    <div class="burmese">အိမ်ပြန်ကြိုဆိုပါတယ်။</div>
+                    <button class="audio-btn" onclick="speakJapanese('おかえりなさい')"><i class="fas fa-volume-up"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Vocabulary Section -->
+        <div class="vocab-box">
+            <h3>📚 Key Vocabulary</h3>
+            <div class="vocab-grid">
+                <div class="vocab-item"><span class="vocab-jp">おはようございます</span><span class="vocab-en">Good morning</span></div>
+                <div class="vocab-item"><span class="vocab-jp">こんにちは</span><span class="vocab-en">Hello/Good afternoon</span></div>
+                <div class="vocab-item"><span class="vocab-jp">こんばんは</span><span class="vocab-en">Good evening</span></div>
+                <div class="vocab-item"><span class="vocab-jp">おやすみなさい</span><span class="vocab-en">Good night</span></div>
+                <div class="vocab-item"><span class="vocab-jp">おげんきですか</span><span class="vocab-en">How are you?</span></div>
+                <div class="vocab-item"><span class="vocab-jp">げんきです</span><span class="vocab-en">I'm fine</span></div>
+                <div class="vocab-item"><span class="vocab-jp">いってきます</span><span class="vocab-en">I'm leaving</span></div>
+                <div class="vocab-item"><span class="vocab-jp">ただいま</span><span class="vocab-en">I'm home</span></div>
+                <div class="vocab-item"><span class="vocab-jp">おかえり</span><span class="vocab-en">Welcome home</span></div>
+                <div class="vocab-item"><span class="vocab-jp">おつかれさま</span><span class="vocab-en">Good work / Thank you</span></div>
+            </div>
+        </div>
+
+        <!-- Practice Section -->
+        <div class="practice-section">
+            <h3>✏️ Practice Questions</h3>
+            <div class="quiz-question">
+                <p>1. How do you say "Good morning" in Japanese?</p>
+                <div class="quiz-options">
+                    <div class="quiz-option" onclick="checkAnswer(this, 'おはようございます')">こんにちは</div>
+                    <div class="quiz-option" onclick="checkAnswer(this, 'おはようございます')">おはようございます</div>
+                    <div class="quiz-option" onclick="checkAnswer(this, 'おはようございます')">こんばんは</div>
+                    <div class="quiz-option" onclick="checkAnswer(this, 'おはようございます')">おやすみなさい</div>
+                </div>
+            </div>
+            <div class="quiz-question">
+                <p>2. What do you say when leaving home?</p>
+                <div class="quiz-options">
+                    <div class="quiz-option" onclick="checkAnswer(this, 'いってきます')">ただいま</div>
+                    <div class="quiz-option" onclick="checkAnswer(this, 'いってきます')">いってきます</div>
+                    <div class="quiz-option" onclick="checkAnswer(this, 'いってきます')">おかえり</div>
+                    <div class="quiz-option" onclick="checkAnswer(this, 'いってきます')">こんにちは</div>
+                </div>
+            </div>
+            <div class="quiz-question">
+                <p>3. What do you say when you come back home?</p>
+                <div class="quiz-options">
+                    <div class="quiz-option" onclick="checkAnswer(this, 'ただいま')">いってきます</div>
+                    <div class="quiz-option" onclick="checkAnswer(this, 'ただいま')">おやすみ</div>
+                    <div class="quiz-option" onclick="checkAnswer(this, 'ただいま')">ただいま</div>
+                    <div class="quiz-option" onclick="checkAnswer(this, 'ただいま')">さようなら</div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <div class="footer-links">
+                <a href="../pages/privacy.html"><i class="fas fa-shield-alt"></i> Privacy Policy</a>
+                <a href="../pages/about.html"><i class="fas fa-info-circle"></i> About</a>
+                <a href="../pages/contact.html"><i class="fas fa-envelope"></i> Contact</a>
+                <a href="../pages/terms.html"><i class="fas fa-file-contract"></i> Terms & Policy</a>
+            </div>
+            <p><i class="fas fa-heart"></i> Next Gen Learning Myanmar - Daily Conversations</p>
+        </footer>
+    </div>
+
+    <script>
+        // Speech function for Japanese
+        function speakJapanese(text) {
+            if (!window.speechSynthesis) return;
+            window.speechSynthesis.cancel();
+            const utterance = new SpeechSynthesisUtterance(text);
+            utterance.lang = 'ja-JP';
+            utterance.rate = 0.8;
+            
+            function setVoice() {
+                const voices = window.speechSynthesis.getVoices();
+                const jpVoice = voices.find(v => v.lang === 'ja-JP' || v.lang === 'ja');
+                if (jpVoice) utterance.voice = jpVoice;
+                window.speechSynthesis.speak(utterance);
+            }
+            
+            if (window.speechSynthesis.getVoices().length) setVoice();
+            else window.speechSynthesis.onvoiceschanged = setVoice;
+        }
+
+        // Quiz answer checker
+        function checkAnswer(element, correctAnswer) {
+            const options = element.parentElement.querySelectorAll('.quiz-option');
+            const isCorrect = element.innerText === correctAnswer;
+            
+            if (isCorrect) {
+                element.style.background = '#2ecc71';
+                element.style.color = 'white';
+                speakJapanese(correctAnswer);
+                setTimeout(() => {
+                    options.forEach(opt => {
+                        opt.style.background = '';
+                        opt.style.color = '';
+                    });
+                }, 1500);
+            } else {
+                element.style.background = '#e74c3c';
+                element.style.color = 'white';
+                setTimeout(() => {
+                    element.style.background = '';
+                    element.style.color = '';
+                }, 500);
+            }
+        }
+
+        // Back to Top Button
+        function addBackToTopButton() {
+            if (document.querySelector('.back-to-top-btn')) return;
+            const btn = document.createElement('button');
+            btn.className = 'back-to-top-btn';
+            btn.innerHTML = '<i class="fas fa-arrow-up"></i><span>TOP</span>';
+            document.body.appendChild(btn);
+            window.addEventListener('scroll', () => btn.classList.toggle('show', window.scrollY > 300));
+            btn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+        }
+        addBackToTopButton();
+    </script>
+</body>
+</html>

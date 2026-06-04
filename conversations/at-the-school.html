@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>At the School - Next Gen Learning Myanmar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Myanmar:wght@400;500;700&family=Noto+Sans+JP:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/conversations.css">
+    <style>
+        .school-icon { font-size: 1.2rem; margin-right: 5px; color: #e67e22; }
+        .tip-box { background: #e8f8f5; border-left: 4px solid #1abc9c; padding: 1rem; border-radius: 10px; margin-top: 1rem; }
+        .class-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 8px; margin-top: 10px; }
+        .class-item { background: white; padding: 5px 10px; border-radius: 20px; font-size: 0.8rem; }
+    </style>
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <a href="daily-conversations.html" class="back-btn">
+                <i class="fas fa-arrow-left"></i> All Conversations
+            </a>
+            <h1>
+                <i class="fas fa-chalkboard-user"></i>
+                At the School
+            </h1>
+            <p>がっこうで - Learn how to talk about school activities and parent-teacher meetings in Japanese</p>
+        </header>
+
+        <!-- Dialogue 1: Parent-Teacher Meeting -->
+        <div class="conversation-section">
+            <h2>👪 Parent-Teacher Meeting</h2>
+            <div class="dialogue-box">
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Teacher:</div>
+                    <div class="japanese">おあいできて うれしいです。おこさんは いつも がんばっています。</div>
+                    <div class="romaji">Oaidekite ureshii desu. Okosan wa itsumo ganbatte imasu.</div>
+                    <div class="english">Nice to meet you. Your child always does their best.</div>
+                    <div class="burmese">တွေ့ရတာဝမ်းသာပါတယ်။ မင်းရဲ့ကလေးက အမြဲကြိုးစားတယ်။</div>
+                    <button class="audio-btn" onclick="speakJapanese('おあいできて うれしいです。おこさんは いつも がんばっています')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Parent:</div>
+                    <div class="japanese">ありがとうございます。がっこうでは どんなふうに すごしていますか。</div>
+                    <div class="romaji">Arigatou gozaimasu. Gakkou de wa donna fuu ni sugoshite imasu ka.</div>
+                    <div class="english">Thank you. How does he spend his time at school?</div>
+                    <div class="burmese">ကျေးဇူးပါ။ ကျောင်းမှာ ဘယ်လိုနေထိုင်လဲ။</div>
+                    <button class="audio-btn" onclick="speakJapanese('ありがとうございます。がっこうでは どんなふうに すごしていますか')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Teacher:</div>
+                    <div class="japanese">ともだちと なかよく あそんでいます。べんきょうも よく できます。</div>
+                    <div class="romaji">Tomodachi to nakayoku asonde imasu. Benkyou mo yoku dekimasu.</div>
+                    <div class="english">He plays well with friends. He also studies well.</div>
+                    <div class="burmese">သူငယ်ချင်းတွေနဲ့ လိုက်လျောညီထွေကစားတယ်။ စာလည်းကောင်းတယ်။</div>
+                    <button class="audio-btn" onclick="speakJapanese('ともだちと なかよく あそんでいます。べんきょうも よく できます')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Parent:</div>
+                    <div class="japanese">それは よかったです。なにか しんぱいすることは ありますか。</div>
+                    <div class="romaji">Sore wa yokatta desu. Nanika shinpai suru koto wa arimasu ka.</div>
+                    <div class="english">That's good. Is there anything to worry about?</div>
+                    <div class="burmese">ကောင်းပါတယ်။ စိုးရိမ်စရာတစ်ခုခုရှိလား။</div>
+                    <button class="audio-btn" onclick="speakJapanese('それは よかったです。なにか しんぱいすることは ありますか')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Teacher:</div>
+                    <div class="japanese">いいえ、ないです。このまま げんきで いて ください。</div>
+                    <div class="romaji">Iie, nai desu. Kono mama genki de ite kudasai.</div>
+                    <div class="english">No, nothing. Please stay healthy.</div>
+                    <div class="burmese">မရှိပါဘူး။ ဒီအတိုင်းကျန်းမာနေပါ။</div>
+                    <button class="audio-btn" onclick="speakJapanese('いいえ、ないです。このまま げんきで いて ください')"><i class="fas fa-volume-up"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dialogue 2: Classroom Activities -->
+        <div class="conversation-section">
+            <h2>📝 Classroom Activities</h2>
+            <div class="dialogue-box">
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Teacher:</div>
+                    <div class="japanese">きょうは グループで さくぶんを かきます。</div>
+                    <div class="romaji">Kyou wa guruupu de sakubun o kakimasu.</div>
+                    <div class="english">Today, we'll write essays in groups.</div>
+                    <div class="burmese">ဒီနေ့ အဖွဲ့လိုက်စာစီစာကုံးရေးမယ်။</div>
+                    <button class="audio-btn" onclick="speakJapanese('きょうは グループで さくぶんを かきます')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Student:</div>
+                    <div class="japanese">テーマは なんですか。</div>
+                    <div class="romaji">Teema wa nan desu ka.</div>
+                    <div class="english">What's the topic?</div>
+                    <div class="burmese">ခေါင်းစဉ်ကဘာလဲ။</div>
+                    <button class="audio-btn" onclick="speakJapanese('テーマは なんですか')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Teacher:</div>
+                    <div class="japanese">「わたしの ゆめ」です。じぶんの ゆめを かいて ください。</div>
+                    <div class="romaji">"Watashi no yume" desu. Jibun no yume o kaite kudasai.</div>
+                    <div class="english">"My Dream." Please write about your own dream.</div>
+                    <div class="burmese">"ကျွန်တော့်အိပ်မက်" ပါ။ ကိုယ့်အိပ်မက်ကိုရေးပါ။</div>
+                    <button class="audio-btn" onclick="speakJapanese('「わたしの ゆめ」です。じぶんの ゆめを かいて ください')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Student:</div>
+                    <div class="japanese">ぼくの ゆめは せんせいに なることです。</div>
+                    <div class="romaji">Boku no yume wa sensei ni naru koto desu.</div>
+                    <div class="english">My dream is to become a teacher.</div>
+                    <div class="burmese">ကျွန်တော့်အိပ်မက်က ဆရာဖြစ်ဖို့ပါ။</div>
+                    <button class="audio-btn" onclick="speakJapanese('ぼくの ゆめは せんせいに なることです')"><i class="fas fa-volume-up"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dialogue 3: Lunch Time -->
+        <div class="conversation-section">
+            <h2>🍱 Lunch Time</h2>
+            <div class="dialogue-box">
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Student A:</div>
+                    <div class="japanese">きょうの きゅうしょくは なに？</div>
+                    <div class="romaji">Kyou no kyuushoku wa nani?</div>
+                    <div class="english">What's today's school lunch?</div>
+                    <div class="burmese">ဒီနေ့ကျောင်းနေ့လည်စာကဘာလဲ။</div>
+                    <button class="audio-btn" onclick="speakJapanese('きょうの きゅうしょくは なに')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Student B:</div>
+                    <div class="japanese">カレーライスと サラダだよ。</div>
+                    <div class="romaji">Karee raisu to sarada da yo.</div>
+                    <div class="english">Curry rice and salad.</div>
+                    <div class="burmese">ဟင်းခေါက်ဆွဲနဲ့သုပ်ပါ။</div>
+                    <button class="audio-btn" onclick="speakJapanese('カレーライスと サラダだよ')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Student A:</div>
+                    <div class="japanese">やった！カレーは だいすき。</div>
+                    <div class="romaji">Yatta! Karee wa daisuki.</div>
+                    <div class="english">Great! I love curry.</div>
+                    <div class="burmese">အောင်းတယ်။ ဟင်းခေါက်ဆွဲအရမ်းကြိုက်တယ်။</div>
+                    <button class="audio-btn" onclick="speakJapanese('やった！カレーは だいすき')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Student B:</div>
+                    <div class="japanese">じゃあ、いっしょに たべよう。</div>
+                    <div class="romaji">Jaa, issho ni tabeyou.</div>
+                    <div class="english">Then let's eat together.</div>
+                    <div class="burmese">ဒါဆိုအတူတူစားကြရအောင်။</div>
+                    <button class="audio-btn" onclick="speakJapanese('じゃあ、いっしょに たべよう')"><i class="fas fa-volume-up"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dialogue 4: Sports Day -->
+        <div class="conversation-section">
+            <h2>🏃 Sports Day (Undoukai)</h2>
+            <div class="dialogue-box">
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Parent:</div>
+                    <div class="japanese">うんどうかいの よていは いつですか。</div>
+                    <div class="romaji">Undoukai no yotei wa itsu desu ka.</div>
+                    <div class="english">When is Sports Day scheduled?</div>
+                    <div class="burmese">အားကစားနေ့အစီအစဉ်ကဘယ်တော့လဲ။</div>
+                    <button class="audio-btn" onclick="speakJapanese('うんどうかいの よていは いつですか')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Teacher:</div>
+                    <div class="japanese">らいしゅうの どようびです。あめなら にちようびに なります。</div>
+                    <div class="romaji">Raishuu no doyoubi desu. Ame nara nichiyoubi ni narimasu.</div>
+                    <div class="english">Next Saturday. If it rains, it will be Sunday.</div>
+                    <div class="burmese">လာမယ့်စနေနေ့ပါ။ မိုးရွာရင် တနင်္ဂနွေနေ့ဖြစ်မယ်။</div>
+                    <button class="audio-btn" onclick="speakJapanese('らいしゅうの どようびです。あめなら にちようびに なります')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Parent:</div>
+                    <div class="japanese">こどもは なにに さんかしますか。</div>
+                    <div class="romaji">Kodomo wa nani ni sanka shimasu ka.</div>
+                    <div class="english">What is your child participating in?</div>
+                    <div class="burmese">ကလေးက ဘာမှာပါဝင်မလဲ။</div>
+                    <button class="audio-btn" onclick="speakJapanese('こどもは なにに さんかしますか')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Teacher:</div>
+                    <div class="japanese">１００メートルそうきょうと つなひきです。</div>
+                    <div class="romaji">Hyaku meetoru soukyou to tsunahiki desu.</div>
+                    <div class="english">100-meter sprint and tug of war.</div>
+                    <div class="burmese">မီတာ ၁၀၀ အပြေးနဲ့ ကြိုးဆွဲပါ။</div>
+                    <button class="audio-btn" onclick="speakJapanese('１００メートルそうきょうと つなひきです')"><i class="fas fa-volume-up"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dialogue 5: Cultural Festival -->
+        <div class="conversation-section">
+            <h2>🎭 Cultural Festival (Bunkasai)</h2>
+            <div class="dialogue-box">
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Student:</div>
+                    <div class="japanese">ぶんかさいに なにを しますか。</div>
+                    <div class="romaji">Bunkasai ni nani o shimasu ka.</div>
+                    <div class="english">What will we do for the cultural festival?</div>
+                    <div class="burmese">ယဉ်ကျေးမှုပွဲအတွက် ဘာလုပ်မလဲ။</div>
+                    <button class="audio-btn" onclick="speakJapanese('ぶんかさいに なにを しますか')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Teacher:</div>
+                    <div class="japanese">クラスで げきを します。</div>
+                    <div class="romaji">Kurasu de geki o shimasu.</div>
+                    <div class="english">We'll do a class play.</div>
+                    <div class="burmese">အတန်းလိုက်ပြဇာတ်လုပ်မယ်။</div>
+                    <button class="audio-btn" onclick="speakJapanese('クラスで げきを します')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Student:</div>
+                    <div class="japanese">どんな おはなしですか。</div>
+                    <div class="romaji">Donna ohanashi desu ka.</div>
+                    <div class="english">What kind of story?</div>
+                    <div class="burmese">ဘယ်လိုဇာတ်လမ်းမျိုးလဲ။</div>
+                    <button class="audio-btn" onclick="speakJapanese('どんな おはなしですか')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Teacher:</div>
+                    <div class="japanese">「ももたろう」です。みんなで やくわりを きめましょう。</div>
+                    <div class="romaji">"Momotarou" desu. Minna de yakuwari o kimemashou.</div>
+                    <div class="english">"Momotarou" (Peach Boy). Let's all decide roles.</div>
+                    <div class="burmese">"မိုမိုတာရို" ပါ။ အားလုံးအခန်းကဏ္ဍတွေဆုံးဖြတ်ကြရအောင်။</div>
+                    <button class="audio-btn" onclick="speakJapanese('「ももたろう」です。みんなで やくわりを きめましょう')"><i class="fas fa-volume-up"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dialogue 6: Homework Help -->
+        <div class="conversation-section">
+            <h2>📚 Homework Help</h2>
+            <div class="dialogue-box">
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Student:</div>
+                    <div class="japanese">せんせい、この もんだいが わかりません。</div>
+                    <div class="romaji">Sensei, kono mondai ga wakarimasen.</div>
+                    <div class="english">Teacher, I don't understand this problem.</div>
+                    <div class="burmese">ဆရာ၊ ဒီပုစ္ဆာနားမလည်ဘူး။</div>
+                    <button class="audio-btn" onclick="speakJapanese('せんせい、この もんだいが わかりません')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Teacher:</div>
+                    <div class="japanese">どこが わからないですか。</div>
+                    <div class="romaji">Doko ga wakaranai desu ka.</div>
+                    <div class="english">Which part don't you understand?</div>
+                    <div class="burmese">ဘယ်အပိုင်းနားမလည်တာလဲ။</div>
+                    <button class="audio-btn" onclick="speakJapanese('どこが わからないですか')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Student:</div>
+                    <div class="japanese">この ぶんぽうの ルールが わかりません。</div>
+                    <div class="romaji">Kono bunpou no ruuru ga wakarimasen.</div>
+                    <div class="english">I don't understand this grammar rule.</div>
+                    <div class="burmese">ဒီသဒ္ဒါစည်းမျဉ်းကိုနားမလည်ဘူး။</div>
+                    <button class="audio-btn" onclick="speakJapanese('この ぶんぽうの ルールが わかりません')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Teacher:</div>
+                    <div class="japanese">じゃあ、いっしょに やりましょう。こうやって ときます。</div>
+                    <div class="romaji">Jaa, issho ni yarimashou. Kou yatte tokimasu.</div>
+                    <div class="english">Then let's do it together. We solve it like this.</div>
+                    <div class="burmese">ဒါဆိုအတူတူလုပ်ကြရအောင်။ ဒီလိုဖြေရှင်းတယ်။</div>
+                    <button class="audio-btn" onclick="speakJapanese('じゃあ、いっしょに やりましょう。こうやって ときます')"><i class="fas fa-volume-up"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dialogue 7: School Trip -->
+        <div class="conversation-section">
+            <h2>🚌 School Trip</h2>
+            <div class="dialogue-box">
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Student:</div>
+                    <div class="japanese">しゅうがくりょこうは どこに いくの？</div>
+                    <div class="romaji">Shuugakuryokou wa doko ni iku no?</div>
+                    <div class="english">Where are we going on the school trip?</div>
+                    <div class="burmese">ကျောင်းခရီးစဉ်ကို ဘယ်ကိုသွားမလဲ။</div>
+                    <button class="audio-btn" onclick="speakJapanese('しゅうがくりょこうは どこに いくの')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Teacher:</div>
+                    <div class="japanese">きょうとと おおさかです。</div>
+                    <div class="romaji">Kyouto to Oosaka desu.</div>
+                    <div class="english">Kyoto and Osaka.</div>
+                    <div class="burmese">ကျိုတိုနဲ့ အိုဆာကာပါ။</div>
+                    <button class="audio-btn" onclick="speakJapanese('きょうとと おおさかです')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Student:</div>
+                    <div class="japanese">たのしみ！なにを もっていけば いいですか。</div>
+                    <div class="romaji">Tanoshimi! Nani o motte ikeba ii desu ka.</div>
+                    <div class="english">I'm looking forward to it! What should I bring?</div>
+                    <div class="burmese">မျှော်လင့်နေတယ်။ ဘာယူသွားရမလဲ။</div>
+                    <button class="audio-btn" onclick="speakJapanese('たのしみ！なにを もっていけば いいですか')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Teacher:</div>
+                    <div class="japanese">おべんとうと すいとう、それから あめが ふったときの かさです。</div>
+                    <div class="romaji">Obentou to suitou, sorekara ame ga futta toki no kasa desu.</div>
+                    <div class="english">Lunchbox, water bottle, and an umbrella in case of rain.</div>
+                    <div class="burmese">ထမင်းဘူး၊ ရေဘူးနဲ့ မိုးရွာရင်ထီးပါ။</div>
+                    <button class="audio-btn" onclick="speakJapanese('おべんとうと すいとう、それから あめが ふったときの かさです')"><i class="fas fa-volume-up"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <!-- School Subjects -->
+        <div class="tip-box">
+            <h3><i class="fas fa-book-open school-icon"></i> School Subjects</h3>
+            <div class="class-list">
+                <div class="class-item">🇯🇵 こくご - Japanese</div>
+                <div class="class-item">🔢 さんすう - Math</div>
+                <div class="class-item">🌏 しゃかい - Social Studies</div>
+                <div class="class-item">🔬 りか - Science</div>
+                <div class="class-item">🎨 びじゅつ - Art</div>
+                <div class="class-item">🎵 おんがく - Music</div>
+                <div class="class-item">🏃 たいいく - PE</div>
+                <div class="class-item">🇬🇧 えいご - English</div>
+            </div>
+        </div>
+
+        <div class="tip-box">
+            <h4><i class="fas fa-lightbulb"></i> Japanese School Tips</h4>
+            <ul style="margin-left: 20px; margin-top: 5px;">
+                <li><strong>School year (がっねん):</strong> April to March. Summer break: July-August.</li>
+                <li><strong>School uniform (せいふく):</strong> Required in most middle and high schools.</li>
+                <li><strong>Cleaning time (そうじじかん):</strong> Students clean the school themselves.</li>
+                <li><strong>Club activities (ぶかつ):</strong> Very important. Many students join clubs.</li>
+                <li><strong>PTA meetings:</strong> Parent-teacher associations are active.</li>
+                <li><strong>School lunch (きゅうしょく):</strong> Provided in elementary and middle schools.</li>
+            </ul>
+        </div>
+
+        <footer>
+            <div class="footer-links">
+                <a href="../pages/privacy.html"><i class="fas fa-shield-alt"></i> Privacy Policy</a>
+                <a href="../pages/about.html"><i class="fas fa-info-circle"></i> About</a>
+                <a href="../pages/contact.html"><i class="fas fa-envelope"></i> Contact</a>
+                <a href="../pages/terms.html"><i class="fas fa-file-contract"></i> Terms & Policy</a>
+            </div>
+            <p><i class="fas fa-heart"></i> Next Gen Learning Myanmar - Daily Conversations</p>
+        </footer>
+    </div>
+    <script>
+        function speakJapanese(text) {
+            if (!window.speechSynthesis) return;
+            window.speechSynthesis.cancel();
+            const utterance = new SpeechSynthesisUtterance(text);
+            utterance.lang = 'ja-JP';
+            utterance.rate = 0.8;
+            function setVoice() {
+                const voices = window.speechSynthesis.getVoices();
+                const jpVoice = voices.find(v => v.lang === 'ja-JP' || v.lang === 'ja');
+                if (jpVoice) utterance.voice = jpVoice;
+                window.speechSynthesis.speak(utterance);
+            }
+            if (window.speechSynthesis.getVoices().length) setVoice();
+            else window.speechSynthesis.onvoiceschanged = setVoice;
+        }
+        function addBackToTopButton() {
+            if (document.querySelector('.back-to-top-btn')) return;
+            const btn = document.createElement('button');
+            btn.className = 'back-to-top-btn';
+            btn.innerHTML = '<i class="fas fa-arrow-up"></i><span>TOP</span>';
+            document.body.appendChild(btn);
+            window.addEventListener('scroll', () => btn.classList.toggle('show', window.scrollY > 300));
+            btn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+        }
+        addBackToTopButton();
+    </script>
+</body>
+</html>

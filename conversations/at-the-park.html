@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>At the Park - Next Gen Learning Myanmar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Myanmar:wght@400;500;700&family=Noto+Sans+JP:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/conversations.css">
+    <style>
+        .park-icon { font-size: 1.2rem; margin-right: 5px; color: #2ecc71; }
+        .tip-box { background: #e8f8f5; border-left: 4px solid #1abc9c; padding: 1rem; border-radius: 10px; margin-top: 1rem; }
+        .activity-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 8px; margin-top: 10px; }
+        .activity-item { background: white; padding: 5px 10px; border-radius: 20px; font-size: 0.8rem; }
+    </style>
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <a href="daily-conversations.html" class="back-btn">
+                <i class="fas fa-arrow-left"></i> All Conversations
+            </a>
+            <h1>
+                <i class="fas fa-tree"></i>
+                At the Park
+            </h1>
+            <p>こうえんで - Learn how to talk about park activities in Japanese</p>
+        </header>
+
+        <!-- Dialogue 1: Going for a Walk -->
+        <div class="conversation-section">
+            <h2>🚶 Going for a Walk</h2>
+            <div class="dialogue-box">
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Person A:</div>
+                    <div class="japanese">こうえんを さんぽしませんか。</div>
+                    <div class="romaji">Kouen o sanpo shimasen ka.</div>
+                    <div class="english">Shall we take a walk in the park?</div>
+                    <div class="burmese">ပန်းခြံထဲလမ်းလျှောက်သွားမလား။</div>
+                    <button class="audio-btn" onclick="speakJapanese('こうえんを さんぽしませんか')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Person B:</div>
+                    <div class="japanese">いいですね。いきましょう。</div>
+                    <div class="romaji">Ii desu ne. Ikimashou.</div>
+                    <div class="english">Sounds good. Let's go.</div>
+                    <div class="burmese">ကောင်းပါတယ်။ သွားကြရအောင်။</div>
+                    <button class="audio-btn" onclick="speakJapanese('いいですね。いきましょう')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Person A:</div>
+                    <div class="japanese">けしきが きれいですね。</div>
+                    <div class="romaji">Keshiki ga kirei desu ne.</div>
+                    <div class="english">The scenery is beautiful.</div>
+                    <div class="burmese">ရှုခင်းတွေလှပါတယ်နော်။</div>
+                    <button class="audio-btn" onclick="speakJapanese('けしきが きれいですね')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Person B:</div>
+                    <div class="japanese">そうですね。しぜんが いっぱいで きもちが いいです。</div>
+                    <div class="romaji">Sou desu ne. Shizen ga ippai de kimochi ga ii desu.</div>
+                    <div class="english">Yes. It's full of nature and feels great.</div>
+                    <div class="burmese">ဟုတ်တယ်နော်။ သဘာဝပြည့်ပြီး စိတ်ခံစားချက်ကောင်းတယ်။</div>
+                    <button class="audio-btn" onclick="speakJapanese('そうですね。しぜんが いっぱいで きもちが いいです')"><i class="fas fa-volume-up"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dialogue 2: Having a Picnic -->
+        <div class="conversation-section">
+            <h2>🧺 Having a Picnic</h2>
+            <div class="dialogue-box">
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Person A:</div>
+                    <div class="japanese">ピクニックに いい てんきですね。</div>
+                    <div class="romaji">Pikunikku ni ii tenki desu ne.</div>
+                    <div class="english">It's nice weather for a picnic.</div>
+                    <div class="burmese">ပျော်ပွဲစားအတွက်ရာသီဥတုကောင်းတယ်နော်။</div>
+                    <button class="audio-btn" onclick="speakJapanese('ピクニックに いい てんきですね')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Person B:</div>
+                    <div class="japanese">おべんとうを つくってきました。</div>
+                    <div class="romaji">Obentou o tsukutte kimashita.</div>
+                    <div class="english">I made boxed lunches.</div>
+                    <div class="burmese">ထမင်းဘူးလုပ်လာတယ်။</div>
+                    <button class="audio-btn" onclick="speakJapanese('おべんとうを つくってきました')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Person A:</div>
+                    <div class="japanese">わあ、おいしそう！</div>
+                    <div class="romaji">Waa, oishisou!</div>
+                    <div class="english">Wow, looks delicious!</div>
+                    <div class="burmese">ဝိုး၊ အရသာရှိပုံရတယ်။</div>
+                    <button class="audio-btn" onclick="speakJapanese('わあ、おいしそう')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Person B:</div>
+                    <div class="japanese">どうぞ、たべてください。</div>
+                    <div class="romaji">Douzo, tabete kudasai.</div>
+                    <div class="english">Please, help yourself.</div>
+                    <div class="burmese">စားပါ။</div>
+                    <button class="audio-btn" onclick="speakJapanese('どうぞ、たべてください')"><i class="fas fa-volume-up"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dialogue 3: Children Playing -->
+        <div class="conversation-section">
+            <h2>👶 Children Playing</h2>
+            <div class="dialogue-box">
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Parent A:</div>
+                    <div class="japanese">こどもたちは どこですか。</div>
+                    <div class="romaji">Kodomotachi wa doko desu ka.</div>
+                    <div class="english">Where are the children?</div>
+                    <div class="burmese">ကလေးတွေဘယ်မှာလဲ။</div>
+                    <button class="audio-btn" onclick="speakJapanese('こどもたちは どこですか')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Parent B:</div>
+                    <div class="japanese">あそこで ブランコに のっています。</div>
+                    <div class="romaji">Asoko de buranko ni notte imasu.</div>
+                    <div class="english">They're on the swings over there.</div>
+                    <div class="burmese">ဟိုမှာလွှဲစီးနေတယ်။</div>
+                    <button class="audio-btn" onclick="speakJapanese('あそこで ブランコに のっています')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Parent A:</div>
+                    <div class="japanese">けがを しないように みていましょう。</div>
+                    <div class="romaji">Kega o shinai you ni mite imashou.</div>
+                    <div class="english">Let's watch them so they don't get hurt.</div>
+                    <div class="burmese">မထိခိုက်ရအောင်ကြည့်နေကြရအောင်။</div>
+                    <button class="audio-btn" onclick="speakJapanese('けがを しないように みていましょう')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Parent B:</div>
+                    <div class="japanese">はい、そうしましょう。</div>
+                    <div class="romaji">Hai, sou shimashou.</div>
+                    <div class="english">Yes, let's do that.</div>
+                    <div class="burmese">ဟုတ်ကဲ့၊ လုပ်ကြရအောင်။</div>
+                    <button class="audio-btn" onclick="speakJapanese('はい、そうしましょう')"><i class="fas fa-volume-up"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dialogue 4: Exercising -->
+        <div class="conversation-section">
+            <h2>🏃 Exercising</h2>
+            <div class="dialogue-box">
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Person A:</div>
+                    <div class="japanese">まいにち うんどうしてるんですか。</div>
+                    <div class="romaji">Mainichi undou shiterun desu ka.</div>
+                    <div class="english">Do you exercise every day?</div>
+                    <div class="burmese">နေ့တိုင်းလေ့ကျင့်ခန်းလုပ်လား။</div>
+                    <button class="audio-btn" onclick="speakJapanese('まいにち うんどうしてるんですか')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Person B:</div>
+                    <div class="japanese">はい、こうえんを ジョギングしています。</div>
+                    <div class="romaji">Hai, kouen o jogingu shite imasu.</div>
+                    <div class="english">Yes, I jog in the park.</div>
+                    <div class="burmese">ဟုတ်ကဲ့၊ ပန်းခြံထဲမှာ ဂျော့ကင်းလုပ်တယ်။</div>
+                    <button class="audio-btn" onclick="speakJapanese('はい、こうえんを ジョギングしています')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Person A:</div>
+                    <div class="japanese">どのくらい はしるんですか。</div>
+                    <div class="romaji">Donokurai hashirun desu ka.</div>
+                    <div class="english">How far do you run?</div>
+                    <div class="burmese">ဘယ်လောက်ဝေးဝေးပြေးလဲ။</div>
+                    <button class="audio-btn" onclick="speakJapanese('どのくらい はしるんですか')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Person B:</div>
+                    <div class="japanese">ごキロ くらいです。</div>
+                    <div class="romaji">Go kiro kurai desu.</div>
+                    <div class="english">About 5 kilometers.</div>
+                    <div class="burmese">၅ ကီလိုမီတာလောက်ပါ။</div>
+                    <button class="audio-btn" onclick="speakJapanese('ごキロ くらいです')"><i class="fas fa-volume-up"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dialogue 5: Feeding Birds -->
+        <div class="conversation-section">
+            <h2>🦆 Feeding Birds</h2>
+            <div class="dialogue-box">
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Child:</div>
+                    <div class="japanese">パンで やきゅうを あげても いいですか。</div>
+                    <div class="romaji">Pan de yakyuu o agete mo ii desu ka.</div>
+                    <div class="english">Can I feed the birds bread?</div>
+                    <div class="burmese">ငှက်တွေကိုပေါင်မုန့်ကျွေးလို့ရမလား။</div>
+                    <button class="audio-btn" onclick="speakJapanese('パンで やきゅうを あげても いいですか')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Parent:</div>
+                    <div class="japanese">いいよ、でも すこしだけ ね。</div>
+                    <div class="romaji">Ii yo, demo sukoshi dake ne.</div>
+                    <div class="english">Yes, but only a little.</div>
+                    <div class="burmese">ရပါတယ်၊ ဒါပေမယ့် နည်းနည်းလေးပါနော်။</div>
+                    <button class="audio-btn" onclick="speakJapanese('いいよ、でも すこしだけ ね')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Child:</div>
+                    <div class="japanese">わかった！みて、いっぱい あつまってきた！</div>
+                    <div class="romaji">Wakatta! Mite, ippai atsumatte kita!</div>
+                    <div class="english">Okay! Look, a lot are gathering!</div>
+                    <div class="burmese">လက်ခံတယ်။ ကြည့်စမ်း၊ အများကြီးစုလာပြီ။</div>
+                    <button class="audio-btn" onclick="speakJapanese('わかった！みて、いっぱい あつまってきた')"><i class="fas fa-volume-up"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dialogue 6: Relaxing on a Bench -->
+        <div class="conversation-section">
+            <h2>🪑 Relaxing on a Bench</h2>
+            <div class="dialogue-box">
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Person A:</div>
+                    <div class="japanese">すこし やすみませんか。</div>
+                    <div class="romaji">Sukoshi yasumimasen ka.</div>
+                    <div class="english">Shall we rest a little?</div>
+                    <div class="burmese">နည်းနည်းအနားယူမလား။</div>
+                    <button class="audio-btn" onclick="speakJapanese('すこし やすみませんか')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Person B:</div>
+                    <div class="japanese">いいですね。あの ベンチに すわりましょう。</div>
+                    <div class="romaji">Ii desu ne. Ano benchi ni suwarimashou.</div>
+                    <div class="english">Sounds good. Let's sit on that bench.</div>
+                    <div class="burmese">ကောင်းပါတယ်။ အဲဒီခုံမှာထိုင်ကြရအောင်။</div>
+                    <button class="audio-btn" onclick="speakJapanese('いいですね。あの ベンチに すわりましょう')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Person A:</div>
+                    <div class="japanese">そよかぜが きもちいいですね。</div>
+                    <div class="romaji">Soyokaze ga kimochi ii desu ne.</div>
+                    <div class="english">The breeze feels nice.</div>
+                    <div class="burmese">လေညင်းကခံစားရကောင်းတယ်နော်။</div>
+                    <button class="audio-btn" onclick="speakJapanese('そよかぜが きもちいいですね')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Person B:</div>
+                    <div class="japanese">そうです。ゆっくりするのが だいすきです。</div>
+                    <div class="romaji">Sou desu. Yukkuri suru no ga daisuki desu.</div>
+                    <div class="english">Yes. I love relaxing.</div>
+                    <div class="burmese">ဟုတ်တယ်။ ဖြေလျှော့တာကိုအရမ်းကြိုက်တယ်။</div>
+                    <button class="audio-btn" onclick="speakJapanese('そうです。ゆっくりするのが だいすきです')"><i class="fas fa-volume-up"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dialogue 7: Flying a Kite -->
+        <div class="conversation-section">
+            <h2>🪁 Flying a Kite</h2>
+            <div class="dialogue-box">
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Child:</div>
+                    <div class="japanese">たこを あげたいです！</div>
+                    <div class="romaji">Tako o agetai desu!</div>
+                    <div class="english">I want to fly a kite!</div>
+                    <div class="burmese">စွန်လွှတ်ချင်တယ်။</div>
+                    <button class="audio-btn" onclick="speakJapanese('たこを あげたいです')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Parent:</div>
+                    <div class="japanese">かぜが つよいから、よく あがるよ。</div>
+                    <div class="romaji">Kaze ga tsuyoi kara, yoku agaru yo.</div>
+                    <div class="english">The wind is strong, so it will fly well.</div>
+                    <div class="burmese">လေပြင်းလို့ကောင်းကောင်းတက်မယ်။</div>
+                    <button class="audio-btn" onclick="speakJapanese('かぜが つよいから、よく あがるよ')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Child:</div>
+                    <div class="japanese">おして ください！</div>
+                    <div class="romaji">Oshite kudasai!</div>
+                    <div class="english">Please push!</div>
+                    <div class="burmese">လာတွန်းပေးပါ။</div>
+                    <button class="audio-btn" onclick="speakJapanese('おして ください')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Parent:</div>
+                    <div class="japanese">はい、せーの！よく あがったね。</div>
+                    <div class="romaji">Hai, seeno! Yoku agatta ne.</div>
+                    <div class="english">Okay, ready, set! It flew well.</div>
+                    <div class="burmese">ဟုတ်ကဲ့၊ အဆင်သင့်။ ကောင်းကောင်းတက်တယ်နော်။</div>
+                    <button class="audio-btn" onclick="speakJapanese('はい、せーの！よく あがったね')"><i class="fas fa-volume-up"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Park Activities -->
+        <div class="tip-box">
+            <h3><i class="fas fa-running park-icon"></i> Park Activities</h3>
+            <div class="activity-list">
+                <div class="activity-item">🚶 さんぽ - Walk</div>
+                <div class="activity-item">🏃 ジョギング - Jogging</div>
+                <div class="activity-item">🧺 ピクニック - Picnic</div>
+                <div class="activity-item">🪁 たこあげ - Kite flying</div>
+                <div class="activity-item">⚽ サッカー - Soccer</div>
+                <div class="activity-item">🐕 いぬのさんぽ - Dog walking</div>
+                <div class="activity-item">📖 よむこと - Reading</div>
+                <div class="activity-item">🎨 えをかく - Drawing</div>
+            </div>
+        </div>
+
+        <div class="tip-box">
+            <h4><i class="fas fa-lightbulb"></i> Park Etiquette in Japan</h4>
+            <ul style="margin-left: 20px; margin-top: 5px;">
+                <li><strong>No littering (ごみをすてない):</strong> Always take your trash home.</li>
+                <li><strong>Keep noise down (おんをひかえる):</strong> Don't play loud music or shout.</li>
+                <li><strong>Leash dogs (いぬをリードにつなぐ):</strong> Dogs must be on a leash in most parks.</li>
+                <li><strong>No smoking (きんえん):</strong> Many parks are smoke-free.</li>
+                <li><strong>Respect nature (しぜんをまもる):</strong> Don't pick flowers or harm animals.</li>
+            </ul>
+        </div>
+
+        <footer>
+            <div class="footer-links">
+                <a href="../pages/privacy.html"><i class="fas fa-shield-alt"></i> Privacy Policy</a>
+                <a href="../pages/about.html"><i class="fas fa-info-circle"></i> About</a>
+                <a href="../pages/contact.html"><i class="fas fa-envelope"></i> Contact</a>
+                <a href="../pages/terms.html"><i class="fas fa-file-contract"></i> Terms & Policy</a>
+            </div>
+            <p><i class="fas fa-heart"></i> Next Gen Learning Myanmar - Daily Conversations</p>
+        </footer>
+    </div>
+    <script>
+        function speakJapanese(text) {
+            if (!window.speechSynthesis) return;
+            window.speechSynthesis.cancel();
+            const utterance = new SpeechSynthesisUtterance(text);
+            utterance.lang = 'ja-JP';
+            utterance.rate = 0.8;
+            function setVoice() {
+                const voices = window.speechSynthesis.getVoices();
+                const jpVoice = voices.find(v => v.lang === 'ja-JP' || v.lang === 'ja');
+                if (jpVoice) utterance.voice = jpVoice;
+                window.speechSynthesis.speak(utterance);
+            }
+            if (window.speechSynthesis.getVoices().length) setVoice();
+            else window.speechSynthesis.onvoiceschanged = setVoice;
+        }
+        function addBackToTopButton() {
+            if (document.querySelector('.back-to-top-btn')) return;
+            const btn = document.createElement('button');
+            btn.className = 'back-to-top-btn';
+            btn.innerHTML = '<i class="fas fa-arrow-up"></i><span>TOP</span>';
+            document.body.appendChild(btn);
+            window.addEventListener('scroll', () => btn.classList.toggle('show', window.scrollY > 300));
+            btn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+        }
+        addBackToTopButton();
+    </script>
+</body>
+</html>

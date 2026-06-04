@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Going to the Dentist - Next Gen Learning Myanmar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Myanmar:wght@400;500;700&family=Noto+Sans+JP:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/conversations.css">
+    <style>
+        .dentist-icon { font-size: 1.2rem; margin-right: 5px; color: #e67e22; }
+        .tip-box { background: #e8f8f5; border-left: 4px solid #1abc9c; padding: 1rem; border-radius: 10px; margin-top: 1rem; }
+        .procedure-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 8px; margin-top: 10px; }
+        .procedure-item { background: white; padding: 5px 10px; border-radius: 20px; font-size: 0.8rem; }
+    </style>
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <a href="daily-conversations.html" class="back-btn">
+                <i class="fas fa-arrow-left"></i> All Conversations
+            </a>
+            <h1>
+                <i class="fas fa-tooth"></i>
+                Going to the Dentist
+            </h1>
+            <p>はいしゃにいく - Learn how to talk about dental visits in Japanese</p>
+        </header>
+
+        <!-- Dialogue 1: Making a Dental Appointment -->
+        <div class="conversation-section">
+            <h2>📞 Making a Dental Appointment</h2>
+            <div class="dialogue-box">
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Patient:</div>
+                    <div class="japanese">はいしゃの よやくを おねがいします。</div>
+                    <div class="romaji">Haisha no yoyaku o onegai shimasu.</div>
+                    <div class="english">I'd like to make a dentist appointment.</div>
+                    <div class="burmese">သွားဆရာဝန်နဲ့ကြိုဘွတ်ခ်လုပ်ချင်ပါတယ်။</div>
+                    <button class="audio-btn" onclick="speakJapanese('はいしゃの よやくを おねがいします')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Staff:</div>
+                    <div class="japanese">どう なさいましたか。</div>
+                    <div class="romaji">Dou nasaimashita ka.</div>
+                    <div class="english">What seems to be the problem?</div>
+                    <div class="burmese">ဘာဖြစ်လို့လဲ။</div>
+                    <button class="audio-btn" onclick="speakJapanese('どう なさいましたか')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Patient:</div>
+                    <div class="japanese">はが いたいです。</div>
+                    <div class="romaji">Ha ga itai desu.</div>
+                    <div class="english">My tooth hurts.</div>
+                    <div class="burmese">သွားနာတယ်။</div>
+                    <button class="audio-btn" onclick="speakJapanese('はが いたいです')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Staff:</div>
+                    <div class="japanese">わかりました。あしたの ごご ２じは いかがですか。</div>
+                    <div class="romaji">Wakarimashita. Ashita no gogo niji wa ikaga desu ka.</div>
+                    <div class="english">Understood. How about tomorrow at 2 PM?</div>
+                    <div class="burmese">နားလည်ပါတယ်။ မနက်ဖြန်ညနေ ၂ နာရီကော။</div>
+                    <button class="audio-btn" onclick="speakJapanese('わかりました。あしたの ごご ２じは いかがですか')"><i class="fas fa-volume-up"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dialogue 2: At the Dentist -->
+        <div class="conversation-section">
+            <h2>🦷 At the Dentist</h2>
+            <div class="dialogue-box">
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Receptionist:</div>
+                    <div class="japanese">いらっしゃいませ。ほけんしょうを おもちですか。</div>
+                    <div class="romaji">Irasshaimase. Hokenshou o omochi desu ka.</div>
+                    <div class="english">Welcome. Do you have your insurance card?</div>
+                    <div class="burmese">ကြိုဆိုပါတယ်။ အာမခံကတ်ပါလား။</div>
+                    <button class="audio-btn" onclick="speakJapanese('いらっしゃいませ。ほけんしょうを おもちですか')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Patient:</div>
+                    <div class="japanese">はい、こちらです。</div>
+                    <div class="romaji">Hai, kochira desu.</div>
+                    <div class="english">Yes, here it is.</div>
+                    <div class="burmese">ဟုတ်ကဲ့၊ ဒီမှာပါ။</div>
+                    <button class="audio-btn" onclick="speakJapanese('はい、こちらです')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Receptionist:</div>
+                    <div class="japanese">おしゃしんを おねがいします。</div>
+                    <div class="romaji">Oshashin o onegai shimasu.</div>
+                    <div class="english">Please fill out this form.</div>
+                    <div class="burmese">ဒီပုံစံဖြည့်ပေးပါ။</div>
+                    <button class="audio-btn" onclick="speakJapanese('おしゃしんを おねがいします')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Patient:</div>
+                    <div class="japanese">はい。</div>
+                    <div class="romaji">Hai.</div>
+                    <div class="english">Okay.</div>
+                    <div class="burmese">ဟုတ်ကဲ့။</div>
+                    <button class="audio-btn" onclick="speakJapanese('はい')"><i class="fas fa-volume-up"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dialogue 3: Describing the Pain -->
+        <div class="conversation-section">
+            <h2>🤕 Describing the Pain</h2>
+            <div class="dialogue-box">
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Dentist:</div>
+                    <div class="japanese">どこが いたいですか。</div>
+                    <div class="romaji">Doko ga itai desu ka.</div>
+                    <div class="english">Where does it hurt?</div>
+                    <div class="burmese">ဘယ်မှာနာလဲ။</div>
+                    <button class="audio-btn" onclick="speakJapanese('どこが いたいですか')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Patient:</div>
+                    <div class="japanese">みぎがわの おくばが いたいです。</div>
+                    <div class="romaji">Migi gawa no okuba ga itai desu.</div>
+                    <div class="english">My right back tooth hurts.</div>
+                    <div class="burmese">ညာဘက်နောက်သွားက နာတယ်။</div>
+                    <button class="audio-btn" onclick="speakJapanese('みぎがわの おくばが いたいです')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Dentist:</div>
+                    <div class="japanese">つめたい ものを たべると しみますか。</div>
+                    <div class="romaji">Tsumetai mono o taberu to shimimasu ka.</div>
+                    <div class="english">Does it sting when you eat cold things?</div>
+                    <div class="burmese">အေးတဲ့အစာစားရင် စပ်တာလား။</div>
+                    <button class="audio-btn" onclick="speakJapanese('つめたい ものを たべると しみますか')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Patient:</div>
+                    <div class="japanese">はい、しみます。</div>
+                    <div class="romaji">Hai, shimimasu.</div>
+                    <div class="english">Yes, it stings.</div>
+                    <div class="burmese">ဟုတ်ကဲ့၊ စပ်တယ်။</div>
+                    <button class="audio-btn" onclick="speakJapanese('はい、しみます')"><i class="fas fa-volume-up"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dialogue 4: Examination -->
+        <div class="conversation-section">
+            <h2>🩺 Examination</h2>
+            <div class="dialogue-box">
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Dentist:</div>
+                    <div class="japanese">くちを あけて ください。</div>
+                    <div class="romaji">Kuchi o akete kudasai.</div>
+                    <div class="english">Please open your mouth.</div>
+                    <div class="burmese">ပါးစပ်ဖွင့်ပါ။</div>
+                    <button class="audio-btn" onclick="speakJapanese('くちを あけて ください')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Patient:</div>
+                    <div class="japanese">あーん。</div>
+                    <div class="romaji">Aaan.</div>
+                    <div class="english">Ahhh.</div>
+                    <div class="burmese">အာ့။</div>
+                    <button class="audio-btn" onclick="speakJapanese('あーん')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Dentist:</div>
+                    <div class="japanese">むしばが ありますね。レントゲンを とりましょう。</div>
+                    <div class="romaji">Mushiba ga arimasu ne. Rentogen o torimashou.</div>
+                    <div class="english">You have a cavity. Let's take an X-ray.</div>
+                    <div class="burmese">သွားပိုးရှိတယ်နော်။ ဓာတ်မှန်ရိုက်ကြရအောင်။</div>
+                    <button class="audio-btn" onclick="speakJapanese('むしばが ありますね。レントゲンを とりましょう')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Patient:</div>
+                    <div class="japanese">わかりました。</div>
+                    <div class="romaji">Wakarimashita.</div>
+                    <div class="english">Okay.</div>
+                    <div class="burmese">နားလည်ပါတယ်။</div>
+                    <button class="audio-btn" onclick="speakJapanese('わかりました')"><i class="fas fa-volume-up"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dialogue 5: Treatment Plan -->
+        <div class="conversation-section">
+            <h2>📋 Treatment Plan</h2>
+            <div class="dialogue-box">
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Dentist:</div>
+                    <div class="japanese">ちりょうは なんどか くる ひつようが あります。</div>
+                    <div class="romaji">Chiryou wa nandoka kuru hitsuyou ga arimasu.</div>
+                    <div class="english">You'll need to come a few times for treatment.</div>
+                    <div class="burmese">ကုသမှုအတွက် အကြိမ်အနည်းငယ်လာရမယ်။</div>
+                    <button class="audio-btn" onclick="speakJapanese('ちりょうは なんどか くる ひつようが あります')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Patient:</div>
+                    <div class="japanese">いたいですか。</div>
+                    <div class="romaji">Itai desu ka.</div>
+                    <div class="english">Will it hurt?</div>
+                    <div class="burmese">နာမလား။</div>
+                    <button class="audio-btn" onclick="speakJapanese('いたいですか')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Dentist:</div>
+                    <div class="japanese">たいてい いたくないです。まず、むしばを とります。</div>
+                    <div class="romaji">Taitei itakunai desu. Mazu, mushiba o torimasu.</div>
+                    <div class="english">Usually, it doesn't hurt. First, I'll remove the cavity.</div>
+                    <div class="burmese">များသောအားဖြင့် မနာပါဘူး။ အရင်ဆုံး သွားပိုးဖယ်မယ်။</div>
+                    <button class="audio-btn" onclick="speakJapanese('たいてい いたくないです。まず、むしばを とります')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Patient:</div>
+                    <div class="japanese">おねがいします。</div>
+                    <div class="romaji">Onegai shimasu.</div>
+                    <div class="english">Please.</div>
+                    <div class="burmese">ကျေးဇူးပြုပါ။</div>
+                    <button class="audio-btn" onclick="speakJapanese('おねがいします')"><i class="fas fa-volume-up"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dialogue 6: During Treatment -->
+        <div class="conversation-section">
+            <h2>🦷 During Treatment</h2>
+            <div class="dialogue-box">
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Dentist:</div>
+                    <div class="japanese">ちゅうしゃを します。すこし ちくっと しますよ。</div>
+                    <div class="romaji">Chuusha o shimasu. Sukoshi chikutto shimasu yo.</div>
+                    <div class="english">I'll give an injection. It will pinch a little.</div>
+                    <div class="burmese">ထိုးဆေးထိုးမယ်။ နည်းနည်းစူးမယ်နော်။</div>
+                    <button class="audio-btn" onclick="speakJapanese('ちゅうしゃを します。すこし ちくっと しますよ')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Patient:</div>
+                    <div class="japanese">いたっ！</div>
+                    <div class="romaji">Ita!</div>
+                    <div class="english">Ouch!</div>
+                    <div class="burmese">အစ်။</div>
+                    <button class="audio-btn" onclick="speakJapanese('いたっ')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Dentist:</div>
+                    <div class="japanese">ごめんなさい。もう おわりです。だいじょうぶですか。</div>
+                    <div class="romaji">Gomen nasai. Mou owari desu. Daijoubu desu ka.</div>
+                    <div class="english">Sorry. It's over now. Are you okay?</div>
+                    <div class="burmese">တောင်းပန်ပါတယ်။ ပြီးပြီ။ အဆင်ပြေရဲ့လား။</div>
+                    <button class="audio-btn" onclick="speakJapanese('ごめんなさい。もう おわりです。だいじょうぶですか')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Patient:</div>
+                    <div class="japanese">はい、だいじょうぶです。</div>
+                    <div class="romaji">Hai, daijoubu desu.</div>
+                    <div class="english">Yes, I'm fine.</div>
+                    <div class="burmese">ဟုတ်ကဲ့၊ အဆင်ပြေပါတယ်။</div>
+                    <button class="audio-btn" onclick="speakJapanese('はい、だいじょうぶです')"><i class="fas fa-volume-up"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dialogue 7: Follow-up Appointment -->
+        <div class="conversation-section">
+            <h2>📅 Follow-up Appointment</h2>
+            <div class="dialogue-box">
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Dentist:</div>
+                    <div class="japanese">つぎは いっしゅうかん ごに きて ください。</div>
+                    <div class="romaji">Tsugi wa isshuukan go ni kite kudasai.</div>
+                    <div class="english">Please come back in one week.</div>
+                    <div class="burmese">နောက်တစ်ခါ တစ်ပတ်အကြာမှာလာပါ။</div>
+                    <button class="audio-btn" onclick="speakJapanese('つぎは いっしゅうかん ごに きて ください')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Patient:</div>
+                    <div class="japanese">はい、わかりました。</div>
+                    <div class="romaji">Hai, wakarimashita.</div>
+                    <div class="english">Yes, I understand.</div>
+                    <div class="burmese">ဟုတ်ကဲ့၊ နားလည်ပါတယ်။</div>
+                    <button class="audio-btn" onclick="speakJapanese('はい、わかりました')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Staff:</div>
+                    <div class="japanese">つぎの よやくを いれます。いつが ごひまだ ですか。</div>
+                    <div class="romaji">Tsugi no yoyaku o iremasu. Itsu ga gohima desu ka.</div>
+                    <div class="english">I'll make the next appointment. When are you free?</div>
+                    <div class="burmese">နောက်ကြိုဘွတ်ခ်ထည့်မယ်။ ဘယ်အချိန်အဆင်ပြေလဲ။</div>
+                    <button class="audio-btn" onclick="speakJapanese('つぎの よやくを いれます。いつが ごひまだ ですか')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Patient:</div>
+                    <div class="japanese">らいしゅうの かようびの ごごです。</div>
+                    <div class="romaji">Raishuu no kayoubi no gogo desu.</div>
+                    <div class="english">Next Tuesday afternoon.</div>
+                    <div class="burmese">လာမယ့်အင်္ဂါနေ့ ညနေပါ။</div>
+                    <button class="audio-btn" onclick="speakJapanese('らいしゅうの かようびの ごごです')"><i class="fas fa-volume-up"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dental Procedures -->
+        <div class="tip-box">
+            <h3><i class="fas fa-stethoscope dentist-icon"></i> Common Dental Procedures</h3>
+            <div class="procedure-list">
+                <div class="procedure-item">🦷 けんさ - Checkup</div>
+                <div class="procedure-item">🦷 むしばのちりょう - Cavity treatment</div>
+                <div class="procedure-item">🦷 ちゅうしゃ - Injection</div>
+                <div class="procedure-item">🦷 ぬく - Extraction</div>
+                <div class="procedure-item">🦷 クリーニング - Cleaning</div>
+                <div class="procedure-item">🦷 ホワイトニング - Whitening</div>
+                <div class="procedure-item">🦷 クラウン - Crown</div>
+                <div class="procedure-item">🦷 ブリッジ - Bridge</div>
+            </div>
+        </div>
+
+        <div class="tip-box">
+            <h4><i class="fas fa-lightbulb"></i> Dental Care Tips</h4>
+            <ul style="margin-left: 20px; margin-top: 5px;">
+                <li><strong>Insurance (ほけん):</strong> Covers most dental procedures in Japan.</li>
+                <li><strong>Regular checkups (ていきけんさ):</strong> Recommended every 6 months.</li>
+                <li><strong>Brushing (みがく):</strong> Brush twice a day, floss regularly.</li>
+                <li><strong>Children's teeth (こどものは):</strong> Free fluoride treatment for kids.</li>
+                <li><strong>Emergency (きんきゅう):</strong> Some clinics have emergency hours.</li>
+                <li><strong>Appointment (よやく):</strong> Always call ahead to book.</li>
+            </ul>
+        </div>
+
+        <footer>
+            <div class="footer-links">
+                <a href="../pages/privacy.html"><i class="fas fa-shield-alt"></i> Privacy Policy</a>
+                <a href="../pages/about.html"><i class="fas fa-info-circle"></i> About</a>
+                <a href="../pages/contact.html"><i class="fas fa-envelope"></i> Contact</a>
+                <a href="../pages/terms.html"><i class="fas fa-file-contract"></i> Terms & Policy</a>
+            </div>
+            <p><i class="fas fa-heart"></i> Next Gen Learning Myanmar - Daily Conversations</p>
+        </footer>
+    </div>
+    <script>
+        function speakJapanese(text) {
+            if (!window.speechSynthesis) return;
+            window.speechSynthesis.cancel();
+            const utterance = new SpeechSynthesisUtterance(text);
+            utterance.lang = 'ja-JP';
+            utterance.rate = 0.8;
+            function setVoice() {
+                const voices = window.speechSynthesis.getVoices();
+                const jpVoice = voices.find(v => v.lang === 'ja-JP' || v.lang === 'ja');
+                if (jpVoice) utterance.voice = jpVoice;
+                window.speechSynthesis.speak(utterance);
+            }
+            if (window.speechSynthesis.getVoices().length) setVoice();
+            else window.speechSynthesis.onvoiceschanged = setVoice;
+        }
+        function addBackToTopButton() {
+            if (document.querySelector('.back-to-top-btn')) return;
+            const btn = document.createElement('button');
+            btn.className = 'back-to-top-btn';
+            btn.innerHTML = '<i class="fas fa-arrow-up"></i><span>TOP</span>';
+            document.body.appendChild(btn);
+            window.addEventListener('scroll', () => btn.classList.toggle('show', window.scrollY > 300));
+            btn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+        }
+        addBackToTopButton();
+    </script>
+</body>
+</html>

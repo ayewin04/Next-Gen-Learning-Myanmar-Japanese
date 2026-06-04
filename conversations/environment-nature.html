@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Environment & Nature - Next Gen Learning Myanmar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Myanmar:wght@400;500;700&family=Noto+Sans+JP:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/conversations.css">
+    <style>
+        .env-icon { font-size: 1.2rem; margin-right: 5px; color: #2ecc71; }
+        .tip-box { background: #e8f8f5; border-left: 4px solid #1abc9c; padding: 1rem; border-radius: 10px; margin-top: 1rem; }
+        .recycle-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 8px; margin-top: 10px; }
+        .recycle-item { background: white; padding: 5px 10px; border-radius: 20px; font-size: 0.8rem; }
+    </style>
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <a href="daily-conversations.html" class="back-btn">
+                <i class="fas fa-arrow-left"></i> All Conversations
+            </a>
+            <h1>
+                <i class="fas fa-tree"></i>
+                Environment & Nature
+            </h1>
+            <p>かんきょう - Learn how to talk about environment and nature in Japanese</p>
+        </header>
+
+        <!-- Dialogue 1: Recycling at Home -->
+        <div class="conversation-section">
+            <h2>♻️ Recycling at Home</h2>
+            <div class="dialogue-box">
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Person A:</div>
+                    <div class="japanese">ごみの ぶんべつは どうやって するんですか。</div>
+                    <div class="romaji">Gomi no bunbetsu wa douyatte surun desu ka.</div>
+                    <div class="english">How do you separate trash?</div>
+                    <div class="burmese">အမှိုက်ခွဲခြားတာဘယ်လိုလုပ်လဲ။</div>
+                    <button class="audio-btn" onclick="speakJapanese('ごみの ぶんべつは どうやって するんですか')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Person B:</div>
+                    <div class="japanese">もえるごみ、もえないごみ、しげんごみに わかれます。</div>
+                    <div class="romaji">Moeru gomi, moenai gomi, shigen gomi ni wakaremasu.</div>
+                    <div class="english">It's divided into burnable, non-burnable, and recyclable.</div>
+                    <div class="burmese">မီးရှို့နိုင်တဲ့အမှိုက်၊ မီးမရှို့နိုင်တဲ့အမှိုက်၊ ပြန်သုံးနိုင်တဲ့အမှိုက်ဆိုပြီးခွဲတယ်။</div>
+                    <button class="audio-btn" onclick="speakJapanese('もえるごみ、もえないごみ、しげんごみに わかれます')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Person A:</div>
+                    <div class="japanese">ペットボトルは どれですか。</div>
+                    <div class="romaji">Pettobotoru wa dore desu ka.</div>
+                    <div class="english">Which category are plastic bottles?</div>
+                    <div class="burmese">ပလတ်စတစ်ပုလင်းတွေက ဘယ်အမျိုးအစားလဲ။</div>
+                    <button class="audio-btn" onclick="speakJapanese('ペットボトルは どれですか')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Person B:</div>
+                    <div class="japanese">しげんごみです。ラベルと キャップを はずしてから すててください。</div>
+                    <div class="romaji">Shigen gomi desu. Raberu to kyappu o hazushite kara sutete kudasai.</div>
+                    <div class="english">Recyclable. Please remove the label and cap before throwing away.</div>
+                    <div class="burmese">ပြန်သုံးနိုင်တဲ့အမှိုက်ပါ။ တံဆိပ်နဲ့အဖုံးဖယ်ပြီးမှ ပစ်ပါ။</div>
+                    <button class="audio-btn" onclick="speakJapanese('しげんごみです。ラベルと キャップを はずしてから すててください')"><i class="fas fa-volume-up"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dialogue 2: Climate Change Discussion -->
+        <div class="conversation-section">
+            <h2>🌡️ Climate Change Discussion</h2>
+            <div class="dialogue-box">
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Person A:</div>
+                    <div class="japanese">きこうへんどうが しんぱいですね。</div>
+                    <div class="romaji">Kikou hendou ga shinpai desu ne.</div>
+                    <div class="english">Climate change is worrying, isn't it?</div>
+                    <div class="burmese">ရာသီဥတုပြောင်းလဲမှုက စိုးရိမ်စရာပါနော်။</div>
+                    <button class="audio-btn" onclick="speakJapanese('きこうへんどうが しんぱいですね')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Person B:</div>
+                    <div class="japanese">そうですね。さいきん たいふうが おおくなりました。</div>
+                    <div class="romaji">Sou desu ne. Saikin taifuu ga ooku narimashita.</div>
+                    <div class="english">Yes. Recently, there have been more typhoons.</div>
+                    <div class="burmese">ဟုတ်တယ်။ မကြာခင်က တိုင်ဖွန်းမုန်တိုင်းတွေ များလာတယ်။</div>
+                    <button class="audio-btn" onclick="speakJapanese('そうですね。さいきん たいふうが おおくなりました')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Person A:</div>
+                    <div class="japanese">カーボンフットプリントを へらすために なにが できますか。</div>
+                    <div class="romaji">Kaabon futtopurinto o herasu tame ni nani ga dekimasu ka.</div>
+                    <div class="english">What can we do to reduce our carbon footprint?</div>
+                    <div class="burmese">ကာဗွန်ခြေရာကိုလျှော့ချဖို့ဘာလုပ်နိုင်မလဲ။</div>
+                    <button class="audio-btn" onclick="speakJapanese('カーボンフットプリントを へらすために なにが できますか')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Person B:</div>
+                    <div class="japanese">でんきを せつやくしたり、エコバッグを つかったり できますね。</div>
+                    <div class="romaji">Denki o setsuyaku shitari, ekobaggu o tsukattari dekimasu ne.</div>
+                    <div class="english">We can save electricity, use eco-bags, etc.</div>
+                    <div class="burmese">လျှပ်စစ်ချွေတာတာ၊ ဂေဟာအိတ်သုံးတာတွေ လုပ်နိုင်တယ်နော်။</div>
+                    <button class="audio-btn" onclick="speakJapanese('でんきを せつやくしたり、エコバッグを つかったり できますね')"><i class="fas fa-volume-up"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dialogue 3: Visiting a National Park -->
+        <div class="conversation-section">
+            <h2>🏞️ Visiting a National Park</h2>
+            <div class="dialogue-box">
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Person A:</div>
+                    <div class="japanese">こんどの しゅうまつ、にほんの こうえんに いきませんか。</div>
+                    <div class="romaji">Kondo no shuumatsu, nihon no kouen ni ikimasen ka.</div>
+                    <div class="english">Shall we go to a Japanese park this weekend?</div>
+                    <div class="burmese">ဒီအားလပ်ရက်မှာ ဂျပန်ပန်းခြံကိုသွားမလား။</div>
+                    <button class="audio-btn" onclick="speakJapanese('こんどの しゅうまつ、にほんの こうえんに いきませんか')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Person B:</div>
+                    <div class="japanese">いいですね。しぜんが いっぱいで きれいですよ。</div>
+                    <div class="romaji">Ii desu ne. Shizen ga ippai de kirei desu yo.</div>
+                    <div class="english">Sounds good. It's full of nature and beautiful.</div>
+                    <div class="burmese">ကောင်းပါတယ်။ သဘာဝပြည့်ပြီး လှပါတယ်။</div>
+                    <button class="audio-btn" onclick="speakJapanese('いいですね。しぜんが いっぱいで きれいですよ')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Person A:</div>
+                    <div class="japanese">ごみは もちかえりましょう。</div>
+                    <div class="romaji">Gomi wa mochikaerimashou.</div>
+                    <div class="english">Let's take our trash back with us.</div>
+                    <div class="burmese">အမှိုက်ကို ပြန်သယ်သွားကြရအောင်။</div>
+                    <button class="audio-btn" onclick="speakJapanese('ごみは もちかえりましょう')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Person B:</div>
+                    <div class="japanese">もちろんです。しぜんを まもることが たいせつですね。</div>
+                    <div class="romaji">Mochiron desu. Shizen o mamoru koto ga taisetsu desu ne.</div>
+                    <div class="english">Of course. Protecting nature is important.</div>
+                    <div class="burmese">သေချာပါတယ်။ သဘာဝကိုကာကွယ်တာအရေးကြီးတယ်နော်။</div>
+                    <button class="audio-btn" onclick="speakJapanese('もちろんです。しぜんを まもることが たいせつですね')"><i class="fas fa-volume-up"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dialogue 4: Reducing Plastic Waste -->
+        <div class="conversation-section">
+            <h2>♻️ Reducing Plastic Waste</h2>
+            <div class="dialogue-box">
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Person A:</div>
+                    <div class="japanese">プラスチックごみが おおすぎますね。</div>
+                    <div class="romaji">Purasuchikku gomi ga oosugimasu ne.</div>
+                    <div class="english">There's too much plastic waste.</div>
+                    <div class="burmese">ပလတ်စတစ်အမှိုက်အရမ်းများတယ်နော်။</div>
+                    <button class="audio-btn" onclick="speakJapanese('プラスチックごみが おおすぎますね')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Person B:</div>
+                    <div class="japanese">はい。わたしは マイボトルを つかうように しています。</div>
+                    <div class="romaji">Hai. Watashi wa maibotoru o tsukau you ni shite imasu.</div>
+                    <div class="english">Yes. I try to use a reusable bottle.</div>
+                    <div class="burmese">ဟုတ်တယ်။ ကျွန်တော် ကိုယ်ပိုင်ပုလင်းသုံးဖို့ ကြိုးစားတယ်။</div>
+                    <button class="audio-btn" onclick="speakJapanese('はい。わたしは マイボトルを つかうように しています')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Person A:</div>
+                    <div class="japanese">いいですね。わたしも そうします。</div>
+                    <div class="romaji">Ii desu ne. Watashi mo sou shimasu.</div>
+                    <div class="english">That's good. I'll do that too.</div>
+                    <div class="burmese">ကောင်းပါတယ်။ ကျွန်တော်လည်းလုပ်မယ်။</div>
+                    <button class="audio-btn" onclick="speakJapanese('いいですね。わたしも そうします')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Person B:</div>
+                    <div class="japanese">スーパーでは レジぶくろを ことわっています。</div>
+                    <div class="romaji">Suupaa de wa rejibukuro o kotowatte imasu.</div>
+                    <div class="english">I refuse plastic bags at the supermarket.</div>
+                    <div class="burmese">စူပါမားကတ်မှာ ပလတ်စတစ်အိတ်တွေကို ငြင်းပါတယ်။</div>
+                    <button class="audio-btn" onclick="speakJapanese('スーパーでは レジぶくろを ことわっています')"><i class="fas fa-volume-up"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dialogue 5: Planting Trees -->
+        <div class="conversation-section">
+            <h2>🌳 Planting Trees</h2>
+            <div class="dialogue-box">
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Person A:</div>
+                    <div class="japanese">こんどの どようび、きを うえに いきませんか。</div>
+                    <div class="romaji">Kondo no doyoubi, ki o ue ni ikimasen ka.</div>
+                    <div class="english">Shall we go plant trees this Saturday?</div>
+                    <div class="burmese">ဒီစနေနေ့ သစ်ပင်စိုက်သွားမလား။</div>
+                    <button class="audio-btn" onclick="speakJapanese('こんどの どようび、きを うえに いきませんか')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Person B:</div>
+                    <div class="japanese">いいですね。どこで うえるんですか。</div>
+                    <div class="romaji">Ii desu ne. Doko de uerun desu ka.</div>
+                    <div class="english">Sounds good. Where will we plant them?</div>
+                    <div class="burmese">ကောင်းပါတယ်။ ဘယ်မှာစိုက်မလဲ။</div>
+                    <button class="audio-btn" onclick="speakJapanese('いいですね。どこで うえるんですか')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Person A:</div>
+                    <div class="japanese">ちかくの こうえん です。ボランティアを ぼしゅうしています。</div>
+                    <div class="romaji">Chikaku no kouen desu. Borantia o boshuu shite imasu.</div>
+                    <div class="english">At a nearby park. They're recruiting volunteers.</div>
+                    <div class="burmese">အနီးက ပန်းခြံမှာပါ။ စေတနာ့ဝန်ထမ်းစုဆောင်းနေတယ်။</div>
+                    <button class="audio-btn" onclick="speakJapanese('ちかくの こうえん です。ボランティアを ぼしゅうしています')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Person B:</div>
+                    <div class="japanese">ぜひ さんかします。</div>
+                    <div class="romaji">Zehi sanka shimasu.</div>
+                    <div class="english">I'll definitely participate.</div>
+                    <div class="burmese">သေချာပါဝင်ပါမယ်။</div>
+                    <button class="audio-btn" onclick="speakJapanese('ぜひ さんかします')"><i class="fas fa-volume-up"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dialogue 6: Saving Energy -->
+        <div class="conversation-section">
+            <h2>💡 Saving Energy</h2>
+            <div class="dialogue-box">
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Person A:</div>
+                    <div class="japanese">でんきだいを LEDに かえました。</div>
+                    <div class="romaji">Denkidai o LED ni kaemashita.</div>
+                    <div class="english">I changed my light bulbs to LED.</div>
+                    <div class="burmese">မီးလုံးတွေကို LED လဲလှယ်လိုက်တယ်။</div>
+                    <button class="audio-btn" onclick="speakJapanese('でんきだいを LEDに かえました')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Person B:</div>
+                    <div class="japanese">それで でんきだいは へりましたか。</div>
+                    <div class="romaji">Sorede denkidai wa herimashita ka.</div>
+                    <div class="english">Did your electricity bill decrease?</div>
+                    <div class="burmese">လျှပ်စစ်မီတာခ လျော့သွားလား။</div>
+                    <button class="audio-btn" onclick="speakJapanese('それで でんきだいは へりましたか')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Person A:</div>
+                    <div class="japanese">はい、だいぶ へりました。エコにも なりますね。</div>
+                    <div class="romaji">Hai, daibu herimashita. Eko ni mo narimasu ne.</div>
+                    <div class="english">Yes, it decreased a lot. It's also eco-friendly.</div>
+                    <div class="burmese">ဟုတ်တယ်၊ အများကြီးလျော့တယ်။ ဂေဟစနစ်လည်းကောင်းတယ်နော်။</div>
+                    <button class="audio-btn" onclick="speakJapanese('はい、だいぶ へりました。エコにも なりますね')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Person B:</div>
+                    <div class="japanese">わたしも LEDに かえようかな。</div>
+                    <div class="romaji">Watashi mo LED ni kaeyou kana.</div>
+                    <div class="english">Maybe I'll change to LED too.</div>
+                    <div class="burmese">ငါလည်း LED ပြောင်းရမလားနော်။</div>
+                    <button class="audio-btn" onclick="speakJapanese('わたしも LEDに かえようかな')"><i class="fas fa-volume-up"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dialogue 7: Environmental Protest -->
+        <div class="conversation-section">
+            <h2>✊ Environmental Protest</h2>
+            <div class="dialogue-box">
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Person A:</div>
+                    <div class="japanese">あした、かんきょう デモに いきませんか。</div>
+                    <div class="romaji">Ashita, kankyou demo ni ikimasen ka.</div>
+                    <div class="english">Shall we go to the environmental protest tomorrow?</div>
+                    <div class="burmese">မနက်ဖြန် သဘာဝပတ်ဝန်းကျင်ဆန္ဒပြပွဲသွားမလား။</div>
+                    <button class="audio-btn" onclick="speakJapanese('あした、かんきょう デモに いきませんか')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Person B:</div>
+                    <div class="japanese">かんきょうを まもるために せいふは もっと する べきだと おもいます。</div>
+                    <div class="romaji">Kankyou o mamoru tame ni seifu wa motto suru beki da to omoimasu.</div>
+                    <div class="english">I think the government should do more to protect the environment.</div>
+                    <div class="burmese">သဘာဝပတ်ဝန်းကျင်ကိုကာကွယ်ဖို့ အစိုးရပိုလုပ်သင့်တယ်လို့ထင်တယ်။</div>
+                    <button class="audio-btn" onclick="speakJapanese('かんきょうを まもるために せいふは もっと する べきだと おもいます')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Person A:</div>
+                    <div class="japanese">そうです。みんなで こえを あげましょう。</div>
+                    <div class="romaji">Sou desu. Minna de koe o agemashou.</div>
+                    <div class="english">That's right. Let's raise our voices together.</div>
+                    <div class="burmese">ဟုတ်တယ်။ အားလုံးအတူတူ အသံထွက်ကြရအောင်။</div>
+                    <button class="audio-btn" onclick="speakJapanese('そうです。みんなで こえを あげましょう')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Person B:</div>
+                    <div class="japanese">はい、いきましょう。</div>
+                    <div class="romaji">Hai, ikimashou.</div>
+                    <div class="english">Yes, let's go.</div>
+                    <div class="burmese">ဟုတ်ကဲ့၊ သွားကြရအောင်။</div>
+                    <button class="audio-btn" onclick="speakJapanese('はい、いきましょう')"><i class="fas fa-volume-up"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Recycling Categories -->
+        <div class="tip-box">
+            <h3><i class="fas fa-recycle env-icon"></i> Recycling Categories in Japan</h3>
+            <div class="recycle-list">
+                <div class="recycle-item">🔥 もえるごみ - Burnable</div>
+                <div class="recycle-item">🗑️ もえないごみ - Non-burnable</div>
+                <div class="recycle-item">♻️ しげんごみ - Recyclable</div>
+                <div class="recycle-item">🍾 びん - Bottles</div>
+                <div class="recycle-item">📰 しんぶん - Newspaper</div>
+                <div class="recycle-item">📦 だんボール - Cardboard</div>
+                <div class="recycle-item">🔋 かん - Cans</div>
+                <div class="recycle-item">🥫 ペットボトル - PET bottles</div>
+                <div class="recycle-item">⚠️ きけんぶつ - Hazardous</div>
+                <div class="recycle-item">📺 だいがたごみ - Large items</div>
+            </div>
+        </div>
+
+        <!-- Environmental Vocabulary -->
+        <div class="tip-box">
+            <h3><i class="fas fa-globe-asia env-icon"></i> Environmental Vocabulary</h3>
+            <div class="recycle-list">
+                <div class="recycle-item">🌍 かんきょう - Environment</div>
+                <div class="recycle-item">🌡️ きこうへんどう - Climate change</div>
+                <div class="recycle-item">♻️ リサイクル - Recycling</div>
+                <div class="recycle-item">💨 はいしゅつぶつ - Emissions</div>
+                <div class="recycle-item">🔋 エネルギー - Energy</div>
+                <div class="recycle-item">☀️ たいようこう - Solar power</div>
+                <div class="recycle-item">💨 ふうりょく - Wind power</div>
+                <div class="recycle-item">🌊 すいりょく - Hydropower</div>
+                <div class="recycle-item">🌳 しんりん - Forest</div>
+                <div class="recycle-item">🐟 せいたいけい - Ecosystem</div>
+                <div class="recycle-item">💧 こうすい - Rainwater</div>
+                <div class="recycle-item">🕊️ ほご - Protection</div>
+            </div>
+        </div>
+
+        <div class="tip-box">
+            <h4><i class="fas fa-lightbulb"></i> Environmental Tips in Japan</h4>
+            <ul style="margin-left: 20px; margin-top: 5px;">
+                <li><strong>Recycling Rules (分別 - bunbetsu):</strong> Each city has different rules. Check your local guidelines.</li>
+                <li><strong>Garbage Collection Days:</strong> Different types collected on different days (e.g., burnable on Mon/Thu).</li>
+                <li><strong>Plastic Bag Fee (レジ袋有料):</strong> Since 2020, stores charge for plastic bags.</li>
+                <li><strong>Cool Biz (クールビズ):</strong> Government campaign to save energy by setting AC to 28°C in summer.</li>
+                <li><strong>Warm Biz (ウォームビズ):</strong> Winter campaign to wear warm clothes and lower heating.</li>
+                <li><strong>Eco-point System:</strong> Points given for buying energy-efficient appliances.</li>
+                <li><strong>Nature Conservation:</strong> National parks cover about 14% of Japan's land area.</li>
+            </ul>
+        </div>
+
+        <footer>
+            <div class="footer-links">
+                <a href="../pages/privacy.html"><i class="fas fa-shield-alt"></i> Privacy Policy</a>
+                <a href="../pages/about.html"><i class="fas fa-info-circle"></i> About</a>
+                <a href="../pages/contact.html"><i class="fas fa-envelope"></i> Contact</a>
+                <a href="../pages/terms.html"><i class="fas fa-file-contract"></i> Terms & Policy</a>
+            </div>
+            <p><i class="fas fa-heart"></i> Next Gen Learning Myanmar - Daily Conversations</p>
+        </footer>
+    </div>
+    <script>
+        function speakJapanese(text) {
+            if (!window.speechSynthesis) return;
+            window.speechSynthesis.cancel();
+            const utterance = new SpeechSynthesisUtterance(text);
+            utterance.lang = 'ja-JP';
+            utterance.rate = 0.8;
+            function setVoice() {
+                const voices = window.speechSynthesis.getVoices();
+                const jpVoice = voices.find(v => v.lang === 'ja-JP' || v.lang === 'ja');
+                if (jpVoice) utterance.voice = jpVoice;
+                window.speechSynthesis.speak(utterance);
+            }
+            if (window.speechSynthesis.getVoices().length) setVoice();
+            else window.speechSynthesis.onvoiceschanged = setVoice;
+        }
+        function addBackToTopButton() {
+            if (document.querySelector('.back-to-top-btn')) return;
+            const btn = document.createElement('button');
+            btn.className = 'back-to-top-btn';
+            btn.innerHTML = '<i class="fas fa-arrow-up"></i><span>TOP</span>';
+            document.body.appendChild(btn);
+            window.addEventListener('scroll', () => btn.classList.toggle('show', window.scrollY > 300));
+            btn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+        }
+        addBackToTopButton();
+    </script>
+</body>
+</html>

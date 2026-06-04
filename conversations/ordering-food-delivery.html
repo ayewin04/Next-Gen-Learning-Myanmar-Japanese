@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Ordering Food Delivery - Next Gen Learning Myanmar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Myanmar:wght@400;500;700&family=Noto+Sans+JP:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/conversations.css">
+    <style>
+        .delivery-icon { font-size: 1.2rem; margin-right: 5px; color: #e67e22; }
+        .tip-box { background: #e8f8f5; border-left: 4px solid #1abc9c; padding: 1rem; border-radius: 10px; margin-top: 1rem; }
+        .app-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 8px; margin-top: 10px; }
+        .app-item { background: white; padding: 5px 10px; border-radius: 20px; font-size: 0.8rem; }
+    </style>
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <a href="daily-conversations.html" class="back-btn">
+                <i class="fas fa-arrow-left"></i> All Conversations
+            </a>
+            <h1>
+                <i class="fas fa-pizza-slice"></i>
+                Ordering Food Delivery
+            </h1>
+            <p>デリバリーをちゅうもんする - Learn how to order food delivery in Japanese</p>
+        </header>
+
+        <!-- Dialogue 1: Choosing a Delivery App -->
+        <div class="conversation-section">
+            <h2>📱 Choosing a Delivery App</h2>
+            <div class="dialogue-box">
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Person A:</div>
+                    <div class="japanese">こんばんは、デリバリーで たべものを ちゅうもんしない？</div>
+                    <div class="romaji">Konbanwa, deribarii de tabemono o chuumon shinai?</div>
+                    <div class="english">Tonight, shall we order food delivery?</div>
+                    <div class="burmese">ဒီည အစားအစာ အွန်လိုင်းမှာမှာကြမလား။</div>
+                    <button class="audio-btn" onclick="speakJapanese('こんばんは、デリバリーで たべものを ちゅうもんしない')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Person B:</div>
+                    <div class="japanese">いいね。アプリで ちゅうもんしよう。</div>
+                    <div class="romaji">Ii ne. Apuri de chuumon shiyou.</div>
+                    <div class="english">Good idea. Let's order through an app.</div>
+                    <div class="burmese">ကောင်းပါတယ်။ အက်ပ်ကနေမှာကြရအောင်။</div>
+                    <button class="audio-btn" onclick="speakJapanese('いいね。アプリで ちゅうもんしよう')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Person A:</div>
+                    <div class="japanese">Uber Eatsが いいかな？</div>
+                    <div class="romaji">Uber Iitsu ga ii kana?</div>
+                    <div class="english">Uber Eats is good, maybe?</div>
+                    <div class="burmese">Uber Eats ကောင်းမယ်နော်။</div>
+                    <button class="audio-btn" onclick="speakJapanese('Uber Eatsが いいかな')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Person B:</div>
+                    <div class="japanese">うん、そうしよう。なにを たべる？</div>
+                    <div class="romaji">Un, sou shiyou. Nani o taberu?</div>
+                    <div class="english">Yeah, let's do that. What will we eat?</div>
+                    <div class="burmese">အင်း၊ လုပ်ကြရအောင်။ ဘာစားမလဲ။</div>
+                    <button class="audio-btn" onclick="speakJapanese('うん、そうしよう。なにを たべる')"><i class="fas fa-volume-up"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dialogue 2: Browsing Restaurants -->
+        <div class="conversation-section">
+            <h2>🍔 Browsing Restaurants</h2>
+            <div class="dialogue-box">
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Person A:</div>
+                    <div class="japanese">ラーメン、ピザ、すし、どれが いい？</div>
+                    <div class="romaji">Raamen, piza, sushi, dore ga ii?</div>
+                    <div class="english">Ramen, pizza, sushi, which is good?</div>
+                    <div class="burmese">ရာမန်၊ ပီဇာ၊ ဆူရှီ၊ ဘယ်ဟာကောင်းလဲ။</div>
+                    <button class="audio-btn" onclick="speakJapanese('ラーメン、ピザ、すし、どれが いい')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Person B:</div>
+                    <div class="japanese">ピザが たべたいな。</div>
+                    <div class="romaji">Piza ga tabetai na.</div>
+                    <div class="english">I want to eat pizza.</div>
+                    <div class="burmese">ပီဇာစားချင်တယ်နော်။</div>
+                    <button class="audio-btn" onclick="speakJapanese('ピザが たべたいな')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Person A:</div>
+                    <div class="japanese">じゃあ、ピザやさんを さがそう。</div>
+                    <div class="romaji">Jaa, piza ya-san o sagasou.</div>
+                    <div class="english">Then let's look for a pizza place.</div>
+                    <div class="burmese">ဒါဆို ပီဇာဆိုင်ရှာကြရအောင်။</div>
+                    <button class="audio-btn" onclick="speakJapanese('じゃあ、ピザやさんを さがそう')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Person B:</div>
+                    <div class="japanese">クチコミが いい おみせに しよう。</div>
+                    <div class="romaji">Kuchikomi ga ii omise ni shiyou.</div>
+                    <div class="english">Let's choose a place with good reviews.</div>
+                    <div class="burmese">သုံးသပ်ချက်ကောင်းတဲ့ဆိုင်ကိုရွေးကြရအောင်။</div>
+                    <button class="audio-btn" onclick="speakJapanese('クチコミが いい おみせに しよう')"><i class="fas fa-volume-up"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dialogue 3: Placing the Order -->
+        <div class="conversation-section">
+            <h2>🍕 Placing the Order</h2>
+            <div class="dialogue-box">
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Person A:</div>
+                    <div class="japanese">マルゲリータを ひとつ ください。</div>
+                    <div class="romaji">Marugariita o hitotsu kudasai.</div>
+                    <div class="english">One Margherita, please.</div>
+                    <div class="burmese">မာဂျရီတာတစ်ခုပေးပါ။</div>
+                    <button class="audio-btn" onclick="speakJapanese('マルゲリータを ひとつ ください')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 System:</div>
+                    <div class="japanese">サイズは S、M、Lが あります。</div>
+                    <div class="romaji">Saizu wa esu, emu, eru ga arimasu.</div>
+                    <div class="english">Sizes: S, M, L.</div>
+                    <div class="burmese">ဆိုက် S, M, L ရှိတယ်။</div>
+                    <button class="audio-btn" onclick="speakJapanese('サイズは S、M、Lが あります')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Person A:</div>
+                    <div class="japanese">Mサイズで おねがいします。</div>
+                    <div class="romaji">Emu saizu de onegai shimasu.</div>
+                    <div class="english">Medium, please.</div>
+                    <div class="burmese">M ဆိုက်ပေးပါ။</div>
+                    <button class="audio-btn" onclick="speakJapanese('Mサイズで おねがいします')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 System:</div>
+                    <div class="japanese">サイドメニューは いかがですか。</div>
+                    <div class="romaji">Saido menyuu wa ikaga desu ka.</div>
+                    <div class="english">How about side menu items?</div>
+                    <div class="burmese">ဘေးထွက်မီနူးကော။</div>
+                    <button class="audio-btn" onclick="speakJapanese('サイドメニューは いかがですか')"><i class="fas fa-volume-up"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dialogue 4: Delivery Address -->
+        <div class="conversation-section">
+            <h2>📍 Delivery Address</h2>
+            <div class="dialogue-box">
+                <div class="dialogue-line">
+                    <div class="speaker">👤 System:</div>
+                    <div class="japanese">おとどけさきを おしえて ください。</div>
+                    <div class="romaji">Otodokesaki o oshiete kudasai.</div>
+                    <div class="english">Please tell me the delivery address.</div>
+                    <div class="burmese">ပို့မည့်လိပ်စာပြောပြပါ။</div>
+                    <button class="audio-btn" onclick="speakJapanese('おとどけさきを おしえて ください')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Person A:</div>
+                    <div class="japanese">とうきょうと しんじゅくく にじゅうさんばんち やまだ アパート ２０３ごうです。</div>
+                    <div class="romaji">Toukyouto Shinjukuku nijuusanbanchi Yamada Apaato nijuusangou desu.</div>
+                    <div class="english">23 Shinjuku, Tokyo, Yamada Apartment, Room 203.</div>
+                    <div class="burmese">တိုကျိုမြို့ ရှင်ဂျူကူ ၂၃ ၊ ယာမာဒါတိုက်ခန်း၊ အခန်း ၂၀၃ ပါ။</div>
+                    <button class="audio-btn" onclick="speakJapanese('とうきょうと しんじゅくく にじゅうさんばんち やまだ アパート ２０３ごうです')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 System:</div>
+                    <div class="japanese">でんわばんごうも おねがいします。</div>
+                    <div class="romaji">Denwabangou mo onegai shimasu.</div>
+                    <div class="english">Phone number as well, please.</div>
+                    <div class="burmese">ဖုန်းနံပါတ်လည်းပေးပါ။</div>
+                    <button class="audio-btn" onclick="speakJapanese('でんわばんごうも おねがいします')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Person A:</div>
+                    <div class="japanese">090-1234-5678です。</div>
+                    <div class="romaji">Zero kyuu zero ichi ni san yon go nana hachi desu.</div>
+                    <div class="english">090-1234-5678.</div>
+                    <div class="burmese">၀၉၀-၁၂၃၄-၅၆၇၈ ပါ။</div>
+                    <button class="audio-btn" onclick="speakJapanese('090-1234-5678です')"><i class="fas fa-volume-up"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dialogue 5: Payment -->
+        <div class="conversation-section">
+            <h2>💳 Payment</h2>
+            <div class="dialogue-box">
+                <div class="dialogue-line">
+                    <div class="speaker">👤 System:</div>
+                    <div class="japanese">おしはらい ほうほうを えらんで ください。</div>
+                    <div class="romaji">Oshiharai houhou o erande kudasai.</div>
+                    <div class="english">Please select a payment method.</div>
+                    <div class="burmese">ငွေပေးချေမည့်နည်းလမ်းရွေးပါ။</div>
+                    <button class="audio-btn" onclick="speakJapanese('おしはらい ほうほうを えらんで ください')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Person A:</div>
+                    <div class="japanese">クレジットカードで おねがいします。</div>
+                    <div class="romaji">Kurejitto kaado de onegai shimasu.</div>
+                    <div class="english">By credit card, please.</div>
+                    <div class="burmese">ခရက်ဒစ်ကတ်နဲ့ပေးပါ။</div>
+                    <button class="audio-btn" onclick="speakJapanese('クレジットカードで おねがいします')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 System:</div>
+                    <div class="japanese">ごちゅうもんを かくにん します。</div>
+                    <div class="romaji">Gochuumon o kakunin shimasu.</div>
+                    <div class="english">I will confirm your order.</div>
+                    <div class="burmese">မှာယူမှုအတည်ပြုပါမယ်။</div>
+                    <button class="audio-btn" onclick="speakJapanese('ごちゅうもんを かくにん します')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Person A:</div>
+                    <div class="japanese">はい、おねがいします。</div>
+                    <div class="romaji">Hai, onegai shimasu.</div>
+                    <div class="english">Yes, please.</div>
+                    <div class="burmese">ဟုတ်ကဲ့။</div>
+                    <button class="audio-btn" onclick="speakJapanese('はい、おねがいします')"><i class="fas fa-volume-up"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dialogue 6: Tracking Delivery -->
+        <div class="conversation-section">
+            <h2>🚚 Tracking Delivery</h2>
+            <div class="dialogue-box">
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Person A:</div>
+                    <div class="japanese">ハイヤーが いま どこに いるか わかる？</div>
+                    <div class="romaji">Haiyaa ga ima doko ni iru ka wakaru?</div>
+                    <div class="english">Do you know where the driver is now?</div>
+                    <div class="burmese">ယာဉ်မောင်းအခုဘယ်မှာရှိတယ်ဆိုတာသိလား။</div>
+                    <button class="audio-btn" onclick="speakJapanese('ハイヤーが いま どこに いるか わかる')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Person B:</div>
+                    <div class="japanese">アプリで トラッキングできるよ。</div>
+                    <div class="romaji">Apuri de torakkingu dekiru yo.</div>
+                    <div class="english">You can track it on the app.</div>
+                    <div class="burmese">အက်ပ်မှာ ခြေရာခံလို့ရတယ်။</div>
+                    <button class="audio-btn" onclick="speakJapanese('アプリで トラッキングできるよ')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Person A:</div>
+                    <div class="japanese">あと ５ぷん くらいで つきそう。</div>
+                    <div class="romaji">Ato gofun kurai de tsukisou.</div>
+                    <div class="english">Looks like it'll arrive in about 5 minutes.</div>
+                    <div class="burmese">နောက် ၅ မိနစ်လောက်ဆို ရောက်တော့မယ်။</div>
+                    <button class="audio-btn" onclick="speakJapanese('あと ５ぷん くらいで つきそう')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Person B:</div>
+                    <div class="japanese">よかった。したに おりようか。</div>
+                    <div class="romaji">Yokatta. Shita ni oriyou ka.</div>
+                    <div class="english">Good. Shall we go downstairs?</div>
+                    <div class="burmese">ကောင်းပါတယ်။ အောက်ထပ်ဆင်းကြမလား။</div>
+                    <button class="audio-btn" onclick="speakJapanese('よかった。したに おりようか')"><i class="fas fa-volume-up"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dialogue 7: Receiving the Order -->
+        <div class="conversation-section">
+            <h2>🍽️ Receiving the Order</h2>
+            <div class="dialogue-box">
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Delivery Person:</div>
+                    <div class="japanese">おまちどおさまです。ピザの おとどけです。</div>
+                    <div class="romaji">Omachidoosama desu. Piza no otodoke desu.</div>
+                    <div class="english">Sorry to keep you waiting. Pizza delivery.</div>
+                    <div class="burmese">စောင့်ရတာကြာလို့တောင်းပန်ပါတယ်။ ပီဇာပို့ဆောင်မှုပါ။</div>
+                    <button class="audio-btn" onclick="speakJapanese('おまちどおさまです。ピザの おとどけです')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Customer:</div>
+                    <div class="japanese">ありがとうございます。</div>
+                    <div class="romaji">Arigatou gozaimasu.</div>
+                    <div class="english">Thank you.</div>
+                    <div class="burmese">ကျေးဇူးတင်ပါတယ်။</div>
+                    <button class="audio-btn" onclick="speakJapanese('ありがとうございます')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Delivery Person:</div>
+                    <div class="japanese">どうぞ ごゆっくり おたのしみ ください。</div>
+                    <div class="romaji">Douzo goyukkuri otanoshimi kudasai.</div>
+                    <div class="english">Please enjoy.</div>
+                    <div class="burmese">ကျေးဇူးပြု၍ ပျော်ပါ။</div>
+                    <button class="audio-btn" onclick="speakJapanese('どうぞ ごゆっくり おたのしみ ください')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Customer:</div>
+                    <div class="japanese">ピザ あつあつで おいしそう！いただきます。</div>
+                    <div class="romaji">Piza atsui atsui de oishisou! Itadakimasu.</div>
+                    <div class="english">The pizza is hot and looks delicious! Let's eat.</div>
+                    <div class="burmese">ပီဇာပူပူက အရသာရှိပုံရတယ်။ စားပါရစေ။</div>
+                    <button class="audio-btn" onclick="speakJapanese('ピザ あつあつで おいしそう！いただきます')"><i class="fas fa-volume-up"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Delivery Apps -->
+        <div class="tip-box">
+            <h3><i class="fas fa-mobile-alt delivery-icon"></i> Popular Delivery Apps in Japan</h3>
+            <div class="app-list">
+                <div class="app-item">🚗 Uber Eats</div>
+                <div class="app-item">🍕 出前館 (Demae-can)</div>
+                <div class="app-item">🍔 メニュー (Menu)</div>
+                <div class="app-item">🍣 すしローラー - Sushi Roller</div>
+                <div class="app-item">🍜 ラーメンデリバリー - Ramen Delivery</div>
+                <div class="app-item">🍱 弁当デリ - Bento Delivery</div>
+                <div class="app-item">🥡 Wolt</div>
+                <div class="app-item">🍽️ 食べログデリバリー - Tabelog Delivery</div>
+            </div>
+        </div>
+
+        <div class="tip-box">
+            <h4><i class="fas fa-lightbulb"></i> Food Delivery Tips</h4>
+            <ul style="margin-left: 20px; margin-top: 5px;">
+                <li><strong>Delivery fee (はいそうりょう):</strong> Some apps charge a delivery fee.</li>
+                <li><strong>Minimum order (さいしょうちゅうもんきんがく):</strong> Some places have minimum order amounts.</li>
+                <li><strong>Peak hours (こんでいるじかん):</strong> Delivery takes longer during dinner rush.</li>
+                <li><strong>Tipping (チップ):</strong> Not customary in Japan.</li>
+                <li><strong>Contactless delivery (ふせつしょくはいそう):</strong> Available on many apps.</li>
+                <li><strong>Promo codes (クーポンコード):</strong> Look for discounts on first orders.</li>
+            </ul>
+        </div>
+
+        <footer>
+            <div class="footer-links">
+                <a href="../pages/privacy.html"><i class="fas fa-shield-alt"></i> Privacy Policy</a>
+                <a href="../pages/about.html"><i class="fas fa-info-circle"></i> About</a>
+                <a href="../pages/contact.html"><i class="fas fa-envelope"></i> Contact</a>
+                <a href="../pages/terms.html"><i class="fas fa-file-contract"></i> Terms & Policy</a>
+            </div>
+            <p><i class="fas fa-heart"></i> Next Gen Learning Myanmar - Daily Conversations</p>
+        </footer>
+    </div>
+    <script>
+        function speakJapanese(text) {
+            if (!window.speechSynthesis) return;
+            window.speechSynthesis.cancel();
+            const utterance = new SpeechSynthesisUtterance(text);
+            utterance.lang = 'ja-JP';
+            utterance.rate = 0.8;
+            function setVoice() {
+                const voices = window.speechSynthesis.getVoices();
+                const jpVoice = voices.find(v => v.lang === 'ja-JP' || v.lang === 'ja');
+                if (jpVoice) utterance.voice = jpVoice;
+                window.speechSynthesis.speak(utterance);
+            }
+            if (window.speechSynthesis.getVoices().length) setVoice();
+            else window.speechSynthesis.onvoiceschanged = setVoice;
+        }
+        function addBackToTopButton() {
+            if (document.querySelector('.back-to-top-btn')) return;
+            const btn = document.createElement('button');
+            btn.className = 'back-to-top-btn';
+            btn.innerHTML = '<i class="fas fa-arrow-up"></i><span>TOP</span>';
+            document.body.appendChild(btn);
+            window.addEventListener('scroll', () => btn.classList.toggle('show', window.scrollY > 300));
+            btn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+        }
+        addBackToTopButton();
+    </script>
+</body>
+</html>

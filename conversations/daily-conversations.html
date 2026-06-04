@@ -144,6 +144,33 @@
         .footer-links a:hover {
             color: #f5b042;
         }
+
+        .topic-mm {
+            font-size: 0.7rem;
+            color: #1abc9c;
+            margin-top: 5px;
+            font-family: 'Noto Sans Myanmar', sans-serif;
+        }
+
+        /* Dark mode / hover effect */
+        .topic-card:hover .topic-mm {
+            color: white;
+        }
+        /* Topic cards grid - adjust to show more cards */
+        .topics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        /* If you have 50+ cards, adjust for smaller screens */
+        @media (max-width: 768px) {
+            .topics-grid {
+                grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+                gap: 1rem;
+            }
+        }
         
         footer p {
             color: #7f8c8d;
@@ -177,214 +204,616 @@
         
         <div class="topics-grid">
             <div class="topic-card" onclick="location.href='greetings.html'">
-                <i class="fas fa-hand-peace"></i>
-                <h3>Greetings</h3>
-                <p>Basic greetings for different times of day</p>
-                <div class="topic-jp">あいさつ</div>
-            </div>
-            
-            <div class="topic-card" onclick="location.href='self-introduction.html'">
-                <i class="fas fa-user"></i>
-                <h3>Self Introduction</h3>
-                <p>Introduce yourself, your job, and where you're from</p>
-                <div class="topic-jp">じこしょうかい</div>
-            </div>
-            
-            <div class="topic-card" onclick="location.href='shopping.html'">
-                <i class="fas fa-bag-shopping"></i>
-                <h3>Shopping</h3>
-                <p>Ask prices, try clothes, buy items</p>
-                <div class="topic-jp">かいもの</div>
-            </div>
-            
-            <div class="topic-card" onclick="location.href='restaurant.html'">
-                <i class="fas fa-utensils"></i>
-                <h3>Restaurant</h3>
-                <p>Order food, ask for recommendations, pay the bill</p>
-                <div class="topic-jp">レストラン</div>
-            </div>
-            
-            <div class="topic-card" onclick="location.href='travel.html'">
-                <i class="fas fa-train"></i>
-                <h3>Travel & Transportation</h3>
-                <p>Buy tickets, ask for directions, take trains</p>
-                <div class="topic-jp">りょこう</div>
-            </div>
-            
-            <div class="topic-card" onclick="location.href='daily-routine.html'">
-                <i class="fas fa-calendar-day"></i>
-                <h3>Daily Routine</h3>
-                <p>Talk about your daily activities</p>
-                <div class="topic-jp">にちじょう</div>
-            </div>
-            
-            <div class="topic-card" onclick="location.href='asking-directions.html'">
-                <i class="fas fa-map-marker-alt"></i>
-                <h3>Asking Directions</h3>
-                <p>Ask "where is...", understand directions</p>
-                <div class="topic-jp">みちをきく</div>
-            </div>
-            
-            <div class="topic-card" onclick="location.href='at-hotel.html'">
-                <i class="fas fa-hotel"></i>
-                <h3>At the Hotel</h3>
-                <p>Check-in, ask for amenities, check-out</p>
-                <div class="topic-jp">ホテルで</div>
-            </div>
-            
-            <div class="topic-card" onclick="location.href='at-hospital.html'">
-                <i class="fas fa-hospital"></i>
-                <h3>At the Hospital</h3>
-                <p>Describe symptoms, see a doctor, get medicine</p>
-                <div class="topic-jp">びょういんで</div>
-            </div>
-            
-            <div class="topic-card" onclick="location.href='making-phone-calls.html'">
-                <i class="fas fa-phone"></i>
-                <h3>Making Phone Calls</h3>
-                <p>Make appointments, leave messages</p>
-                <div class="topic-jp">でんわ</div>
-            </div>
-            
-            <div class="topic-card" onclick="location.href='at-post-office.html'">
-                <i class="fas fa-envelope"></i>
-                <h3>At the Post Office</h3>
-                <p>Send letters, buy stamps, ship packages</p>
-                <div class="topic-jp">ゆうびんきょく</div>
-            </div>
-            
-            <div class="topic-card" onclick="location.href='at-bank.html'">
-                <i class="fas fa-building-columns"></i>
-                <h3>At the Bank</h3>
-                <p>Exchange money, open account, withdraw cash</p>
-                <div class="topic-jp">ぎんこう</div>
-            </div>
-            
-            <div class="topic-card" onclick="location.href='job-interview.html'">
-                <i class="fas fa-briefcase"></i>
-                <h3>Job Interview</h3>
-                <p>Talk about skills, experience, and goals</p>
-                <div class="topic-jp">しゅうしょくめんせつ</div>
-            </div>
-            
-            <div class="topic-card" onclick="location.href='school-life.html'">
-                <i class="fas fa-school"></i>
-                <h3>School Life</h3>
-                <p>Talk about classes, homework, and teachers</p>
-                <div class="topic-jp">がっこうせいかつ</div>
-            </div>
-            
-            <div class="topic-card" onclick="location.href='weather-talk.html'">
-                <i class="fas fa-sun"></i>
-                <h3>Weather Talk</h3>
-                <p>Discuss weather, seasons, and temperature</p>
-                <div class="topic-jp">てんき</div>
-            </div>
-            
-            <div class="topic-card" onclick="location.href='hobbies.html'">
-                <i class="fas fa-music"></i>
-                <h3>Hobbies & Interests</h3>
-                <p>Talk about free time activities</p>
-                <div class="topic-jp">しゅみ</div>
-            </div>
-            
-            <div class="topic-card" onclick="location.href='inviting-friends.html'">
-                <i class="fas fa-calendar-alt"></i>
-                <h3>Inviting Friends</h3>
-                <p>Make plans, accept/decline invitations</p>
-                <div class="topic-jp">さそう</div>
-            </div>
-            
-            <div class="topic-card" onclick="location.href='apologizing.html'">
-                <i class="fas fa-hand-peace"></i>
-                <h3>Apologizing</h3>
-                <p>Say sorry, explain mistakes, ask for forgiveness</p>
-                <div class="topic-jp">あやまる</div>
-            </div>
-            
-            <div class="topic-card" onclick="location.href='giving-reasons.html'">
-                <i class="fas fa-question-circle"></i>
-                <h3>Giving Reasons</h3>
-                <p>Explain why with "because"</p>
-                <div class="topic-jp">りゆう</div>
-            </div>
-            
-            <div class="topic-card" onclick="location.href='making-requests.html'">
-                <i class="fas fa-hand-peace"></i>
-                <h3>Making Requests</h3>
-                <p>Ask politely for help or favors</p>
-                <div class="topic-jp">いらいする</div>
-            </div>
-       
-                    <div class="topic-card" onclick="location.href='at-the-beauty-salon.html'">
-                <i class="fas fa-cut"></i>
-                <h3>At the Beauty Salon</h3>
-                <p>Haircuts, styling, and beauty services</p>
-                <div class="topic-jp">びよういんで</div>
-            </div>
-            
-            <div class="topic-card" onclick="location.href='renting-apartment.html'">
-                <i class="fas fa-building"></i>
-                <h3>Renting an Apartment</h3>
-                <p>Looking for apartments, contracts, and moving</p>
-                <div class="topic-jp">ちんたい</div>
-            </div>
-            
-            <div class="topic-card" onclick="location.href='using-public-transport.html'">
-                <i class="fas fa-subway"></i>
-                <h3>Using Public Transport</h3>
-                <p>Buses, trains, and IC cards</p>
-                <div class="topic-jp">こうつうきかん</div>
-            </div>
-            
-            <div class="topic-card" onclick="location.href='emergency-situations.html'">
-                <i class="fas fa-ambulance"></i>
-                <h3>Emergency Situations</h3>
-                <p>Accidents, lost items, and urgent help</p>
-                <div class="topic-jp">きんきゅうじ</div>
-            </div>
-            
-            <div class="topic-card" onclick="location.href='celebrations.html'">
-                <i class="fas fa-birthday-cake"></i>
-                <h3>Celebrations</h3>
-                <p>Birthdays, weddings, and special occasions</p>
-                <div class="topic-jp">おいわい</div>
-            </div>
-            
-            <div class="topic-card" onclick="location.href='technology-internet.html'">
-                <i class="fas fa-laptop"></i>
-                <h3>Technology & Internet</h3>
-                <p>Computers, smartphones, and social media</p>
-                <div class="topic-jp">テクノロジー</div>
-            </div>
-            
-            <div class="topic-card" onclick="location.href='environment-nature.html'">
-                <i class="fas fa-tree"></i>
-                <h3>Environment & Nature</h3>
-                <p>Recycling, pollution, and conservation</p>
-                <div class="topic-jp">かんきょう</div>
-            </div>
-            
-            <div class="topic-card" onclick="location.href='shopping-online.html'">
-                <i class="fas fa-shopping-cart"></i>
-                <h3>Online Shopping</h3>
-                <p>Ordering online, delivery, returns</p>
-                <div class="topic-jp">ネットかいもの</div>
-            </div>
-            
-            <div class="topic-card" onclick="location.href='cultural-events.html'">
-                <i class="fas fa-drumstick-bite"></i>
-                <h3>Cultural Events</h3>
-                <p>Festivals, temples, and traditions</p>
-                <div class="topic-jp">ぶんかイベント</div>
-            </div>
-            
-            <div class="topic-card" onclick="location.href='workplace-etiquette.html'">
-                <i class="fas fa-users"></i>
-                <h3>Workplace Etiquette</h3>
-                <p>Office manners, meetings, and business culture</p>
-                <div class="topic-jp">しょくばのルール</div>
-            </div>
+            <i class="fas fa-hand-peace"></i>
+            <h3>Greetings</h3>
+            <p>Basic greetings for different times of day</p>
+            <div class="topic-jp">あいさつ</div>
+            <div class="topic-mm">အခြေခံနှုတ်ဆက်စကားများ</div>
+        </div>
+
+        <div class="topic-card" onclick="location.href='self-introduction.html'">
+            <i class="fas fa-user"></i>
+            <h3>Self Introduction</h3>
+            <p>Introduce yourself, your job, and where you're from</p>
+            <div class="topic-jp">じこしょうかい</div>
+            <div class="topic-mm">ကိုယ်ရေးမိတ်ဆက်ခြင်း</div>
+        </div>
+
+        <div class="topic-card" onclick="location.href='shopping.html'">
+            <i class="fas fa-bag-shopping"></i>
+            <h3>Shopping</h3>
+            <p>Ask prices, try clothes, buy items</p>
+            <div class="topic-jp">かいもの</div>
+            <div class="topic-mm">ဈေးဝယ်ခြင်း</div>
+        </div>
+
+        <div class="topic-card" onclick="location.href='restaurant.html'">
+            <i class="fas fa-utensils"></i>
+            <h3>Restaurant</h3>
+            <p>Order food, ask for recommendations, pay the bill</p>
+            <div class="topic-jp">レストラン</div>
+            <div class="topic-mm">စားသောက်ဆိုင်</div>
+        </div>
+
+        <div class="topic-card" onclick="location.href='travel.html'">
+            <i class="fas fa-train"></i>
+            <h3>Travel & Transportation</h3>
+            <p>Buy tickets, ask for directions, take trains</p>
+            <div class="topic-jp">りょこう</div>
+            <div class="topic-mm">ခရီးသွားခြင်း</div>
+        </div>
+
+        <div class="topic-card" onclick="location.href='daily-routine.html'">
+            <i class="fas fa-calendar-day"></i>
+            <h3>Daily Routine</h3>
+            <p>Talk about your daily activities</p>
+            <div class="topic-jp">にちじょう</div>
+            <div class="topic-mm">နေ့စဉ်ဘဝ</div>
+        </div>
+
+        <div class="topic-card" onclick="location.href='asking-directions.html'">
+            <i class="fas fa-map-marker-alt"></i>
+            <h3>Asking Directions</h3>
+            <p>Ask "where is...", understand directions</p>
+            <div class="topic-jp">みちをきく</div>
+            <div class="topic-mm">လမ်းမေးခြင်း</div>
+        </div>
+
+        <div class="topic-card" onclick="location.href='at-hotel.html'">
+            <i class="fas fa-hotel"></i>
+            <h3>At the Hotel</h3>
+            <p>Check-in, ask for amenities, check-out</p>
+            <div class="topic-jp">ホテルで</div>
+            <div class="topic-mm">ဟိုတယ်တွင်</div>
+        </div>
+
+        <div class="topic-card" onclick="location.href='at-hospital.html'">
+            <i class="fas fa-hospital"></i>
+            <h3>At the Hospital</h3>
+            <p>Describe symptoms, see a doctor, get medicine</p>
+            <div class="topic-jp">びょういんで</div>
+            <div class="topic-mm">ဆေးရုံတွင်</div>
+        </div>
+
+        <div class="topic-card" onclick="location.href='making-phone-calls.html'">
+            <i class="fas fa-phone"></i>
+            <h3>Making Phone Calls</h3>
+            <p>Make appointments, leave messages</p>
+            <div class="topic-jp">でんわ</div>
+            <div class="topic-mm">ဖုန်းခေါ်ဆိုခြင်း</div>
+        </div>
+
+        <div class="topic-card" onclick="location.href='at-post-office.html'">
+            <i class="fas fa-envelope"></i>
+            <h3>At the Post Office</h3>
+            <p>Send letters, buy stamps, ship packages</p>
+            <div class="topic-jp">ゆうびんきょく</div>
+            <div class="topic-mm">စာတိုက်တွင်</div>
+        </div>
+
+        <div class="topic-card" onclick="location.href='at-bank.html'">
+            <i class="fas fa-building-columns"></i>
+            <h3>At the Bank</h3>
+            <p>Exchange money, open account, withdraw cash</p>
+            <div class="topic-jp">ぎんこう</div>
+            <div class="topic-mm">ဘဏ်တွင်</div>
+        </div>
+
+        <div class="topic-card" onclick="location.href='job-interview.html'">
+            <i class="fas fa-briefcase"></i>
+            <h3>Job Interview</h3>
+            <p>Talk about skills, experience, and goals</p>
+            <div class="topic-jp">しゅうしょくめんせつ</div>
+            <div class="topic-mm">အလုပ်အင်တာဗျူး</div>
+        </div>
+
+        <div class="topic-card" onclick="location.href='school-life.html'">
+            <i class="fas fa-school"></i>
+            <h3>School Life</h3>
+            <p>Talk about classes, homework, and teachers</p>
+            <div class="topic-jp">がっこうせいかつ</div>
+            <div class="topic-mm">ကျောင်းဘဝ</div>
+        </div>
+
+        <div class="topic-card" onclick="location.href='weather-talk.html'">
+            <i class="fas fa-sun"></i>
+            <h3>Weather Talk</h3>
+            <p>Discuss weather, seasons, and temperature</p>
+            <div class="topic-jp">てんき</div>
+            <div class="topic-mm">ရာသီဥတုအကြောင်း</div>
+        </div>
+
+        <div class="topic-card" onclick="location.href='hobbies.html'">
+            <i class="fas fa-music"></i>
+            <h3>Hobbies & Interests</h3>
+            <p>Talk about free time activities</p>
+            <div class="topic-jp">しゅみ</div>
+            <div class="topic-mm">ဝါသနာများ</div>
+        </div>
+
+        <div class="topic-card" onclick="location.href='inviting-friends.html'">
+            <i class="fas fa-calendar-alt"></i>
+            <h3>Inviting Friends</h3>
+            <p>Make plans, accept/decline invitations</p>
+            <div class="topic-jp">さそう</div>
+            <div class="topic-mm">သူငယ်ချင်းများဖိတ်ကြားခြင်း</div>
+        </div>
+
+        <div class="topic-card" onclick="location.href='apologizing.html'">
+            <i class="fas fa-hand-peace"></i>
+            <h3>Apologizing</h3>
+            <p>Say sorry, explain mistakes, ask for forgiveness</p>
+            <div class="topic-jp">あやまる</div>
+            <div class="topic-mm">တောင်းပန်ခြင်း</div>
+        </div>
+
+        <div class="topic-card" onclick="location.href='giving-reasons.html'">
+            <i class="fas fa-question-circle"></i>
+            <h3>Giving Reasons</h3>
+            <p>Explain why with "because"</p>
+            <div class="topic-jp">りゆう</div>
+            <div class="topic-mm">အကြောင်းပြချက်များ</div>
+        </div>
+
+        <div class="topic-card" onclick="location.href='making-requests.html'">
+            <i class="fas fa-hand-peace"></i>
+            <h3>Making Requests</h3>
+            <p>Ask politely for help or favors</p>
+            <div class="topic-jp">いらいする</div>
+            <div class="topic-mm">တောင်းဆိုခြင်း</div>
+        </div>
+
+        <div class="topic-card" onclick="location.href='at-the-beauty-salon.html'">
+            <i class="fas fa-cut"></i>
+            <h3>At the Beauty Salon</h3>
+            <p>Haircuts, styling, and beauty services</p>
+            <div class="topic-jp">びよういんで</div>
+            <div class="topic-mm">အလှပြင်ဆိုင်တွင်</div>
+        </div>
+
+        <div class="topic-card" onclick="location.href='renting-apartment.html'">
+            <i class="fas fa-building"></i>
+            <h3>Renting an Apartment</h3>
+            <p>Looking for apartments, contracts, and moving</p>
+            <div class="topic-jp">ちんたい</div>
+            <div class="topic-mm">တိုက်ခန်းငှားခြင်း</div>
+        </div>
+
+        <div class="topic-card" onclick="location.href='using-public-transport.html'">
+            <i class="fas fa-subway"></i>
+            <h3>Using Public Transport</h3>
+            <p>Buses, trains, and IC cards</p>
+            <div class="topic-jp">こうつうきかん</div>
+            <div class="topic-mm">အများသုံးယာဉ်များအသုံးပြုခြင်း</div>
+        </div>
+
+        <div class="topic-card" onclick="location.href='emergency-situations.html'">
+            <i class="fas fa-ambulance"></i>
+            <h3>Emergency Situations</h3>
+            <p>Accidents, lost items, and urgent help</p>
+            <div class="topic-jp">きんきゅうじ</div>
+            <div class="topic-mm">အရေးပေါ်အခြေအနေများ</div>
+        </div>
+
+        <div class="topic-card" onclick="location.href='celebrations.html'">
+            <i class="fas fa-birthday-cake"></i>
+            <h3>Celebrations</h3>
+            <p>Birthdays, weddings, and special occasions</p>
+            <div class="topic-jp">おいわい</div>
+            <div class="topic-mm">အခမ်းအနားများ</div>
+        </div>
+
+        <div class="topic-card" onclick="location.href='technology-internet.html'">
+            <i class="fas fa-laptop"></i>
+            <h3>Technology & Internet</h3>
+            <p>Computers, smartphones, and social media</p>
+            <div class="topic-jp">テクノロジー</div>
+            <div class="topic-mm">နည်းပညာနှင့်အင်တာနက်</div>
+        </div>
+
+        <div class="topic-card" onclick="location.href='environment-nature.html'">
+            <i class="fas fa-tree"></i>
+            <h3>Environment & Nature</h3>
+            <p>Recycling, pollution, and conservation</p>
+            <div class="topic-jp">かんきょう</div>
+            <div class="topic-mm">သဘာဝပတ်ဝန်းကျင်</div>
+        </div>
+
+        <div class="topic-card" onclick="location.href='shopping-online.html'">
+            <i class="fas fa-shopping-cart"></i>
+            <h3>Online Shopping</h3>
+            <p>Ordering online, delivery, returns</p>
+            <div class="topic-jp">ネットかいもの</div>
+            <div class="topic-mm">အွန်လိုင်းဈေးဝယ်ခြင်း</div>
+        </div>
+
+        <div class="topic-card" onclick="location.href='cultural-events.html'">
+            <i class="fas fa-drumstick-bite"></i>
+            <h3>Cultural Events</h3>
+            <p>Festivals, temples, and traditions</p>
+            <div class="topic-jp">ぶんかイベント</div>
+            <div class="topic-mm">ယဉ်ကျေးမှုပွဲတော်များ</div>
+        </div>
+
+        <div class="topic-card" onclick="location.href='workplace-etiquette.html'">
+            <i class="fas fa-users"></i>
+            <h3>Workplace Etiquette</h3>
+            <p>Office manners, meetings, and business culture</p>
+            <div class="topic-jp">しょくばのルール</div>
+            <div class="topic-mm">လုပ်ငန်းခွင်ကျင့်ဝတ်</div>
+        </div>
+        <!-- ========== ADDITIONAL 20 TOPICS ========== -->
+
+        <div class="topic-card" onclick="location.href='at-the-gym.html'">
+            <i class="fas fa-dumbbell"></i>
+            <h3>At the Gym</h3>
+            <p>Exercise routines, gym equipment, fitness goals</p>
+            <div class="topic-jp">ジムで</div>
+            <div class="topic-mm">အားကစားခန်းမတွင်</div>
+        </div>
+
+        <div class="topic-card" onclick="location.href='at-the-movies.html'">
+            <i class="fas fa-film"></i>
+            <h3>At the Movies</h3>
+            <p>Buying tickets, choosing movies, concessions</p>
+            <div class="topic-jp">えいがかんで</div>
+            <div class="topic-mm">ရုပ်ရှင်ရုံတွင်</div>
+        </div>
+
+        <div class="topic-card" onclick="location.href='at-the-park.html'">
+            <i class="fas fa-tree"></i>
+            <h3>At the Park</h3>
+            <p>Picnics, walking, relaxing in nature</p>
+            <div class="topic-jp">こうえんで</div>
+            <div class="topic-mm">ပန်းခြံတွင်</div>
+        </div>
+
+        <div class="topic-card" onclick="location.href='at-the-zoo.html'">
+            <i class="fas fa-paw"></i>
+            <h3>At the Zoo</h3>
+            <p>Seeing animals, feeding times, zoo map</p>
+            <div class="topic-jp">どうぶつえんで</div>
+            <div class="topic-mm">တိရစ္ဆာန်ရုံတွင်</div>
+        </div>
+
+        <div class="topic-card" onclick="location.href='at-the-museum.html'">
+            <i class="fas fa-landmark"></i>
+            <h3>At the Museum</h3>
+            <p>Exhibits, guided tours, entrance fees</p>
+            <div class="topic-jp">はくぶつかんで</div>
+            <div class="topic-mm">ပြတိုက်တွင်</div>
+        </div>
+
+        <div class="topic-card" onclick="location.href='at-the-airport.html'">
+            <i class="fas fa-plane"></i>
+            <h3>At the Airport</h3>
+            <p>Check-in, security, boarding, baggage claim</p>
+            <div class="topic-jp">くうこうで</div>
+            <div class="topic-mm">လေဆိပ်တွင်</div>
+        </div>
+
+        <div class="topic-card" onclick="location.href='at-the-bar.html'">
+            <i class="fas fa-beer"></i>
+            <h3>At the Bar</h3>
+            <p>Ordering drinks, chatting with friends, toasts</p>
+            <div class="topic-jp">バーで</div>
+            <div class="topic-mm">ဘားတွင်</div>
+        </div>
+
+        <div class="topic-card" onclick="location.href='at-the-beach.html'">
+            <i class="fas fa-umbrella-beach"></i>
+            <h3>At the Beach</h3>
+            <p>Swimming, sunbathing, beach activities</p>
+            <div class="topic-jp">うみで</div>
+            <div class="topic-mm">ကမ်းခြေတွင်</div>
+        </div>
+
+        <div class="topic-card" onclick="location.href='at-the-bookstore.html'">
+            <i class="fas fa-book"></i>
+            <h3>At the Bookstore</h3>
+            <p>Finding books, asking for recommendations, manga</p>
+            <div class="topic-jp">ほんやで</div>
+            <div class="topic-mm">စာအုပ်ဆိုင်တွင်</div>
+        </div>
+
+        <div class="topic-card" onclick="location.href='at-the-cafe.html'">
+            <i class="fas fa-coffee"></i>
+            <h3>At the Cafe</h3>
+            <p>Ordering coffee, snacks, working remotely</p>
+            <div class="topic-jp">カフェで</div>
+            <div class="topic-mm">ကော်ဖီဆိုင်တွင်</div>
+        </div>
+
+        <div class="topic-card" onclick="location.href='at-the-car-rental.html'">
+            <i class="fas fa-car"></i>
+            <h3>At the Car Rental</h3>
+            <p>Renting a car, insurance, fuel policies</p>
+            <div class="topic-jp">レンタカーで</div>
+            <div class="topic-mm">ကားငှားရမ်းခြင်း</div>
+        </div>
+
+        <div class="topic-card" onclick="location.href='at-the-consulate.html'">
+            <i class="fas fa-passport"></i>
+            <h3>At the Consulate</h3>
+            <p>Visa applications, passport renewal, emergency help</p>
+            <div class="topic-jp">りょうじかんで</div>
+            <div class="topic-mm">ကောင်စစ်ဝန်ရုံးတွင်</div>
+        </div>
+
+        <div class="topic-card" onclick="location.href='at-the-department-store.html'">
+            <i class="fas fa-store"></i>
+            <h3>At the Department Store</h3>
+            <p>Customer service, returns, sales, food floor</p>
+            <div class="topic-jp">デパートで</div>
+            <div class="topic-mm">ဈေးကြီးတွင်</div>
+        </div>
+
+        <div class="topic-card" onclick="location.href='at-the-onsen.html'">
+            <i class="fas fa-hot-tub"></i>
+            <h3>At the Onsen</h3>
+            <p>Hot spring etiquette, public baths, relaxation</p>
+            <div class="topic-jp">おんせんで</div>
+            <div class="topic-mm">ရေပူစမ်းတွင်</div>
+        </div>
+
+        <div class="topic-card" onclick="location.href='at-the-pharmacy.html'">
+            <i class="fas fa-capsules"></i>
+            <h3>At the Pharmacy</h3>
+            <p>Buying medicine, describing symptoms, prescriptions</p>
+            <div class="topic-jp">やっきょくで</div>
+            <div class="topic-mm">ဆေးဆိုင်တွင်</div>
+        </div>
+
+        <div class="topic-card" onclick="location.href='at-the-police-box.html'">
+            <i class="fas fa-shield-haltered"></i>
+            <h3>At the Police Box</h3>
+            <p>Reporting lost items, asking for directions, emergencies</p>
+            <div class="topic-jp">こうばんで</div>
+            <div class="topic-mm">ရဲဂိတ်တွင်</div>
+        </div>
+
+        <div class="topic-card" onclick="location.href='at-the-school.html'">
+            <i class="fas fa-chalkboard-user"></i>
+            <h3>At the School</h3>
+            <p>Parent-teacher meetings, school events, classroom</p>
+            <div class="topic-jp">がっこうで</div>
+            <div class="topic-mm">ကျောင်းတွင်</div>
+        </div>
+
+        <div class="topic-card" onclick="location.href='at-the-vending-machine.html'">
+            <i class="fas fa-cube"></i>
+            <h3>Using Vending Machines</h3>
+            <p>Buying drinks, snacks, using Suica/Pasmo</p>
+            <div class="topic-jp">じどうはんばいき</div>
+            <div class="topic-mm">အလိုအလျောက်ရောင်းစက်</div>
+        </div>
+
+        <div class="topic-card" onclick="location.href='birthday-party.html'">
+            <i class="fas fa-gift"></i>
+            <h3>Birthday Party</h3>
+            <p>Planning parties, giving gifts, singing Happy Birthday</p>
+            <div class="topic-jp">たんじょうびパーティー</div>
+            <div class="topic-mm">မွေးနေ့ပါတီ</div>
+        </div>
+
+        <div class="topic-card" onclick="location.href='studying-japanese.html'">
+            <i class="fas fa-language"></i>
+            <h3>Studying Japanese</h3>
+            <p>Learning tips, textbooks, language schools, JLPT</p>
+            <div class="topic-jp">にほんごのべんきょう</div>
+            <div class="topic-mm">ဂျပန်စာလေ့လာခြင်း</div>
+        </div>
+
+        <!-- ========== ADDITIONAL 20 TOPICS (51-70) ========== -->
+
+        <div class="topic-card" onclick="location.href='after-school-activities.html'">
+            <i class="fas fa-futbol"></i>
+            <h3>After School Activities</h3>
+            <p>Club activities, sports practice, homework time</p>
+            <div class="topic-jp">ほうかごかつどう</div>
+            <div class="topic-mm">ကျောင်းပြီးချိန်လှုပ်ရှားမှုများ</div>
+        </div>
+
+        <div class="topic-card" onclick="location.href='applying-for-jobs.html'">
+            <i class="fas fa-file-signature"></i>
+            <h3>Applying for Jobs</h3>
+            <p>Writing resumes, job hunting, applications</p>
+            <div class="topic-jp">しゅうしょくかつどう</div>
+            <div class="topic-mm">အလုပ်လျှောက်ထားခြင်း</div>
+        </div>
+
+        <div class="topic-card" onclick="location.href='asking-for-a-raise.html'">
+            <i class="fas fa-chart-line"></i>
+            <h3>Asking for a Raise</h3>
+            <p>Salary negotiation, performance review, promotion</p>
+            <div class="topic-jp">しょうきゅうをねがう</div>
+            <div class="topic-mm">လစာတိုးတောင်းခြင်း</div>
+        </div>
+
+        <div class="topic-card" onclick="location.href='buying-a-house.html'">
+            <i class="fas fa-home"></i>
+            <h3>Buying a House</h3>
+            <p>Property search, mortgage loans, home inspection</p>
+            <div class="topic-jp">いえをかう</div>
+            <div class="topic-mm">အိမ်ဝယ်ယူခြင်း</div>
+        </div>
+
+        <div class="topic-card" onclick="location.href='childcare-and-parenting.html'">
+            <i class="fas fa-baby-carriage"></i>
+            <h3>Childcare & Parenting</h3>
+            <p>Daycare, raising children, school selection</p>
+            <div class="topic-jp">いくじ</div>
+            <div class="topic-mm">ကလေးပြုစုခြင်း</div>
+        </div>
+
+        <div class="topic-card" onclick="location.href='complaints-and-refunds.html'">
+            <i class="fas fa-receipt"></i>
+            <h3>Complaints & Refunds</h3>
+            <p>Customer service, product returns, warranty claims</p>
+            <div class="topic-jp">クレームとへんきん</div>
+            <div class="topic-mm">တိုင်ကြားချက်များနှင့်ပြန်အမ်းငွေ</div>
+        </div>
+
+        <div class="topic-card" onclick="location.href='dating-and-relationships.html'">
+            <i class="fas fa-heart"></i>
+            <h3>Dating & Relationships</h3>
+            <p>Asking someone out, love, marriage proposals</p>
+            <div class="topic-jp">こうさいとれんあい</div>
+            <div class="topic-mm">ချစ်ကြိုက်ခြင်းနှင့်ဆက်ဆံရေး</div>
+        </div>
+
+        <div class="topic-card" onclick="location.href='donating-to-charity.html'">
+            <i class="fas fa-hand-holding-heart"></i>
+            <h3>Donating to Charity</h3>
+            <p>Volunteering, donations, fundraising events</p>
+            <div class="topic-jp">きふ</div>
+            <div class="topic-mm">လှူဒါန်းခြင်း</div>
+        </div>
+
+        <div class="topic-card" onclick="location.href='driving-lessons.html'">
+            <i class="fas fa-car-side"></i>
+            <h3>Driving Lessons</h3>
+            <p>Learning to drive, driver's license test, road rules</p>
+            <div class="topic-jp">じどうしゃけいこ</div>
+            <div class="topic-mm">ယာဉ်မောင်းသင်တန်း</div>
+        </div>
+
+        <div class="topic-card" onclick="location.href='family-gatherings.html'">
+            <i class="fas fa-family"></i>
+            <h3>Family Gatherings</h3>
+            <p>Family reunions, holiday dinners, relatives</p>
+            <div class="topic-jp">かぞくのかい</div>
+            <div class="topic-mm">မိသားစုစုဝေးပွဲများ</div>
+        </div>
+
+        <div class="topic-card" onclick="location.href='getting-a-haircut.html'">
+            <i class="fas fa-cut"></i>
+            <h3>Getting a Haircut</h3>
+            <p>Describing hairstyles, barbershop vs salon, pricing</p>
+            <div class="topic-jp">かみをきる</div>
+            <div class="topic-mm">ဆံပင်ညှပ်ခြင်း</div>
+        </div>
+
+        <div class="topic-card" onclick="location.href='going-to-a-concert.html'">
+            <i class="fas fa-guitar"></i>
+            <h3>Going to a Concert</h3>
+            <p>Buying tickets, music genres, live performances</p>
+            <div class="topic-jp">コンサートにいく</div>
+            <div class="topic-mm">ဖျော်ဖြေပွဲသွားခြင်း</div>
+        </div>
+
+        <div class="topic-card" onclick="location.href='going-to-the-dentist.html'">
+            <i class="fas fa-tooth"></i>
+            <h3>Going to the Dentist</h3>
+            <p>Toothache, fillings, braces, regular checkups</p>
+            <div class="topic-jp">はいしゃにいく</div>
+            <div class="topic-mm">သွားဆရာဝန်သွားခြင်း</div>
+        </div>
+
+        <div class="topic-card" onclick="location.href='household-chores.html'">
+            <i class="fas fa-broom"></i>
+            <h3>Household Chores</h3>
+            <p>Cleaning, laundry, cooking, grocery shopping</p>
+            <div class="topic-jp">かていのしごと</div>
+            <div class="topic-mm">အိမ်မှုကိစ္စများ</div>
+        </div>
+
+        <div class="topic-card" onclick="location.href='immigration-and-visas.html'">
+            <i class="fas fa-passport"></i>
+            <h3>Immigration & Visas</h3>
+            <p>Visa applications, residency permits, passport renewal</p>
+            <div class="topic-jp">にゅうこくとビザ</div>
+            <div class="topic-mm">လူဝင်မှုကြီးကြပ်ရေးနှင့်ဗီဇာ</div>
+        </div>
+
+        <div class="topic-card" onclick="location.href='investing-and-saving.html'">
+            <i class="fas fa-chart-pie"></i>
+            <h3>Investing & Saving</h3>
+            <p>Stocks, bonds, savings accounts, retirement planning</p>
+            <div class="topic-jp">とうしとちょきん</div>
+            <div class="topic-mm">ရင်းနှီးမြှုပ်နှံခြင်းနှင့်စုဆောင်းခြင်း</div>
+        </div>
+
+        <div class="topic-card" onclick="location.href='legal-advice.html'">
+            <i class="fas fa-gavel"></i>
+            <h3>Legal Advice</h3>
+            <p>Consulting lawyers, contracts, legal disputes</p>
+            <div class="topic-jp">ほうりつそうだん</div>
+            <div class="topic-mm">ဥပဒေအကြံဉာဏ်</div>
+        </div>
+
+        <div class="topic-card" onclick="location.href='looking-for-a-pet.html'">
+            <i class="fas fa-dog"></i>
+            <h3>Looking for a Pet</h3>
+            <p>Adopting pets, pet stores, veterinary care</p>
+            <div class="topic-jp">ペットをさがす</div>
+            <div class="topic-mm">အိမ်မွေးတိရစ္ဆာန်ရှာဖွေခြင်း</div>
+        </div>
+
+        <div class="topic-card" onclick="location.href='moving-to-a-new-city.html'">
+            <i class="fas fa-truck-moving"></i>
+            <h3>Moving to a New City</h3>
+            <p>Packing, moving companies, changing address</p>
+            <div class="topic-jp">ひっこし</div>
+            <div class="topic-mm">မြို့သစ်သို့ပြောင်းရွှေ့ခြင်း</div>
+        </div>
+
+        <div class="topic-card" onclick="location.href='ordering-food-delivery.html'">
+            <i class="fas fa-pizza-slice"></i>
+            <h3>Ordering Food Delivery</h3>
+            <p>Apps, phone orders, delivery tracking, tipping</p>
+            <div class="topic-jp">でりばリーをちゅうもんする</div>
+            <div class="topic-mm">အစားအစာပို့ဆောင်မှာယူခြင်း</div>
+        </div>
+        <!-- ========== ADDITIONAL 6 TOPICS (71-76) ========== -->
+
+        <div class="topic-card" onclick="location.href='paying-bills.html'">
+            <i class="fas fa-file-invoice-dollar"></i>
+            <h3>Paying Bills</h3>
+            <p>Electricity, water, gas, internet, and phone bills</p>
+            <div class="topic-jp">せいきゅうしんのはらい</div>
+            <div class="topic-mm">ငွေတောင်းခံလွှာများပေးချေခြင်း</div>
+        </div>
+
+        <div class="topic-card" onclick="location.href='planning-a-wedding.html'">
+            <i class="fas fa-ring"></i>
+            <h3>Planning a Wedding</h3>
+            <p>Venue, catering, guest list, wedding ceremony</p>
+            <div class="topic-jp">けっこんしきのけいかく</div>
+            <div class="topic-mm">မင်္ဂလာဆောင်စီစဉ်ခြင်း</div>
+        </div>
+
+        <div class="topic-card" onclick="location.href='renewing-passport.html'">
+            <i class="fas fa-passport"></i>
+            <h3>Renewing Passport</h3>
+            <p>Passport application, photos, fees, processing time</p>
+            <div class="topic-jp">パスポートのこうしん</div>
+            <div class="topic-mm">နိုင်ငံကူးလက်မှတ်သက်တမ်းတိုးခြင်း</div>
+        </div>
+
+        <div class="topic-card" onclick="location.href='signing-a-contract.html'">
+            <i class="fas fa-file-contract"></i>
+            <h3>Signing a Contract</h3>
+            <p>Terms and conditions, signatures, legal obligations</p>
+            <div class="topic-jp">けいやくしょにサインする</div>
+            <div class="topic-mm">စာချုပ်လက်မှတ်ထိုးခြင်း</div>
+        </div>
+
+        <div class="topic-card" onclick="location.href='taking-public-exams.html'">
+            <i class="fas fa-scroll"></i>
+            <h3>Taking Public Exams</h3>
+            <p>JLPT, university entrance exams, certification tests</p>
+            <div class="topic-jp">こうしゅうしけん</div>
+            <div class="topic-mm">အများပြည်သူစာမေးပွဲများဖြေဆိုခြင်း</div>
+        </div>
+
+        <div class="topic-card" onclick="location.href='volunteer-work.html'">
+            <i class="fas fa-hands-helping"></i>
+            <h3>Volunteer Work</h3>
+            <p>Community service, disaster relief, teaching, cleaning</p>
+            <div class="topic-jp">ボランティアかつどう</div>
+            <div class="topic-mm">စေတနာ့ဝန်ထမ်းလုပ်ခြင်း</div>
+        </div>
          </div>
         <footer>
             <div class="footer-links">

@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Childcare & Parenting - Next Gen Learning Myanmar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Myanmar:wght@400;500;700&family=Noto+Sans+JP:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/conversations.css">
+    <style>
+        .parenting-icon { font-size: 1.2rem; margin-right: 5px; color: #e67e22; }
+        .tip-box { background: #e8f8f5; border-left: 4px solid #1abc9c; padding: 1rem; border-radius: 10px; margin-top: 1rem; }
+        .milestone-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 8px; margin-top: 10px; }
+        .milestone-item { background: white; padding: 5px 10px; border-radius: 20px; font-size: 0.8rem; }
+    </style>
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <a href="daily-conversations.html" class="back-btn">
+                <i class="fas fa-arrow-left"></i> All Conversations
+            </a>
+            <h1>
+                <i class="fas fa-baby-carriage"></i>
+                Childcare & Parenting
+            </h1>
+            <p>いくじ - Learn how to talk about childcare and parenting in Japanese</p>
+        </header>
+
+        <!-- Dialogue 1: Pregnancy Announcement -->
+        <div class="conversation-section">
+            <h2>🤰 Pregnancy Announcement</h2>
+            <div class="dialogue-box">
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Person A:</div>
+                    <div class="japanese">あかちゃんが できました。</div>
+                    <div class="romaji">Akachan ga dekimashita.</div>
+                    <div class="english">We're having a baby.</div>
+                    <div class="burmese">ကလေးရပါပြီ။</div>
+                    <button class="audio-btn" onclick="speakJapanese('あかちゃんが できました')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Person B:</div>
+                    <div class="japanese">おめでとうございます！なんにんめですか。</div>
+                    <div class="romaji">Omedetou gozaimasu! Nan ninme desu ka.</div>
+                    <div class="english">Congratulations! Is it your first?</div>
+                    <div class="burmese">ဂုဏ်ယူပါတယ်။ ပထမဆုံးလား။</div>
+                    <button class="audio-btn" onclick="speakJapanese('おめでとうございます！なんにんめですか')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Person A:</div>
+                    <div class="japanese">はい、はじめてです。とても たのしみです。</div>
+                    <div class="romaji">Hai, hajimete desu. Totemo tanoshimi desu.</div>
+                    <div class="english">Yes, it's our first. We're very excited.</div>
+                    <div class="burmese">ဟုတ်ကဲ့၊ ပထမဆုံးပါ။ သိပ်မျှော်လင့်နေတယ်။</div>
+                    <button class="audio-btn" onclick="speakJapanese('はい、はじめてです。とても たのしみです')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Person B:</div>
+                    <div class="japanese">おからだに きをつけて くださいね。</div>
+                    <div class="romaji">Okarada ni ki o tsukete kudasai ne.</div>
+                    <div class="english">Please take care of your health.</div>
+                    <div class="burmese">ကျန်းမာရေးဂရုစိုက်ပါနော်။</div>
+                    <button class="audio-btn" onclick="speakJapanese('おからだに きをつけて くださいね')"><i class="fas fa-volume-up"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dialogue 2: Choosing a Daycare -->
+        <div class="conversation-section">
+            <h2>🏫 Choosing a Daycare</h2>
+            <div class="dialogue-box">
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Parent:</div>
+                    <div class="japanese">ほいくえんを さがしています。</div>
+                    <div class="romaji">Hoikuen o sagashite imasu.</div>
+                    <div class="english">I'm looking for a daycare.</div>
+                    <div class="burmese">ကလေးထိန်းကျောင်းရှာနေတယ်။</div>
+                    <button class="audio-btn" onclick="speakJapanese('ほいくえんを さがしています')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Staff:</div>
+                    <div class="japanese">おすすめの ほいくえんを しょうかいします。</div>
+                    <div class="romaji">Osusume no hoikuen o shoukai shimasu.</div>
+                    <div class="english">I'll introduce some recommended daycares.</div>
+                    <div class="burmese">အကြံပြုထားတဲ့ကလေးထိန်းကျောင်းတွေမိတ်ဆက်ပေးပါမယ်။</div>
+                    <button class="audio-btn" onclick="speakJapanese('おすすめの ほいくえんを しょうかいします')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Parent:</div>
+                    <div class="japanese">えいごの じゅぎょうが ある ところが いいです。</div>
+                    <div class="romaji">Eigo no jugyou ga aru tokoro ga ii desu.</div>
+                    <div class="english">A place with English classes would be good.</div>
+                    <div class="burmese">အင်္ဂလိပ်စာအတန်းရှိတဲ့နေရာကောင်းပါတယ်။</div>
+                    <button class="audio-btn" onclick="speakJapanese('えいごの じゅぎょうが ある ところが いいです')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Staff:</div>
+                    <div class="japanese">では、こちらが ぴったりです。</div>
+                    <div class="romaji">De wa, kochira ga pittari desu.</div>
+                    <div class="english">Then, this one is perfect.</div>
+                    <div class="burmese">ဒါဆိုဒီဟာက အတိအကျပါ။</div>
+                    <button class="audio-btn" onclick="speakJapanese('では、こちらが ぴったりです')"><i class="fas fa-volume-up"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dialogue 3: Baby Milestones -->
+        <div class="conversation-section">
+            <h2>👶 Baby Milestones</h2>
+            <div class="dialogue-box">
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Parent A:</div>
+                    <div class="japanese">あかちゃんが ハイハイを はじめました。</div>
+                    <div class="romaji">Akachan ga haihai o hajimemashita.</div>
+                    <div class="english">The baby started crawling.</div>
+                    <div class="burmese">ကလေးတွားတတ်ပြီ။</div>
+                    <button class="audio-btn" onclick="speakJapanese('あかちゃんが ハイハイを はじめました')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Parent B:</div>
+                    <div class="japanese">すごい！なんかげつ ですか。</div>
+                    <div class="romaji">Sugoi! Nan kagetsu desu ka.</div>
+                    <div class="english">Amazing! How many months old?</div>
+                    <div class="burmese">အံ့သြစရာပဲ။ ဘယ်လောက်လလဲ။</div>
+                    <button class="audio-btn" onclick="speakJapanese('すごい！なんかげつ ですか')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Parent A:</div>
+                    <div class="japanese">８かげつです。はやいですね。</div>
+                    <div class="romaji">Hachi kagetsu desu. Hayai desu ne.</div>
+                    <div class="english">8 months. It's fast.</div>
+                    <div class="burmese">၈ လပါ။ မြန်တယ်နော်။</div>
+                    <button class="audio-btn" onclick="speakJapanese('８かげつです。はやいですね')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Parent B:</div>
+                    <div class="japanese">はやいものですね。つぎは あるく ころですね。</div>
+                    <div class="romaji">Hayai mono desu ne. Tsugi wa aruku koro desu ne.</div>
+                    <div class="english">Time flies. Next will be walking.</div>
+                    <div class="burmese">အချိန်ကမြန်လိုက်တာ။ နောက်တစ်ခုလမ်းလျှောက်တော့မယ်နော်။</div>
+                    <button class="audio-btn" onclick="speakJapanese('はやいものですね。つぎは あるく ころですね')"><i class="fas fa-volume-up"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dialogue 4: Sick Child -->
+        <div class="conversation-section">
+            <h2>🤒 Sick Child</h2>
+            <div class="dialogue-box">
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Parent:</div>
+                    <div class="japanese">こどもが ねつを だしました。</div>
+                    <div class="romaji">Kodomo ga netsu o dashimashita.</div>
+                    <div class="english">My child has a fever.</div>
+                    <div class="burmese">ကလေးအဖျားတက်တယ်။</div>
+                    <button class="audio-btn" onclick="speakJapanese('こどもが ねつを だしました')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Doctor:</div>
+                    <div class="japanese">なんど ありますか。</div>
+                    <div class="romaji">Nan do arimasu ka.</div>
+                    <div class="english">How many degrees?</div>
+                    <div class="burmese">ဘယ်လောက်ဒီဂရီလဲ။</div>
+                    <button class="audio-btn" onclick="speakJapanese('なんど ありますか')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Parent:</div>
+                    <div class="japanese">３８．５ど です。げりも しています。</div>
+                    <div class="romaji">Sanjuuhachi ten go do desu. Geri mo shite imasu.</div>
+                    <div class="english">38.5 degrees. He also has diarrhea.</div>
+                    <div class="burmese">၃၈.၅ ဒီဂရီပါ။ ဝမ်းလည်းလျှောတယ်။</div>
+                    <button class="audio-btn" onclick="speakJapanese('３８．５ど です。げりも しています')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Doctor:</div>
+                    <div class="japanese">ぐうぜん ウイルスかもしれません。くすりを だします。</div>
+                    <div class="romaji">Guuzen uirusu kamoshiremasen. Kusuri o dashimasu.</div>
+                    <div class="english">It might be a stomach virus. I'll prescribe medicine.</div>
+                    <div class="burmese">အစာအိမ်ဗိုင်းရပ်စ်ဖြစ်နိုင်တယ်။ ဆေးပေးပါမယ်။</div>
+                    <button class="audio-btn" onclick="speakJapanese('ぐうぜん ウイルスかもしれません。くすりを だします')"><i class="fas fa-volume-up"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dialogue 5: Parent-Teacher Meeting -->
+        <div class="conversation-section">
+            <h2>👩‍🏫 Parent-Teacher Meeting</h2>
+            <div class="dialogue-box">
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Teacher:</div>
+                    <div class="japanese">おこさんは とても ゆうしょうな がくせいです。</div>
+                    <div class="romaji">Okosan wa totemo yuushou na gakusei desu.</div>
+                    <div class="english">Your child is an excellent student.</div>
+                    <div class="burmese">မင်းရဲ့ကလေးက ထူးချွန်တဲ့ကျောင်းသားပါ။</div>
+                    <button class="audio-btn" onclick="speakJapanese('おこさんは とても ゆうしょうな がくせいです')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Parent:</div>
+                    <div class="japanese">ありがとうございます。なにか もんだいは ありますか。</div>
+                    <div class="romaji">Arigatou gozaimasu. Nanika mondai wa arimasu ka.</div>
+                    <div class="english">Thank you. Are there any problems?</div>
+                    <div class="burmese">ကျေးဇူးပါ။ ပြဿနာတစ်ခုခုရှိလား။</div>
+                    <button class="audio-btn" onclick="speakJapanese('ありがとうございます。なにか もんだいは ありますか')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Teacher:</div>
+                    <div class="japanese">いいえ。ともだちとも なかよく しています。</div>
+                    <div class="romaji">Iie. Tomodachi to mo nakayoku shite imasu.</div>
+                    <div class="english">No. He also gets along well with friends.</div>
+                    <div class="burmese">မရှိပါဘူး။ သူငယ်ချင်းတွေနဲ့လည်း လိုက်လျောညီထွေနေတယ်။</div>
+                    <button class="audio-btn" onclick="speakJapanese('いいえ。ともだちとも なかよく しています')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Parent:</div>
+                    <div class="japanese">それは よかったです。</div>
+                    <div class="romaji">Sore wa yokatta desu.</div>
+                    <div class="english">That's good to hear.</div>
+                    <div class="burmese">ကောင်းပါတယ်။</div>
+                    <button class="audio-btn" onclick="speakJapanese('それは よかったです')"><i class="fas fa-volume-up"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dialogue 6: Discipline Discussion -->
+        <div class="conversation-section">
+            <h2>📏 Discipline Discussion</h2>
+            <div class="dialogue-box">
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Parent A:</div>
+                    <div class="japanese">こどもが いうことを ききません。</div>
+                    <div class="romaji">Kodomo ga iu koto o kikimasen.</div>
+                    <div class="english">My child doesn't listen.</div>
+                    <div class="burmese">ကလေးကနားမထောင်ဘူး။</div>
+                    <button class="audio-btn" onclick="speakJapanese('こどもが いうことを ききません')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Parent B:</div>
+                    <div class="japanese">どうやって たいしょ していますか。</div>
+                    <div class="romaji">Douyatte taisho shite imasu ka.</div>
+                    <div class="english">How are you handling it?</div>
+                    <div class="burmese">ဘယ်လိုကိုင်တွယ်ဖြေရှင်းလဲ။</div>
+                    <button class="audio-btn" onclick="speakJapanese('どうやって たいしょ していますか')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Parent A:</div>
+                    <div class="japanese">おこって しまい ます。でも よくないと わかって います。</div>
+                    <div class="romaji">Okotte shimai masu. Demo yokunai to wakatte imasu.</div>
+                    <div class="english">I end up getting angry. But I know it's not good.</div>
+                    <div class="burmese">စိတ်ဆိုးမိတယ်။ ဒါပေမယ့် မကောင်းဘူးဆိုတာသိတယ်။</div>
+                    <button class="audio-btn" onclick="speakJapanese('おこって しまい ます。でも よくないと わかって います')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Parent B:</div>
+                    <div class="japanese">まず おちついて、なぜ いけないか せつめいするのが たいせつです。</div>
+                    <div class="romaji">Mazu ochitsuite, naze ikenai ka setsumei suru no ga taisetsu desu.</div>
+                    <div class="english">First, calm down and explain why it's wrong. That's important.</div>
+                    <div class="burmese">အရင်ဆုံးစိတ်အေးအေးထားပြီး ဘာလို့မှားလဲရှင်းပြတာအရေးကြီးတယ်။</div>
+                    <button class="audio-btn" onclick="speakJapanese('まず おちついて、なぜ いけないか せつめいするのが たいせつです')"><i class="fas fa-volume-up"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dialogue 7: Planning Playdates -->
+        <div class="conversation-section">
+            <h2>🧸 Planning Playdates</h2>
+            <div class="dialogue-box">
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Parent A:</div>
+                    <div class="japanese">こんどの しゅうまつ、あそびに きませんか。</div>
+                    <div class="romaji">Kondo no shuumatsu, asobi ni kimasen ka.</div>
+                    <div class="english">Would you like to come play this weekend?</div>
+                    <div class="burmese">ဒီအားလပ်ရက်မှာ လာလည်မလား။</div>
+                    <button class="audio-btn" onclick="speakJapanese('こんどの しゅうまつ、あそびに きませんか')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Parent B:</div>
+                    <div class="japanese">いいですね。どこで あいますか。</div>
+                    <div class="romaji">Ii desu ne. Doko de aimasu ka.</div>
+                    <div class="english">Sounds good. Where shall we meet?</div>
+                    <div class="burmese">ကောင်းပါတယ်။ ဘယ်မှာတွေ့ကြမလဲ။</div>
+                    <button class="audio-btn" onclick="speakJapanese('いいですね。どこで あいますか')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Parent A:</div>
+                    <div class="japanese">こうえんは どう？</div>
+                    <div class="romaji">Kouen wa dou?</div>
+                    <div class="english">How about the park?</div>
+                    <div class="burmese">ပန်းခြံကော။</div>
+                    <button class="audio-btn" onclick="speakJapanese('こうえんは どう')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Parent B:</div>
+                    <div class="japanese">いいね。おべんとうを もっていこう。</div>
+                    <div class="romaji">Ii ne. Obentou o motte ikou.</div>
+                    <div class="english">Good idea. Let's bring lunch boxes.</div>
+                    <div class="burmese">ကောင်းပါတယ်။ ထမင်းဘူးယူသွားကြရအောင်။</div>
+                    <button class="audio-btn" onclick="speakJapanese('いいね。おべんとうを もっていこう')"><i class="fas fa-volume-up"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Child Development Milestones -->
+        <div class="tip-box">
+            <h3><i class="fas fa-chart-line parenting-icon"></i> Child Development Milestones</h3>
+            <div class="milestone-list">
+                <div class="milestone-item">👶 ねがえり - Rolling over (3-4 months)</div>
+                <div class="milestone-item">🪑 おすわり - Sitting up (6-7 months)</div>
+                <div class="milestone-item">🐛 ハイハイ - Crawling (8-10 months)</div>
+                <div class="milestone-item">🚶 あるく - Walking (12-15 months)</div>
+                <div class="milestone-item">🗣️ はじめての ことば - First words (12-18 months)</div>
+                <div class="milestone-item">🚽 トイレトレーニング - Toilet training (2-3 years)</div>
+            </div>
+        </div>
+
+        <div class="tip-box">
+            <h4><i class="fas fa-lightbulb"></i> Parenting Tips in Japan</h4>
+            <ul style="margin-left: 20px; margin-top: 5px;">
+                <li><strong>Maternity leave (さんきゅう):</strong> Up to 1 year of maternity/paternity leave available.</li>
+                <li><strong>Child allowance (こどもてあて):</strong> Monthly allowance until junior high school.</li>
+                <li><strong>Vaccination schedule (よぼうせっしゅ):</strong> Free vaccines for children under certain ages.</li>
+                <li><strong>Mother-child handbook (ぼしけんこうてちょう):</strong> Given to all pregnant women in Japan.</li>
+                <li><strong>Playgroups (あそびグループ):</strong> Great way to socialize children and parents.</li>
+                <li><strong>Daycare waitlists (ほいくえんたいき):</strong> Apply early as some areas have long waitlists.</li>
+            </ul>
+        </div>
+
+        <footer>
+            <div class="footer-links">
+                <a href="../pages/privacy.html"><i class="fas fa-shield-alt"></i> Privacy Policy</a>
+                <a href="../pages/about.html"><i class="fas fa-info-circle"></i> About</a>
+                <a href="../pages/contact.html"><i class="fas fa-envelope"></i> Contact</a>
+                <a href="../pages/terms.html"><i class="fas fa-file-contract"></i> Terms & Policy</a>
+            </div>
+            <p><i class="fas fa-heart"></i> Next Gen Learning Myanmar - Daily Conversations</p>
+        </footer>
+    </div>
+    <script>
+        function speakJapanese(text) {
+            if (!window.speechSynthesis) return;
+            window.speechSynthesis.cancel();
+            const utterance = new SpeechSynthesisUtterance(text);
+            utterance.lang = 'ja-JP';
+            utterance.rate = 0.8;
+            function setVoice() {
+                const voices = window.speechSynthesis.getVoices();
+                const jpVoice = voices.find(v => v.lang === 'ja-JP' || v.lang === 'ja');
+                if (jpVoice) utterance.voice = jpVoice;
+                window.speechSynthesis.speak(utterance);
+            }
+            if (window.speechSynthesis.getVoices().length) setVoice();
+            else window.speechSynthesis.onvoiceschanged = setVoice;
+        }
+        function addBackToTopButton() {
+            if (document.querySelector('.back-to-top-btn')) return;
+            const btn = document.createElement('button');
+            btn.className = 'back-to-top-btn';
+            btn.innerHTML = '<i class="fas fa-arrow-up"></i><span>TOP</span>';
+            document.body.appendChild(btn);
+            window.addEventListener('scroll', () => btn.classList.toggle('show', window.scrollY > 300));
+            btn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+        }
+        addBackToTopButton();
+    </script>
+</body>
+</html>

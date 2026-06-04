@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>At the Gym - Next Gen Learning Myanmar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Myanmar:wght@400;500;700&family=Noto+Sans+JP:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/conversations.css">
+    <style>
+        .gym-icon { font-size: 1.2rem; margin-right: 5px; color: #e67e22; }
+        .tip-box { background: #e8f8f5; border-left: 4px solid #1abc9c; padding: 1rem; border-radius: 10px; margin-top: 1rem; }
+        .equipment-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 8px; margin-top: 10px; }
+        .equipment-item { background: white; padding: 5px 10px; border-radius: 20px; font-size: 0.8rem; }
+    </style>
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <a href="daily-conversations.html" class="back-btn">
+                <i class="fas fa-arrow-left"></i> All Conversations
+            </a>
+            <h1>
+                <i class="fas fa-dumbbell"></i>
+                At the Gym
+            </h1>
+            <p>ジムで - Learn how to talk about fitness and gym activities in Japanese</p>
+        </header>
+
+        <!-- Dialogue 1: Joining a Gym -->
+        <div class="conversation-section">
+            <h2>🏋️ Joining a Gym</h2>
+            <div class="dialogue-box">
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Customer:</div>
+                    <div class="japanese">このジムに にゅうかいしたいです。</div>
+                    <div class="romaji">Kono jimu ni nyuukai shitai desu.</div>
+                    <div class="english">I want to join this gym.</div>
+                    <div class="burmese">ဒီအားကစားခန်းမကိုစာရင်းသွင်းချင်ပါတယ်။</div>
+                    <button class="audio-btn" onclick="speakJapanese('このジムに にゅうかいしたいです')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Staff:</div>
+                    <div class="japanese">かしこまりました。にゅうかいきんは いちまんえんです。</div>
+                    <div class="romaji">Kashikomarimashita. Nyuukaikin wa ichiman en desu.</div>
+                    <div class="english">Certainly. The membership fee is 10,000 yen.</div>
+                    <div class="burmese">ကောင်းပါပြီ။ အသင်းဝင်ကြေး ၁၀၀၀၀ ယန်းပါ။</div>
+                    <button class="audio-btn" onclick="speakJapanese('かしこまりました。にゅうかいきんは いちまんえんです')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Staff:</div>
+                    <div class="japanese">げっきんは ごせんえんです。</div>
+                    <div class="romaji">Gekkin wa gosen en desu.</div>
+                    <div class="english">The monthly fee is 5,000 yen.</div>
+                    <div class="burmese">လစဉ်ကြေး ၅၀၀၀ ယန်းပါ။</div>
+                    <button class="audio-btn" onclick="speakJapanese('げっきんは ごせんえんです')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Customer:</div>
+                    <div class="japanese">プールも つかえますか。</div>
+                    <div class="romaji">Puuru mo tsukaemasu ka.</div>
+                    <div class="english">Can I also use the pool?</div>
+                    <div class="burmese">ရေကူးကန်လည်းသုံးလို့ရမလား။</div>
+                    <button class="audio-btn" onclick="speakJapanese('プールも つかえますか')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Staff:</div>
+                    <div class="japanese">はい、プールも スタジオも つかえます。</div>
+                    <div class="romaji">Hai, puuru mo sutajio mo tsukaemasu.</div>
+                    <div class="english">Yes, you can use the pool and the studio.</div>
+                    <div class="burmese">ဟုတ်ကဲ့၊ ရေကူးကန်နဲ့စတူဒီယိုလည်းသုံးလို့ရပါတယ်။</div>
+                    <button class="audio-btn" onclick="speakJapanese('はい、プールも スタジオも つかえます')"><i class="fas fa-volume-up"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dialogue 2: Asking About Equipment -->
+        <div class="conversation-section">
+            <h2>💪 Asking About Equipment</h2>
+            <div class="dialogue-box">
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Member:</div>
+                    <div class="japanese">この マシンは どうやって つかうんですか。</div>
+                    <div class="romaji">Kono mashin wa douyatte tsukaun desu ka.</div>
+                    <div class="english">How do I use this machine?</div>
+                    <div class="burmese">ဒီစက်ကို ဘယ်လိုသုံးရမလဲ။</div>
+                    <button class="audio-btn" onclick="speakJapanese('この マシンは どうやって つかうんですか')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Staff:</div>
+                    <div class="japanese">まず、この ボタンを おして ちからを せっていします。</div>
+                    <div class="romaji">Mazu, kono botan o oshite chikara o settei shimasu.</div>
+                    <div class="english">First, press this button to set the resistance.</div>
+                    <div class="burmese">အရင်ဆုံး ဒီခလုတ်နှိပ်ပြီး အလေးချိန်သတ်မှတ်ပါ။</div>
+                    <button class="audio-btn" onclick="speakJapanese('まず、この ボタンを おして ちからを せっていします')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Staff:</div>
+                    <div class="japanese">それから ゆっくり ひいて ください。</div>
+                    <div class="romaji">Sorekara yukkuri hiite kudasai.</div>
+                    <div class="english">Then pull slowly.</div>
+                    <div class="burmese">ပြီးရင် ဖြည်းဖြည်းဆွဲပါ။</div>
+                    <button class="audio-btn" onclick="speakJapanese('それから ゆっくり ひいて ください')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Member:</div>
+                    <div class="japanese">わかりました。ありがとう。</div>
+                    <div class="romaji">Wakarimashita. Arigatou.</div>
+                    <div class="english">I understand. Thank you.</div>
+                    <div class="burmese">နားလည်ပါတယ်။ ကျေးဇူးပါ။</div>
+                    <button class="audio-btn" onclick="speakJapanese('わかりました。ありがとう')"><i class="fas fa-volume-up"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dialogue 3: Workout Routine -->
+        <div class="conversation-section">
+            <h2>📋 Workout Routine</h2>
+            <div class="dialogue-box">
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Person A:</div>
+                    <div class="japanese">まいにち うんどうしてるんですか。</div>
+                    <div class="romaji">Mainichi undou shiterun desu ka.</div>
+                    <div class="english">Do you exercise every day?</div>
+                    <div class="burmese">နေ့တိုင်းလေ့ကျင့်ခန်းလုပ်လား။</div>
+                    <button class="audio-btn" onclick="speakJapanese('まいにち うんどうしてるんですか')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Person B:</div>
+                    <div class="japanese">いいえ、たいてい まいしゅう さんかい きます。</div>
+                    <div class="romaji">Iie, taitei maishuu sankai kimasu.</div>
+                    <div class="english">No, I usually come three times a week.</div>
+                    <div class="burmese">မဟုတ်ဘူး၊ တစ်ပတ်သုံးကြိမ်လောက်လာတယ်။</div>
+                    <button class="audio-btn" onclick="speakJapanese('いいえ、たいてい まいしゅう さんかい きます')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Person A:</div>
+                    <div class="japanese">どんな トレーニングを してるんですか。</div>
+                    <div class="romaji">Donna toreening o shiterun desu ka.</div>
+                    <div class="english">What kind of training do you do?</div>
+                    <div class="burmese">ဘယ်လိုလေ့ကျင့်ခန်းမျိုးလုပ်လဲ။</div>
+                    <button class="audio-btn" onclick="speakJapanese('どんな トレーニングを してるんですか')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Person B:</div>
+                    <div class="japanese">カーディオと ウェイトトレーニングを しています。</div>
+                    <div class="romaji">Kaadio to weito toreening o shite imasu.</div>
+                    <div class="english">I do cardio and weight training.</div>
+                    <div class="burmese">နှလုံးခုန်လေ့ကျင့်ခန်းနဲ့အလေးမလေ့ကျင့်ခန်းလုပ်တယ်။</div>
+                    <button class="audio-btn" onclick="speakJapanese('カーディオと ウェイトトレーニングを しています')"><i class="fas fa-volume-up"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dialogue 4: Personal Trainer -->
+        <div class="conversation-section">
+            <h2>🧘 Personal Trainer</h2>
+            <div class="dialogue-box">
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Member:</div>
+                    <div class="japanese">パーソナルトレーナーは いますか。</div>
+                    <div class="romaji">Paasonaru toreenaa wa imasu ka.</div>
+                    <div class="english">Do you have a personal trainer?</div>
+                    <div class="burmese">ကိုယ်ပိုင်သင်တန်းဆရာရှိလား။</div>
+                    <button class="audio-btn" onclick="speakJapanese('パーソナルトレーナーは いますか')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Staff:</div>
+                    <div class="japanese">はい、よやくせいです。せんたくしだいで よやくできます。</div>
+                    <div class="romaji">Hai, yoyakusei desu. Sentaku shidai de yoyaku dekimasu.</div>
+                    <div class="english">Yes, by reservation. You can book depending on availability.</div>
+                    <div class="burmese">ဟုတ်ကဲ့၊ ကြိုဘွတ်ခ်လုပ်ရပါတယ်။ ရက်လွတ်ပေါ်မူတည်ပြီးဘွတ်ခ်လို့ရပါတယ်။</div>
+                    <button class="audio-btn" onclick="speakJapanese('はい、よやくせいです。せんたくしだいで よやくできます')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Member:</div>
+                    <div class="japanese">いくらですか。</div>
+                    <div class="romaji">Ikura desu ka.</div>
+                    <div class="english">How much is it?</div>
+                    <div class="burmese">ဘယ်လောက်လဲ။</div>
+                    <button class="audio-btn" onclick="speakJapanese('いくらですか')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Staff:</div>
+                    <div class="japanese">いちじかん ごせんえんです。</div>
+                    <div class="romaji">Ichijikan gosen en desu.</div>
+                    <div class="english">5,000 yen per hour.</div>
+                    <div class="burmese">တစ်နာရီ ၅၀၀၀ ယန်းပါ။</div>
+                    <button class="audio-btn" onclick="speakJapanese('いちじかん ごせんえんです')"><i class="fas fa-volume-up"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dialogue 5: Group Class -->
+        <div class="conversation-section">
+            <h2>🧘 Group Class</h2>
+            <div class="dialogue-box">
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Member:</div>
+                    <div class="japanese">グループクラスは ありますか。</div>
+                    <div class="romaji">Guruupu kurasu wa arimasu ka.</div>
+                    <div class="english">Are there group classes?</div>
+                    <div class="burmese">အဖွဲ့လိုက်အတန်းတွေရှိလား။</div>
+                    <button class="audio-btn" onclick="speakJapanese('グループクラスは ありますか')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Staff:</div>
+                    <div class="japanese">はい、ヨガと ズンバが あります。</div>
+                    <div class="romaji">Hai, yoga to zunba ga arimasu.</div>
+                    <div class="english">Yes, we have yoga and Zumba.</div>
+                    <div class="burmese">ဟုတ်ကဲ့၊ ယောဂနဲ့ဇမ်ဘာရှိတယ်။</div>
+                    <button class="audio-btn" onclick="speakJapanese('はい、ヨガと ズンバが あります')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Member:</div>
+                    <div class="japanese">ヨガの クラスは なんじからですか。</div>
+                    <div class="romaji">Yoga no kurasu wa nanji kara desu ka.</div>
+                    <div class="english">What time is the yoga class?</div>
+                    <div class="burmese">ယောဂအတန်းက ဘယ်နာရီကစလဲ။</div>
+                    <button class="audio-btn" onclick="speakJapanese('ヨガの クラスは なんじからですか')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Staff:</div>
+                    <div class="japanese">ごぜん １０じと ごご ７じです。</div>
+                    <div class="romaji">Gozen juuji to gogo shichiji desu.</div>
+                    <div class="english">10 AM and 7 PM.</div>
+                    <div class="burmese">မနက် ၁၀ နာရီနဲ့ညနေ ၇ နာရီပါ။</div>
+                    <button class="audio-btn" onclick="speakJapanese('ごぜん １０じと ごご ７じです')"><i class="fas fa-volume-up"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dialogue 6: Sauna and Shower -->
+        <div class="conversation-section">
+            <h2>🧖 Sauna and Shower</h2>
+            <div class="dialogue-box">
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Member:</div>
+                    <div class="japanese">サウナは ありますか。</div>
+                    <div class="romaji">Sauna wa arimasu ka.</div>
+                    <div class="english">Is there a sauna?</div>
+                    <div class="burmese">ဆောငွေ့ခန်းရှိလား။</div>
+                    <button class="audio-btn" onclick="speakJapanese('サウナは ありますか')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Staff:</div>
+                    <div class="japanese">はい、おふろと サウナが あります。</div>
+                    <div class="romaji">Hai, ofuro to sauna ga arimasu.</div>
+                    <div class="english">Yes, there's a bath and a sauna.</div>
+                    <div class="burmese">ဟုတ်ကဲ့၊ ရေချိုးကန်နဲ့ ဆောငွေ့ခန်းရှိတယ်။</div>
+                    <button class="audio-btn" onclick="speakJapanese('はい、おふろと サウナが あります')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Member:</div>
+                    <div class="japanese">シャワーも つかえますか。</div>
+                    <div class="romaji">Shawaa mo tsukaemasu ka.</div>
+                    <div class="english">Can I also use the shower?</div>
+                    <div class="burmese">ရေချိုးခန်းလည်းသုံးလို့ရမလား။</div>
+                    <button class="audio-btn" onclick="speakJapanese('シャワーも つかえますか')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Staff:</div>
+                    <div class="japanese">もちろんです。タオルも レンタルできます。</div>
+                    <div class="romaji">Mochiron desu. Taoru mo rentaru dekimasu.</div>
+                    <div class="english">Of course. You can also rent towels.</div>
+                    <div class="burmese">သေချာပါတယ်။ မျက်နှာသုတ်ပုဝါလည်းငှားလို့ရပါတယ်။</div>
+                    <button class="audio-btn" onclick="speakJapanese('もちろんです。タオルも レンタルできます')"><i class="fas fa-volume-up"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dialogue 7: Canceling Membership -->
+        <div class="conversation-section">
+            <h2>📝 Canceling Membership</h2>
+            <div class="dialogue-box">
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Member:</div>
+                    <div class="japanese">たいかいを したいです。</div>
+                    <div class="romaji">Taikai o shitai desu.</div>
+                    <div class="english">I want to cancel my membership.</div>
+                    <div class="burmese">အသင်းဝင်ခြင်းရပ်လိုပါတယ်။</div>
+                    <button class="audio-btn" onclick="speakJapanese('たいかいを したいです')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Staff:</div>
+                    <div class="japanese">たいかいの りゆうは なんですか。</div>
+                    <div class="romaji">Taikai no riyuu wa nan desu ka.</div>
+                    <div class="english">What is the reason for cancellation?</div>
+                    <div class="burmese">ရပ်လိုက်ရတဲ့အကြောင်းရင်းကဘာလဲ။</div>
+                    <button class="audio-btn" onclick="speakJapanese('たいかいの りゆうは なんですか')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Member:</div>
+                    <div class="japanese">ひっこしする からです。</div>
+                    <div class="romaji">Hikkoshi suru kara desu.</div>
+                    <div class="english">Because I'm moving.</div>
+                    <div class="burmese">အိမ်ပြောင်းလို့ပါ။</div>
+                    <button class="audio-btn" onclick="speakJapanese('ひっこしする からです')"><i class="fas fa-volume-up"></i></button>
+                </div>
+                <div class="dialogue-line">
+                    <div class="speaker">👤 Staff:</div>
+                    <div class="japanese">わかりました。たいかい てつづきには せんげつ いじょう まえに もうしでて ください。</div>
+                    <div class="romaji">Wakarimashita. Taikai tetsuduki ni wa sengetsu ijou mae ni moushidete kudasai.</div>
+                    <div class="english">Understood. Please apply for cancellation at least one month in advance.</div>
+                    <div class="burmese">နားလည်ပါတယ်။ အနည်းဆုံးတစ်လအလိုမှာလျှောက်ထားပေးပါ။</div>
+                    <button class="audio-btn" onclick="speakJapanese('わかりました。たいかい てつづきには せんげつ いじょう まえに もうしでて ください')"><i class="fas fa-volume-up"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Gym Equipment Vocabulary -->
+        <div class="tip-box">
+            <h3><i class="fas fa-dumbbell gym-icon"></i> Gym Equipment Vocabulary</h3>
+            <div class="equipment-list">
+                <div class="equipment-item">🏋️ ダンベル - Dumbbell</div>
+                <div class="equipment-item">🏋️ バーベル - Barbell</div>
+                <div class="equipment-item">🪑 ベンチプレス - Bench press</div>
+                <div class="equipment-item">🏃 トレッドミル - Treadmill</div>
+                <div class="equipment-item">🚴 エアロバイク - Stationary bike</div>
+                <div class="equipment-item">🏊 プール - Pool</div>
+                <div class="equipment-item">🧘 ヨガマット - Yoga mat</div>
+                <div class="equipment-item">🪢 ジャンプロープ - Jump rope</div>
+            </div>
+        </div>
+
+        <!-- Fitness Vocabulary -->
+        <div class="tip-box">
+            <h3><i class="fas fa-heartbeat gym-icon"></i> Fitness Vocabulary</h3>
+            <div class="equipment-list">
+                <div class="equipment-item">💪 きんにく - Muscle</div>
+                <div class="equipment-item">🏃 カーディオ - Cardio</div>
+                <div class="equipment-item">🏋️ ウェイト - Weights</div>
+                <div class="equipment-item">🧘 ヨガ - Yoga</div>
+                <div class="equipment-item">💧 あせ - Sweat</div>
+                <div class="equipment-item">🦵 あし - Legs</div>
+                <div class="equipment-item">💪 うで - Arms</div>
+                <div class="equipment-item">🍎 ダイエット - Diet</div>
+            </div>
+        </div>
+
+        <div class="tip-box">
+            <h4><i class="fas fa-lightbulb"></i> Gym Etiquette in Japan</h4>
+            <ul style="margin-left: 20px; margin-top: 5px;">
+                <li><strong>Wipe down equipment (ふく - fuku):</strong> Always wipe machines after use.</li>
+                <li><strong>Indoor shoes (うわばき - uwabaki):</strong> Bring clean indoor shoes.</li>
+                <li><strong>No grunting (どなる - donaru):</strong> Loud grunting is considered rude.</li>
+                <li><strong>Share equipment (こうきょう - kyoukyou):</strong> Don't hog machines during busy hours.</li>
+                <li><strong>Towel (タオル - taoru):</strong> Bring a towel to put on benches.</li>
+                <li><strong>Membership card (かいんしょう - kain shou):</strong> Required to enter.</li>
+            </ul>
+        </div>
+
+        <footer>
+            <div class="footer-links">
+                <a href="../pages/privacy.html"><i class="fas fa-shield-alt"></i> Privacy Policy</a>
+                <a href="../pages/about.html"><i class="fas fa-info-circle"></i> About</a>
+                <a href="../pages/contact.html"><i class="fas fa-envelope"></i> Contact</a>
+                <a href="../pages/terms.html"><i class="fas fa-file-contract"></i> Terms & Policy</a>
+            </div>
+            <p><i class="fas fa-heart"></i> Next Gen Learning Myanmar - Daily Conversations</p>
+        </footer>
+    </div>
+    <script>
+        function speakJapanese(text) {
+            if (!window.speechSynthesis) return;
+            window.speechSynthesis.cancel();
+            const utterance = new SpeechSynthesisUtterance(text);
+            utterance.lang = 'ja-JP';
+            utterance.rate = 0.8;
+            function setVoice() {
+                const voices = window.speechSynthesis.getVoices();
+                const jpVoice = voices.find(v => v.lang === 'ja-JP' || v.lang === 'ja');
+                if (jpVoice) utterance.voice = jpVoice;
+                window.speechSynthesis.speak(utterance);
+            }
+            if (window.speechSynthesis.getVoices().length) setVoice();
+            else window.speechSynthesis.onvoiceschanged = setVoice;
+        }
+        function addBackToTopButton() {
+            if (document.querySelector('.back-to-top-btn')) return;
+            const btn = document.createElement('button');
+            btn.className = 'back-to-top-btn';
+            btn.innerHTML = '<i class="fas fa-arrow-up"></i><span>TOP</span>';
+            document.body.appendChild(btn);
+            window.addEventListener('scroll', () => btn.classList.toggle('show', window.scrollY > 300));
+            btn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+        }
+        addBackToTopButton();
+    </script>
+</body>
+</html>

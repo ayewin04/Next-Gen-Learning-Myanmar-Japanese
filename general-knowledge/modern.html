@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Modern Japan - Next Gen Learning Myanmar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Myanmar:wght@400;500;700&family=Noto+Sans+JP:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .gk-detail-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 1rem;
+        }
+        
+        .gk-detail-header {
+            background: white;
+            border-radius: 20px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .gk-detail-header h1 {
+            font-size: 1.8rem;
+            color: #2c3e50;
+            text-align: center;
+        }
+        
+        .gk-detail-header h1 i {
+            color: #e67e22;
+            margin-right: 10px;
+        }
+        
+        .gk-detail-header h1 span {
+            font-size: 1rem;
+            color: #e67e22;
+            display: block;
+            margin-top: 0.3rem;
+        }
+        
+        .gk-detail-header p {
+            text-align: center;
+            color: #7f8c8d;
+            margin-top: 0.5rem;
+        }
+        
+        .gk-info-card {
+            background: white;
+            border-radius: 20px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .gk-info-card h2 {
+            color: #e67e22;
+            border-left: 4px solid #e67e22;
+            padding-left: 1rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        
+        .gk-info-card h2 .jp-head {
+            font-size: 0.9rem;
+            color: #7f8c8d;
+            font-weight: normal;
+        }
+        
+        .gk-info-card p {
+            line-height: 1.6;
+            color: #2c3e50;
+            margin-bottom: 0.8rem;
+        }
+        
+        .gk-list {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .gk-list li {
+            margin: 0.8rem 0;
+            padding: 0.8rem;
+            background: #f8f9fa;
+            border-radius: 10px;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+        
+        .gk-list li:hover {
+            background: #e67e22;
+            color: white;
+            transform: translateX(5px);
+        }
+        
+        .gk-list li strong {
+            color: #e67e22;
+            font-size: 1rem;
+        }
+        
+        .gk-list li .jp-term {
+            font-family: 'Noto Sans JP', sans-serif;
+            font-size: 0.85rem;
+            color: #7f8c8d;
+            margin-left: 5px;
+        }
+        
+        .gk-list li .mm-meaning {
+            display: block;
+            font-size: 0.8rem;
+            color: #7f8c8d;
+            margin-top: 5px;
+            font-family: 'Noto Sans Myanmar', sans-serif;
+        }
+        
+        .gk-list li:hover strong,
+        .gk-list li:hover .jp-term,
+        .gk-list li:hover .mm-meaning {
+            color: white;
+        }
+        
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #e67e22;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: 0.3s;
+            margin-bottom: 1rem;
+        }
+        
+        .back-btn:hover {
+            background: #d35400;
+            transform: translateX(-3px);
+        }
+        
+        .bilingual-text {
+            margin: 0.5rem 0;
+        }
+        
+        .english-text {
+            color: #2c3e50;
+        }
+        
+        .burmese-text {
+            color: #7f8c8d;
+            font-family: 'Noto Sans Myanmar', sans-serif;
+            font-size: 0.9rem;
+            margin-top: 0.3rem;
+        }
+        
+        .modern-note {
+            background: #fff3e0;
+            border-left: 4px solid #e67e22;
+            padding: 1rem;
+            border-radius: 12px;
+            margin-top: 1rem;
+            font-size: 0.9rem;
+        }
+        
+        @media (max-width: 768px) {
+            .gk-detail-header h1 {
+                font-size: 1.4rem;
+            }
+            
+            .gk-info-card h2 {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="gk-detail-container">
+        <a href="../general-knowledge.html" class="back-btn">
+            <i class="fas fa-arrow-left"></i> Back to General Knowledge / နောက်သို့
+        </a>
+        
+        <div class="gk-detail-header">
+            <h1>
+                <i class="fas fa-city"></i> 
+                Modern Japan
+                <span>げんだいの にほん</span>
+            </h1>
+            <p>Pop culture, fashion, trends, and contemporary lifestyle / လူကြိုက်များယဉ်ကျေးမှု၊ ဖက်ရှင်၊ ခေတ်ရေစီးကြောင်းများနှင့် ခေတ်ပြိုင်လူနေမှုဘဝ</p>
+        </div>
+        
+        <div class="gk-info-card">
+            <h2>
+                <i class="fas fa-music"></i> 
+                J-Pop & Music
+                <span class="jp-head">(ジェイポップ と おんがく)</span>
+            </h2>
+            <div class="bilingual-text">
+                <p class="english-text">Japanese popular music (J-Pop) has a huge domestic market and growing international fans. Idol groups and vocaloids are unique to Japan.</p>
+                <p class="burmese-text">ဂျပန်ပေါ့ပီယာဂီတ (J-Pop) သည် ပြည်တွင်းစျေးကွက်ကြီးမားပြီး နိုင်ငံတကာ ပရိသတ်များ တိုးပွားလာသည်။</p>
+            </div>
+            <ul class="gk-list">
+                <li><strong>アイドル (Aidoru)</strong> <span class="jp-term">- Idol singers/groups (AKB48, Arashi, Nogizaka46)</span><span class="mm-meaning">အိုင်ဒေါ်အဆိုတော်များ</span></li>
+                <li><strong>J-POP (Jei Poppu)</strong> <span class="jp-term">- Japanese pop music (Utada Hikaru, Aimyon, Official Hige Dandism)</span><span class="mm-meaning">ဂျပန်ပေါ့ဂီတ</span></li>
+                <li><strong>ボカロ (Bokaro)</strong> <span class="jp-term">- Vocaloid (Hatsune Miku, virtual singer)</span><span class="mm-meaning">ဗိုကာလွိုက် (ဟာဆွန်းမိခု)</span></li>
+                <li><strong>カラオケ (Karaoke)</strong> <span class="jp-term">- Karaoke (Japanese invention, national pastime)</span><span class="mm-meaning">ကာရာအိုကေ (ဂျပန်တီထွင်)</span></li>
+                <li><strong>紅白歌合戦 (Kōhaku Uta Gassen)</strong> <span class="jp-term">- Red/White Song Battle (NYE TV special)</span><span class="mm-meaning">နှစ်သစ်ကူးအကြို တီဗွီဂီတပွဲ</span></li>
+                <li><strong>宇多田ヒカル (Utada Hikaru)</strong> <span class="jp-term">- Utada Hikaru (most successful J-Pop artist internationally)</span><span class="mm-meaning">အူတဒဟီခရု</span></li>
+            </ul>
+        </div>
+        
+        <div class="gk-info-card">
+            <h2>
+                <i class="fas fa-tshirt"></i> 
+                Japanese Fashion
+                <span class="jp-head">(にほんの ファッション)</span>
+            </h2>
+            <ul class="gk-list">
+                <li><strong>原宿 (Harajuku)</strong> <span class="jp-term">- Harajuku (center of youth fashion and street style)</span><span class="mm-meaning">ဟာရဂျူကူ (လူငယ်ဖက်ရှင်ဗဟို)</span></li>
+                <li><strong>渋谷 (Shibuya)</strong> <span class="jp-term">- Shibuya (trendsetting fashion district)</span><span class="mm-meaning">ရှိဘုရား</span></li>
+                <li><strong>ギャル (Gyaru)</strong> <span class="jp-term">- Gyaru fashion (tan skin, bleached hair, 90s-2000s)</span><span class="mm-meaning">ဂျာရူဖက်ရှင်</span></li>
+                <li><strong>ロリータ (Rorīta)</strong> <span class="jp-term">- Lolita fashion (Victorian/rococo inspired, cute)</span><span class="mm-meaning">လိုလီတာဖက်ရှင်</span></li>
+                <li><strong>ビジネススーツ (Bijinesu Sūtsu)</strong> <span class="jp-term">- Business suit (standard office wear, often dark)</span><span class="mm-meaning">စီးပွားရေးဝတ်စုံ</span></li>
+                <li><strong>ユニクロ (Uniqlo)</strong> <span class="jp-term">- Uniqlo (global casual wear brand, affordable)</span><span class="mm-meaning">အူနီခလို</span></li>
+                <li><strong>川久保玲 (Kawakubo Rei)</strong> <span class="jp-term">- Rei Kawakubo (Comme des Garçons, avant-garde designer)</span><span class="mm-meaning">ကာဝါကုဘိုရေး</span></li>
+                <li><strong>山本耀司 (Yamamoto Yōji)</strong> <span class="jp-term">- Yohji Yamamoto (avant-garde, black dominant)</span><span class="mm-meaning">ယာမာမိုတိုယိုဂျိ</span></li>
+            </ul>
+        </div>
+        
+        <div class="gk-info-card">
+            <h2>
+                <i class="fas fa-mobile-alt"></i> 
+                Technology & Social Trends
+                <span class="jp-head">(テクノロジー と しゃかい の きょうこう)</span>
+            </h2>
+            <ul class="gk-list">
+                <li><strong>スマホ (Sumaho)</strong> <span class="jp-term">- Smartphone (high penetration, many features)</span><span class="mm-meaning">စမတ်ဖုန်း</span></li>
+                <li><strong>SNS (Esuenuesu)</strong> <span class="jp-term">- Social media (Twitter/X is very popular in Japan)</span><span class="mm-meaning">လူမှုမီဒီယာ</span></li>
+                <li><strong>コンビニ (Konbini)</strong> <span class="jp-term">- Convenience stores (7-Eleven, Lawson, FamilyMart, 24/7)</span><span class="mm-meaning">အဆင်ပြေစတိုး</span></li>
+                <li><strong>キャッシュレス (Kyasshuresu)</strong> <span class="jp-term">- Cashless payments (PayPay, Suica, credit cards)</span><span class="mm-meaning">ငွေသားမဲ့ ငွေပေးချေမှု</span></li>
+                <li><strong>自動販売機 (Jidō Hanbaiki)</strong> <span class="jp-term">- Vending machines (ubiquitous, sell drinks, food, umbrellas)</span><span class="mm-meaning">အလိုအလျောက်ရောင်းစက်</span></li>
+                <li><strong>リモートワーク (Rimōto Wāku)</strong> <span class="jp-term">- Remote work (increased after COVID)</span><span class="mm-meaning">အဝေးမှအလုပ်လုပ်ခြင်း</span></li>
+            </ul>
+        </div>
+        
+        <div class="gk-info-card">
+            <h2>
+                <i class="fas fa-child"></i> 
+                Modern Social Issues
+                <span class="jp-head">(げんだい しゃかい もんだい)</span>
+            </h2>
+            <ul class="gk-list">
+                <li><strong>少子高齢化 (Shōshi Kōreika)</strong> <span class="jp-term">- Low birth rate + aging population (serious crisis)</span><span class="mm-meaning">မွေးနှုန်းနိမ့်ပြီး လူဦးရေအိုမင်းခြင်း</span></li>
+                <li><strong>引きこもり (Hikikomori)</strong> <span class="jp-term">- Social withdrawal (500,000+ people isolating at home)</span><span class="mm-meaning">လူမှုရေးမှ ဆုတ်ခွာခြင်း</span></li>
+                <li><strong>過労死 (Karōshi)</strong> <span class="jp-term">- Death from overwork (legal term)</span><span class="mm-meaning">အလုပ်အလွန်အကျွံကြောင့် သေဆုံးခြင်း</span></li>
+                <li><strong>非正規雇用 (Hiseiki Koyō)</strong> <span class="jp-term">- Non-regular employment (part-time, contract, lower pay)</span><span class="mm-meaning">ပုံမှန်မဟုတ်သော အလုပ်အကိုင်</span></li>
+                <li><strong>未婚化 (Mikonka)</strong> <span class="jp-term">- Rising number of unmarried people</span><span class="mm-meaning">အိမ်ထောင်မပြုသူဦးရေ မြင့်တက်ခြင်း</span></li>
+                <li><strong>孤独死 (Kodokushi)</strong> <span class="jp-term">- Lonely death (dying alone, found later)</span><span class="mm-meaning">အထီးကျန်သေဆုံးခြင်း</span></li>
+            </ul>
+        </div>
+        
+        <div class="gk-info-card">
+            <h2>
+                <i class="fas fa-gamepad"></i> 
+                Pop Culture Phenomena
+                <span class="jp-head">(ポップカルチャー げんしょう)</span>
+            </h2>
+            <ul class="gk-list">
+                <li><strong>アニメ (Anime)</strong> <span class="jp-term">- Anime (global phenomenon, from Spirited Away to Demon Slayer)</span><span class="mm-meaning">အန်နီမီး</span></li>
+                <li><strong>漫画 (Manga)</strong> <span class="jp-term">- Manga (One Piece best-selling of all time)</span><span class="mm-meaning">မန်ဂါ</span></li>
+                <li><strong>コスプレ (Kosupure)</strong> <span class="jp-term">- Cosplay (costume play of anime/game characters)</span><span class="mm-meaning">ကိုစ်ပလေး</span></li>
+                <li><strong>eスポーツ (Ī Supōtsu)</strong> <span class="jp-term">- Esports (growing, Nintendo titles popular)</span><span class="mm-meaning">အီးစပို့ (အီလက်ထရွန်းနစ်အားကစား)</span></li>
+                <li><strong>VTuber (Vチューバー)</strong> <span class="jp-term">- Virtual YouTuber (avatar-based streaming)</span><span class="mm-meaning">ဗာ့ချွယ်လ်ယူချူဘာ</span></li>
+                <li><strong>推し活 (Oshi-katsu)</strong> <span class="jp-term">- "Oshi" activities (supporting favorite idol/character)</span><span class="mm-meaning">အိုရှိအားပေးလှုပ်ရှားမှု</span></li>
+            </ul>
+        </div>
+        
+        <div class="gk-info-card">
+            <h2>
+                <i class="fas fa-heart"></i> 
+                Modern Japanese Lifestyle
+                <span class="jp-head">(げんだい せいかつ)</span>
+            </h2>
+            <ul class="gk-list">
+                <li><strong>ワンルームマンション (Wan Rūmu Manshon)</strong> <span class="jp-term">- Studio apartment (common for singles in cities)</span><span class="mm-meaning">တစ်ခန်းတည်းကွန်ဒို</span></li>
+                <li><strong>通勤ラッシュ (Tsūkin Rasshu)</strong> <span class="jp-term">- Commuter rush hour (very crowded trains)</span><span class="mm-meaning">အလုပ်သွားအလုပ်လာ အလုပ်ရှုပ်ချိန်</span></li>
+                <li><strong>外食 (Gaishoku)</strong> <span class="jp-term">- Eating out (very common, many affordable options)</span><span class="mm-meaning">အပြင်ထွက်စားခြင်း</span></li>
+                <li><strong>宅配 (Takuhai)</strong> <span class="jp-term">- Home delivery (Amazon Japan, Kuroneko Yamato)</span><span class="mm-meaning">အိမ်အရောက်ပို့ဆောင်ခြင်း</span></li>
+                <li><strong>サブスク (Sabusuku)</strong> <span class="jp-term">- Subscription services (Netflix, Amazon Prime, Spotify)</span><span class="mm-meaning">စာရင်းသွင်းဝန်ဆောင်မှုများ</span></li>
+                <li><strong>温泉旅行 (Onsen Ryokō)</strong> <span class="jp-term">- Hot spring trip (popular weekend getaway)</span><span class="mm-meaning">ရေပူစမ်းခရီးစဉ်</span></li>
+            </ul>
+            <div class="modern-note">
+                <i class="fas fa-flag-checkered"></i> <strong>Reiwa Era (2019-present) / ရေဝါခေတ်:</strong> The current era began with Emperor Naruhito's ascension. It emphasizes harmony, tradition, and innovation. Japan faces challenges but continues to lead in technology, culture, and design.
+                <div class="burmese-text" style="margin-top: 8px;">လက်ရှိခေတ်သည် ဧကရာဇ်နာရူဟီတို နန်းတက်ခြင်းဖြင့် စတင်ခဲ့သည်။ သဟဇာတဖြစ်မှု၊ အစဉ်အလာနှင့် ဆန်းသစ်တီထွင်မှုကို အလေးပေးသည်။</div>
+            </div>
+        </div>
+        
+        <footer style="background: rgba(0, 0, 0, 0.85); border-radius: 20px; padding: 1.2rem; margin-top: 2rem; text-align: center;">
+            <div class="footer-links" style="display: flex; justify-content: center; gap: 1.5rem; margin-bottom: 1rem; flex-wrap: wrap;">
+                <a href="../pages/privacy.html" style="color: white; text-decoration: none;"><i class="fas fa-shield-alt"></i> Privacy Policy</a>
+                <a href="../pages/about.html" style="color: white; text-decoration: none;"><i class="fas fa-info-circle"></i> About</a>
+                <a href="../pages/contact.html" style="color: white; text-decoration: none;"><i class="fas fa-envelope"></i> Contact</a>
+                <a href="../pages/terms.html" style="color: white; text-decoration: none;"><i class="fas fa-file-contract"></i> Terms & Policy</a>
+            </div>
+            <p style="color: #7f8c8d;"><i class="fas fa-heart"></i> Next Gen Learning Myanmar - Modern Japan / ခေတ်သစ်ဂျပန်</p>
+        </footer>
+    </div>
+    
+    <script>
+        function addBackToTopButton() {
+            if (document.querySelector('.back-to-top-btn')) return;
+            const btn = document.createElement('button');
+            btn.className = 'back-to-top-btn';
+            btn.innerHTML = '<i class="fas fa-arrow-up"></i><span>TOP</span>';
+            document.body.appendChild(btn);
+            window.addEventListener('scroll', () => btn.classList.toggle('show', window.scrollY > 300));
+            btn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+        }
+        addBackToTopButton();
+        
+        document.querySelectorAll('.gk-list li').forEach(item => {
+            item.addEventListener('click', () => {
+                const jpTextElement = item.querySelector('strong');
+                if (jpTextElement && window.speechSynthesis) {
+                    let japaneseOnly = jpTextElement.innerText.split('(')[0].trim();
+                    if (japaneseOnly) {
+                        window.speechSynthesis.cancel();
+                        const utterance = new SpeechSynthesisUtterance(japaneseOnly);
+                        utterance.lang = 'ja-JP';
+                        utterance.rate = 0.7;
+                        window.speechSynthesis.speak(utterance);
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>

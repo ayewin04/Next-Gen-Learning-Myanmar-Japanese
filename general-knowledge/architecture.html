@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Japanese Architecture - Next Gen Learning Myanmar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Myanmar:wght@400;500;700&family=Noto+Sans+JP:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .gk-detail-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 1rem;
+        }
+        
+        .gk-detail-header {
+            background: white;
+            border-radius: 20px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .gk-detail-header h1 {
+            font-size: 1.8rem;
+            color: #2c3e50;
+            text-align: center;
+        }
+        
+        .gk-detail-header h1 i {
+            color: #e67e22;
+            margin-right: 10px;
+        }
+        
+        .gk-detail-header h1 span {
+            font-size: 1rem;
+            color: #e67e22;
+            display: block;
+            margin-top: 0.3rem;
+        }
+        
+        .gk-detail-header p {
+            text-align: center;
+            color: #7f8c8d;
+            margin-top: 0.5rem;
+        }
+        
+        .gk-info-card {
+            background: white;
+            border-radius: 20px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .gk-info-card h2 {
+            color: #e67e22;
+            border-left: 4px solid #e67e22;
+            padding-left: 1rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        
+        .gk-info-card h2 .jp-head {
+            font-size: 0.9rem;
+            color: #7f8c8d;
+            font-weight: normal;
+        }
+        
+        .gk-info-card p {
+            line-height: 1.6;
+            color: #2c3e50;
+            margin-bottom: 0.8rem;
+        }
+        
+        .gk-list {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .gk-list li {
+            margin: 0.8rem 0;
+            padding: 0.8rem;
+            background: #f8f9fa;
+            border-radius: 10px;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+        
+        .gk-list li:hover {
+            background: #e67e22;
+            color: white;
+            transform: translateX(5px);
+        }
+        
+        .gk-list li strong {
+            color: #e67e22;
+            font-size: 1rem;
+        }
+        
+        .gk-list li .jp-term {
+            font-family: 'Noto Sans JP', sans-serif;
+            font-size: 0.85rem;
+            color: #7f8c8d;
+            margin-left: 5px;
+        }
+        
+        .gk-list li .mm-meaning {
+            display: block;
+            font-size: 0.8rem;
+            color: #7f8c8d;
+            margin-top: 5px;
+            font-family: 'Noto Sans Myanmar', sans-serif;
+        }
+        
+        .gk-list li:hover strong,
+        .gk-list li:hover .jp-term,
+        .gk-list li:hover .mm-meaning {
+            color: white;
+        }
+        
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #e67e22;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: 0.3s;
+            margin-bottom: 1rem;
+        }
+        
+        .back-btn:hover {
+            background: #d35400;
+            transform: translateX(-3px);
+        }
+        
+        .bilingual-text {
+            margin: 0.5rem 0;
+        }
+        
+        .english-text {
+            color: #2c3e50;
+        }
+        
+        .burmese-text {
+            color: #7f8c8d;
+            font-family: 'Noto Sans Myanmar', sans-serif;
+            font-size: 0.9rem;
+            margin-top: 0.3rem;
+        }
+        
+        .architecture-note {
+            background: #fff3e0;
+            border-left: 4px solid #e67e22;
+            padding: 1rem;
+            border-radius: 12px;
+            margin-top: 1rem;
+            font-size: 0.9rem;
+        }
+        
+        @media (max-width: 768px) {
+            .gk-detail-header h1 {
+                font-size: 1.4rem;
+            }
+            
+            .gk-info-card h2 {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="gk-detail-container">
+        <a href="../general-knowledge.html" class="back-btn">
+            <i class="fas fa-arrow-left"></i> Back to General Knowledge / နောက်သို့
+        </a>
+        
+        <div class="gk-detail-header">
+            <h1>
+                <i class="fas fa-building"></i> 
+                Japanese Architecture
+                <span>にほんの けんちく</span>
+            </h1>
+            <p>Traditional temples, modern skyscrapers, and unique Japanese design / ရိုးရာဘုရားကျောင်းများ၊ ခေတ်မီမိုးမျှော်တိုက်များနှင့် ထူးခြားသောဂျပန်ဒီဇိုင်း</p>
+        </div>
+        
+        <div class="gk-info-card">
+            <h2>
+                <i class="fas fa-torii-gate"></i> 
+                Traditional Architecture - Key Elements
+                <span class="jp-head">(でんとう けんちく の ようそ)</span>
+            </h2>
+            <div class="bilingual-text">
+                <p class="english-text">Japanese traditional architecture emphasizes harmony with nature, simplicity, and the use of natural materials like wood, paper, and bamboo.</p>
+                <p class="burmese-text">ဂျပန်ရိုးရာဗိသုကာလက်ရာများသည် သဘာဝနှင့် သဟဇာတဖြစ်မှု၊ ရိုးရှင်းမှုနှင့် သစ်သား၊ စက္ကူ၊ ဝါးကဲ့သို့သော သဘာဝပစ္စည်းများကို အသုံးပြုမှုကို အလေးပေးသည်။</p>
+            </div>
+            <ul class="gk-list">
+                <li><strong>木材 (Mokuzai)</strong> <span class="jp-term">- Wood (primary building material)</span><span class="mm-meaning">သစ်သား (အဓိက ဆောက်လုပ်ရေးပစ္စည်း)</span></li>
+                <li><strong>障子 (Shōji)</strong> <span class="jp-term">- Sliding paper screens (translucent, made of washi paper)</span><span class="mm-meaning">စက္ကူဖြင့် ပြုလုပ်ထားသော တံခါးခတ်ကာများ</span></li>
+                <li><strong>襖 (Fusuma)</strong> <span class="jp-term">- Opaque sliding doors (often painted)</span><span class="mm-meaning">အလင်းမဝင်သော တံခါးခတ်ကာများ</span></li>
+                <li><strong>畳 (Tatami)</strong> <span class="jp-term">- Rice straw mats (floor covering, measures room size)</span><span class="mm-meaning">ကောက်ရိုးဖြင့် ပြုလုပ်ထားသော ဖျာများ</span></li>
+                <li><strong>縁側 (Engawa)</strong> <span class="jp-term">- Veranda / wooden porch (between inside and garden)</span><span class="mm-meaning">အိမ်တွင်းနှင့် ဥယျာဉ်ကြားရှိ သစ်သားမုတ်</span></li>
+                <li><strong>瓦 (Kawara)</strong> <span class="jp-term">- Clay roof tiles (curved, often dark gray)</span><span class="mm-meaning">ရွှံ့စေးအုတ်ပြားများ (မီးခိုးရောင်၊ ကွေးညွှတ်)</span></li>
+                <li><strong>組子 (Kumiko)</strong> <span class="jp-term">- Intricate wooden latticework (no nails)</span><span class="mm-meaning">သစ်သားဖြင့် ပြုလုပ်ထားသော အနုစိတ်ဆန်သော ရက်လုပ်မှု</span></li>
+            </ul>
+        </div>
+        
+        <div class="gk-info-card">
+            <h2>
+                <i class="fas fa-church"></i> 
+                Religious Architecture
+                <span class="jp-head">(しゅうきょうてき けんちく)</span>
+            </h2>
+            <ul class="gk-list">
+                <li><strong>神社 (Jinja) - Shrine</strong> <span class="jp-term">- Shinto shrine (torii gate, simple natural materials)</span><span class="mm-meaning">ရှင်တိုစေတီ (တိုရီးတံခါး၊ ရိုးရိုးသဘာဝပစ္စည်း)</span></li>
+                <li><strong>寺院 (Ji-in) - Temple</strong> <span class="jp-term">- Buddhist temple (pagodas, larger complexes)</span><span class="mm-meaning">ဗုဒ္ဓဘာသာဘုရားကျောင်း (ဘုရားမျှော်စင်)</span></li>
+                <li><strong>五重塔 (Gojū-no-tō)</strong> <span class="jp-term">- Five-story pagoda (symbol of Buddhist cosmology)</span><span class="mm-meaning">ငါးထပ် ဘုရားမျှော်စင်</span></li>
+                <li><strong>本堂 (Hondō)</strong> <span class="jp-term">- Main hall of a temple (houses the main Buddha image)</span><span class="mm-meaning">ဘုရားကျောင်း၏ ပင်မခန်းမ</span></li>
+                <li><strong>拝殿 (Haiden)</strong> <span class="jp-term">- Worship hall of a shrine (for prayers)</span><span class="mm-meaning">စေတီ၏ ဝတ်ပြုခန်းမ</span></li>
+                <li><strong>法隆寺 (Hōryū-ji)</strong> <span class="jp-term">- Hōryū-ji Temple (oldest wooden structure in the world, UNESCO)</span><span class="mm-meaning">ကမ္ဘာ့ရှေးအကျဆုံးသစ်သားတည်ဆောက်မှု</span></li>
+            </ul>
+        </div>
+        
+        <div class="gk-info-card">
+            <h2>
+                <i class="fas fa-fort-awesome"></i> 
+                Castles (Shiro)
+                <span class="jp-head">(しろ)</span>
+            </h2>
+            <ul class="gk-list">
+                <li><strong>天守閣 (Tenshukaku)</strong> <span class="jp-term">- Main keep / castle tower (iconic feature)</span><span class="mm-meaning">ပင်မရဲတိုက်စင်</span></li>
+                <li><strong>石垣 (Ishigaki)</strong> <span class="jp-term">- Stone walls (curved, masterfully fitted without mortar)</span><span class="mm-meaning">ကျောက်နံရံများ (အင်္ဂတေမသုံးဘဲ တည်ဆောက်)</span></li>
+                <li><strong>堀 (Hori)</strong> <span class="jp-term">- Moats (water or dry, for defense)</span><span class="mm-meaning">ကျုံး (ရေဖြင့်ဖြစ်စေ၊ ခြောက်သွေ့စွာဖြစ်စေ)</span></li>
+                <li><strong>姫路城 (Himeji-jō)</strong> <span class="jp-term">- Himeji Castle ("White Heron Castle", UNESCO)</span><span class="mm-meaning">ဟိမဲဂျိရဲတိုက် (ဂျပန်တွင် အလှပဆုံးဟု သတ်မှတ်)</span></li>
+                <li><strong>松本城 (Matsumoto-jō)</strong> <span class="jp-term">- Matsumoto Castle ("Crow Castle", black exterior)</span><span class="mm-meaning">မဆွတ်မိုတိုရဲတိုက် (အနက်ရောင်ရဲတိုက်)</span></li>
+                <li><strong>大阪城 (Ōsaka-jō)</strong> <span class="jp-term">- Osaka Castle (reconstructed, iconic symbol of Osaka)</span><span class="mm-meaning">အိုဆာကာရဲတိုက် (ပြန်လည်တည်ဆောက်)</span></li>
+            </ul>
+        </div>
+        
+        <div class="gk-info-card">
+            <h2>
+                <i class="fas fa-home"></i> 
+                Traditional Houses (Minka)
+                <span class="jp-head">(みんか)</span>
+            </h2>
+            <ul class="gk-list">
+                <li><strong>町家 (Machiya)</strong> <span class="jp-term">- Townhouse (Kyoto style, narrow frontage)</span><span class="mm-meaning">မြို့အိမ်များ (ကျိုတိုပုံစံ၊ အရှေ့ဘက်ကျဉ်း)</span></li>
+                <li><strong>農家 (Nōka)</strong> <span class="jp-term">- Farmhouse (thatch roof, large earthen floor)</span><span class="mm-meaning">လယ်ယာအိမ် (မြက်မိုး)</span></li>
+                <li><strong>合掌造り (Gasshō-zukuri)</strong> <span class="jp-term">- "Hands-in-prayer" thatched roofs (Shirakawa-gō, UNESCO)</span><span class="mm-meaning">ဆုတောင်းလက်အုပ်ပုံ မြက်မိုးအိမ်များ</span></li>
+                <li><strong>土間 (Doma)</strong> <span class="jp-term">- Earthen floor entrance area (for cooking, work)</span><span class="mm-meaning">မြေကြမ်းဧရိယာ (အိမ်ဝင်လက်စ)</span></li>
+                <li><strong>床の間 (Tokonoma)</strong> <span class="jp-term">- Alcove for displaying art/flowers (formal rooms)</span><span class="mm-meaning">အနုပညာပြသရန် နယ်မြေခန်း</span></li>
+            </ul>
+        </div>
+        
+        <div class="gk-info-card">
+            <h2>
+                <i class="fas fa-city"></i> 
+                Modern & Contemporary Architecture
+                <span class="jp-head">(げんだいてき けんちく)</span>
+            </h2>
+            <ul class="gk-list">
+                <li><strong>東京スカイツリー (Tōkyō Sukai Tsurī)</strong> <span class="jp-term">- Tokyo Skytree (634m, world's tallest tower, 2012)</span><span class="mm-meaning">တိုကျိုစကိုင်းသစ်ပင် (ကမ္ဘာ့အမြင့်ဆုံးမျှော်စင်)</span></li>
+                <li><strong>東京タワー (Tōkyō Tawā)</strong> <span class="jp-term">- Tokyo Tower (333m, Eiffel-inspired, 1958)</span><span class="mm-meaning">တိုကျိုမျှော်စင် (အက်ဖီယယ်မျှော်စင်မှ စိတ်ကူး)</span></li>
+                <li><strong>六本木ヒルズ (Roppongi Hiruzu)</strong> <span class="jp-term">- Roppongi Hills (mixed-use skyscraper complex)</span><span class="mm-meaning">ရိုပွန်းဂီတောင်ကုန်း (အသုံးစုံမိုးမျှော်တိုက်စု)</span></li>
+                <li><strong>横浜ランドマークタワー (Yokohama Randomāku Tawā)</strong> <span class="jp-term">- Yokohama Landmark Tower (296m, Japan's tallest 1993-2014)</span><span class="mm-meaning">ယိုကိုဟားမားအထင်ကရမျှော်စင်</span></li>
+                <li><strong>Abeno Harukas (あべのハルカス)</strong> <span class="jp-term">- Abeno Harukas (300m, Japan's tallest building since 2014, Osaka)</span><span class="mm-meaning">အဘဲနိုဟာရုကာစ် (ဂျပန်အမြင့်ဆုံးအဆောက်အအုံ)</span></li>
+            </ul>
+        </div>
+        
+        <div class="gk-info-card">
+            <h2>
+                <i class="fas fa-draw-polygon"></i> 
+                Famous Modern Japanese Architects
+                <span class="jp-head">(ゆうめいな けんちくか)</span>
+            </h2>
+            <ul class="gk-list">
+                <li><strong>丹下健三 (Tange Kenzō)</strong> <span class="jp-term">- Kenzo Tange (Yoyogi National Gymnasium, Hiroshima Peace Memorial)</span><span class="mm-meaning">တန်ဂဲခန်ဇို (Pritzker Prize 1987)</span></li>
+                <li><strong>安藤忠雄 (Andō Tadao)</strong> <span class="jp-term">- Tadao Ando (Church of Light, concrete minimalist)</span><span class="mm-meaning">အန်ဒိုတာဒအို (ကွန်ကရစ်ဗိသုကာ)</span></li>
+                <li><strong>隈研吾 (Kuma Kengo)</strong> <span class="jp-term">- Kengo Kuma (New National Stadium Tokyo, uses natural materials)</span><span class="mm-meaning">ခုမခန်ဂို (သဘာဝပစ္စည်းများကို နှစ်သက်)</span></li>
+                <li><strong>妹島和世 (Sejima Kazuyo)</strong> <span class="jp-term">- Kazuyo Sejima + Ryue Nishizawa (SANAA, transparent designs)</span><span class="mm-meaning">ဆဲဂျီမာကာဇုယို (Pritzker Prize 2010)</span></li>
+                <li><strong>黒川紀章 (Kurokawa Kishō)</strong> <span class="jp-term">- Kisho Kurokawa (Nakagin Capsule Tower, Metabolism movement)</span><span class="mm-meaning">ခုရိုကာဝါခိရှို (ဇီဝဖြစ်စဉ်လှုပ်ရှားမှု)</span></li>
+            </ul>
+        </div>
+        
+        <div class="gk-info-card">
+            <h2>
+                <i class="fas fa-tea"></i> 
+                Tea Houses & Garden Architecture
+                <span class="jp-head">(ちゃしつ と にわ の けんちく)</span>
+            </h2>
+            <ul class="gk-list">
+                <li><strong>茶室 (Chashitsu)</strong> <span class="jp-term">- Tea house (small, rustic, designed for tea ceremony)</span><span class="mm-meaning">လက်ဖက်ရည်ဆောင် (သေးငယ်၊ ရိုးရိုး)</span></li>
+                <li><strong>露地 (Roji)</strong> <span class="jp-term">- Tea garden path (leading to tea house, symbolizes leaving the world behind)</span><span class="mm-meaning">လက်ဖက်ရည်ဆောင်သို့သွားသော ဥယျာဉ်လမ်း</span></li>
+                <li><strong>蹲踞 (Tsukubai)</strong> <span class="jp-term">- Stone water basin (for purification before tea ceremony)</span><span class="mm-meaning">ကျောက်ရေခွက် (လက်ဖက်ရည်ပွဲမတိုင်မီ စင်ကြယ်ရန်)</span></li>
+                <li><strong>飛び石 (Tobi-ishi)</strong> <span class="jp-term">- Stepping stones (guide through garden)</span><span class="mm-meaning">ဥယျာဉ်လမ်းညွှန်ကျောက်တုံးများ</span></li>
+            </ul>
+            <div class="architecture-note">
+                <i class="fas fa-tree"></i> <strong>Japanese Gardens / ဂျပန်ဥယျာဉ်များ:</strong> Japanese garden architecture includes "Karesansui" (dry rock gardens, like Ryoan-ji), "Chisen" (pond gardens), and "Kaiyū-shiki" (stroll gardens). They represent nature in miniature.
+                <div class="burmese-text" style="margin-top: 8px;">ဂျပန်ဥယျာဉ်ဗိသုကာတွင် "ခရဲဆန်စုအိ" (ကျောက်ခြောက်ဥယျာဉ်၊ ရအန်းဂျီကဲ့သို့)၊ "ချိဆဲန်" (ကန်ဥယျာဉ်) နှင့် "ခိုင်ယူရှိတ်ရှိ" (လမ်းလျှောက်ဥယျာဉ်) တို့ ပါဝင်သည်။</div>
+            </div>
+        </div>
+        
+        <footer style="background: rgba(0, 0, 0, 0.85); border-radius: 20px; padding: 1.2rem; margin-top: 2rem; text-align: center;">
+            <div class="footer-links" style="display: flex; justify-content: center; gap: 1.5rem; margin-bottom: 1rem; flex-wrap: wrap;">
+                <a href="../pages/privacy.html" style="color: white; text-decoration: none;"><i class="fas fa-shield-alt"></i> Privacy Policy</a>
+                <a href="../pages/about.html" style="color: white; text-decoration: none;"><i class="fas fa-info-circle"></i> About</a>
+                <a href="../pages/contact.html" style="color: white; text-decoration: none;"><i class="fas fa-envelope"></i> Contact</a>
+                <a href="../pages/terms.html" style="color: white; text-decoration: none;"><i class="fas fa-file-contract"></i> Terms & Policy</a>
+            </div>
+            <p style="color: #7f8c8d;"><i class="fas fa-heart"></i> Next Gen Learning Myanmar - Japanese Architecture / ဂျပန်ဗိသုကာလက်ရာများ</p>
+        </footer>
+    </div>
+    
+    <script>
+        function addBackToTopButton() {
+            if (document.querySelector('.back-to-top-btn')) return;
+            const btn = document.createElement('button');
+            btn.className = 'back-to-top-btn';
+            btn.innerHTML = '<i class="fas fa-arrow-up"></i><span>TOP</span>';
+            document.body.appendChild(btn);
+            window.addEventListener('scroll', () => btn.classList.toggle('show', window.scrollY > 300));
+            btn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+        }
+        addBackToTopButton();
+        
+        document.querySelectorAll('.gk-list li').forEach(item => {
+            item.addEventListener('click', () => {
+                const jpTextElement = item.querySelector('strong');
+                if (jpTextElement && window.speechSynthesis) {
+                    let japaneseOnly = jpTextElement.innerText.split('(')[0].trim();
+                    if (japaneseOnly) {
+                        window.speechSynthesis.cancel();
+                        const utterance = new SpeechSynthesisUtterance(japaneseOnly);
+                        utterance.lang = 'ja-JP';
+                        utterance.rate = 0.7;
+                        window.speechSynthesis.speak(utterance);
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>

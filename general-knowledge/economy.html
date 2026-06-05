@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Japanese Economy & Business - Next Gen Learning Myanmar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Myanmar:wght@400;500;700&family=Noto+Sans+JP:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .gk-detail-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 1rem;
+        }
+        
+        .gk-detail-header {
+            background: white;
+            border-radius: 20px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .gk-detail-header h1 {
+            font-size: 1.8rem;
+            color: #2c3e50;
+            text-align: center;
+        }
+        
+        .gk-detail-header h1 i {
+            color: #e67e22;
+            margin-right: 10px;
+        }
+        
+        .gk-detail-header h1 span {
+            font-size: 1rem;
+            color: #e67e22;
+            display: block;
+            margin-top: 0.3rem;
+        }
+        
+        .gk-detail-header p {
+            text-align: center;
+            color: #7f8c8d;
+            margin-top: 0.5rem;
+        }
+        
+        .gk-info-card {
+            background: white;
+            border-radius: 20px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .gk-info-card h2 {
+            color: #e67e22;
+            border-left: 4px solid #e67e22;
+            padding-left: 1rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        
+        .gk-info-card h2 .jp-head {
+            font-size: 0.9rem;
+            color: #7f8c8d;
+            font-weight: normal;
+        }
+        
+        .gk-info-card p {
+            line-height: 1.6;
+            color: #2c3e50;
+            margin-bottom: 0.8rem;
+        }
+        
+        .gk-list {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .gk-list li {
+            margin: 0.8rem 0;
+            padding: 0.8rem;
+            background: #f8f9fa;
+            border-radius: 10px;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+        
+        .gk-list li:hover {
+            background: #e67e22;
+            color: white;
+            transform: translateX(5px);
+        }
+        
+        .gk-list li strong {
+            color: #e67e22;
+            font-size: 1rem;
+        }
+        
+        .gk-list li .jp-term {
+            font-family: 'Noto Sans JP', sans-serif;
+            font-size: 0.85rem;
+            color: #7f8c8d;
+            margin-left: 5px;
+        }
+        
+        .gk-list li .mm-meaning {
+            display: block;
+            font-size: 0.8rem;
+            color: #7f8c8d;
+            margin-top: 5px;
+            font-family: 'Noto Sans Myanmar', sans-serif;
+        }
+        
+        .gk-list li:hover strong,
+        .gk-list li:hover .jp-term,
+        .gk-list li:hover .mm-meaning {
+            color: white;
+        }
+        
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #e67e22;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: 0.3s;
+            margin-bottom: 1rem;
+        }
+        
+        .back-btn:hover {
+            background: #d35400;
+            transform: translateX(-3px);
+        }
+        
+        .bilingual-text {
+            margin: 0.5rem 0;
+        }
+        
+        .english-text {
+            color: #2c3e50;
+        }
+        
+        .burmese-text {
+            color: #7f8c8d;
+            font-family: 'Noto Sans Myanmar', sans-serif;
+            font-size: 0.9rem;
+            margin-top: 0.3rem;
+        }
+        
+        .economy-note {
+            background: #fff3e0;
+            border-left: 4px solid #e67e22;
+            padding: 1rem;
+            border-radius: 12px;
+            margin-top: 1rem;
+            font-size: 0.9rem;
+        }
+        
+        @media (max-width: 768px) {
+            .gk-detail-header h1 {
+                font-size: 1.4rem;
+            }
+            
+            .gk-info-card h2 {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="gk-detail-container">
+        <a href="../general-knowledge.html" class="back-btn">
+            <i class="fas fa-arrow-left"></i> Back to General Knowledge / နောက်သို့
+        </a>
+        
+        <div class="gk-detail-header">
+            <h1>
+                <i class="fas fa-chart-line"></i> 
+                Japanese Economy & Business
+                <span>にほんの けいざい と ビジネス</span>
+            </h1>
+            <p>Understanding Japan's economic power and work culture / ဂျပန်၏ စီးပွားရေးစွမ်းအားနှင့် အလုပ်ယဉ်ကျေးမှုကို နားလည်ခြင်း</p>
+        </div>
+        
+        <div class="gk-info-card">
+            <h2>
+                <i class="fas fa-chart-pie"></i> 
+                Economic Overview
+                <span class="jp-head">(けいざい がいよう)</span>
+            </h2>
+            <div class="bilingual-text">
+                <p class="english-text">Japan has the world's 3rd largest economy by nominal GDP (after US and China). It is a global leader in automobiles, electronics, robotics, and finance.</p>
+                <p class="burmese-text">ဂျပန်သည် အမည်ခံဂျီဒီပီအရ ကမ္ဘာ့တတိယအကြီးဆုံး စီးပွားရေးနိုင်ငံဖြစ်သည် (အမေရိကန်နှင့် တရုတ်နောက်)။ မော်တော်ယာဉ်၊ အီလက်ထရွန်းနစ်၊ စက်ရုပ်နှင့် ဘဏ္ဍာရေးတို့တွင် ကမ္ဘာ့ခေါင်းဆောင်ဖြစ်သည်။</p>
+            </div>
+            <ul class="gk-list">
+                <li><strong>GDP (めいもくGDP)</strong> <span class="jp-term">- Nominal GDP: ~$4.2 trillion (2024)</span><span class="mm-meaning">အမည်ခံဂျီဒီပီ (ဒေါ်လာ ၄.၂ ထရီလီယံ)</span></li>
+                <li><strong>通貨 (Tsūka)</strong> <span class="jp-term">- Currency: Japanese Yen (JPY, ¥)</span><span class="mm-meaning">ငွေကြေး- ဂျပန်ယန်း</span></li>
+                <li><strong>主要産業 (Shuyō Sangyō)</strong> <span class="jp-term">- Main industries: Automotive, electronics, robotics, steel, chemicals</span><span class="mm-meaning">အဓိကစက်မှုလုပ်ငန်းများ</span></li>
+                <li><strong>失業率 (Shitsugyōritsu)</strong> <span class="jp-term">- Unemployment rate: ~2.6% (very low)</span><span class="mm-meaning">အလုပ်လက်မဲ့နှုန်း (အလွန်နိမ့်)</span></li>
+                <li><strong>貿易収支 (Bōeki Shūshi)</strong> <span class="jp-term">- Trade balance: Historically surplus (now mixed)</span><span class="mm-meaning">ကုန်သွယ်မှုလက်ကျန်</span></li>
+            </ul>
+        </div>
+        
+        <div class="gk-info-card">
+            <h2>
+                <i class="fas fa-building"></i> 
+                Major Japanese Companies (Globally Known)
+                <span class="jp-head">(せかいで ゆうめいな にほん きぎょう)</span>
+            </h2>
+            <ul class="gk-list">
+                <li><strong>トヨタ (Toyota)</strong> <span class="jp-term">- World's largest automaker</span><span class="mm-meaning">ကမ္ဘာ့အကြီးဆုံးမော်တော်ယာဉ်ထုတ်လုပ်သူ</span></li>
+                <li><strong>ホンダ (Honda)</strong> <span class="jp-term">- Cars, motorcycles, power equipment</span><span class="mm-meaning">ကား၊ ဆိုင်ကယ်၊ စက်ကိရိယာ</span></li>
+                <li><strong>ソニー (Sony)</strong> <span class="jp-term">- Electronics, gaming (PlayStation), entertainment</span><span class="mm-meaning">အီလက်ထရွန်းနစ်၊ ဂိမ်း (ပလေးစတေရှင်)</span></li>
+                <li><strong>任天堂 (Nintendo)</strong> <span class="jp-term">- Video game company (Switch, Mario)</span><span class="mm-meaning">ဗီဒီယိုဂိမ်းကုမ္ပဏီ</span></li>
+                <li><strong>三菱 (Mitsubishi)</strong> <span class="jp-term">- Conglomerate (cars, finance, electronics)</span><span class="mm-meaning">စီးပွားရေးလုပ်ငန်းစု</span></li>
+                <li><strong>三井 (Mitsui)</strong> <span class="jp-term">- Trading, chemicals, real estate</span><span class="mm-meaning">ကုန်သွယ်ရေး၊ ဓာတုပစ္စည်း၊ အိမ်ခြံမြေ</span></li>
+                <li><strong>住友 (Sumitomo)</strong> <span class="jp-term">- Conglomerate (mining, banking, metals)</span><span class="mm-meaning">စီးပွားရေးလုပ်ငန်းစု</span></li>
+                <li><strong>ファーストリテイリング (Fāsuto Riteiringu)</strong> <span class="jp-term">- Fast Retailing (Uniqlo parent company)</span><span class="mm-meaning">အူနီခလို၏ မိခင်ကုမ္ပဏီ</span></li>
+                <li><strong>キーエンス (Kīensu)</strong> <span class="jp-term">- Keyence (automation, sensors, high-profit)</span><span class="mm-meaning">အော်တိုမက်ရှင်၊ အာရုံခံကိရိယာ</span></li>
+            </ul>
+        </div>
+        
+        <div class="gk-info-card">
+            <h2>
+                <i class="fas fa-clock"></i> 
+                Japanese Work Culture
+                <span class="jp-head">(にほんの しごと ぶんか)</span>
+            </h2>
+            <ul class="gk-list">
+                <li><strong>終身雇用 (Shūshin Koyō)</strong> <span class="jp-term">- Lifetime employment (traditional)</span><span class="mm-meaning">တစ်သက်တာအလုပ်အကိုင် (ရိုးရာ စနစ်)</span></li>
+                <li><strong>年功序列 (Nenkō Joretsu)</strong> <span class="jp-term">- Seniority-based pay and promotion</span><span class="mm-meaning">အလုပ်သက်အရ လစာနှင့် ရာထူးတိုးမြှင့်ခြင်း</span></li>
+                <li><strong>残業 (Zangyō)</strong> <span class="jp-term">- Overtime work (common, but changing)</span><span class="mm-meaning">အချိန်ပိုအလုပ် (အဖြစ်များသော်လည်း ပြောင်းလဲလာသည်)</span></li>
+                <li><strong>サービス残業 (Sābisu Zangyō)</strong> <span class="jp-term">- Unpaid overtime (problematic)</span><span class="mm-meaning">လစာမဲ့ အချိန်ပို (ပြဿနာရှိသော ဓလေ့)</span></li>
+                <li><strong>仕事の後飲み会 (Shigoto no Ato Nomikai)</strong> <span class="jp-term">- After-work drinking parties (team building)</span><span class="mm-meaning">အလုပ်ပြီးနောက် အရက်သောက်ပွဲများ</span></li>
+                <li><strong>名刺交換 (Meishi Kōkan)</strong> <span class="jp-term">- Business card exchange (ritualistic)</span><span class="mm-meaning">စီးပွားရေးကတ်ပြား ဖလှယ်ခြင်း (ထုံးတမ်းတစ်ခု)</span></li>
+                <li><strong>ホワイト企業 (Howaito Kigyō)</strong> <span class="jp-term">- "White company" (good work environment)</span><span class="mm-meaning">"အဖြူရောင်ကုမ္ပဏီ" (ကောင်းမွန်သော အလုပ်ခွင်)</span></li>
+                <li><strong>ブラック企業 (Burakku Kigyō)</strong> <span class="jp-term">- "Black company" (exploitative)</span><span class="mm-meaning">"အနက်ရောင်ကုမ္ပဏီ" (ခေါင်းပုံဖြတ်သော)</span></li>
+            </ul>
+            <div class="economy-note">
+                <i class="fas fa-chart-simple"></i> <strong>Economic Miracle / စီးပွားရေးအံ့ဖွယ်:</strong> After WWII, Japan rebuilt from destruction to become the world's second-largest economy by 1968. This "post-war economic miracle" was driven by government-industry cooperation, hard work, technological innovation, and export-focused policies.
+                <div class="burmese-text" style="margin-top: 8px;">ဒုတိယကမ္ဘာစစ်ပြီးနောက် ဂျပန်သည် ပျက်စီးမှုမှ ပြန်လည်တည်ဆောက်ကာ ၁၉၆၈ တွင် ကမ္ဘာ့ဒုတိယအကြီးဆုံးစီးပွားရေးနိုင်ငံဖြစ်လာသည်။</div>
+            </div>
+        </div>
+        
+        <div class="gk-info-card">
+            <h2>
+                <i class="fas fa-chart-line"></i> 
+                Economic History Overview
+                <span class="jp-head">(けいざい れきし がいよう)</span>
+            </h2>
+            <ul class="gk-list">
+                <li><strong>高度経済成長期 (Kōdo Keizai Seichōki)</strong> <span class="jp-term">- High Growth Era (1950s-1970s)</span><span class="mm-meaning">စီးပွားရေးအရှိန်အဟုန်မြင့်တက်ခဲ့သော ခေတ်</span></li>
+                <li><strong>バブル経済 (Baburu Keizai)</strong> <span class="jp-term">- Bubble Economy (1980s)</span><span class="mm-meaning">ပူဖောင်းစီးပွားရေး (အကြွေးများပြီး စျေးနှုန်းများ မြင့်တက်)</span></li>
+                <li><strong>失われた10年 (Ushinawareta Jūnen)</strong> <span class="jp-term">- Lost Decade (1990s, economic stagnation)</span><span class="mm-meaning">ပျောက်ဆုံးသော ဆယ်စုနှစ် (စီးပွားရေးတုံ့ဆိုင်း)</span></li>
+                <li><strong>失われた20年/30年 (Ushinawareta 20-nen/30-nen)</strong> <span class="jp-term">- Lost 20/30 Years (continued stagnation)</span><span class="mm-meaning">ပျောက်ဆုံးသော အနှစ် ၂၀/၃၀</span></li>
+                <li><strong>アベノミクス (Abenomikusu)</strong> <span class="jp-term">- Abenomics (2012-2020, three arrows policy)</span><span class="mm-meaning">အာဘဲနိုမိခ်စ် (မြှားသုံးချက်မူဝါဒ)</span></li>
+                <li><strong>賃金上昇 (Chingin Jōshō)</strong> <span class="jp-term">- Recent wage increases (2023-2024)</span><span class="mm-meaning">မကြာသေးမီက လုပ်ခလစာများ မြင့်တက်လာခြင်း</span></li>
+            </ul>
+        </div>
+        
+        <div class="gk-info-card">
+            <h2>
+                <i class="fas fa-university"></i> 
+                Currency & Banking
+                <span class="jp-head">(つうか と ぎんこう)</span>
+            </h2>
+            <ul class="gk-list">
+                <li><strong>日本円 (Nihon En)</strong> <span class="jp-term">- Japanese Yen (¥, JPY)</span><span class="mm-meaning">ဂျပန်ယန်းငွေကြေး</span></li>
+                <li><strong>日本銀行 (Nihon Ginkō)</strong> <span class="jp-term">- Bank of Japan (central bank)</span><span class="mm-meaning">ဂျပန်ဗဟိုဘဏ်</span></li>
+                <li><strong>硬貨 (Kōka)</strong> <span class="jp-term">- Coins: ¥1, ¥5, ¥10, ¥50, ¥100, ¥500</span><span class="mm-meaning">ဒင်္ဂါးပြားများ (အထူးသဖြင့် အပေါက်ပါသော ¥5)</span></li>
+                <li><strong>紙幣 (Shihei)</strong> <span class="jp-term">- Banknotes: ¥1000, ¥2000 (rare), ¥5000, ¥10,000</span><span class="mm-meaning">ငွေစက္ကူများ</span></li>
+                <li><strong>キャッシュレス (Kyasshuresu)</strong> <span class="jp-term">- Cashless payment (growing but cash still common)</span><span class="mm-meaning">ငွေသားမဲ့ ငွေပေးချေမှု (တိုးတက်နေသော်လည်း ငွေသားမှာ အသုံ�များဆုံး)</span></li>
+                <li><strong>Suica / Pasmo</strong> <span class="jp-term">- IC cards for trains and payments</span><span class="mm-meaning">ရထားနှင့် ငွေပေးချေရန် အိုင်စီကတ်များ</span></li>
+            </ul>
+        </div>
+        
+        <div class="gk-info-card">
+            <h2>
+                <i class="fas fa-charging-station"></i> 
+                Key Economic Challenges
+                <span class="jp-head">(けいざい じょうの ちょうせん)</span>
+            </h2>
+            <ul class="gk-list">
+                <li><strong>少子高齢化 (Shōshi Kōreika)</strong> <span class="jp-term">- Low birth rate + aging population</span><span class="mm-meaning">မွေးနှုန်းနိမ့်ပြီး လူဦးရေအိုမင်းခြင်း (ကမ္ဘာ့အဟောင်းဆုံး လူဦးရေ)</span></li>
+                <li><strong>労働力不足 (Rōdōryoku Busoku)</strong> <span class="jp-term">- Labor shortage</span><span class="mm-meaning">လုပ်သားအင်အား ပြတ်လပ်မှု</span></li>
+                <li><strong>国債 (Kokusai)</strong> <span class="jp-term">- National debt (highest in world relative to GDP)</span><span class="mm-meaning">အမျိုးသားကြွေးမြီ (ဂျီဒီပီနှင့်ယှဉ်လျှင် ကမ္ဘာ့အမြင့်ဆုံး)</span></li>
+                <li><strong>デフレ (Defure)</strong> <span class="jp-term">- Deflation (falling prices, historically)</span><span class="mm-meaning">ငွေကြေးဖောင်းပွမှု (စျေးနှုန်းများ ကျဆင်းခြင်း)</span></li>
+                <li><strong>賃金停滞 (Chingin Teitai)</strong> <span class="jp-term">- Wage stagnation (decades of little growth)</span><span class="mm-meaning">လုပ်ခလစာ ရပ်တန့်နေခြင်း</span></li>
+            </ul>
+        </div>
+        
+        <footer style="background: rgba(0, 0, 0, 0.85); border-radius: 20px; padding: 1.2rem; margin-top: 2rem; text-align: center;">
+            <div class="footer-links" style="display: flex; justify-content: center; gap: 1.5rem; margin-bottom: 1rem; flex-wrap: wrap;">
+                <a href="../pages/privacy.html" style="color: white; text-decoration: none;"><i class="fas fa-shield-alt"></i> Privacy Policy</a>
+                <a href="../pages/about.html" style="color: white; text-decoration: none;"><i class="fas fa-info-circle"></i> About</a>
+                <a href="../pages/contact.html" style="color: white; text-decoration: none;"><i class="fas fa-envelope"></i> Contact</a>
+                <a href="../pages/terms.html" style="color: white; text-decoration: none;"><i class="fas fa-file-contract"></i> Terms & Policy</a>
+            </div>
+            <p style="color: #7f8c8d;"><i class="fas fa-heart"></i> Next Gen Learning Myanmar - Japanese Economy & Business / ဂျပန်စီးပွားရေးနှင့် စီးပွားရေးလုပ်ငန်း</p>
+        </footer>
+    </div>
+    
+    <script>
+        function addBackToTopButton() {
+            if (document.querySelector('.back-to-top-btn')) return;
+            const btn = document.createElement('button');
+            btn.className = 'back-to-top-btn';
+            btn.innerHTML = '<i class="fas fa-arrow-up"></i><span>TOP</span>';
+            document.body.appendChild(btn);
+            window.addEventListener('scroll', () => btn.classList.toggle('show', window.scrollY > 300));
+            btn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+        }
+        addBackToTopButton();
+        
+        document.querySelectorAll('.gk-list li').forEach(item => {
+            item.addEventListener('click', () => {
+                const jpTextElement = item.querySelector('strong');
+                if (jpTextElement && window.speechSynthesis) {
+                    let japaneseOnly = jpTextElement.innerText.split('(')[0].trim();
+                    if (japaneseOnly) {
+                        window.speechSynthesis.cancel();
+                        const utterance = new SpeechSynthesisUtterance(japaneseOnly);
+                        utterance.lang = 'ja-JP';
+                        utterance.rate = 0.7;
+                        window.speechSynthesis.speak(utterance);
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>

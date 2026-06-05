@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Famous Places & Things in Japan - Next Gen Learning Myanmar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Myanmar:wght@400;500;700&family=Noto+Sans+JP:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .gk-detail-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 1rem;
+        }
+        
+        .gk-detail-header {
+            background: white;
+            border-radius: 20px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .gk-detail-header h1 {
+            font-size: 1.8rem;
+            color: #2c3e50;
+            text-align: center;
+        }
+        
+        .gk-detail-header h1 i {
+            color: #e67e22;
+            margin-right: 10px;
+        }
+        
+        .gk-detail-header h1 span {
+            font-size: 1rem;
+            color: #e67e22;
+            display: block;
+            margin-top: 0.3rem;
+        }
+        
+        .gk-detail-header p {
+            text-align: center;
+            color: #7f8c8d;
+            margin-top: 0.5rem;
+        }
+        
+        .gk-info-card {
+            background: white;
+            border-radius: 20px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .gk-info-card h2 {
+            color: #e67e22;
+            border-left: 4px solid #e67e22;
+            padding-left: 1rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        
+        .gk-info-card h2 .jp-head {
+            font-size: 0.9rem;
+            color: #7f8c8d;
+            font-weight: normal;
+        }
+        
+        .gk-info-card p {
+            line-height: 1.6;
+            color: #2c3e50;
+            margin-bottom: 0.8rem;
+        }
+        
+        .gk-list {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .gk-list li {
+            margin: 0.8rem 0;
+            padding: 0.8rem;
+            background: #f8f9fa;
+            border-radius: 10px;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+        
+        .gk-list li:hover {
+            background: #e67e22;
+            color: white;
+            transform: translateX(5px);
+        }
+        
+        .gk-list li strong {
+            color: #e67e22;
+            font-size: 1rem;
+        }
+        
+        .gk-list li .jp-term {
+            font-family: 'Noto Sans JP', sans-serif;
+            font-size: 0.85rem;
+            color: #7f8c8d;
+            margin-left: 5px;
+        }
+        
+        .gk-list li .mm-meaning {
+            display: block;
+            font-size: 0.8rem;
+            color: #7f8c8d;
+            margin-top: 5px;
+            font-family: 'Noto Sans Myanmar', sans-serif;
+        }
+        
+        .gk-list li:hover strong,
+        .gk-list li:hover .jp-term,
+        .gk-list li:hover .mm-meaning {
+            color: white;
+        }
+        
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #e67e22;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: 0.3s;
+            margin-bottom: 1rem;
+        }
+        
+        .back-btn:hover {
+            background: #d35400;
+            transform: translateX(-3px);
+        }
+        
+        .bilingual-text {
+            margin: 0.5rem 0;
+        }
+        
+        .english-text {
+            color: #2c3e50;
+        }
+        
+        .burmese-text {
+            color: #7f8c8d;
+            font-family: 'Noto Sans Myanmar', sans-serif;
+            font-size: 0.9rem;
+            margin-top: 0.3rem;
+        }
+        
+        @media (max-width: 768px) {
+            .gk-detail-header h1 {
+                font-size: 1.4rem;
+            }
+            
+            .gk-info-card h2 {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="gk-detail-container">
+        <a href="../general-knowledge.html" class="back-btn">
+            <i class="fas fa-arrow-left"></i> Back to General Knowledge / နောက်သို့
+        </a>
+        
+        <div class="gk-detail-header">
+            <h1>
+                <i class="fas fa-mountain"></i> 
+                Famous Places & Things in Japan
+                <span>ゆうめいな ばしょ と もの</span>
+            </h1>
+            <p>Iconic landmarks, cultural symbols, and world-famous Japanese creations / အထင်ကရနေရာများ၊ ယဉ်ကျေးမှုသင်္ကေတများနှင့် ကမ္ဘာကျော်ဂျပန်ဖန်တီးမှုများ</p>
+        </div>
+        
+        <div class="gk-info-card">
+            <h2>
+                <i class="fas fa-mountain"></i> 
+                Natural Wonders
+                <span class="jp-head">(しぜんの けしょう)</span>
+            </h2>
+            <ul class="gk-list">
+                <li><strong>富士山 (Fujisan)</strong> <span class="jp-term">- Mount Fuji</span><span class="mm-meaning">ဂျပန်နိုင်ငံ၏ အမြင့်ဆုံးတောင် (၃,၇၇၆မီတာ)၊ ယူနက်စကို ကမ္ဘာ့အမွေအနှစ်</span></li>
+                <li><strong>桜 (Sakura)</strong> <span class="jp-term">- Cherry blossoms</span><span class="mm-meaning">ဂျပန်နိုင်ငံ၏ သင်္ကေတပန်း၊ နွေဦးရာသီတွင် ဟာနားမိပွဲတော်ကျင်းပ</span></li>
+                <li><strong>紅葉 (Kōyō)</strong> <span class="jp-term">- Autumn leaves</span><span class="mm-meaning">ဆောင်းဦးရာသီတွင် မေပယ်ရွက်နီများ အထူးလှပသော နေရာများ (ကျိုတို၊ နစ်ကို)</span></li>
+                <li><strong>日本アルプス (Nihon Arupusu)</strong> <span class="jp-term">- Japanese Alps</span><span class="mm-meaning">ဗဟိုဂျပန်ရှိ တောင်တန်းများ (ချူးဘူး သုံးတောင်)</span></li>
+                <li><strong>青ヶ島 (Aogashima)</strong> <span class="jp-term">- Aogashima volcanic island</span><span class="mm-meaning">မီးတောင်ကျွန်း၊ နှစ်ထပ်မီးတောင်ကြားရှိ ရွာ</span></li>
+            </ul>
+        </div>
+        
+        <div class="gk-info-card">
+            <h2>
+                <i class="fas fa-city"></i> 
+                Famous Cities & Landmarks
+                <span class="jp-head">(ゆうめいな とし と ちめい)</span>
+            </h2>
+            <ul class="gk-list">
+                <li><strong>東京タワー (Tōkyō Tawā)</strong> <span class="jp-term">- Tokyo Tower</span><span class="mm-meaning">အက်ဖီယယ်မျှော်စင်မှ စိတ်ကူးယူထားသော ဆက်သွယ်ရေးမျှော်စင် (၃၃၃မီတာ)</span></li>
+                <li><strong>渋谷スクランブル交差点 (Shibuya Sukuranburu Kōsaten)</strong> <span class="jp-term">- Shibuya Crossing</span><span class="mm-meaning">ကမ္ဘာ့အလုပ်အများဆုံး လမ်းဆုံ၊ "ဟာချီကို" ခွေးရုပ်တု အနီး</span></li>
+                <li><strong>浅草寺 (Sensō-ji)</strong> <span class="jp-term">- Senso-ji Temple</span><span class="mm-meaning">တိုကျိုရှိ ရှေးအကျဆုံး ဗုဒ္ဓဘာသာဘုရားကျောင်း (အာဆာကူဆာ)</span></li>
+                <li><strong>金閣寺 (Kinkaku-ji)</strong> <span class="jp-term">- Golden Pavilion</span><span class="mm-meaning">ကျိုတိုရှိ ရွှေသင်္ဘောသားဖြင့် ဖုံးအုပ်ထားသော ဇင်ဗုဒ္ဓဘာသာကျောင်း</span></li>
+                <li><strong>大阪城 (Ōsaka-jō)</strong> <span class="jp-term">- Osaka Castle</span><span class="mm-meaning">တိုယိုတိုမိဟိဒေယောရှိ တည်ဆောက်ခဲ့သော သမိုင်းဝင်ရဲတိုက်</span></li>
+                <li><strong>厳島神社 (Itsukushima Jinja)</strong> <span class="jp-term">- Itsukushima Shrine</span><span class="mm-meaning">ရေထဲတွင် ရပ်နေသော တိုရီးဂိတ်ကြီးကြောင့် ကျော်ကြား (မိဂျီမာ)</span></li>
+                <li><strong>姫路城 (Himeji-jō)</strong> <span class="jp-term">- Himeji Castle</span><span class="mm-meaning">"ငှက်ဖြူရဲတိုက်" ဟုခေါ်သော ရှေးဟောင်းရဲတိုက်၊ ယူနက်စကို အမွေအနှစ်</span></li>
+            </ul>
+        </div>
+        
+        <div class="gk-info-card">
+            <h2>
+                <i class="fas fa-robot"></i> 
+                Famous Japanese Inventions & Brands
+                <span class="jp-head">(ゆうめいな はつめい と ブランド)</span>
+            </h2>
+            <ul class="gk-list">
+                <li><strong>新幹線 (Shinkansen)</strong> <span class="jp-term">- Bullet train</span><span class="mm-meaning">ကမ္ဘာ့ပထမဆုံး အမြန်နှုန်းမြင့်ရထားစနစ် (၁၉၆၄)</span></li>
+                <li><strong>ソニー (Sonī)</strong> <span class="jp-term">- Sony</span><span class="mm-meaning">ဝပ်မန်၊ ပလေးစတေရှင်၊ ကင်မရာ တီထွင်ထုတ်လုပ်သူ</span></li>
+                <li><strong>任天堂 (Nintendō)</strong> <span class="jp-term">- Nintendo</span><span class="mm-meaning">မာရီယို၊ ဇဲလ်ဒါ၊ ဆွစ်ချ် စသည့် ဗီဒီယိုဂိမ်းကုမ္ပဏီ</span></li>
+                <li><strong>トヨタ (Toyota)</strong> <span class="jp-term">- Toyota</span><span class="mm-meaning">ကမ္ဘာ့အကြီးဆုံး မော်တော်ယာဉ်ထုတ်လုပ်သူများထဲမှ တစ်ခု</span></li>
+                <li><strong>ユニクロ (Uniqlo)</strong> <span class="jp-term">- Uniqlo</span><span class="mm-meaning">ဂျပန်ဖက်ရှင်လက်လီကုမ္ပဏီ၊ အရည်အသွေးကောင်း ဈေးသက်သာ</span></li>
+                <li><strong>カラオケ (Karaoke)</strong> <span class="jp-term">- Karaoke</span><span class="mm-meaning">ဂျပန်တီထွင်မှု (စာသားအရ "လွတ်လပ်သောသံစုံတီးဝိုင်း")</span></li>
+            </ul>
+        </div>
+        
+        <div class="gk-info-card">
+            <h2>
+                <i class="fas fa-film"></i> 
+                Pop Culture Icons
+                <span class="jp-head">(ポップカルチャー アイコン)</span>
+            </h2>
+            <ul class="gk-list">
+                <li><strong>ポケモン (Pokémon)</strong> <span class="jp-term">- Pokémon</span><span class="mm-meaning">ဂျပန်၏ အကြီးကျယ်ဆုံး အောင်မြင်သော ဂိမ်းနှင့် အန်နီမီး ဖရန်ချိုင်ဇ်</span></li>
+                <li><strong>ドラえもん (Doraemon)</strong> <span class="jp-term">- Doraemon</span><span class="mm-meaning">ဂျပန်အမျိုးသား ကာတွန်း ဆိုင်ဘာကြောင်</span></li>
+                <li><strong>ハローキティ (Harō Kitī)</strong> <span class="jp-term">- Hello Kitty</span><span class="mm-meaning">ဆန်ရီယို၏ ကမ္ဘာကျော်ဖဲ့ဇ်နက် ကာတွန်းဇာတ်ကောင်</span></li>
+                <li><strong>スタジオジブリ (Sutajio Jiburi)</strong> <span class="jp-term">- Studio Ghibli</span><span class="mm-meaning">မီယာဇာကီဟာယာအို၏ အော်စကာဆုရ အန်နီမီးစတူဒီယို (မုန့်ဖုတ်စက်လေး၊ စပရစ်စ်သို့ လမ်းခွဲ)</span></li>
+                <li><strong>ゴジラ (Gojira)</strong> <span class="jp-term">- Godzilla</span><span class="mm-meaning">ဂျပန်ရုပ်ရှင်၏ အထင်ကရဧရာမနဂါးသတ္တဝါ</span></li>
+            </ul>
+        </div>
+        
+        <div class="gk-info-card">
+            <h2>
+                <i class="fas fa-utensils"></i> 
+                Famous Foods (Iconic Dishes)
+                <span class="jp-head">(ゆうめいな りょうり)</span>
+            </h2>
+            <ul class="gk-list">
+                <li><strong>寿司 (Sushi)</strong> <span class="jp-term">- Sushi</span><span class="mm-meaning">ဂျပန်နိုင်ငံ၏ အထင်ရှားဆုံး အစားအစာ (ဆန်နှင့် ငါးအစိမ်း)</span></li>
+                <li><strong>ラーメン (Rāmen)</strong> <span class="jp-term">- Ramen</span><span class="mm-meaning">ဂျပန်ခေါက်ဆွဲဟင်း (စွပ်ပြုတ်အမျိုးမျိုး)</span></li>
+                <li><strong>天ぷら (Tempura)</strong> <span class="jp-term">- Tempura</span><span class="mm-meaning">ကြက်ကြော်ခြောက်ကြော်နည်း (ပင်လယ်စာနှင့် ဟင်းသီးဟင်းရွက်)</span></li>
+                <li><strong>和牛 (Wagyū)</strong> <span class="jp-term">- Wagyu beef</span><span class="mm-meaning">ဂျပန်အသားကြက်သွန်အသား (ကိုဘီ၊ မာဆွာဇာကီဟုခေါ်)</span></li>
+                <li><strong>抹茶 (Matcha)</strong> <span class="jp-term">- Matcha green tea</span><span class="mm-meaning">ဂျပန်လက်ဖက်စိမ်းမှုန့်၊ လက်ဖက်ရည်ပွဲနှင့် ကိတ်မုန့်များတွင် သုံး</span></li>
+            </ul>
+        </div>
+        
+        <footer style="background: rgba(0, 0, 0, 0.85); border-radius: 20px; padding: 1.2rem; margin-top: 2rem; text-align: center;">
+            <div class="footer-links" style="display: flex; justify-content: center; gap: 1.5rem; margin-bottom: 1rem; flex-wrap: wrap;">
+                <a href="../pages/privacy.html" style="color: white; text-decoration: none;"><i class="fas fa-shield-alt"></i> Privacy Policy</a>
+                <a href="../pages/about.html" style="color: white; text-decoration: none;"><i class="fas fa-info-circle"></i> About</a>
+                <a href="../pages/contact.html" style="color: white; text-decoration: none;"><i class="fas fa-envelope"></i> Contact</a>
+                <a href="../pages/terms.html" style="color: white; text-decoration: none;"><i class="fas fa-file-contract"></i> Terms & Policy</a>
+            </div>
+            <p style="color: #7f8c8d;"><i class="fas fa-heart"></i> Next Gen Learning Myanmar - Famous Places & Things / ကျော်ကြားသောနေရာများနှင့် အရာများ</p>
+        </footer>
+    </div>
+    
+    <script>
+        function addBackToTopButton() {
+            if (document.querySelector('.back-to-top-btn')) return;
+            const btn = document.createElement('button');
+            btn.className = 'back-to-top-btn';
+            btn.innerHTML = '<i class="fas fa-arrow-up"></i><span>TOP</span>';
+            document.body.appendChild(btn);
+            window.addEventListener('scroll', () => btn.classList.toggle('show', window.scrollY > 300));
+            btn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+        }
+        addBackToTopButton();
+        
+        document.querySelectorAll('.gk-list li').forEach(item => {
+            item.addEventListener('click', () => {
+                const jpTextElement = item.querySelector('strong');
+                if (jpTextElement && window.speechSynthesis) {
+                    let japaneseOnly = jpTextElement.innerText.split('(')[0].trim();
+                    if (japaneseOnly) {
+                        window.speechSynthesis.cancel();
+                        const utterance = new SpeechSynthesisUtterance(japaneseOnly);
+                        utterance.lang = 'ja-JP';
+                        utterance.rate = 0.7;
+                        window.speechSynthesis.speak(utterance);
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>

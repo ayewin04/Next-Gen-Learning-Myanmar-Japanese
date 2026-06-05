@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Japanese Traditional Arts - Next Gen Learning Myanmar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Myanmar:wght@400;500;700&family=Noto+Sans+JP:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .gk-detail-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 1rem;
+        }
+        
+        .gk-detail-header {
+            background: white;
+            border-radius: 20px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .gk-detail-header h1 {
+            font-size: 1.8rem;
+            color: #2c3e50;
+            text-align: center;
+        }
+        
+        .gk-detail-header h1 i {
+            color: #e67e22;
+            margin-right: 10px;
+        }
+        
+        .gk-detail-header h1 span {
+            font-size: 1rem;
+            color: #e67e22;
+            display: block;
+            margin-top: 0.3rem;
+        }
+        
+        .gk-detail-header p {
+            text-align: center;
+            color: #7f8c8d;
+            margin-top: 0.5rem;
+        }
+        
+        .gk-info-card {
+            background: white;
+            border-radius: 20px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .gk-info-card h2 {
+            color: #e67e22;
+            border-left: 4px solid #e67e22;
+            padding-left: 1rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        
+        .gk-info-card h2 .jp-head {
+            font-size: 0.9rem;
+            color: #7f8c8d;
+            font-weight: normal;
+        }
+        
+        .gk-info-card p {
+            line-height: 1.6;
+            color: #2c3e50;
+            margin-bottom: 0.8rem;
+        }
+        
+        .gk-list {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .gk-list li {
+            margin: 0.8rem 0;
+            padding: 0.8rem;
+            background: #f8f9fa;
+            border-radius: 10px;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+        
+        .gk-list li:hover {
+            background: #e67e22;
+            color: white;
+            transform: translateX(5px);
+        }
+        
+        .gk-list li strong {
+            color: #e67e22;
+            font-size: 1rem;
+        }
+        
+        .gk-list li .jp-term {
+            font-family: 'Noto Sans JP', sans-serif;
+            font-size: 0.85rem;
+            color: #7f8c8d;
+            margin-left: 5px;
+        }
+        
+        .gk-list li .mm-meaning {
+            display: block;
+            font-size: 0.8rem;
+            color: #7f8c8d;
+            margin-top: 5px;
+            font-family: 'Noto Sans Myanmar', sans-serif;
+        }
+        
+        .gk-list li:hover strong,
+        .gk-list li:hover .jp-term,
+        .gk-list li:hover .mm-meaning {
+            color: white;
+        }
+        
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #e67e22;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: 0.3s;
+            margin-bottom: 1rem;
+        }
+        
+        .back-btn:hover {
+            background: #d35400;
+            transform: translateX(-3px);
+        }
+        
+        .bilingual-text {
+            margin: 0.5rem 0;
+        }
+        
+        .english-text {
+            color: #2c3e50;
+        }
+        
+        .burmese-text {
+            color: #7f8c8d;
+            font-family: 'Noto Sans Myanmar', sans-serif;
+            font-size: 0.9rem;
+            margin-top: 0.3rem;
+        }
+        
+        .arts-note {
+            background: #fff3e0;
+            border-left: 4px solid #e67e22;
+            padding: 1rem;
+            border-radius: 12px;
+            margin-top: 1rem;
+            font-size: 0.9rem;
+        }
+        
+        @media (max-width: 768px) {
+            .gk-detail-header h1 {
+                font-size: 1.4rem;
+            }
+            
+            .gk-info-card h2 {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="gk-detail-container">
+        <a href="../general-knowledge.html" class="back-btn">
+            <i class="fas fa-arrow-left"></i> Back to General Knowledge / နောက်သို့
+        </a>
+        
+        <div class="gk-detail-header">
+            <h1>
+                <i class="fas fa-paintbrush"></i> 
+                Japanese Traditional Arts
+                <span>にほんの でんとう げいじゅつ</span>
+            </h1>
+            <p>Origami, pottery, lacquerware, swordsmithing, and crafts / အိုရီဂါမီ၊ အိုးထိန်းလုပ်ငန်း၊ ယွန်းထည်လုပ်ငန်း၊ ဓားသွန်းလုပ်ငန်းနှင့် လက်မှုပစ္စည်းများ</p>
+        </div>
+        
+        <div class="gk-info-card">
+            <h2>
+                <i class="fas fa-paper-plane"></i> 
+                Origami (折り紙) - Paper Folding
+                <span class="jp-head">(おりがみ)</span>
+            </h2>
+            <div class="bilingual-text">
+                <p class="english-text">Origami is the art of folding paper into shapes without cutting or gluing. It originated in Japan in the 17th century.</p>
+                <p class="burmese-text">အိုရီဂါမီသည် စက္ကူကို မညှပ်၊ မကပ်ဘဲ ပုံအမျိုးမျိုးခေါက်သည့် အနုပညာဖြစ်သည်။ ၁၇ ရာစုတွင် ဂျပန်၌ စတင်ပေါ်ပေါက်ခဲ့သည်။</p>
+            </div>
+            <ul class="gk-list">
+                <li><strong>折り鶴 (Orizuru)</strong> <span class="jp-term">- Paper crane (symbol of peace, from Sadako Sasaki story)</span><span class="mm-meaning">စက္ကူကြိုးကြာ (ငြိမ်းချမ်းရေးသင်္ကေတ)</span></li>
+                <li><strong>千羽鶴 (Senbazuru)</strong> <span class="jp-term">- 1,000 paper cranes (wish for healing/peace)</span><span class="mm-meaning">ကြိုးကြာ ၁၀၀၀ (ဆုတောင်းချက်)</span></li>
+                <li><strong>連鶴 (Renzuru)</strong> <span class="jp-term">- Connected cranes (folded from one sheet)</span><span class="mm-meaning">ဆက်စပ်ကြိုးကြာများ</span></li>
+                <li><strong>折り紙用紙 (Origami Yōshi)</strong> <span class="jp-term">- Special origami paper (thinner, various colors)</span><span class="mm-meaning">အိုရီဂါမီစက္ကူ</span></li>
+            </ul>
+        </div>
+        
+        <div class="gk-info-card">
+            <h2>
+                <i class="fas fa-mug-hot"></i> 
+                Pottery & Ceramics (陶芸 - Tōgei)
+                <span class="jp-head">(とうげい)</span>
+            </h2>
+            <ul class="gk-list">
+                <li><strong>有田焼 (Arita-yaki)</strong> <span class="jp-term">- Arita ware (Saga, first Japanese porcelain, 17th century)</span><span class="mm-meaning">အရီတာထည် (ဂျပန်ပထမဆုံးကြွေထည်)</span></li>
+                <li><strong>美濃焼 (Mino-yaki)</strong> <span class="jp-term">- Mino ware (Gifu, most produced, 50% of Japanese ceramics)</span><span class="mm-meaning">မိနိုထည်</span></li>
+                <li><strong>京都焼 (Kyō-yaki)</strong> <span class="jp-term">- Kyo ware (Kyoto, refined, artistic)</span><span class="mm-meaning">ကျိုတိုထည်</span></li>
+                <li><strong>萩焼 (Hagi-yaki)</strong> <span class="jp-term">- Hagi ware (Yamaguchi, simple, earthy, used for tea ceremony)</span><span class="mm-meaning">ဟာဂီထည်</span></li>
+                <li><strong>備前焼 (Bizen-yaki)</strong> <span class="jp-term">- Bizen ware (Okayama, unglazed, iron-rich clay)</span><span class="mm-meaning">ဘိဇန်ထည်</span></li>
+                <li><strong>楽焼 (Raku-yaki)</strong> <span class="jp-term">- Raku ware (hand-molded, low-firing, used for tea bowls)</span><span class="mm-meaning">ရာကုထည်</span></li>
+            </ul>
+        </div>
+        
+        <div class="gk-info-card">
+            <h2>
+                <i class="fas fa-palette"></i> 
+                Painting & Calligraphy
+                <span class="jp-head">(かいが と しょどう)</span>
+            </h2>
+            <ul class="gk-list">
+                <li><strong>書道 (Shodō)</strong> <span class="jp-term">- Calligraphy (writing characters with brush and ink)</span><span class="mm-meaning">ဂျပန်ပန်းချီစာရေးခြင်း</span></li>
+                <li><strong>墨絵 (Sumi-e)</strong> <span class="jp-term">- Ink wash painting (black ink only)</span><span class="mm-meaning">မင်စုတ်ပန်းချီ</span></li>
+                <li><strong>浮世絵 (Ukiyo-e)</strong> <span class="jp-term">- Woodblock prints (Edo period, "pictures of the floating world")</span><span class="mm-meaning">ဂျပန်သစ်သားပုံနှိပ်အနုပညာ</span></li>
+                <li><strong>葛飾北斎 (Katsushika Hokusai)</strong> <span class="jp-term">- Hokusai (most famous ukiyo-e artist, "The Great Wave off Kanagawa")</span><span class="mm-meaning">ဟိုကုဆိုင် (အကျော်ကြားဆုံး အုကီယိုအေ ပန်းချီဆရာ)</span></li>
+                <li><strong>歌川広重 (Utagawa Hiroshige)</strong> <span class="jp-term">- Hiroshige (landscape prints, "53 Stations of the Tokaido")</span><span class="mm-meaning">ဟီရိုရှီဂေး</span></li>
+                <li><strong>筆 (Fude)</strong> <span class="jp-term">- Japanese brush</span><span class="mm-meaning">စုတ်တံ</span></li>
+                <li><strong>墨 (Sumi)</strong> <span class="jp-term">- Ink stick (ground on ink stone)</span><span class="mm-meaning">မင်ခဲ</span></li>
+            </ul>
+        </div>
+        
+        <div class="gk-info-card">
+            <h2>
+                <i class="fas fa-crown"></i> 
+                Lacquerware (漆器 - Shikki)
+                <span class="jp-head">(しっき)</span>
+            </h2>
+            <ul class="gk-list">
+                <li><strong>漆 (Urushi)</strong> <span class="jp-term">- Japanese lacquer (from urushi tree sap)</span><span class="mm-meaning">ဂျပန်ယွန်းဆေး</span></li>
+                <li><strong>輪島塗 (Wajima-nuri)</strong> <span class="jp-term">- Wajima lacquerware (Ishikawa, most durable)</span><span class="mm-meaning">ဝါဂျီမာယွန်းထည်</span></li>
+                <li><strong>蒔絵 (Makie)</strong> <span class="jp-term">- Gold/silver powder decoration on lacquer</span><span class="mm-meaning">ရွှေမှုန့်အလှဆင်ခြင်း</span></li>
+                <li><strong>沈金 (Chinkin)</strong> <span class="jp-term">- Gold inlay carving</span><span class="mm-meaning">ရွှေထည့်ထွင်းခြင်း</span></li>
+                <li><strong>椀物 (Wanmono)</strong> <span class="jp-term">- Lacquered bowls (for soup, rice)</span><span class="mm-meaning">ယွန်းထည်ခွက်များ</span></li>
+            </ul>
+        </div>
+        
+        <div class="gk-info-card">
+            <h2>
+                <i class="fas fa-sword"></i> 
+                Swordsmithing (刀剣 - Tōken)
+                <span class="jp-head">(とうけん)</span>
+            </h2>
+            <ul class="gk-list">
+                <li><strong>刀 (Katana)</strong> <span class="jp-term">- Japanese sword (curved, single-edged, samurai weapon)</span><span class="mm-meaning">ဂျပန်ဓား (ဆာမူရိုင်းဓား)</span></li>
+                <li><strong>刀匠 (Tōshō)</strong> <span class="jp-term">- Swordsmith (highly respected artisan)</span><span class="mm-meaning">ဓားသွန်းဆရာ</span></li>
+                <li><strong>玉鋼 (Tama-hagane)</strong> <span class="jp-term">- Traditional steel made from iron sand</span><span class="mm-meaning">ရိုးရာသံမဏိ</span></li>
+                <li><strong>折り返し鍛錬 (Ori-kaeshi Tanren)</strong> <span class="jp-term">- Folding and forging (removes impurities)</span><span class="mm-meaning">အလွှာလိုက်ခေါက်ထုခြင်း</span></li>
+                <li><strong>刃文 (Hamon)</strong> <span class="jp-term">- Edge pattern (signature of swordsmith)</span><span class="mm-meaning">ဓားသွားပုံစံ</span></li>
+                <li><strong>日本刀 (Nihontō)</strong> <span class="jp-term">- Japanese sword (collective term)</span><span class="mm-meaning">ဂျပန်ဓား</span></li>
+            </ul>
+            <div class="arts-note">
+                <i class="fas fa-shield-alt"></i> <strong>Living National Treasures / သက်ရှိအမျိုးသားရတနာများ:</strong> Japan designates master craftspeople as "Living National Treasures" (重要無形文化財保持者) to preserve traditional arts. They receive government support to train apprentices.
+                <div class="burmese-text" style="margin-top: 8px;">ဂျပန်သည် ရိုးရာအနုပညာများ ထိန်းသိမ်းရန် ကျွမ်းကျင်လက်မှုပညာရှင်များကို "သက်ရှိအမျိုးသားရတနာများ" အဖြစ် သတ်မှတ်သည်။</div>
+            </div>
+        </div>
+        
+        <div class="gk-info-card">
+            <h2>
+                <i class="fas fa-cut"></i> 
+                Other Traditional Crafts
+                <span class="jp-head">(ほかの でんとう こうげい)</span>
+            </h2>
+            <ul class="gk-list">
+                <li><strong>人形 (Ningyō)</strong> <span class="jp-term">- Traditional dolls (Hina dolls, Kokeshi, Daruma)</span><span class="mm-meaning">ရိုးရာအရုပ် (ဟီးနားအရုပ်၊ ကိုခက်ရှိ၊ ဒရူးမား)</span></li>
+                <li><strong>組紐 (Kumihimo)</strong> <span class="jp-term">- Braided cords (used for kimono ties, samurai armor)</span><span class="mm-meaning">ကြိုးကျစ်ခြင်း</span></li>
+                <li><strong>友禅染 (Yūzen-zome)</strong> <span class="jp-term">- Yuzen dyeing (colorful kimono dyeing technique)</span><span class="mm-meaning">ယူဇန်ဆိုးဆေးလုပ်ငန်း</span></li>
+                <li><strong>金工 (Kinkō)</strong> <span class="jp-term">- Metalwork (bronze, iron, silver crafts)</span><span class="mm-meaning">သတ္တုလက်မှုပညာ</span></li>
+                <li><strong>竹細工 (Takezaiku)</strong> <span class="jp-term">- Bamboo crafts (baskets, tea scoops, fences)</span><span class="mm-meaning">ဝါးလက်မှုပညာ</span></li>
+                <li><strong>和紙 (Washi)</strong> <span class="jp-term">- Traditional Japanese paper (strong, beautiful, UNESCO heritage)</span><span class="mm-meaning">ဂျပန်ရိုးရာစက္ကူ</span></li>
+            </ul>
+        </div>
+        
+        <footer style="background: rgba(0, 0, 0, 0.85); border-radius: 20px; padding: 1.2rem; margin-top: 2rem; text-align: center;">
+            <div class="footer-links" style="display: flex; justify-content: center; gap: 1.5rem; margin-bottom: 1rem; flex-wrap: wrap;">
+                <a href="../pages/privacy.html" style="color: white; text-decoration: none;"><i class="fas fa-shield-alt"></i> Privacy Policy</a>
+                <a href="../pages/about.html" style="color: white; text-decoration: none;"><i class="fas fa-info-circle"></i> About</a>
+                <a href="../pages/contact.html" style="color: white; text-decoration: none;"><i class="fas fa-envelope"></i> Contact</a>
+                <a href="../pages/terms.html" style="color: white; text-decoration: none;"><i class="fas fa-file-contract"></i> Terms & Policy</a>
+            </div>
+            <p style="color: #7f8c8d;"><i class="fas fa-heart"></i> Next Gen Learning Myanmar - Japanese Traditional Arts / ဂျပန်ရိုးရာအနုပညာများ</p>
+        </footer>
+    </div>
+    
+    <script>
+        function addBackToTopButton() {
+            if (document.querySelector('.back-to-top-btn')) return;
+            const btn = document.createElement('button');
+            btn.className = 'back-to-top-btn';
+            btn.innerHTML = '<i class="fas fa-arrow-up"></i><span>TOP</span>';
+            document.body.appendChild(btn);
+            window.addEventListener('scroll', () => btn.classList.toggle('show', window.scrollY > 300));
+            btn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+        }
+        addBackToTopButton();
+        
+        document.querySelectorAll('.gk-list li').forEach(item => {
+            item.addEventListener('click', () => {
+                const jpTextElement = item.querySelector('strong');
+                if (jpTextElement && window.speechSynthesis) {
+                    let japaneseOnly = jpTextElement.innerText.split('(')[0].trim();
+                    if (japaneseOnly) {
+                        window.speechSynthesis.cancel();
+                        const utterance = new SpeechSynthesisUtterance(japaneseOnly);
+                        utterance.lang = 'ja-JP';
+                        utterance.rate = 0.7;
+                        window.speechSynthesis.speak(utterance);
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>

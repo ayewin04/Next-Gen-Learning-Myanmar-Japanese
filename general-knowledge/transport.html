@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Japanese Transportation - Next Gen Learning Myanmar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Myanmar:wght@400;500;700&family=Noto+Sans+JP:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .gk-detail-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 1rem;
+        }
+        
+        .gk-detail-header {
+            background: white;
+            border-radius: 20px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .gk-detail-header h1 {
+            font-size: 1.8rem;
+            color: #2c3e50;
+            text-align: center;
+        }
+        
+        .gk-detail-header h1 i {
+            color: #e67e22;
+            margin-right: 10px;
+        }
+        
+        .gk-detail-header h1 span {
+            font-size: 1rem;
+            color: #e67e22;
+            display: block;
+            margin-top: 0.3rem;
+        }
+        
+        .gk-detail-header p {
+            text-align: center;
+            color: #7f8c8d;
+            margin-top: 0.5rem;
+        }
+        
+        .gk-info-card {
+            background: white;
+            border-radius: 20px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .gk-info-card h2 {
+            color: #e67e22;
+            border-left: 4px solid #e67e22;
+            padding-left: 1rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        
+        .gk-info-card h2 .jp-head {
+            font-size: 0.9rem;
+            color: #7f8c8d;
+            font-weight: normal;
+        }
+        
+        .gk-info-card p {
+            line-height: 1.6;
+            color: #2c3e50;
+            margin-bottom: 0.8rem;
+        }
+        
+        .gk-list {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .gk-list li {
+            margin: 0.8rem 0;
+            padding: 0.8rem;
+            background: #f8f9fa;
+            border-radius: 10px;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+        
+        .gk-list li:hover {
+            background: #e67e22;
+            color: white;
+            transform: translateX(5px);
+        }
+        
+        .gk-list li strong {
+            color: #e67e22;
+            font-size: 1rem;
+        }
+        
+        .gk-list li .jp-term {
+            font-family: 'Noto Sans JP', sans-serif;
+            font-size: 0.85rem;
+            color: #7f8c8d;
+            margin-left: 5px;
+        }
+        
+        .gk-list li .mm-meaning {
+            display: block;
+            font-size: 0.8rem;
+            color: #7f8c8d;
+            margin-top: 5px;
+            font-family: 'Noto Sans Myanmar', sans-serif;
+        }
+        
+        .gk-list li:hover strong,
+        .gk-list li:hover .jp-term,
+        .gk-list li:hover .mm-meaning {
+            color: white;
+        }
+        
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #e67e22;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: 0.3s;
+            margin-bottom: 1rem;
+        }
+        
+        .back-btn:hover {
+            background: #d35400;
+            transform: translateX(-3px);
+        }
+        
+        .bilingual-text {
+            margin: 0.5rem 0;
+        }
+        
+        .english-text {
+            color: #2c3e50;
+        }
+        
+        .burmese-text {
+            color: #7f8c8d;
+            font-family: 'Noto Sans Myanmar', sans-serif;
+            font-size: 0.9rem;
+            margin-top: 0.3rem;
+        }
+        
+        .transport-note {
+            background: #fff3e0;
+            border-left: 4px solid #e67e22;
+            padding: 1rem;
+            border-radius: 12px;
+            margin-top: 1rem;
+            font-size: 0.9rem;
+        }
+        
+        @media (max-width: 768px) {
+            .gk-detail-header h1 {
+                font-size: 1.4rem;
+            }
+            
+            .gk-info-card h2 {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="gk-detail-container">
+        <a href="../general-knowledge.html" class="back-btn">
+            <i class="fas fa-arrow-left"></i> Back to General Knowledge / နောက်သို့
+        </a>
+        
+        <div class="gk-detail-header">
+            <h1>
+                <i class="fas fa-train"></i> 
+                Japanese Transportation
+                <span>にほんの こうつう</span>
+            </h1>
+            <p>The world's most efficient and punctual transportation system / ကမ္ဘာ့အထိရောက်ဆုံးနှင့် အချိန်မှန်ဆုံး သယ်ယူပို့ဆောင်ရေးစနစ်</p>
+        </div>
+        
+        <div class="gk-info-card">
+            <h2>
+                <i class="fas fa-train"></i> 
+                Shinkansen (Bullet Train)
+                <span class="jp-head">(しんかんせん)</span>
+            </h2>
+            <div class="bilingual-text">
+                <p class="english-text">The Shinkansen, launched in 1964 for the Tokyo Olympics, is the world's first high-speed rail system. Trains run at speeds up to 320 km/h (200 mph) with average delay of less than 1 minute.</p>
+                <p class="burmese-text">ရှင်ကန်ဆန်သည် ၁၉၆၄ ခုနှစ် တိုကျိုအိုလံပစ်အတွက် စတင်မိတ်ဆက်ခဲ့ပြီး ကမ္ဘာ့ပထမဆုံး အမြန်နှုန်းမြင့်ရထားလမ်းစနစ်ဖြစ်သည်။</p>
+            </div>
+            <ul class="gk-list">
+                <li><strong>東海道新幹線 (Tōkaidō Shinkansen)</strong> <span class="jp-term">- Tokaido line (Tokyo - Osaka)</span><span class="mm-meaning">တိုကျို-အိုဆာကာ (ဂျပန်တွင် အလုပ်အများဆုံးလမ်းကြောင်း)</span></li>
+                <li><strong>のぞみ (Nozomi)</strong> <span class="jp-term">- Fastest service (stops at major stations)</span><span class="mm-meaning">အမြန်ဆုံးဝန်ဆောင်မှု (Tokyo → Shin-Osaka: 2h22m)</span></li>
+                <li><strong>ひかり (Hikari)</strong> <span class="jp-term">- Medium speed (more stops)</span><span class="mm-meaning">အလယ်အလတ်မြန်နှုန်း</span></li>
+                <li><strong>こだま (Kodama)</strong> <span class="jp-term">- Slowest (all stations)</span><span class="mm-meaning">အနှေးဆုံး (ဘူတာရုံတိုင်းရပ်)</span></li>
+                <li><strong>グリーン車 (Gurīn-sha)</strong> <span class="jp-term">- Green Car (first class)</span><span class="mm-meaning">ပထမတန်း (ချမ်းသာသောခန်း)</span></li>
+                <li><strong>指定席 (Shiteiseki)</strong> <span class="jp-term">- Reserved seat</span><span class="mm-meaning">ကြိုတင်ဘိုကင်ထိုင်ခုံ</span></li>
+                <li><strong>自由席 (Jiyūseki)</strong> <span class="jp-term">- Non-reserved seat</span><span class="mm-meaning">ကြိုတင်မဘိုကင်ရသော ထိုင်ခုံ</span></li>
+            </ul>
+        </div>
+        
+        <div class="gk-info-card">
+            <h2>
+                <i class="fas fa-subway"></i> 
+                Urban Trains & Subways
+                <span class="jp-head">(としない でんしゃ と ちかてつ)</span>
+            </h2>
+            <ul class="gk-list">
+                <li><strong>JR (Japan Railways)</strong> <span class="jp-term">- Former national railway (now 6 regional companies)</span><span class="mm-meaning">ယခင်အမျိုးသားရထားလမ်း (JR East, JR West, etc.)</span></li>
+                <li><strong>山手線 (Yamanote-sen)</strong> <span class="jp-term">- Yamanote Line (Tokyo's circular loop line)</span><span class="mm-meaning">တိုကျိုမြို့လည်ပတ်လမ်းကြောင်း (အလုပ်အများဆုံး)</span></li>
+                <li><strong>中央線 (Chūō-sen)</strong> <span class="jp-term">- Chuo Line (Tokyo east-west)</span><span class="mm-meaning">တိုကျို အရှေ့-အနောက်လမ်းကြောင်း</span></li>
+                <li><strong>私鉄 (Shitetsu)</strong> <span class="jp-term">- Private railways (Keio, Odakyu, Tobu, Seibu, Hankyu)</span><span class="mm-meaning">ပုဂ္ဂလိကရထားလမ်းများ</span></li>
+                <li><strong>地下鉄 (Chikatetsu)</strong> <span class="jp-term">- Subway (Tokyo Metro, Toei, Osaka Metro)</span><span class="mm-meaning">မြေအောက်ရထား</span></li>
+                <li><strong>Suica / Pasmo</strong> <span class="jp-term">- IC cards (tap to ride, also pay at stores)</span><span class="mm-meaning">အိုင်စီကတ်များ (ထိရုံနှင့် စီးနိုင်သည်၊ စတိုးဆိုင်များတွင်လည်း သုံးနိုင်)</span></li>
+            </ul>
+        </div>
+        
+        <div class="gk-info-card">
+            <h2>
+                <i class="fas fa-bus"></i> 
+                Buses & Local Transport
+                <span class="jp-head">(バス と ちいき こうつう)</span>
+            </h2>
+            <ul class="gk-list">
+                <li><strong>路線バス (Rosen Basu)</strong> <span class="jp-term">- Route buses (city buses)</span><span class="mm-meaning">မြို့ပြဘတ်စ်ကားများ (နောက်မှတက်ရှေ့ကထွက်)</span></li>
+                <li><strong>高速バス (Kōsoku Basu)</strong> <span class="jp-term">- Highway bus (cheaper than Shinkansen)</span><span class="mm-meaning">အဝေးပြေးဘတ်စ်ကား (ရှင်ကန်ဆန်ထက် ဈေးသက်သာ)</span></li>
+                <li><strong>夜行バス (Yakō Basu)</strong> <span class="jp-term">- Overnight bus (save hotel cost)</span><span class="mm-meaning">ညအိပ်ဘတ်စ်ကား (ဟိုတယ်စရိတ်သက်သာ)</span></li>
+                <li><strong>コミュニティバス (Komyuniti Basu)</strong> <span class="jp-term">- Community bus (local small buses)</span><span class="mm-meaning">ရပ်ရွာဘတ်စ်ကား</span></li>
+                <li><strong>タクシー (Takushī)</strong> <span class="jp-term">- Taxi (expensive, but very clean and safe)</span><span class="mm-meaning">တက္ကစီ (စျေးကြီးသော်လည်း အလွန်သန့်ရှင်းပြီး လုံခြုံ)</span></li>
+            </ul>
+            <div class="transport-note">
+                <i class="fas fa-lightbulb"></i> <strong>How to ride buses / ဘတ်စ်ကားစီးနည်း:</strong> Board from the rear door, take a "整理券" (seiriken - numbered ticket) if no IC card. Pay the fare displayed when exiting through the front door. Exact change is appreciated.
+                <div class="burmese-text" style="margin-top: 8px;">နောက်ဘက်တံခါးမှတက်ပါ၊ အိုင်စီကတ်မရှိလျှင် "ဆေရီခန်" (နံပါတ်စဉ်လက်မှတ်) ယူပါ။ အရှေ့ဘက်တံခါးမှဆင်းရန်။ ငွေအတိအကျ ပေးဆောင်ခြင်းကို နှစ်သက်သည်။</div>
+            </div>
+        </div>
+        
+        <div class="gk-info-card">
+            <h2>
+                <i class="fas fa-fighter-jet"></i> 
+                Air Travel
+                <span class="jp-head">(こうくうき)</span>
+            </h2>
+            <ul class="gk-list">
+                <li><strong>羽田空港 (Haneda Kūkō)</strong> <span class="jp-term">- Haneda Airport (Tokyo's main domestic hub)</span><span class="mm-meaning">တိုကျိုပင်မပြည်တွင်းလေဆိပ်</span></li>
+                <li><strong>成田空港 (Narita Kūkō)</strong> <span class="jp-term">- Narita Airport (Tokyo's main international hub)</span><span class="mm-meaning">တိုကျိုပင်မနိုင်ငံတကာလေဆိပ်</span></li>
+                <li><strong>関西空港 (Kansai Kūkō)</strong> <span class="jp-term">- Kansai Airport (Osaka, built on artificial island)</span><span class="mm-meaning">အိုဆာကာ (အတုကျွန်းပေါ်တွင် ဆောက်လုပ်ထား)</span></li>
+                <li><strong>JAL (Japan Airlines)</strong> <span class="jp-term">- Japan Airlines (flagship carrier)</span><span class="mm-meaning">ဂျပန်အလံတင်လေကြောင်းလိုင်း</span></li>
+                <li><strong>ANA (All Nippon Airways)</strong> <span class="jp-term">- ANA (largest Japanese airline, 5-star rating)</span><span class="mm-meaning">ဂျပန်အကြီးဆုံးလေကြောင်းလိုင်း (ကြယ် ၅ ပွင့်)</span></li>
+                <li><strong>LCC (Low Cost Carrier)</strong> <span class="jp-term">- LCC: Peach, Jetstar Japan, Spring Japan</span><span class="mm-meaning">စျေးသက်သာသော လေကြောင်းလိုင်းများ</span></li>
+            </ul>
+        </div>
+        
+        <div class="gk-info-card">
+            <h2>
+                <i class="fas fa-ship"></i> 
+                Ferries & Water Transport
+                <span class="jp-head">(フェリー と すいろ こうつう)</span>
+            </h2>
+            <ul class="gk-list">
+                <li><strong>フェリー (Ferī)</strong> <span class="jp-term">- Ferries (connect islands and main islands)</span><span class="mm-meaning">ကူးတို့သင်္ဘော (ကျွန်းများကို ချိတ်ဆက်)</span></li>
+                <li><strong>水上バス (Suijō Basu)</strong> <span class="jp-term">- Water bus (Tokyo, Osaka, Yokohama)</span><span class="mm-meaning">ရေဘတ်စ်ကား (တိုကျို၊ အိုဆာကာ၊ ယိုကိုဟားမား)</span></li>
+                <li><strong>汽船 (Kisen)</strong> <span class="jp-term">- Steam ship / local ferry</span><span class="mm-meaning">ဒေသဆိုင်ရာ ကူးတို့သင်္ဘော</span></li>
+            </ul>
+        </div>
+        
+        <div class="gk-info-card">
+            <h2>
+                <i class="fas fa-bicycle"></i> 
+                Bicycles & Personal Transport
+                <span class="jp-head">(じてんしゃ と こじん こうつう)</span>
+            </h2>
+            <ul class="gk-list">
+                <li><strong>自転車 (Jitensha)</strong> <span class="jp-term">- Bicycle (very common for short trips)</span><span class="mm-meaning">စက်ဘီး (အတိုအထွာအတွက် အလွန်အသုံးများ)</span></li>
+                <li><strong>駐輪場 (Chūrinjō)</strong> <span class="jp-term">- Bicycle parking lot (must park properly)</span><span class="mm-meaning">စက်ဘီးရပ်နားရာနေရာ (မှန်ကန်စွာရပ်ရမည်)</span></li>
+                <li><strong>原付 (Gentsuki)</strong> <span class="jp-term">- Moped/scooter (up to 50cc, special license)</span><span class="mm-meaning">မော်တော်ဆိုင်ကယ် (၅၀စီစီအထိ)</span></li>
+                <li><strong>レンタサイクル (Renta Saikuru)</strong> <span class="jp-term">- Rental bicycle (available in tourist cities)</span><span class="mm-meaning">စက်ဘီးငှားရမ်းခြင်း (ခရီးသွားမြို့များတွင် ရနိုင်)</span></li>
+            </ul>
+        </div>
+        
+        <div class="gk-info-card">
+            <h2>
+                <i class="fas fa-ticket-alt"></i> 
+                Transportation Passes & Tips
+                <span class="jp-head">(パス と アドバイス)</span>
+            </h2>
+            <ul class="gk-list">
+                <li><strong>JRパス (JR Pasu)</strong> <span class="jp-term">- Japan Rail Pass (unlimited travel, for tourists)</span><span class="mm-meaning">ဂျအာရ် ရထားလမ်းဖြတ်သန်းခွင့် (ခရီးသွားများအတွက် အကန့်အသတ်မဲ့)</span></li>
+                <li><strong>地下鉄1日券 (Chikatetsu Ichinichiken)</strong> <span class="jp-term">- Subway one-day pass</span><span class="mm-meaning">မြေအောက်ရထား တစ်ရက်ဖြတ်ပိုင်း</span></li>
+                <li><strong>ICカードチャージ (IC Kādo Chāji)</strong> <span class="jp-term">- IC card recharge (at ticket machines)</span><span class="mm-meaning">အိုင်စီကတ် ငွေထည့်ခြင်း</span></li>
+                <li><strong>乗り換え (Norikae)</strong> <span class="jp-term">- Transfer / change trains</span><span class="mm-meaning">ရထားလဲခြင်း</span></li>
+                <li><strong>時刻表 (Jikokuhyō)</strong> <span class="jp-term">- Timetable (trains arrive exactly on time)</span><span class="mm-meaning">အချိန်ဇယား (ရထားများသည် အချိန်မှန်မှန် ရောက်ရှိ)</span></li>
+            </ul>
+            <div class="transport-note">
+                <i class="fas fa-clock"></i> <strong>Punctuality / အချိန်မှန်ခြင်း:</strong> Japanese trains are famous for their punctuality. If a train is delayed more than 5 minutes, a "delay certificate" (遅延証明書 - Chien Shōmeisho) is often issued. Never be late for the last train.
+                <div class="burmese-text" style="margin-top: 8px;">ဂျပန်ရထားများသည် ၎င်းတို့၏ အချိန်မှန်မှုကြောင့် ကျော်ကြားသည်။ ရထားတစ်စီးသည် ၅ မိနစ်ကျော် နောက်ကျပါက "နှောင့်နှေးမှုလက်မှတ်" (ချီအန်ရှိုးမေရှို) ကို ထုတ်ပေးလေ့ရှိသည်။ နောက်ဆုံးရထားအတွက် ဘယ်တော့မှ မနောက်ကျပါနှင့်။</div>
+            </div>
+        </div>
+        
+        <footer style="background: rgba(0, 0, 0, 0.85); border-radius: 20px; padding: 1.2rem; margin-top: 2rem; text-align: center;">
+            <div class="footer-links" style="display: flex; justify-content: center; gap: 1.5rem; margin-bottom: 1rem; flex-wrap: wrap;">
+                <a href="../pages/privacy.html" style="color: white; text-decoration: none;"><i class="fas fa-shield-alt"></i> Privacy Policy</a>
+                <a href="../pages/about.html" style="color: white; text-decoration: none;"><i class="fas fa-info-circle"></i> About</a>
+                <a href="../pages/contact.html" style="color: white; text-decoration: none;"><i class="fas fa-envelope"></i> Contact</a>
+                <a href="../pages/terms.html" style="color: white; text-decoration: none;"><i class="fas fa-file-contract"></i> Terms & Policy</a>
+            </div>
+            <p style="color: #7f8c8d;"><i class="fas fa-heart"></i> Next Gen Learning Myanmar - Japanese Transportation / ဂျပန်သယ်ယူပို့ဆောင်ရေး</p>
+        </footer>
+    </div>
+    
+    <script>
+        function addBackToTopButton() {
+            if (document.querySelector('.back-to-top-btn')) return;
+            const btn = document.createElement('button');
+            btn.className = 'back-to-top-btn';
+            btn.innerHTML = '<i class="fas fa-arrow-up"></i><span>TOP</span>';
+            document.body.appendChild(btn);
+            window.addEventListener('scroll', () => btn.classList.toggle('show', window.scrollY > 300));
+            btn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+        }
+        addBackToTopButton();
+        
+        document.querySelectorAll('.gk-list li').forEach(item => {
+            item.addEventListener('click', () => {
+                const jpTextElement = item.querySelector('strong');
+                if (jpTextElement && window.speechSynthesis) {
+                    let japaneseOnly = jpTextElement.innerText.split('(')[0].trim();
+                    if (japaneseOnly) {
+                        window.speechSynthesis.cancel();
+                        const utterance = new SpeechSynthesisUtterance(japaneseOnly);
+                        utterance.lang = 'ja-JP';
+                        utterance.rate = 0.7;
+                        window.speechSynthesis.speak(utterance);
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>

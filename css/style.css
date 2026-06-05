@@ -527,3 +527,135 @@ footer p i {
         font-size: 1.1rem;
     }
 }
+
+/* ========== GENERAL KNOWLEDGE SECTION ========== */
+.general-knowledge-section {
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0;
+}
+
+.gen-knowledge-card {
+    background: linear-gradient(145deg, #2c3e50, #1a252f);
+    border-radius: 20px;
+    padding: 2rem 3rem;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    width: 100%;
+    border: 2px solid rgba(241, 196, 15, 0.5);
+}
+
+.gen-knowledge-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 35px rgba(0, 0, 0, 0.3);
+    border-color: #f1c40f;
+}
+
+.gen-knowledge-card i {
+    font-size: 3rem;
+    color: #f1c40f;
+    margin-bottom: 1rem;
+}
+
+.gen-knowledge-card h3 {
+    font-size: 1.5rem;
+    color: white;
+    margin-bottom: 0.5rem;
+}
+
+.gen-knowledge-card p {
+    font-size: 1rem;
+    color: #bdc3c7;
+    margin-bottom: 1rem;
+    font-family: 'Noto Sans JP', 'Segoe UI', sans-serif;
+}
+
+.gen-knowledge-badge {
+    display: inline-block;
+    background: rgba(241, 196, 15, 0.2);
+    color: #f1c40f;
+    padding: 0.5rem 1.5rem;
+    border-radius: 25px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.gen-knowledge-card:hover .gen-knowledge-badge {
+    background: #f1c40f;
+    color: #2c3e50;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .gen-knowledge-card {
+        padding: 1.5rem 2rem;
+        max-width: 320px;
+    }
+    
+    .gen-knowledge-card i {
+        font-size: 2.5rem;
+    }
+    
+    .gen-knowledge-card h3 {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .gen-knowledge-card {
+        padding: 1.2rem 1.5rem;
+        max-width: 280px;
+    }
+    
+    .gen-knowledge-card i {
+        font-size: 2rem;
+    }
+    
+    .gen-knowledge-card h3 {
+        font-size: 1.1rem;
+    }
+}
+/* General Knowledge Card - Same style as conversation card */
+.general-knowledge-section {
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0;
+}
+
+/* Reusing conversation-card styles - no additional styling needed since it uses the same class */
+
+        .gk-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        /* For larger screens, show more columns */
+        @media (min-width: 1200px) {
+            .gk-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+        
+        @media (min-width: 900px) and (max-width: 1199px) {
+            .gk-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+        
+        @media (min-width: 600px) and (max-width: 899px) {
+            .gk-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (max-width: 599px) {
+            .gk-grid {
+                grid-template-columns: 1fr;
+            }
+        }

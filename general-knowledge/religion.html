@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Japanese Religion & Spirituality - Next Gen Learning Myanmar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Myanmar:wght@400;500;700&family=Noto+Sans+JP:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .gk-detail-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 1rem;
+        }
+        
+        .gk-detail-header {
+            background: white;
+            border-radius: 20px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .gk-detail-header h1 {
+            font-size: 1.8rem;
+            color: #2c3e50;
+            text-align: center;
+        }
+        
+        .gk-detail-header h1 i {
+            color: #e67e22;
+            margin-right: 10px;
+        }
+        
+        .gk-detail-header h1 span {
+            font-size: 1rem;
+            color: #e67e22;
+            display: block;
+            margin-top: 0.3rem;
+        }
+        
+        .gk-detail-header p {
+            text-align: center;
+            color: #7f8c8d;
+            margin-top: 0.5rem;
+        }
+        
+        .gk-info-card {
+            background: white;
+            border-radius: 20px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .gk-info-card h2 {
+            color: #e67e22;
+            border-left: 4px solid #e67e22;
+            padding-left: 1rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        
+        .gk-info-card h2 .jp-head {
+            font-size: 0.9rem;
+            color: #7f8c8d;
+            font-weight: normal;
+        }
+        
+        .gk-info-card p {
+            line-height: 1.6;
+            color: #2c3e50;
+            margin-bottom: 0.8rem;
+        }
+        
+        .gk-list {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .gk-list li {
+            margin: 0.8rem 0;
+            padding: 0.8rem;
+            background: #f8f9fa;
+            border-radius: 10px;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+        
+        .gk-list li:hover {
+            background: #e67e22;
+            color: white;
+            transform: translateX(5px);
+        }
+        
+        .gk-list li strong {
+            color: #e67e22;
+            font-size: 1rem;
+        }
+        
+        .gk-list li .jp-term {
+            font-family: 'Noto Sans JP', sans-serif;
+            font-size: 0.85rem;
+            color: #7f8c8d;
+            margin-left: 5px;
+        }
+        
+        .gk-list li .mm-meaning {
+            display: block;
+            font-size: 0.8rem;
+            color: #7f8c8d;
+            margin-top: 5px;
+            font-family: 'Noto Sans Myanmar', sans-serif;
+        }
+        
+        .gk-list li:hover strong,
+        .gk-list li:hover .jp-term,
+        .gk-list li:hover .mm-meaning {
+            color: white;
+        }
+        
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #e67e22;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: 0.3s;
+            margin-bottom: 1rem;
+        }
+        
+        .back-btn:hover {
+            background: #d35400;
+            transform: translateX(-3px);
+        }
+        
+        .bilingual-text {
+            margin: 0.5rem 0;
+        }
+        
+        .english-text {
+            color: #2c3e50;
+        }
+        
+        .burmese-text {
+            color: #7f8c8d;
+            font-family: 'Noto Sans Myanmar', sans-serif;
+            font-size: 0.9rem;
+            margin-top: 0.3rem;
+        }
+        
+        .religion-note {
+            background: #fff3e0;
+            border-left: 4px solid #e67e22;
+            padding: 1rem;
+            border-radius: 12px;
+            margin-top: 1rem;
+            font-size: 0.9rem;
+        }
+        
+        @media (max-width: 768px) {
+            .gk-detail-header h1 {
+                font-size: 1.4rem;
+            }
+            
+            .gk-info-card h2 {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="gk-detail-container">
+        <a href="../general-knowledge.html" class="back-btn">
+            <i class="fas fa-arrow-left"></i> Back to General Knowledge / နောက်သို့
+        </a>
+        
+        <div class="gk-detail-header">
+            <h1>
+                <i class="fas fa-pray"></i> 
+                Japanese Religion & Spirituality
+                <span>にほんの しゅうきょう と せいしんせい</span>
+            </h1>
+            <p>Shinto shrines, Buddhist temples, and spiritual practices / ရှင်တိုစေတီများ၊ ဗုဒ္ဓဘာသာဘုရားကျောင်းများနှင့် ဝိညာဉ်ရေးရာအလေ့အကျင့်များ</p>
+        </div>
+        
+        <div class="gk-info-card">
+            <h2>
+                <i class="fas fa-torii-gate"></i> 
+                Shinto (神道) - The Way of the Gods
+                <span class="jp-head">(しんとう)</span>
+            </h2>
+            <div class="bilingual-text">
+                <p class="english-text">Shinto is Japan's indigenous religion, focusing on kami (spirits/deities) found in nature, ancestors, and sacred places. It has no founder or holy book.</p>
+                <p class="burmese-text">ရှင်တိုသည် ဂျပန်၏ ဌာနေဘာသာဖြစ်ပြီး သဘာဝ၊ ဘိုးဘေးများနှင့် မြင့်မြတ်သောနေရာများတွင် တည်ရှိသော ကာမိ (နတ်များ) ကို အဓိကထားသည်။ တည်ထောင်သူ သို့မဟုတ် ကျမ်းစာမရှိပါ။</p>
+            </div>
+            <ul class="gk-list">
+                <li><strong>神社 (Jinja)</strong> <span class="jp-term">- Shinto shrine (place of worship)</span><span class="mm-meaning">ရှင်တိုစေတီ (ဝတ်ပြုရာနေရာ)</span></li>
+                <li><strong>鳥居 (Torii)</strong> <span class="jp-term">- Red gate marking shrine entrance (sacred boundary)</span><span class="mm-meaning">စေတီဝင်ပေါက်ကို အမှတ်အသားပြုသော အနီရောင်တံခါး (မြင့်မြတ်သောနယ်နိမိတ်)</span></li>
+                <li><strong>神様 (Kami-sama)</strong> <span class="jp-term">- Gods/spirits (millions of kami exist)</span><span class="mm-meaning">နတ်များ/စွမ်းအင်များ</span></li>
+                <li><strong>天照大神 (Amaterasu Ōmikami)</strong> <span class="jp-term">- Sun Goddess, most important kami, ancestress of Imperial family</span><span class="mm-meaning">နေနတ်သမီး (အရေးအပါဆုံးကာမိ)</span></li>
+                <li><strong>伊勢神宮 (Ise Jingū)</strong> <span class="jp-term">- Ise Grand Shrine (most sacred Shinto shrine)</span><span class="mm-meaning">အမြင့်မြတ်ဆုံး ရှင်တိုစေတီ</span></li>
+                <li><strong>おみくじ (Omikuji)</strong> <span class="jp-term">- Fortune-telling paper strips (tied at shrines)</span><span class="mm-meaning">ကံစမ်းစက္ကူစများ (စေတီတွင် ချည်နှောင်)</span></li>
+                <li><strong>絵馬 (Ema)</strong> <span class="jp-term">- Votive tablets (write wishes on wooden boards)</span><span class="mm-meaning">ဆုတောင်းချက်ပြားများ (သစ်သားပြားပေါ်တွင် ဆုတောင်းရေး)</span></li>
+            </ul>
+        </div>
+        
+        <div class="gk-info-card">
+            <h2>
+                <i class="fas fa-buddha"></i> 
+                Buddhism (仏教) - Bukkyō
+                <span class="jp-head">(ぶっきょう)</span>
+            </h2>
+            <div class="bilingual-text">
+                <p class="english-text">Buddhism arrived in Japan from China and Korea in the 6th century. It focuses on enlightenment, reincarnation, and funeral rites. Many Japanese practice both Shinto and Buddhism.</p>
+                <p class="burmese-text">ဗုဒ္ဓဘာသာသည် ၆ ရာစုတွင် တရုတ်နှင့် ကိုရီးယားမှ ဂျပန်သို့ ရောက်ရှိခဲ့သည်။ သစ္စာဉာဏ်အလင်း၊ ဝင်စားခြင်းနှင့် ဈာပနအခမ်းအနားများကို အလေးပေးသည်။ ဂျပန်လူများစွာသည် ရှင်တိုနှင့် ဗုဒ္ဓဘာသာ နှစ်မျိုးလုံးကို ကျင့်သုံးကြသည်။</p>
+            </div>
+            <ul class="gk-list">
+                <li><strong>お寺 (O-tera)</strong> <span class="jp-term">- Buddhist temple</span><span class="mm-meaning">ဗုဒ္ဓဘာသာဘုရားကျောင်း</span></li>
+                <li><strong>禅 (Zen)</strong> <span class="jp-term">- Zen Buddhism (meditation-focused, influenced samurai)</span><span class="mm-meaning">ဇင်ဗုဒ္ဓဘာသာ (တရားထိုင်ခြင်းကို အဓိကထား)</span></li>
+                <li><strong>浄土宗 (Jōdo-shū)</strong> <span class="jp-term">- Pure Land Buddhism (faith in Amida Buddha)</span><span class="mm-meaning">သန့်ရှင်းသောမြေ ဗုဒ္ဓဘာသာ</span></li>
+                <li><strong>日蓮宗 (Nichiren-shū)</strong> <span class="jp-term">- Nichiren Buddhism (chanting Namu Myōhō Renge Kyō)</span><span class="mm-meaning">နီချီရန်ဗုဒ္ဓဘာသာ (နမ်းမီယိုဟိုရန်းဂဲကျိုး ရွတ်ဆို)</span></li>
+                <li><strong>仏像 (Butsuzō)</strong> <span class="jp-term">- Buddha statues (often large and ancient)</span><span class="mm-meaning">ဗုဒ္ဓရုပ်ပွားတော်များ</span></li>
+                <li><strong>線香 (Senkō)</strong> <span class="jp-term">- Incense (burned at temples and graves)</span><span class="mm-meaning">အမွှေးတိုင် (ဘုရားကျောင်းနှင့် သင်္ချိုင်းများတွင် မီးရှို့)</span></li>
+                <li><strong>写経 (Shakyō)</strong> <span class="jp-term">- Sutra copying (meditative practice)</span><span class="mm-meaning">ဗုဒ္ဓကျမ်းစာများ ကူးယူခြင်း (တရားထိုင်ခြင်းအလေ့အကျင့်)</span></li>
+            </ul>
+        </div>
+        
+        <div class="gk-info-card">
+            <h2>
+                <i class="fas fa-hand-holding-heart"></i> 
+                Shrine & Temple Visiting Etiquette
+                <span class="jp-head">(じんじゃ と おてら の まいりかた)</span>
+            </h2>
+            <ul class="gk-list">
+                <li><strong>手水舎 (Temizuya)</strong> <span class="jp-term">- Purification fountain (wash hands and mouth)</span><span class="mm-meaning">စင်ကြယ်ရေးစမ်းရေတွင်း (လက်နှင့် ပါးစပ်ဆေး)</span></li>
+                <li><strong>二礼二拍手一礼 (Nirei Nihakushu Ichirei)</strong> <span class="jp-term">- Two bows, two claps, one bow (Shinto prayer)</span><span class="mm-meaning">နှစ်ချက် ဦးညွှတ်၊ နှစ်ချက် လက်ခုပ်၊ တစ်ချက် ဦးညွှတ် (ရှင်တိုဆုတောင်းပုံစံ)</span></li>
+                <li><strong>お賽銭 (Osaisen)</strong> <span class="jp-term">- Offering money (usually ¥5 - lucky number)</span><span class="mm-meaning">ငွေလှူဒါန်းခြင်း (များသောအားဖြင့် ¥၅ - ကံကောင်းသောနံပါတ်)</span></li>
+                <li><strong>鐘 (Kane)</strong> <span class="jp-term">- Bell (sometimes rung for prayer)</span><span class="mm-meaning">ခေါင်းလောင်း (တစ်ခါတစ်ရံ ဆုတောင်းရန် ခေါက်)</span></li>
+                <li><strong>お焚き上げ (O-takiage)</strong> <span class="jp-term">- Burning of old omamori (charms) and omikuji</span><span class="mm-meaning">ဟောင်းနွမ်းသော အိုမမိုရီနှင့် အိုမိခုဂျီများကို မီးရှို့ခြင်း</span></li>
+            </ul>
+        </div>
+        
+        <div class="gk-info-card">
+            <h2>
+                <i class="fas fa-leaf"></i> 
+                Spiritual Concepts & Philosophy
+                <span class="jp-head">(せいしんてき がいねん と てつがく)</span>
+            </h2>
+            <ul class="gk-list">
+                <li><strong>侘寂 (Wabi-sabi)</strong> <span class="jp-term">- Beauty in imperfection, transience, and simplicity</span><span class="mm-meaning">မစုံလင်မှု၊ ယာယီသဘောနှင့် ရိုးရှင်းမှုတွင် အလှတရား</span></li>
+                <li><strong>一期一会 (Ichi-go ichi-e)</strong> <span class="jp-term">- "One time, one meeting" (treasure each encounter as unique)</span><span class="mm-meaning">"တစ်ကြိမ်၊ တစ်ကြိမ်တွေ့ဆုံမှု" (တစ်ခုချင်းစီတိုင်းကို အဖိုးတန်ထား)</span></li>
+                <li><strong>粋 (Iki)</strong> <span class="jp-term">- Refined, sophisticated elegance (Edo-period aesthetic)</span><span class="mm-meaning">ပရိယာယ်ပြည့်ဝသော ကျက်သရေ</span></li>
+                <li><strong>無常 (Mujō)</strong> <span class="jp-term">- Impermanence (Buddhist concept, everything changes)</span><span class="mm-meaning">မမြဲခြင်း (ဗုဒ္ဓဘာသာအယူအဆ)</span></li>
+                <li><strong>輪廻 (Rinne)</strong> <span class="jp-term">- Cycle of rebirth/reincarnation</span><span class="mm-meaning">သံသရာလည်ခြင်း/ဝင်စားခြင်း</span></li>
+                <li><strong>業 (Gō)</strong> <span class="jp-term">- Karma (actions have consequences)</span><span class="mm-meaning">ကံ (လုပ်ရပ်များသည် အကျိုးဆက်များရှိ)</span></li>
+            </ul>
+        </div>
+        
+        <div class="gk-info-card">
+            <h2>
+                <i class="fas fa-dharmachakra"></i> 
+                Religious Festivals & Rituals
+                <span class="jp-head">(しゅうきょう てき まつり と ぎしき)</span>
+            </h2>
+            <ul class="gk-list">
+                <li><strong>初詣 (Hatsumōde)</strong> <span class="jp-term">- First shrine visit of the New Year (very important)</span><span class="mm-meaning">နှစ်သစ်၏ ပထမဆုံး စေတီဖူးခြင်း (အလွန်အရေးကြီး)</span></li>
+                <li><strong>節分 (Setsubun)</strong> <span class="jp-term">- Bean-throwing to drive away evil spirits (Feb 3)</span><span class="mm-meaning">မကောင်းဆိုးဝါးများကို ပဲပစ်မောင်းထုတ်ခြင်း</span></li>
+                <li><strong>お盆 (Obon)</strong> <span class="jp-term">- Ancestor spirit festival (August, welcoming spirits home)</span><span class="mm-meaning">ဘိုးဘေးဝိညာဉ်များ ပွဲတော် (ဩဂုတ်)</span></li>
+                <li><strong>七五三 (Shichi-Go-San)</strong> <span class="jp-term">- Children's shrine visit at ages 3,5,7 (November)</span><span class="mm-meaning">ကလေးများ စေတီဖူးခြင်း (အသက် ၃၊၅၊၇)</span></li>
+                <li><strong>成人式 (Seijin Shiki)</strong> <span class="jp-term">- Coming of Age ceremony (at 20, at shrines)</span><span class="mm-meaning">အရွယ်ရောက်ပွဲတော် (အသက်၂၀၊ စေတီများတွင်)</span></li>
+                <li><strong>彼岸 (Higan)</strong> <span class="jp-term">- Equinox weeks (spring/autumn, visiting graves)</span><span class="mm-meaning">ညံ့ညီညီညာညာ ရက်သတ္တပတ်များ (သင်္ချိုင်းသို့ သွားရောက်)</span></li>
+            </ul>
+        </div>
+        
+        <div class="gk-info-card">
+            <h2>
+                <i class="fas fa-mask"></i> 
+                Folk Beliefs & Superstitions
+                <span class="jp-head">(みんかん しんこう と めいしん)</span>
+            </h2>
+            <ul class="gk-list">
+                <li><strong>お守り (Omamori)</strong> <span class="jp-term">- Protective charms (bought at shrines/temples)</span><span class="mm-meaning">အကာအကွယ်သင်္ကေတများ (စေတီ/ဘုရားကျောင်းတွင် ဝယ်)</span></li>
+                <li><strong>達磨 (Daruma)</strong> <span class="jp-term">- Daruma doll (set goal, color one eye, color other when goal achieved)</span><span class="mm-meaning">ဒရူးမားရုပ် (ပန်းတိုင်ထား၊ မျက်လုံးတစ်လုံး ဆေး၊ အောင်မြင်ပါက နောက်တစ်လုံး ဆေး)</span></li>
+                <li><strong>招き猫 (Maneki-neko)</strong> <span class="jp-term">- Beckoning cat (brings good luck/business)</span><span class="mm-meaning">ကံကောင်းခြင်းဖိတ်ခေါ်သော ကြောင်</span></li>
+                <li><strong>四 (Shi) / 死 (Shi)</strong> <span class="jp-term">- Number 4 is unlucky (sounds like "death")</span><span class="mm-meaning">နံပါတ် ၄ သည် မကောင်းသော (သေခြင်းနှင့် အသံတူ)</span></li>
+                <li><strong>九 (Ku) / 苦 (Ku)</strong> <span class="jp-term">- Number 9 is unlucky (sounds like "suffering")</span><span class="mm-meaning">နံပါတ် ၉ သည် မကောင်းသော (ဆင်းရဲခြင်းနှင့် အသံတူ)</span></li>
+                <li><strong>縁起物 (Engimono)</strong> <span class="jp-term">- Lucky charms/items (many types)</span><span class="mm-meaning">ကံကောင်းသော အရာဝတ္ထုများ</span></li>
+            </ul>
+            <div class="religion-note">
+                <i class="fas fa-sync-alt"></i> <strong>Syncretism / ပေါင်းစပ်ယှက်နွယ်မှု:</strong> Most Japanese people do not identify exclusively with one religion. They may have a Shinto wedding, a Buddhist funeral, and celebrate Christmas (secular) and New Year (Shinto). This religious syncretism is uniquely Japanese.
+                <div class="burmese-text" style="margin-top: 8px;">ဂျပန်လူအများစုသည် ဘာသာတစ်ခုတည်းနှင့် သီးသန့်မသတ်မှတ်ကြပါ။ ရှင်တိုအိမ်ထောင်ပွဲ၊ ဗုဒ္ဓဘာသာဈာပန၊ ခရစ်စမတ်နှင့် နှစ်သစ်ကူးကို ကျင်းပနိုင်သည်။</div>
+            </div>
+        </div>
+        
+        <footer style="background: rgba(0, 0, 0, 0.85); border-radius: 20px; padding: 1.2rem; margin-top: 2rem; text-align: center;">
+            <div class="footer-links" style="display: flex; justify-content: center; gap: 1.5rem; margin-bottom: 1rem; flex-wrap: wrap;">
+                <a href="../pages/privacy.html" style="color: white; text-decoration: none;"><i class="fas fa-shield-alt"></i> Privacy Policy</a>
+                <a href="../pages/about.html" style="color: white; text-decoration: none;"><i class="fas fa-info-circle"></i> About</a>
+                <a href="../pages/contact.html" style="color: white; text-decoration: none;"><i class="fas fa-envelope"></i> Contact</a>
+                <a href="../pages/terms.html" style="color: white; text-decoration: none;"><i class="fas fa-file-contract"></i> Terms & Policy</a>
+            </div>
+            <p style="color: #7f8c8d;"><i class="fas fa-heart"></i> Next Gen Learning Myanmar - Japanese Religion & Spirituality / ဂျပန်ဘာသာနှင့် ဝိညာဉ်ရေးရာ</p>
+        </footer>
+    </div>
+    
+    <script>
+        function addBackToTopButton() {
+            if (document.querySelector('.back-to-top-btn')) return;
+            const btn = document.createElement('button');
+            btn.className = 'back-to-top-btn';
+            btn.innerHTML = '<i class="fas fa-arrow-up"></i><span>TOP</span>';
+            document.body.appendChild(btn);
+            window.addEventListener('scroll', () => btn.classList.toggle('show', window.scrollY > 300));
+            btn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+        }
+        addBackToTopButton();
+        
+        document.querySelectorAll('.gk-list li').forEach(item => {
+            item.addEventListener('click', () => {
+                const jpTextElement = item.querySelector('strong');
+                if (jpTextElement && window.speechSynthesis) {
+                    let japaneseOnly = jpTextElement.innerText.split('(')[0].trim();
+                    if (japaneseOnly) {
+                        window.speechSynthesis.cancel();
+                        const utterance = new SpeechSynthesisUtterance(japaneseOnly);
+                        utterance.lang = 'ja-JP';
+                        utterance.rate = 0.7;
+                        window.speechSynthesis.speak(utterance);
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>

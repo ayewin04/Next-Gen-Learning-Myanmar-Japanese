@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Japanese Culture - Next Gen Learning Myanmar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Myanmar:wght@400;500;700&family=Noto+Sans+JP:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .gk-detail-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 1rem;
+        }
+        
+        .gk-detail-header {
+            background: white;
+            border-radius: 20px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .gk-detail-header h1 {
+            font-size: 1.8rem;
+            color: #2c3e50;
+            text-align: center;
+        }
+        
+        .gk-detail-header h1 i {
+            color: #e67e22;
+            margin-right: 10px;
+        }
+        
+        .gk-detail-header h1 span {
+            font-size: 1rem;
+            color: #e67e22;
+            display: block;
+            margin-top: 0.3rem;
+        }
+        
+        .gk-detail-header p {
+            text-align: center;
+            color: #7f8c8d;
+            margin-top: 0.5rem;
+        }
+        
+        .gk-detail-header .jp-text {
+            font-family: 'Noto Sans JP', sans-serif;
+            color: #e67e22;
+            font-size: 0.9rem;
+        }
+        
+        .gk-info-card {
+            background: white;
+            border-radius: 20px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .gk-info-card h2 {
+            color: #e67e22;
+            border-left: 4px solid #e67e22;
+            padding-left: 1rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        
+        .gk-info-card h2 .jp-head {
+            font-size: 0.9rem;
+            color: #7f8c8d;
+            font-weight: normal;
+        }
+        
+        .gk-info-card p {
+            line-height: 1.6;
+            color: #2c3e50;
+            margin-bottom: 0.8rem;
+        }
+        
+        .gk-list {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .gk-list li {
+            margin: 0.8rem 0;
+            padding: 0.8rem;
+            background: #f8f9fa;
+            border-radius: 10px;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+        
+        .gk-list li:hover {
+            background: #e67e22;
+            color: white;
+            transform: translateX(5px);
+        }
+        
+        .gk-list li strong {
+            color: #e67e22;
+            font-size: 1rem;
+        }
+        
+        .gk-list li .jp-term {
+            font-family: 'Noto Sans JP', sans-serif;
+            font-size: 0.85rem;
+            color: #7f8c8d;
+            margin-left: 5px;
+        }
+        
+        .gk-list li .mm-meaning {
+            display: block;
+            font-size: 0.8rem;
+            color: #7f8c8d;
+            margin-top: 5px;
+            font-family: 'Noto Sans Myanmar', sans-serif;
+        }
+        
+        .gk-list li:hover strong,
+        .gk-list li:hover .jp-term,
+        .gk-list li:hover .mm-meaning {
+            color: white;
+        }
+        
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #e67e22;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: 0.3s;
+            margin-bottom: 1rem;
+        }
+        
+        .back-btn:hover {
+            background: #d35400;
+            transform: translateX(-3px);
+        }
+        
+        .bilingual-text {
+            margin: 0.5rem 0;
+        }
+        
+        .english-text {
+            color: #2c3e50;
+        }
+        
+        .burmese-text {
+            color: #7f8c8d;
+            font-family: 'Noto Sans Myanmar', sans-serif;
+            font-size: 0.9rem;
+            margin-top: 0.3rem;
+        }
+        
+        @media (max-width: 768px) {
+            .gk-detail-header h1 {
+                font-size: 1.4rem;
+            }
+            
+            .gk-info-card h2 {
+                font-size: 1.2rem;
+            }
+            
+            .gk-list li strong {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="gk-detail-container">
+        <a href="../general-knowledge.html" class="back-btn">
+            <i class="fas fa-arrow-left"></i> Back to General Knowledge / နောက်သို့
+        </a>
+        
+        <div class="gk-detail-header">
+            <h1>
+                <i class="fas fa-festival"></i> 
+                Japanese Culture & Traditions
+                <span>にほんの ぶんか と でんとう</span>
+            </h1>
+            <p>Learn about the rich cultural heritage of Japan / ဂျပန်၏ ကြွယ်ဝသော ယဉ်ကျေးမှု အမွေအနှစ်ကို လေ့လာပါ</p>
+        </div>
+        
+        <div class="gk-info-card">
+            <h2>
+                <i class="fas fa-leaf"></i> 
+                Traditional Arts 
+                <span class="jp-head">(でんとうげいじゅつ)</span>
+            </h2>
+            <div class="bilingual-text">
+                <p class="english-text">Japan has a rich tradition of performing and visual arts that have been practiced for centuries.</p>
+                <p class="burmese-text">ဂျပန်တွင် ရာစုနှစ်များစွာ ကျင့်သုံးခဲ့သော ဖျော်ဖြေရေးနှင့် အနုပညာများ ကြွယ်ဝစွာ ရှိသည်။</p>
+            </div>
+            <ul class="gk-list">
+                <li>
+                    <strong>茶道 (Sadō)</strong> 
+                    <span class="jp-term">- Tea ceremony</span>
+                    <span class="mm-meaning">ဂျပန်လက်ဖက်ရည်ပွဲတော်</span>
+                </li>
+                <li>
+                    <strong>華道 (Kadō)</strong> 
+                    <span class="jp-term">- Flower arranging</span>
+                    <span class="mm-meaning">ပန်းအစီအစဉ်ဆင်ခြင်း</span>
+                </li>
+                <li>
+                    <strong>書道 (Shodō)</strong> 
+                    <span class="jp-term">- Calligraphy</span>
+                    <span class="mm-meaning">ဂျပန်ပန်းချီစာရေးခြင်း</span>
+                </li>
+                <li>
+                    <strong>歌舞伎 (Kabuki)</strong> 
+                    <span class="jp-term">- Classical dance-drama</span>
+                    <span class="mm-meaning">ဂျပန်ရိုးရာအက-ပြဇာတ်</span>
+                </li>
+                <li>
+                    <strong>能 (Nō)</strong> 
+                    <span class="jp-term">- Masked dance-drama</span>
+                    <span class="mm-meaning">မျက်နှာဖုံးစွပ်အကပြဇာတ်</span>
+                </li>
+                <li>
+                    <strong>文楽 (Bunraku)</strong> 
+                    <span class="jp-term">- Puppet theater</span>
+                    <span class="mm-meaning">အရုပ်သေးပြဇာတ်</span>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="gk-info-card">
+            <h2>
+                <i class="fas fa-tshirt"></i> 
+                Traditional Clothing 
+                <span class="jp-head">(でんとう いしょう)</span>
+            </h2>
+            <div class="bilingual-text">
+                <p class="english-text">Traditional Japanese clothing is known for its elegance and cultural significance.</p>
+                <p class="burmese-text">ဂျပန်ရိုးရာအဝတ်အစားများသည် ၎င်းတို့၏ ကျက်သရေနှင့် ယဉ်ကျေးမှုဆိုင်ရာ အရေးပါမှုကြောင့် လူသိများသည်။</p>
+            </div>
+            <ul class="gk-list">
+                <li>
+                    <strong>着物 (Kimono)</strong> 
+                    <span class="jp-term">- Traditional formal wear</span>
+                    <span class="mm-meaning">ဂျပန်ရိုးရာဝတ်စုံ</span>
+                </li>
+                <li>
+                    <strong>浴衣 (Yukata)</strong> 
+                    <span class="jp-term">- Summer kimono</span>
+                    <span class="mm-meaning">နွေရာသီ ခီမိုနို</span>
+                </li>
+                <li>
+                    <strong>袴 (Hakama)</strong> 
+                    <span class="jp-term">- Wide-legged pants</span>
+                    <span class="mm-meaning">ဂျပန်ရိုးရာဘောင်းဘီကျယ်</span>
+                </li>
+                <li>
+                    <strong>草履 (Zōri)</strong> 
+                    <span class="jp-term">- Traditional sandals</span>
+                    <span class="mm-meaning">ရိုးရာခြေညှပ်ဖိနပ်</span>
+                </li>
+                <li>
+                    <strong>下駄 (Geta)</strong> 
+                    <span class="jp-term">- Wooden clogs</span>
+                    <span class="mm-meaning">သစ်သားဖိနပ်</span>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="gk-info-card">
+            <h2>
+                <i class="fas fa-music"></i> 
+                Traditional Music 
+                <span class="jp-head">(でんとう おんがく)</span>
+            </h2>
+            <div class="bilingual-text">
+                <p class="english-text">Japanese traditional music uses unique instruments and scales.</p>
+                <p class="burmese-text">ဂျပန်ရိုးရာဂီတသည် ထူးခြားသော တူရိယာများနှင့် ဂီတစနစ်များကို အသုံးပြုသည်။</p>
+            </div>
+            <ul class="gk-list">
+                <li>
+                    <strong>琴 (Koto)</strong> 
+                    <span class="jp-term">- 13-stringed zither</span>
+                    <span class="mm-meaning">၁၃ ကြိုးတပ် စောင်းကောက်</span>
+                </li>
+                <li>
+                    <strong>尺八 (Shakuhachi)</strong> 
+                    <span class="jp-term">- Bamboo flute</span>
+                    <span class="mm-meaning">ဝါးပိုက်လေမှုတ်</span>
+                </li>
+                <li>
+                    <strong>三味線 (Shamisen)</strong> 
+                    <span class="jp-term">- Three-stringed instrument</span>
+                    <span class="mm-meaning">သုံးကြိုးတပ် တူရိယာ</span>
+                </li>
+                <li>
+                    <strong>和太鼓 (Wadaiko)</strong> 
+                    <span class="jp-term">- Japanese drums</span>
+                    <span class="mm-meaning">ဂျပန်စည်</span>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="gk-info-card">
+            <h2>
+                <i class="fas fa-building"></i> 
+                Architecture 
+                <span class="jp-head">(けんちく)</span>
+            </h2>
+            <div class="bilingual-text">
+                <p class="english-text">Japanese architecture blends traditional wooden structures with modern designs.</p>
+                <p class="burmese-text">ဂျပန်ဗိသုကာလက်ရာများသည် ရိုးရာသစ်သားတည်ဆောက်ပုံများနှင့် ခေတ်မီဒီဇိုင်းများကို ပေါင်းစပ်ထားသည်။</p>
+            </div>
+            <ul class="gk-list">
+                <li>
+                    <strong>神社 (Jinja)</strong> 
+                    <span class="jp-term">- Shinto shrines</span>
+                    <span class="mm-meaning">ရှင်တိုဘုရားစေတီ</span>
+                </li>
+                <li>
+                    <strong>寺院 (Jiin)</strong> 
+                    <span class="jp-term">- Buddhist temples</span>
+                    <span class="mm-meaning">ဗုဒ္ဓဘာသာစေတီ</span>
+                </li>
+                <li>
+                    <strong>城 (Shiro)</strong> 
+                    <span class="jp-term">- Japanese castles</span>
+                    <span class="mm-meaning">ဂျပန်ရဲတိုက်</span>
+                </li>
+                <li>
+                    <strong>茶室 (Chashitsu)</strong> 
+                    <span class="jp-term">- Tea houses</span>
+                    <span class="mm-meaning">လက်ဖက်ရည်ဆောင်</span>
+                </li>
+                <li>
+                    <strong>町家 (Machiya)</strong> 
+                    <span class="jp-term">- Townhouses</span>
+                    <span class="mm-meaning">ရိုးရာမြို့အိမ်များ</span>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="gk-info-card">
+            <h2>
+                <i class="fas fa-dharmachakra"></i> 
+                Religion & Philosophy 
+                <span class="jp-head">(しゅうきょう と てつがく)</span>
+            </h2>
+            <div class="bilingual-text">
+                <p class="english-text">Japanese spirituality is shaped by Shinto and Buddhism.</p>
+                <p class="burmese-text">ဂျပန်၏ ဝိညာဉ်ရေးရာသည် ရှင်တိုနှင့် ဗုဒ္ဓဘာသာတို့က ပုံဖော်ထားသည်။</p>
+            </div>
+            <ul class="gk-list">
+                <li>
+                    <strong>神道 (Shintō)</strong> 
+                    <span class="jp-term">- Indigenous religion</span>
+                    <span class="mm-meaning">ဂျပန်ဌာနေဘာသာ</span>
+                </li>
+                <li>
+                    <strong>仏教 (Bukkyō)</strong> 
+                    <span class="jp-term">- Buddhism</span>
+                    <span class="mm-meaning">ဗုဒ္ဓဘာသာ</span>
+                </li>
+                <li>
+                    <strong>禅 (Zen)</strong> 
+                    <span class="jp-term">- Meditation school</span>
+                    <span class="mm-meaning">တရားထိုင်ကျောင်း</span>
+                </li>
+                <li>
+                    <strong>武士道 (Bushidō)</strong> 
+                    <span class="jp-term">- Way of the warrior</span>
+                    <span class="mm-meaning">ဆာမူရိုင်းလမ်းစဉ်</span>
+                </li>
+                <li>
+                    <strong>侘寂 (Wabi-sabi)</strong> 
+                    <span class="jp-term">- Imperfect beauty</span>
+                    <span class="mm-meaning">မစုံလင်မှု၏ အလှတရား</span>
+                </li>
+            </ul>
+        </div>
+        
+        <footer style="background: rgba(0, 0, 0, 0.85); border-radius: 20px; padding: 1.2rem; margin-top: 2rem; text-align: center;">
+            <div class="footer-links" style="display: flex; justify-content: center; gap: 1.5rem; margin-bottom: 1rem; flex-wrap: wrap;">
+                <a href="../pages/privacy.html" style="color: white; text-decoration: none;"><i class="fas fa-shield-alt"></i> Privacy Policy</a>
+                <a href="../pages/about.html" style="color: white; text-decoration: none;"><i class="fas fa-info-circle"></i> About</a>
+                <a href="../pages/contact.html" style="color: white; text-decoration: none;"><i class="fas fa-envelope"></i> Contact</a>
+                <a href="../pages/terms.html" style="color: white; text-decoration: none;"><i class="fas fa-file-contract"></i> Terms & Policy</a>
+            </div>
+            <p style="color: #7f8c8d;"><i class="fas fa-heart"></i> Next Gen Learning Myanmar - Japanese Culture / ဂျပန်ယဉ်ကျေးမှု</p>
+        </footer>
+    </div>
+    
+    <script>
+        function addBackToTopButton() {
+            if (document.querySelector('.back-to-top-btn')) return;
+            const btn = document.createElement('button');
+            btn.className = 'back-to-top-btn';
+            btn.innerHTML = '<i class="fas fa-arrow-up"></i><span>TOP</span>';
+            document.body.appendChild(btn);
+            window.addEventListener('scroll', () => btn.classList.toggle('show', window.scrollY > 300));
+            btn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+        }
+        addBackToTopButton();
+        
+        // Add click-to-speak for list items (Japanese text)
+        document.querySelectorAll('.gk-list li').forEach(item => {
+            item.addEventListener('click', () => {
+                const jpText = item.querySelector('strong')?.innerText || '';
+                if (jpText && window.speechSynthesis) {
+                    window.speechSynthesis.cancel();
+                    const utterance = new SpeechSynthesisUtterance(jpText);
+                    utterance.lang = 'ja-JP';
+                    utterance.rate = 0.7;
+                    window.speechSynthesis.speak(utterance);
+                }
+            });
+        });
+    </script>
+</body>
+</html>

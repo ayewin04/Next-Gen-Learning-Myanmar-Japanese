@@ -9774,6 +9774,7 @@ const vocabularyData = [
 ];
 // ========== GRAMMAR DATA ==========
 const grammarData = [
+    // ========== BASIC SENTENCE STRUCTURE (1-10) ==========
     {
         title: "〜は〜です",
         pronunciation: "wa desu",
@@ -9781,31 +9782,916 @@ const grammarData = [
         burmese: "A သည် B ဖြစ်သည်",
         category: "basic",
         example_jp: "わたしは がくせいです。",
+        example_romaji: "Watashi wa gakusei desu.",
         example_en: "I am a student.",
         example_mm: "ကျွန်တော် ကျောင်းသားဖြစ်ပါတယ်။"
     },
     {
-        title: "〜ます form",
-        pronunciation: "masu",
-        english: "Polite present/future",
-        burmese: "ယဉ်ကျေးသော ပစ္စုပ္ပန်/အနာဂတ်",
+        title: "〜は〜じゃないです / 〜ではありません",
+        pronunciation: "wa janai desu / wa dewa arimasen",
+        english: "A is not B",
+        burmese: "A သည် B မဟုတ်ပါ",
         category: "basic",
-        example_jp: "いきます。",
-        example_en: "I will go.",
-        example_mm: "သွားမယ်။"
+        example_jp: "これは ほんじゃないです。",
+        example_romaji: "Kore wa hon janai desu.",
+        example_en: "This is not a book.",
+        example_mm: "ဒါက စာအုပ်မဟုတ်ပါဘူး။"
+    },
+    {
+        title: "〜ですか？",
+        pronunciation: "desu ka",
+        english: "Question particle (Is it A?)",
+        burmese: "မေးခွန်းပါ (A လား?)",
+        category: "basic",
+        example_jp: "あなたは にほんじんですか？",
+        example_romaji: "Anata wa nihonjin desu ka?",
+        example_en: "Are you Japanese?",
+        example_mm: "ခင်ဗျား ဂျပန်လား။"
+    },
+    {
+        title: "〜も",
+        pronunciation: "mo",
+        english: "Also / too",
+        burmese: "လည်း",
+        category: "particle",
+        example_jp: "わたしも いきます。",
+        example_romaji: "Watashi mo ikimasu.",
+        example_en: "I will go too.",
+        example_mm: "ငါလည်းသွားမယ်။"
+    },
+    {
+        title: "〜と",
+        pronunciation: "to",
+        english: "And (connecting nouns)",
+        burmese: "နှင့် (နာမ်များကို ဆက်ရန်)",
+        category: "particle",
+        example_jp: "ほん と ノート。",
+        example_romaji: "Hon to noto.",
+        example_en: "Book and notebook.",
+        example_mm: "စာအုပ်နှင့် မှတ်စုစာအုပ်။"
+    },
+    {
+        title: "〜の",
+        pronunciation: "no",
+        english: "Possessive / 's",
+        burmese: "၏",
+        category: "particle",
+        example_jp: "わたしの かばん。",
+        example_romaji: "Watashi no kaban.",
+        example_en: "My bag.",
+        example_mm: "ငါ၏အိတ်။"
+    },
+    {
+        title: "〜に (location)",
+        pronunciation: "ni",
+        english: "At / in (location exists)",
+        burmese: "မှာ (တည်နေရာ)",
+        category: "particle",
+        example_jp: "がっこうに います。",
+        example_romaji: "Gakkou ni imasu.",
+        example_en: "I am at school.",
+        example_mm: "ကျောင်းမှာရှိတယ်။"
+    },
+    {
+        title: "〜に (time)",
+        pronunciation: "ni",
+        english: "At (specific time)",
+        burmese: "မှာ (အချိန်)",
+        category: "particle",
+        example_jp: "くじに おきます。",
+        example_romaji: "Kuji ni okimasu.",
+        example_en: "I wake up at 9 o'clock.",
+        example_mm: "၉ နာရီမှာ နိုးတယ်။"
+    },
+    {
+        title: "〜へ",
+        pronunciation: "e",
+        english: "To / toward (direction)",
+        burmese: "သို့ (လမ်းကြောင်း)",
+        category: "particle",
+        example_jp: "がっこうへ いきます。",
+        example_romaji: "Gakkou e ikimasu.",
+        example_en: "I go to school.",
+        example_mm: "ကျောင်းကိုသွားတယ်။"
+    },
+    {
+        title: "〜で (method/tool)",
+        pronunciation: "de",
+        english: "By / using (means)",
+        burmese: "ဖြင့် (နည်းလမ်း)",
+        category: "particle",
+        example_jp: "でんしゃで いきます。",
+        example_romaji: "Densha de ikimasu.",
+        example_en: "I go by train.",
+        example_mm: "ရထားနဲ့သွားတယ်။"
+    },
+
+    // ========== VERB FORMS (11-25) ==========
+    {
+        title: "〜ます",
+        pronunciation: "masu",
+        english: "Polite non-past",
+        burmese: "ယဉ်ကျေးသော ပစ္စုပ္ပန်/အနာဂတ်",
+        category: "verb",
+        example_jp: "たべます。",
+        example_romaji: "Tabemasu.",
+        example_en: "I eat / will eat.",
+        example_mm: "စားတယ် / စားမယ်။"
+    },
+    {
+        title: "〜ません",
+        pronunciation: "masen",
+        english: "Polite negative",
+        burmese: "ယဉ်ကျေးသော ငြင်းပယ်ချက်",
+        category: "verb",
+        example_jp: "たべません。",
+        example_romaji: "Tabemasen.",
+        example_en: "I do not eat.",
+        example_mm: "မစားဘူး။"
+    },
+    {
+        title: "〜ました",
+        pronunciation: "mashita",
+        english: "Polite past",
+        burmese: "ယဉ်ကျေးသော အတိတ်",
+        category: "verb",
+        example_jp: "たべました。",
+        example_romaji: "Tabemashita.",
+        example_en: "I ate.",
+        example_mm: "စားခဲ့တယ်။"
+    },
+    {
+        title: "〜ませんでした",
+        pronunciation: "masen deshita",
+        english: "Polite past negative",
+        burmese: "ယဉ်ကျေးသော အတိတ်ငြင်း",
+        category: "verb",
+        example_jp: "たべませんでした。",
+        example_romaji: "Tabemasen deshita.",
+        example_en: "I did not eat.",
+        example_mm: "မစားခဲ့ဘူး။"
     },
     {
         title: "〜たいです",
         pronunciation: "tai desu",
         english: "Want to do",
         burmese: "လုပ်ချင်သည်",
-        category: "basic",
+        category: "verb",
         example_jp: "にほんに いきたいです。",
+        example_romaji: "Nihon ni ikitai desu.",
         example_en: "I want to go to Japan.",
         example_mm: "ဂျပန်ကို သွားချင်တယ်။"
+    },
+    {
+        title: "〜たくないです",
+        pronunciation: "takunai desu",
+        english: "Don't want to do",
+        burmese: "မလုပ်ချင်ဘူး",
+        category: "verb",
+        example_jp: "はたらきたくないです。",
+        example_romaji: "Hatarakitakunai desu.",
+        example_en: "I don't want to work.",
+        example_mm: "အလုပ်မလုပ်ချင်ဘူး။"
+    },
+    {
+        title: "〜ましょう",
+        pronunciation: "mashou",
+        english: "Let's do",
+        burmese: "လုပ်ကြရအောင်",
+        category: "verb",
+        example_jp: "いきましょう。",
+        example_romaji: "Ikimashou.",
+        example_en: "Let's go.",
+        example_mm: "သွားကြရအောင်။"
+    },
+    {
+        title: "〜ませんか",
+        pronunciation: "masen ka",
+        english: "Shall we? / Won't you?",
+        burmese: "လုပ်မလား? (ဖိတ်ကြားချက်)",
+        category: "verb",
+        example_jp: "いっしょに いきませんか？",
+        example_romaji: "Issho ni ikimasen ka?",
+        example_en: "Shall we go together?",
+        example_mm: "အတူတူသွားကြမလား။"
+    },
+    {
+        title: "Dictionary Form (じしょけい)",
+        pronunciation: "jisho kei",
+        english: "Plain dictionary form",
+        burmese: "အဘိဓာန်ပုံစံ",
+        category: "verb",
+        example_jp: "たべる／いく／くる",
+        example_romaji: "Taberu / Iku / Kuru",
+        example_en: "to eat / to go / to come",
+        example_mm: "စားသည် / သွားသည် / လာသည်"
+    },
+    {
+        title: "〜て Form",
+        pronunciation: "te form",
+        english: "Te-form (connects verbs)",
+        burmese: "တဲပုံစံ (ကြိယာများကိုဆက်ရန်)",
+        category: "verb",
+        example_jp: "たべて／いって／きて",
+        example_romaji: "Tabete / Itte / Kite",
+        example_en: "eat and / go and / come and",
+        example_mm: "စားပြီး / သွားပြီး / လာပြီး"
+    },
+    {
+        title: "〜ている",
+        pronunciation: "te iru",
+        english: "Present continuous / state",
+        burmese: "လုပ်နေသည် / အခြေအနေ",
+        category: "verb",
+        example_jp: "いま たべています。",
+        example_romaji: "Ima tabete imasu.",
+        example_en: "I am eating now.",
+        example_mm: "ငါအခုစားနေတယ်။"
+    },
+    {
+        title: "〜てもいいです",
+        pronunciation: "te mo ii desu",
+        english: "May I do / It's okay to do",
+        burmese: "လုပ်လို့ရသည်",
+        category: "verb",
+        example_jp: "ここに すわってもいいですか？",
+        example_romaji: "Koko ni suwatte mo ii desu ka?",
+        example_en: "May I sit here?",
+        example_mm: "ဒီမှာထိုင်လို့ရမလား။"
+    },
+    {
+        title: "〜てはいけません",
+        pronunciation: "te wa ikemasen",
+        english: "Must not do",
+        burmese: "မလုပ်ရ",
+        category: "verb",
+        example_jp: "たばこを すってはいけません。",
+        example_romaji: "Tabako o sutte wa ikemasen.",
+        example_en: "You must not smoke.",
+        example_mm: "ဆေးလိပ်မသောက်ရ။"
+    },
+    {
+        title: "〜なくてもいいです",
+        pronunciation: "nakute mo ii desu",
+        english: "Don't have to do",
+        burmese: "မလုပ်လည်းရသည်",
+        category: "verb",
+        example_jp: "あした こなくてもいいです。",
+        example_romaji: "Ashita konakute mo ii desu.",
+        example_en: "You don't have to come tomorrow.",
+        example_mm: "မနက်ဖြန် လာစရာမလိုဘူး။"
+    },
+    {
+        title: "〜た Form",
+        pronunciation: "ta form",
+        english: "Plain past form",
+        burmese: "တပုံစံ (အတိတ်)",
+        category: "verb",
+        example_jp: "たべた／いった／きた",
+        example_romaji: "Tabeta / Itta / Kita",
+        example_en: "ate / went / came",
+        example_mm: "စားခဲ့တယ် / သွားခဲ့တယ် / လာခဲ့တယ်"
+    },
+
+    // ========== ADJECTIVES (26-35) ==========
+    {
+        title: "い-adjective 〜くない",
+        pronunciation: "kunai",
+        english: "Negative i-adjective",
+        burmese: "အိုင်နာမဝိသေသန ငြင်း",
+        category: "adjective",
+        example_jp: "おいしくない。",
+        example_romaji: "Oishikunai.",
+        example_en: "Not delicious.",
+        example_mm: "အရသာမရှိဘူး။"
+    },
+    {
+        title: "い-adjective 〜かった",
+        pronunciation: "katta",
+        english: "Past i-adjective",
+        burmese: "အိုင်နာမဝိသေသန အတိတ်",
+        category: "adjective",
+        example_jp: "おいしかった。",
+        example_romaji: "Oishikatta.",
+        example_en: "It was delicious.",
+        example_mm: "အရသာရှိခဲ့တယ်။"
+    },
+    {
+        title: "い-adjective 〜くなかった",
+        pronunciation: "kunakatta",
+        english: "Past negative i-adjective",
+        burmese: "အိုင်နာမဝိသေသန အတိတ်ငြင်း",
+        category: "adjective",
+        example_jp: "おいしくなかった。",
+        example_romaji: "Oishikunakatta.",
+        example_en: "It was not delicious.",
+        example_mm: "အရသာမရှိခဲ့ဘူး။"
+    },
+    {
+        title: "な-adjective 〜じゃない",
+        pronunciation: "janai",
+        english: "Negative na-adjective",
+        burmese: "နနာမဝိသေသန ငြင်း",
+        category: "adjective",
+        example_jp: "しずかじゃない。",
+        example_romaji: "Shizuka janai.",
+        example_en: "Not quiet.",
+        example_mm: "မတိတ်ဆိတ်ဘူး။"
+    },
+    {
+        title: "な-adjective 〜だった",
+        pronunciation: "datta",
+        english: "Past na-adjective",
+        burmese: "နနာမဝိသေသန အတိတ်",
+        category: "adjective",
+        example_jp: "しずかだった。",
+        example_romaji: "Shizuka datta.",
+        example_en: "It was quiet.",
+        example_mm: "တိတ်ဆိတ်ခဲ့တယ်။"
+    },
+    {
+        title: "〜くて / 〜で",
+        pronunciation: "kute / de",
+        english: "Connecting adjectives",
+        burmese: "နာမဝိသေသနများကိုဆက်ရန်",
+        category: "adjective",
+        example_jp: "あかるくて ひろい へや。",
+        example_romaji: "Akarukute hiroi heya.",
+        example_en: "Bright and wide room.",
+        example_mm: "တောက်ပပြီး ကျယ်တဲ့အခန်း။"
+    },
+    {
+        title: "〜すぎる",
+        pronunciation: "sugiru",
+        english: "Too much",
+        burmese: "လွန်ကဲသည်",
+        category: "adjective",
+        example_jp: "たかすぎる。",
+        example_romaji: "Takasugiru.",
+        example_en: "Too expensive.",
+        example_mm: "အရမ်းစျေးကြီးတယ်။"
+    },
+    {
+        title: "〜くなる",
+        pronunciation: "ku naru",
+        english: "Become (i-adj)",
+        burmese: "ဖြစ်လာသည် (အိုင်)",
+        category: "adjective",
+        example_jp: "あつくなる。",
+        example_romaji: "Atsukunaru.",
+        example_en: "It becomes hot.",
+        example_mm: "ပူလာတယ်။"
+    },
+    {
+        title: "〜になる",
+        pronunciation: "ni naru",
+        english: "Become (na-adj/noun)",
+        burmese: "ဖြစ်လာသည် (န/နာမ်)",
+        category: "adjective",
+        example_jp: "しずかになる。",
+        example_romaji: "Shizuka ni naru.",
+        example_en: "It becomes quiet.",
+        example_mm: "တိတ်ဆိတ်လာတယ်။"
+    },
+    {
+        title: "〜くする",
+        pronunciation: "ku suru",
+        english: "Make something (i-adj)",
+        burmese: "ဖြစ်စေသည် (အိုင်)",
+        category: "adjective",
+        example_jp: "やすくします。",
+        example_romaji: "Yasuku shimasu.",
+        example_en: "I make it cheap.",
+        example_mm: "စျေးချိုအောင်လုပ်တယ်။"
+    },
+
+    // ========== NOUNS & COUNTERS (36-45) ==========
+    {
+        title: "〜がある",
+        pronunciation: "ga aru",
+        english: "There is (non-living)",
+        burmese: "ရှိသည် (သက်မဲ့)",
+        category: "noun",
+        example_jp: "つくえが あります。",
+        example_romaji: "Tsukue ga arimasu.",
+        example_en: "There is a desk.",
+        example_mm: "စားပွဲရှိတယ်။"
+    },
+    {
+        title: "〜がいる",
+        pronunciation: "ga iru",
+        english: "There is (living)",
+        burmese: "ရှိသည် (သက်ရှိ)",
+        category: "noun",
+        example_jp: "ねこが います。",
+        example_romaji: "Neko ga imasu.",
+        example_en: "There is a cat.",
+        example_mm: "ကြောင်ရှိတယ်။"
+    },
+    {
+        title: "〜が好き",
+        pronunciation: "ga suki",
+        english: "Like",
+        burmese: "ကြိုက်သည်",
+        category: "noun",
+        example_jp: "さかな が すきです。",
+        example_romaji: "Sakana ga suki desu.",
+        example_en: "I like fish.",
+        example_mm: "ငါးကြိုက်တယ်။"
+    },
+    {
+        title: "〜が上手",
+        pronunciation: "ga jouzu",
+        english: "Good at",
+        burmese: "ကျွမ်းကျင်သည်",
+        category: "noun",
+        example_jp: "ピアノ が じょうずです。",
+        example_romaji: "Piano ga jouzu desu.",
+        example_en: "I am good at piano.",
+        example_mm: "စန္ဒယားကျွမ်းကျင်တယ်။"
+    },
+    {
+        title: "〜が下手",
+        pronunciation: "ga heta",
+        english: "Poor at",
+        burmese: "မကျွမ်းကျင်ဘူး",
+        category: "noun",
+        example_jp: "えいご が へたです。",
+        example_romaji: "Eigo ga heta desu.",
+        example_en: "I am bad at English.",
+        example_mm: "အင်္ဂလိပ်စာ ညံ့တယ်။"
+    },
+    {
+        title: "〜がほしい",
+        pronunciation: "ga hoshii",
+        english: "Want (something)",
+        burmese: "လိုချင်သည် (အရာဝတ္ထု)",
+        category: "noun",
+        example_jp: "くるま が ほしいです。",
+        example_romaji: "Kuruma ga hoshii desu.",
+        example_en: "I want a car.",
+        example_mm: "ကားလိုချင်တယ်။"
+    },
+    {
+        title: "Counters 〜つ",
+        pronunciation: "tsu",
+        english: "General counter (1-10)",
+        burmese: "အထွေထွေ အရေအတွက်",
+        category: "counter",
+        example_jp: "ひとつ、ふたつ、みっつ...",
+        example_romaji: "Hitotsu, futatsu, mittsu...",
+        example_en: "one, two, three...",
+        example_mm: "တစ်ခု၊ နှစ်ခု၊ သုံးခု..."
+    },
+    {
+        title: "Counters 〜人",
+        pronunciation: "nin",
+        english: "Counter for people",
+        burmese: "လူဦးရေ",
+        category: "counter",
+        example_jp: "さんにん",
+        example_romaji: "Sannin",
+        example_en: "three people",
+        example_mm: "လူသုံးယောက်"
+    },
+    {
+        title: "Counters 〜時間",
+        pronunciation: "jikan",
+        english: "Counter for hours",
+        burmese: "နာရီ",
+        category: "counter",
+        example_jp: "さんじかん",
+        example_romaji: "Sanjikan",
+        example_en: "three hours",
+        example_mm: "သုံးနာရီကြာ"
+    },
+    {
+        title: "Counters 〜円",
+        pronunciation: "en",
+        english: "Counter for yen",
+        burmese: "ယန်းငွေ",
+        category: "counter",
+        example_jp: "ごひゃくえん",
+        example_romaji: "Gohyaku en",
+        example_en: "500 yen",
+        example_mm: "ယန်း ၅၀၀"
+    },
+
+    // ========== QUESTION WORDS (46-52) ==========
+    {
+        title: "何 (なん／なに)",
+        pronunciation: "nan / nani",
+        english: "What",
+        burmese: "ဘာ",
+        category: "question",
+        example_jp: "これは なんですか？",
+        example_romaji: "Kore wa nan desu ka?",
+        example_en: "What is this?",
+        example_mm: "ဒါကဘာလဲ။"
+    },
+    {
+        title: "誰 (だれ)",
+        pronunciation: "dare",
+        english: "Who",
+        burmese: "ဘယ်သူ",
+        category: "question",
+        example_jp: "あのひとは だれですか？",
+        example_romaji: "Ano hito wa dare desu ka?",
+        example_en: "Who is that person?",
+        example_mm: "အဲဒီလူက ဘယ်သူလဲ။"
+    },
+    {
+        title: "どこ",
+        pronunciation: "doko",
+        english: "Where",
+        burmese: "ဘယ်မှာ",
+        category: "question",
+        example_jp: "トイレは どこですか？",
+        example_romaji: "Toire wa doko desu ka?",
+        example_en: "Where is the toilet?",
+        example_mm: "အိမ်သာက ဘယ်မှာလဲ။"
+    },
+    {
+        title: "いつ",
+        pronunciation: "itsu",
+        english: "When",
+        burmese: "ဘယ်အချိန်",
+        category: "question",
+        example_jp: "ぱーてぃーは いつですか？",
+        example_romaji: "Paatii wa itsu desu ka?",
+        example_en: "When is the party?",
+        example_mm: "ပါတီက ဘယ်တော့လဲ။"
+    },
+    {
+        title: "なぜ / どうして",
+        pronunciation: "naze / doushite",
+        english: "Why",
+        burmese: "ဘာဖြစ်လို့",
+        category: "question",
+        example_jp: "どうして おくれたんですか？",
+        example_romaji: "Doushite okureta n desu ka?",
+        example_en: "Why were you late?",
+        example_mm: "ဘာလို့နောက်ကျတာလဲ။"
+    },
+    {
+        title: "どの〜",
+        pronunciation: "dono",
+        english: "Which (noun)",
+        burmese: "ဘယ် (နာမ်)",
+        category: "question",
+        example_jp: "どの くるま が あなたのですか？",
+        example_romaji: "Dono kuruma ga anata no desu ka?",
+        example_en: "Which car is yours?",
+        example_mm: "ဘယ်ကားက မင်းဟာလဲ။"
+    },
+    {
+        title: "どれ",
+        pronunciation: "dore",
+        english: "Which one",
+        burmese: "ဘယ်ဟာ",
+        category: "question",
+        example_jp: "どれが あなたの かばんですか？",
+        example_romaji: "Dore ga anata no kaban desu ka?",
+        example_en: "Which one is your bag?",
+        example_mm: "ဘယ်အိတ်က မင်းဟာလဲ။"
+    },
+
+    // ========== CONJUNCTIONS & CONNECTORS (53-62) ==========
+    {
+        title: "〜から (reason)",
+        pronunciation: "kara",
+        english: "Because",
+        burmese: "သောကြောင့်",
+        category: "conjunction",
+        example_jp: "あめが ふったから、やめた。",
+        example_romaji: "Ame ga futta kara, yameta.",
+        example_en: "Because it rained, I quit.",
+        example_mm: "မိုးရွာလို့ ရပ်လိုက်တယ်။"
+    },
+    {
+        title: "〜ので",
+        pronunciation: "node",
+        english: "Because (more polite)",
+        burmese: "သောကြောင့် (ပိုယဉ်ကျေး)",
+        category: "conjunction",
+        example_jp: "びょうきなので、やすみます。",
+        example_romaji: "Byouki na node, yasumimasu.",
+        example_en: "Because I am sick, I will rest.",
+        example_mm: "နေမကောင်းလို့ အနားယူမယ်။"
+    },
+    {
+        title: "〜のに",
+        pronunciation: "noni",
+        english: "Although / even though",
+        burmese: "သော်လည်း",
+        category: "conjunction",
+        example_jp: "たかかったのに、かいました。",
+        example_romaji: "Takakatta noni, kaimashita.",
+        example_en: "Although it was expensive, I bought it.",
+        example_mm: "စျေးကြီးပေမဲ့ ဝယ်လိုက်တယ်။"
+    },
+    {
+        title: "〜けど / 〜が",
+        pronunciation: "kedo / ga",
+        english: "But / however",
+        burmese: "သော်လည်း",
+        category: "conjunction",
+        example_jp: "たのしいけど、つかれました。",
+        example_romaji: "Tanoshii kedo, tsukaremashita.",
+        example_en: "It was fun, but I'm tired.",
+        example_mm: "ပျော်ပေမဲ့ ပင်ပန်းတယ်။"
+    },
+    {
+        title: "そして",
+        pronunciation: "soshite",
+        english: "And then",
+        burmese: "ပြီးတော့",
+        category: "conjunction",
+        example_jp: "きっさてんに いって、そして えいがを みました。",
+        example_romaji: "Kissaten ni itte, soshite eiga o mimashita.",
+        example_en: "I went to a cafe and then watched a movie.",
+        example_mm: "လက်ဖက်ရည်ဆိုင်သွားပြီး ရုပ်ရှင်ကြည့်တယ်။"
+    },
+    {
+        title: "それから",
+        pronunciation: "sorekara",
+        english: "After that / since then",
+        burmese: "အဲဒီနောက်",
+        category: "conjunction",
+        example_jp: "ごはんを たべて、それから べんきょうします。",
+        example_romaji: "Gohan o tabete, sorekara benkyou shimasu.",
+        example_en: "I'll eat, and after that study.",
+        example_mm: "ထမင်းစားပြီး လေ့လာမယ်။"
+    },
+    {
+        title: "でも",
+        pronunciation: "demo",
+        english: "But / however",
+        burmese: "ဒါပေမဲ့",
+        category: "conjunction",
+        example_jp: "やすいです。でも よくないです。",
+        example_romaji: "Yasui desu. Demo yokunai desu.",
+        example_en: "It's cheap. But it's not good.",
+        example_mm: "စျေးချိုတယ်။ ဒါပေမဲ့မကောင်းဘူး။"
+    },
+    {
+        title: "それに",
+        pronunciation: "soreni",
+        english: "Moreover / in addition",
+        burmese: "ထို့အပြင်",
+        category: "conjunction",
+        example_jp: "やすいし、それに べんりです。",
+        example_romaji: "Yasui shi, soreni benri desu.",
+        example_en: "It's cheap, and moreover it's convenient.",
+        example_mm: "စျေးချိုတယ်၊ ပြီးတော့ အဆင်ပြေတယ်။"
+    },
+    {
+        title: "〜し",
+        pronunciation: "shi",
+        english: "And (listing reasons)",
+        burmese: "ပြီးတော့ (အကြောင်းများစာရင်း)",
+        category: "conjunction",
+        example_jp: "やすいし、おいしい。",
+        example_romaji: "Yasui shi, oishii.",
+        example_en: "It's cheap, and it's delicious.",
+        example_mm: "စျေးချိုတယ်၊ အရသာလည်းရှိတယ်။"
+    },
+    {
+        title: "〜たり〜たりする",
+        pronunciation: "tari tari suru",
+        english: "Do things like",
+        burmese: "စသည်တို့ လုပ်သည်",
+        category: "conjunction",
+        example_jp: "よんだり、かいたりします。",
+        example_romaji: "Yondari, kaitari shimasu.",
+        example_en: "I do things like reading and writing.",
+        example_mm: "စာဖတ်တာ၊ ရေးတာစတာတွေလုပ်တယ်။"
+    },
+
+    // ========== TIME & CONDITIONAL (63-72) ==========
+    {
+        title: "〜前に",
+        pronunciation: "mae ni",
+        english: "Before doing",
+        burmese: "မလုပ်ခင်က",
+        category: "time",
+        example_jp: "ねる まえに はをみがきます。",
+        example_romaji: "Neru mae ni ha o migakimasu.",
+        example_en: "I brush my teeth before sleeping.",
+        example_mm: "အိပ်ခါနီး သွားတိုက်တယ်။"
+    },
+    {
+        title: "〜後で",
+        pronunciation: "ato de",
+        english: "After doing",
+        burmese: "လုပ်ပြီးနောက်",
+        category: "time",
+        example_jp: "たべた あとで くすりを のみます。",
+        example_romaji: "Tabeta ato de kusuri o nomimasu.",
+        example_en: "I take medicine after eating.",
+        example_mm: "စားပြီးမှ ဆေးသောက်တယ်။"
+    },
+    {
+        title: "〜ながら",
+        pronunciation: "nagara",
+        english: "While doing",
+        burmese: "လုပ်ရင်း",
+        category: "time",
+        example_jp: "おんがくを ききながら べんきょうします。",
+        example_romaji: "Ongaku o kikinagara benkyou shimasu.",
+        example_en: "I study while listening to music.",
+        example_mm: "ဂီတနားထောင်ရင်း လေ့လာတယ်။"
+    },
+    {
+        title: "〜てから",
+        pronunciation: "te kara",
+        english: "After doing (sequence)",
+        burmese: "လုပ်ပြီးမှ (အစဉ်)",
+        category: "time",
+        example_jp: "てを あらってから たべます。",
+        example_romaji: "Te o aratte kara tabemasu.",
+        example_en: "After washing hands, I eat.",
+        example_mm: "လက်ဆေးပြီးမှ စားတယ်။"
+    },
+    {
+        title: "〜始める",
+        pronunciation: "hajimeru",
+        english: "Start doing",
+        burmese: "စတင်သည်",
+        category: "time",
+        example_jp: "ふりはじめた。",
+        example_romaji: "Furi hajimeta.",
+        example_en: "It started raining.",
+        example_mm: "စတင်ရွာသွန်းတယ်။"
+    },
+    {
+        title: "〜終わる",
+        pronunciation: "owaru",
+        english: "Finish doing",
+        burmese: "ပြီးဆုံးသည်",
+        category: "time",
+        example_jp: "たべおわった。",
+        example_romaji: "Tabeowatta.",
+        example_en: "I finished eating.",
+        example_mm: "စားပြီးသွားပြီ။"
+    },
+    {
+        title: "〜と (conditional)",
+        pronunciation: "to",
+        english: "If / when (natural consequence)",
+        burmese: "လျှင် (သဘာဝအကျိုး)",
+        category: "conditional",
+        example_jp: "はるに なると、さくらが さきます。",
+        example_romaji: "Haru ni naru to, sakura ga sakimasu.",
+        example_en: "When spring comes, cherry blossoms bloom.",
+        example_mm: "နွေဦးရောက်ရင် ချယ်ရီပွင့်တယ်။"
+    },
+    {
+        title: "〜ば (conditional)",
+        pronunciation: "ba",
+        english: "If (general condition)",
+        burmese: "လျှင် (အထွေထွေ)",
+        category: "conditional",
+        example_jp: "やすければ、かいます。",
+        example_romaji: "Yasukereba, kaimasu.",
+        example_en: "If it's cheap, I'll buy it.",
+        example_mm: "စျေးချိုရင် ဝယ်မယ်။"
+    },
+    {
+        title: "〜たら (conditional)",
+        pronunciation: "tara",
+        english: "If / when (specific)",
+        burmese: "လျှင် (တိကျ)",
+        category: "conditional",
+        example_jp: "あした あめが ふったら、いかない。",
+        example_romaji: "Ashita ame ga futtara, ikanai.",
+        example_en: "If it rains tomorrow, I won't go.",
+        example_mm: "မနက်ဖြန်မိုးရွာရင် မသွားဘူး။"
+    },
+    {
+        title: "〜ても",
+        pronunciation: "temo",
+        english: "Even if",
+        burmese: "သော်လည်း",
+        category: "conditional",
+        example_jp: "さむくても、にほんに いきます。",
+        example_romaji: "Samukutemo, nihon ni ikimasu.",
+        example_en: "Even if it's cold, I'll go to Japan.",
+        example_mm: "အေးရင်တောင် ဂျပန်ကိုသွားမယ်။"
+    },
+
+    // ========== ADDITIONAL EXPRESSIONS (73-80) ==========
+    {
+        title: "〜でしょう",
+        pronunciation: "deshou",
+        english: "Probably / isn't it?",
+        burmese: "ဖြစ်မယ် / မဟုတ်လား",
+        category: "expression",
+        example_jp: "あしたは あめでしょう。",
+        example_romaji: "Ashita wa ame deshou.",
+        example_en: "It will probably rain tomorrow.",
+        example_mm: "မနက်ဖြန် မိုးရွာမယ်။"
+    },
+    {
+        title: "〜かも知れない",
+        pronunciation: "kamo shirenai",
+        english: "Maybe / might",
+        burmese: "ဖြစ်နိုင်သည်",
+        category: "expression",
+        example_jp: "あめが ふる かも しれない。",
+        example_romaji: "Ame ga furu kamo shirenai.",
+        example_en: "It might rain.",
+        example_mm: "မိုးရွာနိုင်တယ်။"
+    },
+    {
+        title: "〜つもり",
+        pronunciation: "tsumori",
+        english: "Intend to do",
+        burmese: "လုပ်ရန် ရည်ရွယ်သည်",
+        category: "expression",
+        example_jp: "にほんに いく つもりです。",
+        example_romaji: "Nihon ni iku tsumori desu.",
+        example_en: "I intend to go to Japan.",
+        example_mm: "ဂျပန်ကိုသွားဖို့ ရည်ရွယ်ထားတယ်။"
+    },
+    {
+        title: "〜予定",
+        pronunciation: "yotei",
+        english: "Plan to do",
+        burmese: "စီစဉ်ထားသည်",
+        category: "expression",
+        example_jp: "らいしゅう きょうとに いく よていです。",
+        example_romaji: "Raishuu Kyouto ni iku yotei desu.",
+        example_en: "I plan to go to Kyoto next week.",
+        example_mm: "လာမယ့်အပတ် ကျိုတိုကိုသွားဖို့ စီစဉ်ထားတယ်။"
+    },
+    {
+        title: "〜方 (かた)",
+        pronunciation: "kata",
+        english: "Way of doing",
+        burmese: "လုပ်နည်း",
+        category: "expression",
+        example_jp: "この かんじの かきかたを おしえてください。",
+        example_romaji: "Kono kanji no kakikata o oshiete kudasai.",
+        example_en: "Please teach me how to write this kanji.",
+        example_mm: "ဒီကန်ဂျိ ရေးနည်းကို သင်ပေးပါ။"
+    },
+    {
+        title: "〜ながら (contrast)",
+        pronunciation: "nagara",
+        english: "Although / but",
+        burmese: "သော်လည်း (ဆန့်ကျင်)",
+        category: "expression",
+        example_jp: "おそいながら、がんばっています。",
+        example_romaji: "Osoinagara, ganbatte imasu.",
+        example_en: "Although I'm slow, I'm doing my best.",
+        example_mm: "နှေးပေမဲ့ ကြိုးစားနေတယ်။"
+    },
+    {
+        title: "〜そう (appearance)",
+        pronunciation: "sou",
+        english: "Looks like (seems)",
+        burmese: "ပုံရသည်",
+        category: "expression",
+        example_jp: "おいしそう。",
+        example_romaji: "Oishisou.",
+        example_en: "It looks delicious.",
+        example_mm: "အရသာရှိပုံရတယ်။"
+    },
+    {
+        title: "〜やすい / 〜にくい",
+        pronunciation: "yasui / nikui",
+        english: "Easy to / difficult to",
+        burmese: "လုပ်ရလွယ်သည် / လုပ်ရခက်သည်",
+        category: "expression",
+        example_jp: "このペンは かきやすいです。",
+        example_romaji: "Kono pen wa kakiyasui desu.",
+        example_en: "This pen is easy to write with.",
+        example_mm: "ဒီဘောပင်က ရေးရလွယ်တယ်။"
+    },
+    {
+        title: "〜かもしれない",
+        pronunciation: "kamo shirenai",
+        english: "Maybe / might (polite)",
+        burmese: "ဖြစ်နိုင်သည် (ယဉ်ကျေး)",
+        category: "expression",
+        example_jp: "せんせいは もう かえった かもしれない。",
+        example_romaji: "Sensei wa mou kaetta kamo shirenai.",
+        example_en: "The teacher might have already gone home.",
+        example_mm: "ဆရာက အိမ်ပြန်သွားပြီဖြစ်နိုင်တယ်။"
+    },
+    {
+        title: "〜はず",
+        pronunciation: "hazu",
+        english: "Supposed to / should",
+        burmese: "ဖြစ်ရမည်",
+        category: "expression",
+        example_jp: "でんしゃは ろくじに つくはずです。",
+        example_romaji: "Densha wa rokuji ni tsuku hazu desu.",
+        example_en: "The train is supposed to arrive at 6.",
+        example_mm: "ရထားက ၆ နာရီမှာ ရောက်ရမယ်။"
     }
 ];
-
 // ========== KANJI DATA ==========
 const kanjiData = [
     {
@@ -9865,8 +10751,17 @@ const vocabularyCategories = [
 ];
 
 const grammarCategories = [
-    { id: "all", name: "All", icon: "fa-book" },
-    { id: "basic", name: "Basic Grammar", icon: "fa-spell-check" }
+    { id: "all", name: "All Grammar", icon: "fa-star" },
+    { id: "basic", name: "Basic Structure", icon: "fa-book" },
+    { id: "particle", name: "Particles", icon: "fa-link" },
+    { id: "verb", name: "Verb Forms", icon: "fa-running" },
+    { id: "adjective", name: "Adjectives", icon: "fa-palette" },
+    { id: "noun", name: "Nouns & Counters", icon: "fa-hashtag" },
+    { id: "question", name: "Question Words", icon: "fa-question-circle" },
+    { id: "conjunction", name: "Conjunctions", icon: "fa-code-branch" },
+    { id: "time", name: "Time Expressions", icon: "fa-clock" },
+    { id: "conditional", name: "Conditionals", icon: "fa-code-branch" },
+    { id: "expression", name: "Expressions", icon: "fa-smile" }
 ];
 
 const kanjiCategories = [
@@ -10032,105 +10927,332 @@ function getFilteredItems() {
 }
 
 
-// ========== PDF GENERATION FUNCTION ==========
-async function generateVocabularyPDF() {
-    // Show loading indicator
-    const downloadBtn = document.getElementById('downloadVocabPDF');
-    const originalText = downloadBtn.innerHTML;
-    downloadBtn.innerHTML = '<i class="fas fa-spinner fa-pulse"></i> Generating PDF...';
-    downloadBtn.disabled = true;
+// ========== PDF GENERATION FUNCTIONS ==========
+
+// Helper function to escape HTML special characters
+function escapeHtml(text) {
+    if (!text) return '';
+    return String(text)
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#39;');
+}
+
+// Show loading overlay
+function showPDFLoadingOverlay(message = 'Generating PDF...') {
+    const existingOverlay = document.getElementById('pdfLoadingOverlay');
+    if (existingOverlay) existingOverlay.remove();
     
-    try {
-        // Get all vocabulary data
-        const vocabList = vocabularyData;
-        
-        if (!vocabList || vocabList.length === 0) {
-            alert('No vocabulary data available to generate PDF.');
-            return;
-        }
-        
-        // Load jsPDF library if not already loaded
-        if (typeof window.jspdf === 'undefined') {
-            await loadScript('https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js');
-            await loadScript('https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.31/jspdf.plugin.autotable.min.js');
-        }
-        
-        const { jsPDF } = window.jspdf;
-        const doc = new jsPDF({
-            orientation: 'portrait',
-            unit: 'mm',
-            format: 'a4'
-        });
-        
-        // Add title
-        doc.setFontSize(20);
-        doc.setTextColor(44, 62, 80);
-        doc.text('N5 Vocabulary List', 105, 20, { align: 'center' });
-        
-        // Add subtitle
-        doc.setFontSize(10);
-        doc.setTextColor(127, 140, 141);
-        doc.text(`Total Words: ${vocabList.length} | Generated: ${new Date().toLocaleDateString()}`, 105, 30, { align: 'center' });
-        
-        // Prepare table data (English, Romaji, Burmese only)
-        const tableData = vocabList.map(item => [
-            item.english,
-            item.romaji || item.pronunciation || '',
-            item.burmese
-        ]);
-        
-        // Create table
-        doc.autoTable({
-            startY: 40,
-            head: [['English', 'Romaji', 'Burmese (မြန်မာ)']],
-            body: tableData,
-            theme: 'striped',
-            headStyles: {
-                fillColor: [230, 126, 34],
-                textColor: [255, 255, 255],
-                fontStyle: 'bold',
-                halign: 'center'
-            },
-            bodyStyles: {
-                textColor: [44, 62, 80],
-                fontSize: 9
-            },
-            alternateRowStyles: {
-                fillColor: [245, 245, 245]
-            },
-            columnStyles: {
-                0: { cellWidth: 50, halign: 'left' },
-                1: { cellWidth: 40, halign: 'left' },
-                2: { cellWidth: 50, halign: 'left' }
-            },
-            margin: { top: 40, left: 15, right: 15, bottom: 20 },
-            didDrawPage: function(data) {
-                // Add page number on each page
-                const pageCount = doc.internal.getNumberOfPages();
-                doc.setFontSize(8);
-                doc.setTextColor(150, 150, 150);
-                doc.text(
-                    `Page ${data.pageNumber} of ${pageCount}`,
-                    doc.internal.pageSize.getWidth() / 2,
-                    doc.internal.pageSize.getHeight() - 10,
-                    { align: 'center' }
-                );
-            }
-        });
-        
-        // Save the PDF
-        doc.save('N5_Vocabulary_English_Romaji_Burmese.pdf');
-        
-    } catch (error) {
-        console.error('PDF Generation Error:', error);
-        alert('Error generating PDF. Please try again.');
-    } finally {
-        // Reset button
-        downloadBtn.innerHTML = originalText;
-        downloadBtn.disabled = false;
+    const loadingDiv = document.createElement('div');
+    loadingDiv.id = 'pdfLoadingOverlay';
+    loadingDiv.innerHTML = `
+        <div style="position:fixed; top:50%; left:50%; transform:translate(-50%,-50%); 
+                    background:#1e3c72; color:white; padding:25px 35px; border-radius:15px; 
+                    z-index:10000; text-align:center; box-shadow:0 0 30px rgba(0,0,0,0.5);">
+            <i class="fas fa-spinner fa-pulse" style="font-size:40px; margin-bottom:15px; display:block"></i>
+            <p style="margin:0; font-size:16px"><strong>${message}</strong></p>
+            <p style="margin:10px 0 0 0; font-size:12px" id="pdfProgressText">Please wait...</p>
+        </div>
+    `;
+    document.body.appendChild(loadingDiv);
+}
+
+// Update loading progress
+function updatePDFProgress(text) {
+    const progressText = document.getElementById('pdfProgressText');
+    if (progressText) {
+        progressText.innerHTML = text;
     }
 }
 
+// Hide loading overlay
+function hidePDFLoadingOverlay() {
+    const overlay = document.getElementById('pdfLoadingOverlay');
+    if (overlay) overlay.remove();
+}
+
+// Ensure libraries are loaded
+async function ensureLibrariesLoaded() {
+    // Check if jspdf is already loaded
+    if (typeof window.jspdf !== 'undefined' && window.jspdf.jsPDF) {
+        return true;
+    }
+    
+    // Load jspdf
+    await new Promise((resolve, reject) => {
+        const script = document.createElement('script');
+        script.src = 'https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js';
+        script.onload = resolve;
+        script.onerror = reject;
+        document.head.appendChild(script);
+    });
+    
+    // Load html2canvas
+    await new Promise((resolve, reject) => {
+        const script = document.createElement('script');
+        script.src = 'https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js';
+        script.onload = resolve;
+        script.onerror = reject;
+        document.head.appendChild(script);
+    });
+    
+    // Wait a moment for libraries to initialize
+    await new Promise(r => setTimeout(r, 500));
+    return true;
+}
+
+// Generate PDF using html2canvas (better for Japanese characters)
+async function generatePDFWithHtml2Canvas(data, title, filename, getRowData, columns) {
+    return new Promise(async (resolve, reject) => {
+        try {
+            await ensureLibrariesLoaded();
+            
+            // Create a temporary div for rendering
+            const tempDiv = document.createElement('div');
+            tempDiv.style.position = 'absolute';
+            tempDiv.style.left = '-9999px';
+            tempDiv.style.top = '0';
+            tempDiv.style.backgroundColor = 'white';
+            tempDiv.style.padding = '20px';
+            tempDiv.style.width = '1100px';
+            tempDiv.style.fontFamily = "'Noto Sans JP', 'Noto Sans Myanmar', 'MS Gothic', 'Meiryo', sans-serif";
+            
+            // Build HTML table
+            let rows = '';
+            for (let i = 0; i < data.length; i++) {
+                const rowData = getRowData(data[i]);
+                rows += `<tr>`;
+                for (let j = 0; j < columns.length; j++) {
+                    const cellContent = escapeHtml(rowData[j] || '');
+                    let fontFamily = '';
+                    if (j === 0) fontFamily = 'font-family: "Noto Sans JP", "MS Gothic", "Meiryo", monospace;';
+                    if (j === 3) fontFamily = 'font-family: "Noto Sans Myanmar", "Myanmar Text", sans-serif;';
+                    rows += `<td style="border:1px solid #ccc;padding:10px;font-size:11px;vertical-align:top;${fontFamily}">${cellContent}</td>`;
+                }
+                rows += `</td>`;
+            }
+            
+            tempDiv.innerHTML = `
+                <div style="font-family:'Noto Sans JP','Noto Sans Myanmar','MS Gothic','Meiryo',sans-serif; width:100%">
+                    <div style="text-align:center; margin-bottom:20px;">
+                        <h1 style="color:#1e3c72; margin:0 0 5px 0; font-size:22px;">
+                            🇯🇵 Next Gen Learning Myanmar - ${title}
+                        </h1>
+                        <p style="margin:0; font-size:11px; color:#666;">
+                            Generated: ${new Date().toLocaleDateString()} | Total: ${data.length} items
+                        </p>
+                    </div>
+                    <table style="border-collapse:collapse;width:100%; font-size:12px;">
+                        <thead>
+                            <tr style="background-color:#1e3c72;color:white;font-weight:bold;">
+                                ${columns.map(col => `<th style="border:1px solid #1e3c72;padding:10px;text-align:left;font-size:12px;">${escapeHtml(col)}</th>`).join('')}
+                            </tr>
+                        </thead>
+                        <tbody>
+                            ${rows}
+                        </tbody>
+                    </table>
+                    <div style="text-align:center; margin-top:20px; font-size:9px; color:#999;">
+                        Next Gen Learning Myanmar - Master Japanese from N5 to N1
+                    </div>
+                </div>
+            `;
+            
+            document.body.appendChild(tempDiv);
+            await new Promise(r => setTimeout(r, 300));
+            
+            // Render with html2canvas
+            const canvas = await html2canvas(tempDiv, {
+                scale: 2,
+                backgroundColor: '#ffffff',
+                logging: false,
+                useCORS: false,
+                windowWidth: tempDiv.scrollWidth,
+                onclone: (clonedDoc, element) => {
+                    // Ensure fonts are applied in cloned document
+                    const style = clonedDoc.createElement('style');
+                    style.textContent = `
+                        td, th { font-family: "Noto Sans JP", "MS Gothic", "Meiryo", "Noto Sans Myanmar", sans-serif; }
+                    `;
+                    clonedDoc.head.appendChild(style);
+                }
+            });
+            
+            const imgData = canvas.toDataURL('image/jpeg', 0.95);
+            
+            const { jsPDF } = window.jspdf;
+            const doc = new jsPDF({
+                orientation: 'landscape',
+                unit: 'mm',
+                format: 'a4'
+            });
+            
+            const imgWidth = 277; // A4 landscape width in mm (297 - margins)
+            const imgHeight = (canvas.height * imgWidth) / canvas.width;
+            let heightLeft = imgHeight;
+            let position = 0;
+            let pageNum = 1;
+            
+            doc.addImage(imgData, 'JPEG', 10, position, imgWidth, imgHeight);
+            heightLeft -= (doc.internal.pageSize.getHeight() - 20);
+            
+            while (heightLeft > 0) {
+                position = heightLeft - imgHeight;
+                doc.addPage();
+                doc.addImage(imgData, 'JPEG', 10, position, imgWidth, imgHeight);
+                heightLeft -= (doc.internal.pageSize.getHeight() - 20);
+                pageNum++;
+            }
+            
+            doc.save(`${filename}.pdf`);
+            tempDiv.remove();
+            resolve();
+            
+        } catch (error) {
+            console.error('PDF Generation Error:', error);
+            reject(error);
+        }
+    });
+}
+
+// ========== VOCABULARY PDF ==========
+async function generateVocabularyPDF() {
+    const dataList = vocabularyData;
+    
+    if (!dataList || dataList.length === 0) {
+        alert('No vocabulary data available to generate PDF.');
+        return;
+    }
+    
+    showPDFLoadingOverlay('Generating Vocabulary PDF...');
+    updatePDFProgress(`Processing ${dataList.length} vocabulary words...`);
+    
+    try {
+        await generatePDFWithHtml2Canvas(
+            dataList,
+            'N5 Vocabulary List',
+            'N5_Vocabulary_Japanese_English_Burmese',
+            (item) => [
+                item.japanese || '',
+                item.romaji || item.pronunciation || '',
+                item.english || '',
+                item.burmese || ''
+            ],
+            ['日本語 (Japanese)', 'Romaji', 'English', 'မြန်မာ (Burmese)']
+        );
+        hidePDFLoadingOverlay();
+        alert(`✅ Successfully generated PDF with ${dataList.length} vocabulary words!`);
+    } catch (error) {
+        hidePDFLoadingOverlay();
+        alert('Error generating PDF. Please check your internet connection and try again.');
+        console.error(error);
+    }
+}
+
+// ========== GRAMMAR PDF ==========
+async function generateGrammarPDF() {
+    const dataList = grammarData;
+    
+    if (!dataList || dataList.length === 0) {
+        alert('No grammar data available to generate PDF.');
+        return;
+    }
+    
+    showPDFLoadingOverlay('Generating Grammar PDF...');
+    updatePDFProgress(`Processing ${dataList.length} grammar rules...`);
+    
+    try {
+        await generatePDFWithHtml2Canvas(
+            dataList,
+            'N5 Grammar List',
+            'N5_Grammar_Japanese_English_Burmese',
+            (item) => [
+                item.title || '',
+                item.pronunciation || '',
+                item.english || '',
+                item.burmese || ''
+            ],
+            ['日本語 (Japanese Grammar Point)', 'Pronunciation/Romaji', 'English Meaning', 'မြန်မာ (Burmese)']
+        );
+        hidePDFLoadingOverlay();
+        alert(`✅ Successfully generated PDF with ${dataList.length} grammar rules!`);
+    } catch (error) {
+        hidePDFLoadingOverlay();
+        alert('Error generating PDF. Please check your internet connection and try again.');
+        console.error(error);
+    }
+}
+
+// ========== KANJI PDF ==========
+async function generateKanjiPDF() {
+    const dataList = kanjiData;
+    
+    if (!dataList || dataList.length === 0) {
+        alert('No kanji data available to generate PDF.');
+        return;
+    }
+    
+    showPDFLoadingOverlay('Generating Kanji PDF...');
+    updatePDFProgress(`Processing ${dataList.length} kanji characters...`);
+    
+    try {
+        await generatePDFWithHtml2Canvas(
+            dataList,
+            'N5 Kanji List',
+            'N5_Kanji_Japanese_English_Burmese',
+            (item) => [
+                item.kanji || '',
+                item.pronunciation || '',
+                item.english || '',
+                item.burmese || ''
+            ],
+            ['漢字 (Kanji)', 'On/Kun Reading', 'English Meaning', 'မြန်မာ (Burmese)']
+        );
+        hidePDFLoadingOverlay();
+        alert(`✅ Successfully generated PDF with ${dataList.length} kanji characters!`);
+    } catch (error) {
+        hidePDFLoadingOverlay();
+        alert('Error generating PDF. Please check your internet connection and try again.');
+        console.error(error);
+    }
+}
+
+// Update PDF button based on current category
+function updatePDFButtons() {
+    const pdfSection = document.querySelector('.pdf-download-section');
+    if (!pdfSection) return;
+    
+    // Clear existing buttons
+    pdfSection.innerHTML = '';
+    
+    if (currentCategory === 'vocab') {
+        pdfSection.innerHTML = `
+            <button id="downloadVocabPDF" class="pdf-download-btn">
+                <i class="fas fa-file-pdf"></i> Download N5 Vocabulary PDF (日本語・Romaji・English・မြန်မာ)
+            </button>
+        `;
+        const btn = document.getElementById('downloadVocabPDF');
+        if (btn) btn.addEventListener('click', generateVocabularyPDF);
+    } else if (currentCategory === 'grammar') {
+        pdfSection.innerHTML = `
+            <button id="downloadGrammarPDF" class="pdf-download-btn grammar-pdf">
+                <i class="fas fa-file-pdf"></i> Download N5 Grammar PDF (日本語・Romaji・English・မြန်မာ)
+            </button>
+        `;
+        const btn = document.getElementById('downloadGrammarPDF');
+        if (btn) btn.addEventListener('click', generateGrammarPDF);
+    } else if (currentCategory === 'kanji') {
+        pdfSection.innerHTML = `
+            <button id="downloadKanjiPDF" class="pdf-download-btn kanji-pdf">
+                <i class="fas fa-file-pdf"></i> Download N5 Kanji PDF (日本語・Romaji・English・မြန်မာ)
+            </button>
+        `;
+        const btn = document.getElementById('downloadKanjiPDF');
+        if (btn) btn.addEventListener('click', generateKanjiPDF);
+    }
+}
 // Helper function to load scripts dynamically
 function loadScript(src) {
     return new Promise((resolve, reject) => {
@@ -10451,6 +11573,7 @@ function createFlashcard(item) {
                             <button class="speak-example-btn" data-text="${item.example_jp.replace(/'/g, "\\'")}">
                                 <i class="fas fa-volume-up"></i> Speak Japanese
                             </button>
+                            <p class="en-ex">RM ${item.example_romaji}</p>
                             <p class="en-ex">🇬🇧 ${item.example_en}</p>
                             <p class="mm-ex">🇲🇲 ${item.example_mm}</p>
                         </div>
@@ -10592,6 +11715,7 @@ function setupEventListeners() {
             currentTopic = 'all';
             generateCategoryBar();
             renderFlashcards();
+            updatePDFButtons();
         });
     });
     
@@ -10708,6 +11832,7 @@ document.addEventListener('DOMContentLoaded', () => {
     generateCategoryBar();
     renderFlashcards();
     displayCategoryStatistics();
-    addBackToTopButton();  // ADD THIS LINE
+    addBackToTopButton(); 
+    updatePDFButtons();  // ADD THIS LINE // ADD THIS LINE
     console.log('N5 Level Ready! Use topic filters to sort by category.');
 });

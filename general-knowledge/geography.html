@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Japanese Geography & Nature - Next Gen Learning Myanmar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Myanmar:wght@400;500;700&family=Noto+Sans+JP:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .gk-detail-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 1rem;
+        }
+        
+        .gk-detail-header {
+            background: white;
+            border-radius: 20px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .gk-detail-header h1 {
+            font-size: 1.8rem;
+            color: #2c3e50;
+            text-align: center;
+        }
+        
+        .gk-detail-header h1 i {
+            color: #e67e22;
+            margin-right: 10px;
+        }
+        
+        .gk-detail-header h1 span {
+            font-size: 1rem;
+            color: #e67e22;
+            display: block;
+            margin-top: 0.3rem;
+        }
+        
+        .gk-detail-header p {
+            text-align: center;
+            color: #7f8c8d;
+            margin-top: 0.5rem;
+        }
+        
+        .gk-info-card {
+            background: white;
+            border-radius: 20px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .gk-info-card h2 {
+            color: #e67e22;
+            border-left: 4px solid #e67e22;
+            padding-left: 1rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        
+        .gk-info-card h2 .jp-head {
+            font-size: 0.9rem;
+            color: #7f8c8d;
+            font-weight: normal;
+        }
+        
+        .gk-info-card p {
+            line-height: 1.6;
+            color: #2c3e50;
+            margin-bottom: 0.8rem;
+        }
+        
+        .gk-list {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .gk-list li {
+            margin: 0.8rem 0;
+            padding: 0.8rem;
+            background: #f8f9fa;
+            border-radius: 10px;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+        
+        .gk-list li:hover {
+            background: #e67e22;
+            color: white;
+            transform: translateX(5px);
+        }
+        
+        .gk-list li strong {
+            color: #e67e22;
+            font-size: 1rem;
+        }
+        
+        .gk-list li .jp-term {
+            font-family: 'Noto Sans JP', sans-serif;
+            font-size: 0.85rem;
+            color: #7f8c8d;
+            margin-left: 5px;
+        }
+        
+        .gk-list li .mm-meaning {
+            display: block;
+            font-size: 0.8rem;
+            color: #7f8c8d;
+            margin-top: 5px;
+            font-family: 'Noto Sans Myanmar', sans-serif;
+        }
+        
+        .gk-list li:hover strong,
+        .gk-list li:hover .jp-term,
+        .gk-list li:hover .mm-meaning {
+            color: white;
+        }
+        
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #e67e22;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: 0.3s;
+            margin-bottom: 1rem;
+        }
+        
+        .back-btn:hover {
+            background: #d35400;
+            transform: translateX(-3px);
+        }
+        
+        .bilingual-text {
+            margin: 0.5rem 0;
+        }
+        
+        .english-text {
+            color: #2c3e50;
+        }
+        
+        .burmese-text {
+            color: #7f8c8d;
+            font-family: 'Noto Sans Myanmar', sans-serif;
+            font-size: 0.9rem;
+            margin-top: 0.3rem;
+        }
+        
+        .geo-note {
+            background: #fff3e0;
+            border-left: 4px solid #e67e22;
+            padding: 1rem;
+            border-radius: 12px;
+            margin-top: 1rem;
+            font-size: 0.9rem;
+        }
+        
+        @media (max-width: 768px) {
+            .gk-detail-header h1 {
+                font-size: 1.4rem;
+            }
+            
+            .gk-info-card h2 {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="gk-detail-container">
+        <a href="../general-knowledge.html" class="back-btn">
+            <i class="fas fa-arrow-left"></i> Back to General Knowledge / နောက်သို့
+        </a>
+        
+        <div class="gk-detail-header">
+            <h1>
+                <i class="fas fa-map"></i> 
+                Japanese Geography & Nature
+                <span>にほんの ちり と しぜん</span>
+            </h1>
+            <p>Landscapes, climate, and natural wonders of Japan / ဂျပန်၏ ရှုခင်းများ၊ ရာသီဥတုနှင့် သဘာဝအံ့ဖွယ်ရာများ</p>
+        </div>
+        
+        <div class="gk-info-card">
+            <h2>
+                <i class="fas fa-globe-asia"></i> 
+                Basic Facts & Location
+                <span class="jp-head">(きほんじょうほう と いち)</span>
+            </h2>
+            <div class="bilingual-text">
+                <p class="english-text">Japan is an island nation in East Asia, consisting of 14,125 islands. The four main islands are Hokkaido, Honshu, Shikoku, and Kyushu.</p>
+                <p class="burmese-text">ဂျပန်သည် အရှေ့အာရှရှိ ကျွန်းနိုင်ငံဖြစ်ပြီး ကျွန်းပေါင်း ၁၄,၁၂၅ ကျွန်း ပါဝင်သည်။ အဓိကကျွန်းကြီးလေးခုမှာ ဟော့ကိုင်းဒိုး၊ ဟွန်ရှူး၊ ရှီကိုကုနှင့် ကျူရှူးတို့ဖြစ်သည်။</p>
+            </div>
+            <ul class="gk-list">
+                <li><strong>面積 (Menseki)</strong> <span class="jp-term">- Area: 377,975 km²</span><span class="mm-meaning">ဧရိယာ (ကမ္ဘာ့ ၆၂ ခုမြောက် အကြီးဆုံး)</span></li>
+                <li><strong>人口 (Jinkō)</strong> <span class="jp-term">- Population: ~125 million (2024)</span><span class="mm-meaning">လူဦးရေ (ကမ္ဘာ့ ၁၁ ခုမြောက် အများဆုံး)</span></li>
+                <li><strong>首都 (Shuto)</strong> <span class="jp-term">- Capital: Tokyo</span><span class="mm-meaning">မြို့တော်: တိုကျို (ကမ္ဘာ့အကြီးဆုံးမြို့ပြဧရိယာ)</span></li>
+                <li><strong>最高峰 (Saikōhō)</strong> <span class="jp-term">- Highest peak: Mount Fuji (3,776m)</span><span class="mm-meaning">အမြင့်ဆုံးတောင်: ဖူဂျီတောင်</span></li>
+                <li><strong>最長河川 (Saichō Kasen)</strong> <span class="jp-term">- Longest river: Shinano River (367km)</span><span class="mm-meaning">အရှည်ဆုံးမြစ်: ရှိနနိုမြစ်</span></li>
+                <li><strong>最大湖沼 (Saidai Kosho)</strong> <span class="jp-term">- Largest lake: Lake Biwa (670 km²)</span><span class="mm-meaning">အကြီးဆုံးအိုင်: ဘီဝါအိုင်</span></li>
+            </ul>
+        </div>
+        
+        <div class="gk-info-card">
+            <h2>
+                <i class="fas fa-mountain"></i> 
+                Mountains & Volcanoes
+                <span class="jp-head">(やま と かざん)</span>
+            </h2>
+            <ul class="gk-list">
+                <li><strong>富士山 (Fujisan)</strong> <span class="jp-term">- Mount Fuji (UNESCO World Heritage)</span><span class="mm-meaning">ဂျပန်နိုင်ငံ၏ သင်္ကေတတောင်၊ မီးတောင်ငုပ်အဖြစ် သတ်မှတ်</span></li>
+                <li><strong>北アルプス (Kita Arupusu)</strong> <span class="jp-term">- Northern Alps (Hida Mountains)</span><span class="mm-meaning">"ဂျပန်ဆွစ်ဇာလန်" ဟုခေါ်သော တောင်တန်း</span></li>
+                <li><strong>中央アルプス (Chūō Arupusu)</strong> <span class="jp-term">- Central Alps (Kiso Mountains)</span><span class="mm-meaning">ခရီးသွား တောင်တက်လမ်းကြောင်းများ ကျော်ကြား</span></li>
+                <li><strong>南アルプス (Minami Arupusu)</strong> <span class="jp-term">- Southern Alps (Akaishi Mountains)</span><span class="mm-meaning">ဂျပန်တွင် ဖူဂျီပြီးလျှင် ဒုတိယအမြင့်ဆုံးတောင်များ</span></li>
+                <li><strong>浅間山 (Asamayama)</strong> <span class="jp-term">- Mount Asama (active volcano)</span><span class="mm-meaning">ဟွန်ရှူးကျွန်းပေါ်ရှိ လှုပ်ရှားနေသော မီးတောင်</span></li>
+                <li><strong>桜島 (Sakurajima)</strong> <span class="jp-term">- Sakurajima (active volcano in Kagoshima)</span><span class="mm-meaning">ခါဂိုရှီးမားရှိ အမြဲမီးခိုးထွက်နေသော မီးတောင်ကျွန်း</span></li>
+            </ul>
+        </div>
+        
+        <div class="gk-info-card">
+            <h2>
+                <i class="fas fa-water"></i> 
+                Rivers, Lakes & Coastlines
+                <span class="jp-head">(かわ みずうみ と かいがんせん)</span>
+            </h2>
+            <ul class="gk-list">
+                <li><strong>信濃川 (Shinanogawa)</strong> <span class="jp-term">- Shinano River (longest, 367km)</span><span class="mm-meaning">အရှည်ဆုံးမြစ် (နီးဂါတာမြို့မှတစ်ဆင့် ဂျပန်ပင်လယ်သို့ စီးဝင်)</span></li>
+                <li><strong>利根川 (Tonegawa)</strong> <span class="jp-term">- Tone River (2nd longest, 322km)</span><span class="mm-meaning">တိုကျိုအား ရေအရင်းအမြစ်ပေးသော မြစ်</span></li>
+                <li><strong>琵琶湖 (Biwako)</strong> <span class="jp-term">- Lake Biwa (largest lake)</span><span class="mm-meaning">ဂျပန်နိုင်ငံ၏ အကြီးဆုံးရေချိုအိုင် (ရှီဂါစီရင်စု)</span></li>
+                <li><strong>霞ヶ浦 (Kasumigaura)</strong> <span class="jp-term">- Lake Kasumigaura (2nd largest)</span><span class="mm-meaning">ဒုတိယအကြီးဆုံးအိုင် (အိဘာရာကီစီရင်စု)</span></li>
+                <li><strong>松島 (Matsushima)</strong> <span class="jp-term">- Matsushima Bay (one of Three Views of Japan)</span><span class="mm-meaning">ဂျပန်၏ သုံးမြောက်အလှပဆုံးနေရာများထဲမှ တစ်ခု</span></li>
+                <li><strong>天橋立 (Amanohashidate)</strong> <span class="jp-term">- Amanohashidate (sandbar, Three Views)</span><span class="mm-meaning">ကောင်းကင်တံတား (သဲသောင်တန်း)</span></li>
+            </ul>
+        </div>
+        
+        <div class="gk-info-card">
+            <h2>
+                <i class="fas fa-temperature-high"></i> 
+                Climate & Seasons
+                <span class="jp-head">(きこう と きせつ)</span>
+            </h2>
+            <div class="bilingual-text">
+                <p class="english-text">Japan has four distinct seasons with unique beauty in each: spring (cherry blossoms), summer (festivals), autumn (fall colors), and winter (snow).</p>
+                <p class="burmese-text">ဂျပန်တွင် ရာသီဥတုကြီးများ ကွဲပြားစွာရှိပြီး တစ်ခုစီတွင် ထူးခြားသော အလှတရားများ ရှိသည်။</p>
+            </div>
+            <ul class="gk-list">
+                <li><strong>春 (Haru)</strong> <span class="jp-term">- Spring (March-May)</span><span class="mm-meaning">နွေဦး (ချယ်ရီပွင့်ရာသီ၊ အပူချိန် ၁၀-၂၀°C)</span></li>
+                <li><strong>梅雨 (Tsuyu)</strong> <span class="jp-term">- Rainy season (June-July)</span><span class="mm-meaning">မိုးရာသီ (စိုစွတ်သော၊ ဆူမီးမှို၊ အပူချိန် ၂၀-၂၅°C)</span></li>
+                <li><strong>夏 (Natsu)</strong> <span class="jp-term">- Summer (June-August)</span><span class="mm-meaning">နွေရာသီ (ပူပြင်းစိုစွတ်၊ ပွဲတော်များ၊ အပူချိန် ၂၅-၃၅°C)</span></li>
+                <li><strong>秋 (Aki)</strong> <span class="jp-term">- Autumn (September-November)</span><span class="mm-meaning">ဆောင်းဦး (မေပယ်ရွက်နီများ၊ အပူချိန် ၁၀-၂၀°C)</span></li>
+                <li><strong>冬 (Fuyu)</strong> <span class="jp-term">- Winter (December-February)</span><span class="mm-meaning">ဆောင်းရာသီ (ဟော့ကိုင်းဒိုးတွင် နှင်းများ၊ အပူချိန် -၁၀ မှ ၁၀°C)</span></li>
+            </ul>
+            <div class="geo-note">
+                <i class="fas fa-umbrella"></i> <strong>Typhoon Season / တိုင်ဖွန်းမုန်တိုင်းရာသီ:</strong> Japan experiences about 3-4 typhoons annually, mostly between August and October. Always check weather warnings.
+                <div class="burmese-text" style="margin-top: 8px;">ဂျပန်သည် နှစ်စဉ် တိုင်ဖွန်းမုန်တိုင်း ၃-၄ ကြိမ် ဖြတ်သန်းလေ့ရှိပြီး အများစုမှာ သြဂုတ်လမှ အောက်တိုဘာလအတွင်း ဖြစ်သည်။ ရာသီဥတုသတိပေးချက်များကို အမြဲစစ်ဆေးပါ။</div>
+            </div>
+        </div>
+        
+        <div class="gk-info-card">
+            <h2>
+                <i class="fas fa-tree"></i> 
+                National Parks & Natural Wonders
+                <span class="jp-head">(こくりつこうえん と しぜんきしょう)</span>
+            </h2>
+            <ul class="gk-list">
+                <li><strong>知床国立公園 (Shiretoko Kokuritsu Kōen)</strong> <span class="jp-term">- Shiretoko National Park (Hokkaido, UNESCO)</span><span class="mm-meaning">ဟော့ကိုင်းဒိုး အရှေ့မြောက်စွန်း၊ ဝက်ဝံများနှင့် ရေခဲမျော</span></li>
+                <li><strong>日光国立公園 (Nikkō Kokuritsu Kōen)</strong> <span class="jp-term">- Nikko National Park (waterfalls, shrines)</span><span class="mm-meaning">ရေတံခွန်များ၊ တိုရှိုဂူစေတီ</span></li>
+                <li><strong>阿蘇くじゅう国立公園 (Aso Kujū Kokuritsu Kōen)</strong> <span class="jp-term">- Aso-Kujū National Park (volcanic landscape)</span><span class="mm-meaning">ကမ္ဘာ့အကြီးဆုံး မီးတောင်ကြားများထဲမှ တစ်ခု</span></li>
+                <li><strong>屋久島 (Yakushima)</strong> <span class="jp-term">- Yakushima Island (UNESCO, ancient cedars)</span><span class="mm-meaning">နှစ်ထောင်ချီသော စီဒါသစ်ပင်များ (သစ်တောများ)</span></li>
+                <li><strong>白神山地 (Shirakami Sanchi)</strong> <span class="jp-term">- Shirakami-Sanchi (UNESCO, beech forests)</span><span class="mm-meaning">ကမ္ဘာ့အကြီးဆုံး သစ်တောကြီးများထဲမှ တစ်ခု</span></li>
+                <li><strong>青ヶ島 (Aogashima)</strong> <span class="jp-term">- Aogashima (double volcano crater)</span><span class="mm-meaning">နှစ်ထပ်မီးတောင်အတွင်း ရွာတည်ရှိသော ကျွန်း</span></li>
+            </ul>
+        </div>
+        
+        <div class="gk-info-card">
+            <h2>
+                <i class="fas fa-city"></i> 
+                Major Regions & Cities
+                <span class="jp-head">(ちほう と とし)</span>
+            </h2>
+            <ul class="gk-list">
+                <li><strong>北海道 (Hokkaidō)</strong> <span class="jp-term">- Hokkaido region</span><span class="mm-meaning">မြောက်ဘက်အကျဆုံးကျွန်း၊ အအေးဆုံး၊ နှင်းလျှောစီး၊ ဆာပ္ပိုရို</span></li>
+                <li><strong>東北 (Tōhoku)</strong> <span class="jp-term">- Tohoku region</span><span class="mm-meaning">အရှေ့မြောက်ဒေသ (ဆန်စပါးထွက်ရှိရာ၊ ဆန်ဒိုင်း၊ မိယာဂီ)</span></li>
+                <li><strong>関東 (Kantō)</strong> <span class="jp-term">- Kanto region</span><span class="mm-meaning">တိုကျိုမြို့တော်နှင့် ယိုကိုဟားမား (အကြီးဆုံးမြို့ပြဧရိယာ)</span></li>
+                <li><strong>中部 (Chūbu)</strong> <span class="jp-term">- Chubu region</span><span class="mm-meaning">ဗဟိုဒေသ (ဖူဂျီတောင်၊ နာဂိုယာမြို့)</span></li>
+                <li><strong>関西 (Kansai)</strong> <span class="jp-term">- Kansai region</span><span class="mm-meaning">အိုဆာကာ၊ ကျိုတို၊ ကိုဘီ (ယဉ်ကျေးမှုနှင့် စီးပွားရေးဗဟို)</span></li>
+                <li><strong>中国 (Chūgoku)</strong> <span class="jp-term">- Chugoku region</span><span class="mm-meaning">ဟီရိုရှီးမား၊ အိုကာယာမာ၊ ရှိမာနေး</span></li>
+                <li><strong>四国 (Shikoku)</strong> <span class="jp-term">- Shikoku region</span><span class="mm-meaning">အသေးဆုံးသော အဓိကကျွန်း (၈၈ ဘုရားကျောင်း ဘုရားဖူးခရီး)</span></li>
+                <li><strong>九州 (Kyūshū)</strong> <span class="jp-term">- Kyushu region</span><span class="mm-meaning">အနောက်တောင်ဘက်ကျွန်း (မီးတောင်များ၊ ဖူကုအိုကာ)</span></li>
+            </ul>
+        </div>
+        
+        <footer style="background: rgba(0, 0, 0, 0.85); border-radius: 20px; padding: 1.2rem; margin-top: 2rem; text-align: center;">
+            <div class="footer-links" style="display: flex; justify-content: center; gap: 1.5rem; margin-bottom: 1rem; flex-wrap: wrap;">
+                <a href="../pages/privacy.html" style="color: white; text-decoration: none;"><i class="fas fa-shield-alt"></i> Privacy Policy</a>
+                <a href="../pages/about.html" style="color: white; text-decoration: none;"><i class="fas fa-info-circle"></i> About</a>
+                <a href="../pages/contact.html" style="color: white; text-decoration: none;"><i class="fas fa-envelope"></i> Contact</a>
+                <a href="../pages/terms.html" style="color: white; text-decoration: none;"><i class="fas fa-file-contract"></i> Terms & Policy</a>
+            </div>
+            <p style="color: #7f8c8d;"><i class="fas fa-heart"></i> Next Gen Learning Myanmar - Japanese Geography & Nature / ဂျပန်ပထဝီဝင်နှင့် သဘာဝ</p>
+        </footer>
+    </div>
+    
+    <script>
+        function addBackToTopButton() {
+            if (document.querySelector('.back-to-top-btn')) return;
+            const btn = document.createElement('button');
+            btn.className = 'back-to-top-btn';
+            btn.innerHTML = '<i class="fas fa-arrow-up"></i><span>TOP</span>';
+            document.body.appendChild(btn);
+            window.addEventListener('scroll', () => btn.classList.toggle('show', window.scrollY > 300));
+            btn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+        }
+        addBackToTopButton();
+        
+        document.querySelectorAll('.gk-list li').forEach(item => {
+            item.addEventListener('click', () => {
+                const jpTextElement = item.querySelector('strong');
+                if (jpTextElement && window.speechSynthesis) {
+                    let japaneseOnly = jpTextElement.innerText.split('(')[0].trim();
+                    if (japaneseOnly) {
+                        window.speechSynthesis.cancel();
+                        const utterance = new SpeechSynthesisUtterance(japaneseOnly);
+                        utterance.lang = 'ja-JP';
+                        utterance.rate = 0.7;
+                        window.speechSynthesis.speak(utterance);
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>

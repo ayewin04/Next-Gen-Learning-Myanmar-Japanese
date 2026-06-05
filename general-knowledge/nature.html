@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Japanese Wildlife & Nature - Next Gen Learning Myanmar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Myanmar:wght@400;500;700&family=Noto+Sans+JP:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .gk-detail-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 1rem;
+        }
+        
+        .gk-detail-header {
+            background: white;
+            border-radius: 20px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .gk-detail-header h1 {
+            font-size: 1.8rem;
+            color: #2c3e50;
+            text-align: center;
+        }
+        
+        .gk-detail-header h1 i {
+            color: #e67e22;
+            margin-right: 10px;
+        }
+        
+        .gk-detail-header h1 span {
+            font-size: 1rem;
+            color: #e67e22;
+            display: block;
+            margin-top: 0.3rem;
+        }
+        
+        .gk-detail-header p {
+            text-align: center;
+            color: #7f8c8d;
+            margin-top: 0.5rem;
+        }
+        
+        .gk-info-card {
+            background: white;
+            border-radius: 20px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .gk-info-card h2 {
+            color: #e67e22;
+            border-left: 4px solid #e67e22;
+            padding-left: 1rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        
+        .gk-info-card h2 .jp-head {
+            font-size: 0.9rem;
+            color: #7f8c8d;
+            font-weight: normal;
+        }
+        
+        .gk-info-card p {
+            line-height: 1.6;
+            color: #2c3e50;
+            margin-bottom: 0.8rem;
+        }
+        
+        .gk-list {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .gk-list li {
+            margin: 0.8rem 0;
+            padding: 0.8rem;
+            background: #f8f9fa;
+            border-radius: 10px;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+        
+        .gk-list li:hover {
+            background: #e67e22;
+            color: white;
+            transform: translateX(5px);
+        }
+        
+        .gk-list li strong {
+            color: #e67e22;
+            font-size: 1rem;
+        }
+        
+        .gk-list li .jp-term {
+            font-family: 'Noto Sans JP', sans-serif;
+            font-size: 0.85rem;
+            color: #7f8c8d;
+            margin-left: 5px;
+        }
+        
+        .gk-list li .mm-meaning {
+            display: block;
+            font-size: 0.8rem;
+            color: #7f8c8d;
+            margin-top: 5px;
+            font-family: 'Noto Sans Myanmar', sans-serif;
+        }
+        
+        .gk-list li:hover strong,
+        .gk-list li:hover .jp-term,
+        .gk-list li:hover .mm-meaning {
+            color: white;
+        }
+        
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #e67e22;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: 0.3s;
+            margin-bottom: 1rem;
+        }
+        
+        .back-btn:hover {
+            background: #d35400;
+            transform: translateX(-3px);
+        }
+        
+        .bilingual-text {
+            margin: 0.5rem 0;
+        }
+        
+        .english-text {
+            color: #2c3e50;
+        }
+        
+        .burmese-text {
+            color: #7f8c8d;
+            font-family: 'Noto Sans Myanmar', sans-serif;
+            font-size: 0.9rem;
+            margin-top: 0.3rem;
+        }
+        
+        .nature-note {
+            background: #fff3e0;
+            border-left: 4px solid #e67e22;
+            padding: 1rem;
+            border-radius: 12px;
+            margin-top: 1rem;
+            font-size: 0.9rem;
+        }
+        
+        @media (max-width: 768px) {
+            .gk-detail-header h1 {
+                font-size: 1.4rem;
+            }
+            
+            .gk-info-card h2 {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="gk-detail-container">
+        <a href="../general-knowledge.html" class="back-btn">
+            <i class="fas fa-arrow-left"></i> Back to General Knowledge / နောက်သို့
+        </a>
+        
+        <div class="gk-detail-header">
+            <h1>
+                <i class="fas fa-leaf"></i> 
+                Japanese Wildlife & Nature
+                <span>にほんの やせいどうぶつ と しぜん</span>
+            </h1>
+            <p>Unique animals, forests, and conservation in Japan / ဂျပန်ရှိ ထူးခြားသောတိရစ္ဆာန်များ၊ သစ်တောများနှင့် ထိန်းသိမ်းရေး</p>
+        </div>
+        
+        <div class="gk-info-card">
+            <h2>
+                <i class="fas fa-monkey"></i> 
+                Famous Japanese Animals
+                <span class="jp-head">(ゆうめいな にほんの どうぶつ)</span>
+            </h2>
+            <div class="bilingual-text">
+                <p class="english-text">Japan is home to many unique animal species, some found nowhere else in the world.</p>
+                <p class="burmese-text">ဂျပန်သည် ကမ္ဘာပေါ်တွင် အခြားမည်သည့်နေရာမှမရှိသော ထူးခြားသောတိရစ္ဆာန်မျိုးစိတ်များ၏ နေရာဖြစ်သည်။</p>
+            </div>
+            <ul class="gk-list">
+                <li><strong>ニホンザル (Nihon Zaru)</strong> <span class="jp-term">- Japanese macaque / Snow monkey</span><span class="mm-meaning">ဂျပန်မျောက် (နှင်းမျောက်) - နှင်းထဲတွင် နေနိုင်သော မျောက်</span></li>
+                <li><strong>タヌキ (Tanuki)</strong> <span class="jp-term">- Japanese raccoon dog (folklore creature)</span><span class="mm-meaning">ဂျပန်ခွေးဝံ (ရိုးရာပုံပြင်သတ္တဝါ)</span></li>
+                <li><strong>キツネ (Kitsune)</strong> <span class="jp-term">- Japanese red fox (sacred messenger of Inari)</span><span class="mm-meaning">ဂျပန်မြေခွေး (အင်နာရိနတ်၏ မြင့်မြတ်သော တမန်)</span></li>
+                <li><strong>ニホンジカ (Nihon Jika)</strong> <span class="jp-term">- Sika deer (Nara deer are famous)</span><span class="mm-meaning">ဂျပန်သမင် (နာရာသမင်များ ကျော်ကြား)</span></li>
+                <li><strong>ツキノワグマ (Tsukinowaguma)</strong> <span class="jp-term">- Asian black bear (moon-shaped chest mark)</span><span class="mm-meaning">အာရှဝက်ဝံနက် (ရင်ဘတ်တွင် လပုံအမှတ်အသား)</span></li>
+                <li><strong>ホンドテン (Hondo Ten)</strong> <span class="jp-term">- Japanese marten (weasel family)</span><span class="mm-meaning">ဂျပန်မတ်တန်</span></li>
+                <li><strong>イリオモテヤマネコ (Iriomote Yamaneko)</strong> <span class="jp-term">- Iriomote cat (critically endangered, only on Iriomote Island)</span><span class="mm-meaning">အိရိအိုမိုတေတောကြောင် (မျိုးသုဉ်းလုနီးပါး)</span></li>
+            </ul>
+        </div>
+        
+        <div class="gk-info-card">
+            <h2>
+                <i class="fas fa-feather-alt"></i> 
+                Birds of Japan
+                <span class="jp-head">(にほんの とり)</span>
+            </h2>
+            <ul class="gk-list">
+                <li><strong>タンチョウ (Tancho)</strong> <span class="jp-term">- Red-crowned crane (symbol of luck, longevity, Japan's national bird)</span><span class="mm-meaning">ဂျပန်သင်္ကေတငှက် (ကံကောင်းခြင်းနှင့် အသက်ရှည်ခြင်း)</span></li>
+                <li><strong>ヤンバルクイナ (Yanbaru Kuina)</strong> <span class="jp-term">- Okinawa rail (flightless bird, endangered)</span><span class="mm-meaning">အိုကီနာဝါရထားငှက်</span></li>
+                <li><strong>カワセミ (Kawasemi)</strong> <span class="jp-term">- Kingfisher (brilliant blue and orange)</span><span class="mm-meaning">ငှက်ပတ္တမြား</span></li>
+                <li><strong>フクロウ (Fukurō)</strong> <span class="jp-term">- Owl (symbol of good fortune)</span><span class="mm-meaning">ဇီးကွက် (ကံကောင်းခြင်းသင်္ကေတ)</span></li>
+                <li><strong>スズメ (Suzume)</strong> <span class="jp-term">- Tree sparrow (common urban bird)</span><span class="mm-meaning">စာငှက်</span></li>
+                <li><strong>カラス (Karasu)</strong> <span class="jp-term">- Jungle crow (very common, intelligent, sometimes problematic)</span><span class="mm-meaning">ကျီးကန်း (အလွန်အသိဉာဏ်ကောင်း)</span></li>
+            </ul>
+        </div>
+        
+        <div class="gk-info-card">
+            <h2>
+                <i class="fas fa-fish"></i> 
+                Marine Life & Rivers
+                <span class="jp-head">(うみ の いきもの と かわ)</span>
+            </h2>
+            <ul class="gk-list">
+                <li><strong>錦鯉 (Nishikigoi)</strong> <span class="jp-term">- Koi carp (ornamental fish, symbol of love and friendship)</span><span class="mm-meaning">ကိုင် (အလှဆင်ငါး)</span></li>
+                <li><strong>ドクター・フィッシュ (Dokutā Fisshu)</strong> <span class="jp-term">- Doctor fish (Garra rufa, used in fish spas)</span><span class="mm-meaning">ငါးကုသရေး</span></li>
+                <li><strong>イルカ (Iruka)</strong> <span class="jp-term">- Dolphin (Taiji dolphin hunting controversial)</span><span class="mm-meaning">လင်းပိုင်</span></li>
+                <li><strong>クジラ (Kujira)</strong> <span class="jp-term">- Whale (Japan is one of few countries that hunts whales)</span><span class="mm-meaning">ဝေလငါး</span></li>
+                <li><strong>サケ (Sake) / 鮭 (Shake)</strong> <span class="jp-term">- Salmon (returns to rivers to spawn)</span><span class="mm-meaning">ဆယ်လ်မွန်</span></li>
+                <li><strong>ウナギ (Unagi)</strong> <span class="jp-term">- Freshwater eel (popular summer food)</span><span class="mm-meaning">ရေချိုငါးရှဉ့်</span></li>
+                <li><strong>タコ (Tako)</strong> <span class="jp-term">- Octopus (common in Japanese cuisine)</span><span class="mm-meaning">ရေဘဝဲ</span></li>
+            </ul>
+        </div>
+        
+        <div class="gk-info-card">
+            <h2>
+                <i class="fas fa-tree"></i> 
+                Forests & Plants
+                <span class="jp-head">(しんりん と しょくぶつ)</span>
+            </h2>
+            <ul class="gk-list">
+                <li><strong>杉 (Sugi)</strong> <span class="jp-term">- Japanese cedar (Cryptomeria, national tree)</span><span class="mm-meaning">ဂျပန်အာရဇ်ပင် (အမျိုးသားသစ်ပင်)</span></li>
+                <li><strong>桜 (Sakura)</strong> <span class="jp-term">- Cherry blossom (Somei-yoshino is most common)</span><span class="mm-meaning">ချယ်ရီပန်းပင်</span></li>
+                <li><strong>紅葉 (Momiji)</strong> <span class="jp-term">- Japanese maple (famous for autumn colors)</span><span class="mm-meaning">ဂျပန်မေပယ်ပင်</span></li>
+                <li><strong>竹 (Take)</strong> <span class="jp-term">- Bamboo (used in construction, crafts, food)</span><span class="mm-meaning">ဝါး</span></li>
+                <li><strong>屋久杉 (Yakusugi)</strong> <span class="jp-term">- Ancient Yakushima cedars (over 1,000 years old)</span><span class="mm-meaning">ရှေးဟောင်းအာရဇ်ပင်</span></li>
+                <li><strong>苔 (Koke)</strong> <span class="jp-term">- Moss (important in Japanese gardens)</span><span class="mm-meaning">ရေညှိ (ဂျပန်ဥယျာဉ်များတွင် အရေးပါ)</span></li>
+            </ul>
+        </div>
+        
+        <div class="gk-info-card">
+            <h2>
+                <i class="fas fa-bug"></i> 
+                Insects (Mushi)
+                <span class="jp-head">(むし)</span>
+            </h2>
+            <div class="bilingual-text">
+                <p class="english-text">Insects are beloved in Japan, especially in summer. Children collect beetles and crickets are kept as pets for their songs.</p>
+                <p class="burmese-text">အင်းဆက်များသည် ဂျပန်တွင် အထူးသဖြင့် နွေရာသီတွင် ချစ်ခင်ကြသည်။</p>
+            </div>
+            <ul class="gk-list">
+                <li><strong>カブトムシ (Kabutomushi)</strong> <span class="jp-term">- Rhinoceros beetle (very popular pet for boys)</span><span class="mm-meaning">ဦးချိုပိုးတောင်မာ</span></li>
+                <li><strong>クワガタ (Kuwagata)</strong> <span class="jp-term">- Stag beetle (another popular pet)</span><span class="mm-meaning">သမင်ချိုပိုး</span></li>
+                <li><strong>セミ (Semi)</strong> <span class="jp-term">- Cicada (loud summer singing)</span><span class="mm-meaning">စက္ကူခတ်ပိုး</span></li>
+                <li><strong>ホタル (Hotaru)</strong> <span class="jp-term">- Firefly (symbol of summer, romantic)</span><span class="mm-meaning">ပိုးစုန်းကြူး</span></li>
+                <li><strong>トンボ (Tonbo)</strong> <span class="jp-term">- Dragonfly (symbol of courage, victory)</span><span class="mm-meaning">သင်ပုန်းကြီး</span></li>
+                <li><strong>コオロギ (Kōrogi)</strong> <span class="jp-term">- Cricket (kept for their singing)</span><span class="mm-meaning">ပုရစ်</span></li>
+            </ul>
+        </div>
+        
+        <div class="gk-info-card">
+            <h2>
+                <i class="fas fa-shield-alt"></i> 
+                Conservation & Environmental Issues
+                <span class="jp-head">(ほぜん と かんきょう もんだい)</span>
+            </h2>
+            <ul class="gk-list">
+                <li><strong>国立公園 (Kokuritsu Kōen)</strong> <span class="jp-term">- National parks (34 parks protecting nature)</span><span class="mm-meaning">အမျိုးသားဥယျာဉ်များ</span></li>
+                <li><strong>世界自然遺産 (Sekai Shizen Isan)</strong> <span class="jp-term">- UNESCO Natural Heritage sites (Shiretoko, Yakushima, Amami-Oshima)</span><span class="mm-meaning">ယူနက်စကိုသဘာဝအမွေအနှစ်နေရာများ</span></li>
+                <li><strong>野生生物保護区 (Yasei Seibutsu Hogoku)</strong> <span class="jp-term">- Wildlife sanctuaries</span><span class="mm-meaning">တောရိုင်းတိရစ္ဆာန်ဘေးမဲ့တော</span></li>
+                <li><strong>外来種問題 (Gairai-shu Mondai)</strong> <span class="jp-term">- Invasive species problem (raccoons, nutria, black bass)</span><span class="mm-meaning">ပြင်ပမျိုးစိတ်ပြဿနာ</span></li>
+                <li><strong>森林減少 (Shinrin Genshō)</strong> <span class="jp-term">- Deforestation (historic, but now reforesting)</span><span class="mm-meaning">သစ်တောပြုန်းတီးမှု</span></li>
+                <li><strong>獣害 (Chūgai)</strong> <span class="jp-term">- Wildlife damage to agriculture (deer, boar, monkeys)</span><span class="mm-meaning">တောရိုင်းတိရစ္ဆာန်များကြောင့် စိုက်ပျိုးရေးထိခိုက်မှု</span></li>
+            </ul>
+            <div class="nature-note">
+                <i class="fas fa-paw"></i> <strong>Endemic Species / ဌာနေမျိုးစိတ်များ:</strong> Japan has many endemic species due to its island geography. About 40% of its mammals and 60% of its amphibians are found only in Japan. The Japanese giant salamander (オオサンショウウオ) is the second-largest amphibian in the world.
+                <div class="burmese-text" style="margin-top: 8px;">ဂျပန်တွင် ကျွန်းပထဝီဝင်အနေအထားကြောင့် ဌာနေမျိုးစိတ်များစွာရှိသည်။ နို့တိုက်သတ္တဝါများ၏ ၄၀% ခန့်နှင့် ကုန်းနေရေနေသတ္တဝါများ၏ ၆၀% ခန့်သည် ဂျပန်တွင်သာ တွေ့ရှိရသည်။</div>
+            </div>
+        </div>
+        
+        <footer style="background: rgba(0, 0, 0, 0.85); border-radius: 20px; padding: 1.2rem; margin-top: 2rem; text-align: center;">
+            <div class="footer-links" style="display: flex; justify-content: center; gap: 1.5rem; margin-bottom: 1rem; flex-wrap: wrap;">
+                <a href="../pages/privacy.html" style="color: white; text-decoration: none;"><i class="fas fa-shield-alt"></i> Privacy Policy</a>
+                <a href="../pages/about.html" style="color: white; text-decoration: none;"><i class="fas fa-info-circle"></i> About</a>
+                <a href="../pages/contact.html" style="color: white; text-decoration: none;"><i class="fas fa-envelope"></i> Contact</a>
+                <a href="../pages/terms.html" style="color: white; text-decoration: none;"><i class="fas fa-file-contract"></i> Terms & Policy</a>
+            </div>
+            <p style="color: #7f8c8d;"><i class="fas fa-heart"></i> Next Gen Learning Myanmar - Japanese Wildlife & Nature / ဂျပန်တောရိုင်းတိရစ္ဆာန်များနှင့် သဘာဝ</p>
+        </footer>
+    </div>
+    
+    <script>
+        function addBackToTopButton() {
+            if (document.querySelector('.back-to-top-btn')) return;
+            const btn = document.createElement('button');
+            btn.className = 'back-to-top-btn';
+            btn.innerHTML = '<i class="fas fa-arrow-up"></i><span>TOP</span>';
+            document.body.appendChild(btn);
+            window.addEventListener('scroll', () => btn.classList.toggle('show', window.scrollY > 300));
+            btn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+        }
+        addBackToTopButton();
+        
+        document.querySelectorAll('.gk-list li').forEach(item => {
+            item.addEventListener('click', () => {
+                const jpTextElement = item.querySelector('strong');
+                if (jpTextElement && window.speechSynthesis) {
+                    let japaneseOnly = jpTextElement.innerText.split('(')[0].trim();
+                    if (japaneseOnly) {
+                        window.speechSynthesis.cancel();
+                        const utterance = new SpeechSynthesisUtterance(japaneseOnly);
+                        utterance.lang = 'ja-JP';
+                        utterance.rate = 0.7;
+                        window.speechSynthesis.speak(utterance);
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>

@@ -924,3 +924,114 @@ footer p i {
         font-size: 1rem;
     }
 }
+
+/* PDF Download Section - Multiple Buttons */
+.pdf-download-section {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 20px 0;
+    flex-wrap: wrap;
+}
+
+.pdf-download-btn {
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 50px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.pdf-download-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+    background: linear-gradient(135deg, #2a5298 0%, #1e3c72 100%);
+}
+
+.pdf-download-btn i {
+    font-size: 18px;
+}
+
+.pdf-download-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* Grammar PDF button - different color */
+.pdf-download-btn.grammar-pdf {
+    background: linear-gradient(135deg, #2e7d32 0%, #1b5e20 100%);
+}
+
+.pdf-download-btn.grammar-pdf:hover {
+    background: linear-gradient(135deg, #1b5e20 0%, #2e7d32 100%);
+}
+
+/* Kanji PDF button - different color */
+.pdf-download-btn.kanji-pdf {
+    background: linear-gradient(135deg, #e65100 0%, #bf360c 100%);
+}
+
+.pdf-download-btn.kanji-pdf:hover {
+    background: linear-gradient(135deg, #bf360c 0%, #e65100 100%);
+}
+
+/* Loading Overlay improvements */
+#pdfLoadingOverlay div {
+    min-width: 300px;
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%) !important;
+}
+
+#pdfProgressText {
+    font-size: 12px;
+    margin-top: 10px;
+    opacity: 0.9;
+}
+
+/* Empty state improvements */
+.empty-state {
+    text-align: center;
+    padding: 60px 20px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+.empty-state i {
+    font-size: 48px;
+    color: #e67e22;
+    margin-bottom: 15px;
+}
+
+.empty-state p {
+    font-size: 18px;
+    color: #2c3e50;
+    margin-bottom: 8px;
+}
+
+.empty-state small {
+    color: #7f8c8d;
+    font-size: 14px;
+    
+}
+
+/* Ensure Japanese fonts are properly loaded for PDF generation */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap');
+
+/* PDF container styles */
+.pdf-export-container {
+    font-family: 'Noto Sans JP', 'MS Gothic', 'Meiryo', 'Noto Sans Myanmar', sans-serif;
+}
+
+/* Ensure Japanese characters render correctly */
+.japanese-text {
+    font-family: 'Noto Sans JP', 'MS Gothic', 'Meiryo', monospace;
+}

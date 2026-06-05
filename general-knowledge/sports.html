@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Sports in Japan - Next Gen Learning Myanmar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Myanmar:wght@400;500;700&family=Noto+Sans+JP:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .gk-detail-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 1rem;
+        }
+        
+        .gk-detail-header {
+            background: white;
+            border-radius: 20px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .gk-detail-header h1 {
+            font-size: 1.8rem;
+            color: #2c3e50;
+            text-align: center;
+        }
+        
+        .gk-detail-header h1 i {
+            color: #e67e22;
+            margin-right: 10px;
+        }
+        
+        .gk-detail-header h1 span {
+            font-size: 1rem;
+            color: #e67e22;
+            display: block;
+            margin-top: 0.3rem;
+        }
+        
+        .gk-detail-header p {
+            text-align: center;
+            color: #7f8c8d;
+            margin-top: 0.5rem;
+        }
+        
+        .gk-info-card {
+            background: white;
+            border-radius: 20px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .gk-info-card h2 {
+            color: #e67e22;
+            border-left: 4px solid #e67e22;
+            padding-left: 1rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        
+        .gk-info-card h2 .jp-head {
+            font-size: 0.9rem;
+            color: #7f8c8d;
+            font-weight: normal;
+        }
+        
+        .gk-info-card p {
+            line-height: 1.6;
+            color: #2c3e50;
+            margin-bottom: 0.8rem;
+        }
+        
+        .gk-list {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .gk-list li {
+            margin: 0.8rem 0;
+            padding: 0.8rem;
+            background: #f8f9fa;
+            border-radius: 10px;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+        
+        .gk-list li:hover {
+            background: #e67e22;
+            color: white;
+            transform: translateX(5px);
+        }
+        
+        .gk-list li strong {
+            color: #e67e22;
+            font-size: 1rem;
+        }
+        
+        .gk-list li .jp-term {
+            font-family: 'Noto Sans JP', sans-serif;
+            font-size: 0.85rem;
+            color: #7f8c8d;
+            margin-left: 5px;
+        }
+        
+        .gk-list li .mm-meaning {
+            display: block;
+            font-size: 0.8rem;
+            color: #7f8c8d;
+            margin-top: 5px;
+            font-family: 'Noto Sans Myanmar', sans-serif;
+        }
+        
+        .gk-list li:hover strong,
+        .gk-list li:hover .jp-term,
+        .gk-list li:hover .mm-meaning {
+            color: white;
+        }
+        
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #e67e22;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: 0.3s;
+            margin-bottom: 1rem;
+        }
+        
+        .back-btn:hover {
+            background: #d35400;
+            transform: translateX(-3px);
+        }
+        
+        .bilingual-text {
+            margin: 0.5rem 0;
+        }
+        
+        .english-text {
+            color: #2c3e50;
+        }
+        
+        .burmese-text {
+            color: #7f8c8d;
+            font-family: 'Noto Sans Myanmar', sans-serif;
+            font-size: 0.9rem;
+            margin-top: 0.3rem;
+        }
+        
+        .sports-note {
+            background: #fff3e0;
+            border-left: 4px solid #e67e22;
+            padding: 1rem;
+            border-radius: 12px;
+            margin-top: 1rem;
+            font-size: 0.9rem;
+        }
+        
+        @media (max-width: 768px) {
+            .gk-detail-header h1 {
+                font-size: 1.4rem;
+            }
+            
+            .gk-info-card h2 {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="gk-detail-container">
+        <a href="../general-knowledge.html" class="back-btn">
+            <i class="fas fa-arrow-left"></i> Back to General Knowledge / နောက်သို့
+        </a>
+        
+        <div class="gk-detail-header">
+            <h1>
+                <i class="fas fa-baseball-ball"></i> 
+                Sports in Japan
+                <span>にほんの スポーツ</span>
+            </h1>
+            <p>Traditional and modern sports popular in Japan / ဂျပန်တွင် ရေပန်းစားသော ရိုးရာနှင့် ခေတ်မီအားကစားများ</p>
+        </div>
+        
+        <div class="gk-info-card">
+            <h2>
+                <i class="fas fa-fist-raised"></i> 
+                Traditional Martial Arts
+                <span class="jp-head">(でんとうぶげい)</span>
+            </h2>
+            <div class="bilingual-text">
+                <p class="english-text">Japan is the birthplace of several martial arts that emphasize discipline, respect, and spiritual development.</p>
+                <p class="burmese-text">ဂျပန်သည် စည်းကမ်း၊ ရိုသေမှုနှင့် ဝိညာဉ်ရေးရာ ဖွံ့ဖြိုးတိုးတက်မှုကို အလေးပေးသော ကိုယ်ခံပညာ အများအပြား၏ မွေးရပ်မြေဖြစ်သည်။</p>
+            </div>
+            <ul class="gk-list">
+                <li><strong>相撲 (Sumō)</strong> <span class="jp-term">- Sumo wrestling (national sport)</span><span class="mm-meaning">ဂျပန်၏ အမျိုးသားအားကစား (ဧရာမနပန်းသမားများ)</span></li>
+                <li><strong>柔道 (Jūdō)</strong> <span class="jp-term">- Judo (Olympic sport, Jigoro Kano)</span><span class="mm-meaning">အိုလံပစ်အားကစား (ပျော့ပျောင်းသောလမ်းစဉ်)</span></li>
+                <li><strong>剣道 (Kendō)</strong> <span class="jp-term">- Kendo (Japanese fencing with bamboo swords)</span><span class="mm-meaning">ဝါးဓားဖြင့် ဂျပန်ဓားပညာ</span></li>
+                <li><strong>空手 (Karate)</strong> <span class="jp-term">- Karate (Okinawan martial art)</span><span class="mm-meaning">အိုကီနာဝါ ကိုယ်ခံပညာ (လက်ဗလာ၊ ခြေဗလာ)</span></li>
+                <li><strong>合気道 (Aikidō)</strong> <span class="jp-term">- Aikido (using opponent's energy)</span><span class="mm-meaning">ပြိုင်ဘက်၏ စွမ်းအင်ကို အသုံးပြုသော ကိုယ်ခံပညာ</span></li>
+                <li><strong>弓道 (Kyūdō)</strong> <span class="jp-term">- Kyudo (Japanese archery)</span><span class="mm-meaning">ဂျပန်လေးပညာ (တရားထိုင်ခြင်းနှင့် ဆက်စပ်)</span></li>
+            </ul>
+        </div>
+        
+        <div class="gk-info-card">
+            <h2>
+                <i class="fas fa-baseball-ball"></i> 
+                Most Popular Modern Sports
+                <span class="jp-head">(いちばん にんきな スポーツ)</span>
+            </h2>
+            <ul class="gk-list">
+                <li><strong>野球 (Yakyū)</strong> <span class="jp-term">- Baseball (most popular spectator sport)</span><span class="mm-meaning">ဂျပန်တွင် လူကြိုက်အများဆုံး အားကစား (Shohei Ohtani, Ichiro)</span></li>
+                <li><strong>サッカー (Sakkā)</strong> <span class="jp-term">- Soccer (J-League founded 1993)</span><span class="mm-meaning">ဂျပန်ဘောလုံးလိဂ် (ကမ္ဘာ့ဖလားတွင် အကြိမ်ကြိမ် ပါဝင်)</span></li>
+                <li><strong>ラグビー (Ragubī)</strong> <span class="jp-term">- Rugby (Japan hosted 2019 World Cup)</span><span class="mm-meaning">ဂျပန်သည် ၂၀၁၉ ရပ်ဘီကမ္ဘာ့ဖလားကို အိမ်ရှင်အဖြစ် လက်ခံကျင်းပ</span></li>
+                <li><strong>ゴルフ (Gorufu)</strong> <span class="jp-term">- Golf (very popular, many courses)</span><span class="mm-meaning">ဂေါက်သီး (ကွင်းအများအပြားရှိ)</span></li>
+                <li><strong>テニス (Tenisu)</strong> <span class="jp-term">- Tennis (Naomi Osaka, Kei Nishikori)</span><span class="mm-meaning">အိုဆာကာနာအိုမိ (ဂရင်းစလမ်းချန်ပီယံ)</span></li>
+            </ul>
+        </div>
+        
+        <div class="gk-info-card">
+            <h2>
+                <i class="fas fa-hands"></i> 
+                Sumo Wrestling (Detailed)
+                <span class="jp-head">(すもう の しょうさい)</span>
+            </h2>
+            <ul class="gk-list">
+                <li><strong>土俵 (Dohyō)</strong> <span class="jp-term">- Sumo ring made of clay</span><span class="mm-meaning">မြေစေးဖြင့် ပြုလုပ်ထားသော စူမိုကွင်း</span></li>
+                <li><strong>横綱 (Yokozuna)</strong> <span class="jp-term">- Grand champion (highest rank)</span><span class="mm-meaning">အမြင့်ဆုံးအဆင့် (ဒဏ္ဍာရီလာ နပန်းသမားများ)</span></li>
+                <li><strong>力士 (Rikishi)</strong> <span class="jp-term">- Sumo wrestler</span><span class="mm-meaning">စူမိုနပန်းသမား</span></li>
+                <li><strong>勝ち星 (Kachiboshi)</strong> <span class="jp-term">- Winning star (each win)</span><span class="mm-meaning">အနိုင်ပွဲတစ်ပွဲလျှင် ကြယ်တစ်ပွင့်</span></li>
+                <li><strong>本場所 (Honbasho)</strong> <span class="jp-term">- Official sumo tournament (6 per year)</span><span class="mm-meaning">တရားဝင် စူမိုပြိုင်ပွဲ (တစ်နှစ် ၆ ကြိမ်)</span></li>
+                <li><strong>塩 (Shio)</strong> <span class="jp-term">- Salt thrown for purification</span><span class="mm-meaning">စင်ကြယ်စေရန် ဆားဖြန့်ကြဲခြင်း</span></li>
+            </ul>
+        </div>
+        
+        <div class="gk-info-card">
+            <h2>
+                <i class="fas fa-medal"></i> 
+                Olympic Achievements
+                <span class="jp-head">(オリンピック せいせき)</span>
+            </h2>
+            <div class="bilingual-text">
+                <p class="english-text">Japan has hosted the Olympics four times: 1964 (Tokyo), 1972 (Sapporo Winter), 1998 (Nagano Winter), and 2020 (Tokyo, held in 2021).</p>
+                <p class="burmese-text">ဂျပန်သည် အိုလံပစ်ကို လေးကြိမ် အိမ်ရှင်အဖြစ် လက်ခံကျင်းပခဲ့သည်။</p>
+            </div>
+            <ul class="gk-list">
+                <li><strong>1964東京オリンピック (1964 Tōkyō Orinpikku)</strong> <span class="jp-term">- First Olympics in Asia</span><span class="mm-meaning">အာရှတွင် ပထမဆုံးအိုလံပစ် (ရှင်ကန်ဆန်ကို မိတ်ဆက်)</span></li>
+                <li><strong>2020東京オリンピック (2020 Tōkyō Orinpikku)</strong> <span class="jp-term">- Postponed to 2021 due to COVID</span><span class="mm-meaning">COVID ကြောင့် ၂၀၂၁ သို့ ရွှေ့ဆိုင်း</span></li>
+                <li><strong>柔道 (Jūdō)</strong> <span class="jp-term">- Judo (Japan dominates)</span><span class="mm-meaning">ဂျပန်သည် ဂျူဒိုတွင် အသာစီးရှိ</span></li>
+                <li><strong>スケートボード (Sukētobōdo)</strong> <span class="jp-term">- Skateboarding (Japan won gold in 2020)</span><span class="mm-meaning">စကိတ်ဘုတ် (၂၀၂၀ တွင် ရွှေတံဆိပ်)</span></li>
+                <li><strong>水泳 (Suiei)</strong> <span class="jp-term">- Swimming (multiple medalists)</span><span class="mm-meaning">ရေကူး (ဆုတံဆိပ် အများအပြား)</span></li>
+            </ul>
+            <div class="sports-note">
+                <i class="fas fa-baseball"></i> <strong>Baseball in Japan / ဂျပန်တွင် ဘေ့စ်ဘော:</strong> Japan's professional baseball league (NPB) has two leagues (Central and Pacific). The annual Japan Series championship is a major national event. Stars like Shohei Ohtani (Angels) and Ichiro Suzuki are national heroes.
+                <div class="burmese-text" style="margin-top: 8px;">ဂျပန်၏ ပရော်ဖက်ရှင်နယ် ဘေ့စ်ဘောလိဂ် (NPB) တွင် လိဂ်နှစ်ခု (ဗဟိုနှင့် ပစိဖိတ်) ရှိသည်။ နှစ်စဉ် ဂျပန်စီးရီးချန်ပီယံရှစ်သည် အဓိကအမျိုးသားပွဲတော်ဖြစ်သည်။</div>
+            </div>
+        </div>
+        
+        <div class="gk-info-card">
+            <h2>
+                <i class="fas fa-bicycle"></i> 
+                Other Popular Sports & Activities
+                <span class="jp-head">(ほかの にんき スポーツ)</span>
+            </h2>
+            <ul class="gk-list">
+                <li><strong>マラソン (Marason)</strong> <span class="jp-term">- Marathon (Tokyo Marathon is a major event)</span><span class="mm-meaning">တိုကျိုမာရသွန်သည် ကြီးမားသော ပွဲတစ်ခု</span></li>
+                <li><strong>スキー (Sukī)</strong> <span class="jp-term">- Skiing (Hokkaido and Nagano resorts)</span><span class="mm-meaning">နှင်းလျှောစီး (ဟော့ကိုင်းဒိုး၊ နာဂါနို)</span></li>
+                <li><strong>スノーボード (Sunōbōdo)</strong> <span class="jp-term">- Snowboarding</span><span class="mm-meaning">နှင်းလျှောစီးဘုတ်</span></li>
+                <li><strong>バレーボール (Barēbōru)</strong> <span class="jp-term">- Volleyball (Japanese women's team is strong)</span><span class="mm-meaning">ဘော်လီဘော (ဂျပန်အမျိုးသမီးအသင်း အားကောင်း)</span></li>
+                <li><strong>バスケットボール (Basukettobōru)</strong> <span class="jp-term">- Basketball (B.League growing)</span><span class="mm-meaning">ဘတ်စကတ်ဘော (B.လိဂ် ကြီးထွားလာ)</span></li>
+                <li><strong>卓球 (Takkyū)</strong> <span class="jp-term">- Table tennis (Japan is competitive)</span><span class="mm-meaning">စားပွဲတင်တင်းနစ် (ဂျပန် ပြိုင်ဆိုင်နိုင်)</span></li>
+            </ul>
+        </div>
+        
+        <div class="gk-info-card">
+            <h2>
+                <i class="fas fa-school"></i> 
+                School Sports (Bukatsu)
+                <span class="jp-head">(がっこう スポーツ - ぶかつ)</span>
+            </h2>
+            <div class="bilingual-text">
+                <p class="english-text">"Bukatsu" refers to extracurricular club activities in Japanese schools. Students often dedicate immense time and effort to their chosen sport.</p>
+                <p class="burmese-text">"ဘူကဆု" သည် ဂျပန်ကျောင်းများတွင် သင်ရိုးပြင်ပ ကလပ်လှုပ်ရှားမှုများကို ရည်ညွှန်းသည်။ ကျောင်းသားများသည် ၎င်းတို့ရွေးချယ်သော အားကစားအတွက် အချိန်နှင့် အားစိုက်မှု အလွန်အမင်း မြှုပ်နှံကြသည်။</p>
+            </div>
+            <ul class="gk-list">
+                <li><strong>甲子園 (Kōshien)</strong> <span class="jp-term">- High school baseball championship (national obsession)</span><span class="mm-meaning">အထက်တန်းကျောင်း ဘေ့စ်ဘောချန်ပီယံရှစ် (တစ်နိုင်ငံလုံး စွဲလမ်းမှု)</span></li>
+                <li><strong>インターハイ (Intāhai)</strong> <span class="jp-term">- National high school sports tournament</span><span class="mm-meaning">အမျိုးသားအထက်တန်းကျောင်း အားကစားပြိုင်ပွဲ</span></li>
+                <li><strong>箱根駅伝 (Hakone Ekiden)</strong> <span class="jp-term">- Hakone relay marathon (Jan 2-3)</span><span class="mm-meaning">ဟာကိုနေ လက်ဆင့်ကမ်း မာရသွန် (နှစ်စဉ် ဇန်နဝါရီ ၂-၃)</span></li>
+                <li><strong>運動部 (Undōbu)</strong> <span class="jp-term">- Sports club (tennis, soccer, judo, etc.)</span><span class="mm-meaning">အားကစားကလပ် (တင်းနစ်၊ ဘောလုံး၊ ဂျူဒို စသည်)</span></li>
+            </ul>
+            <div class="sports-note">
+                <i class="fas fa-heart"></i> <strong>Sportsmanship / အားကစားစိတ်ဓာတ်:</strong> Japanese sports culture values "Rei" (respect) and "Doryoku" (effort). Bowing before and after matches, cleaning the gym, and respecting opponents are fundamental.
+                <div class="burmese-text" style="margin-top: 8px;">ဂျပန်အားကစားယဉ်ကျေးမှုသည် "ရေ" (ရိုသေမှု) နှင့် "ဒိုရယ်ကု" (အားထုတ်မှု) တို့ကို တန်ဖိုးထားသည်။ ပွဲမတိုင်မီနှင့် ပွဲအပြီး ဦးညွှတ်ခြင်း၊ အားကစားရုံကို သန့်ရှင်းရေးလုပ်ခြင်းနှင့် ပြိုင်ဘက်ကို ရိုသေခြင်းတို့သည် အခြေခံဖြစ်သည်။</div>
+            </div>
+        </div>
+        
+        <footer style="background: rgba(0, 0, 0, 0.85); border-radius: 20px; padding: 1.2rem; margin-top: 2rem; text-align: center;">
+            <div class="footer-links" style="display: flex; justify-content: center; gap: 1.5rem; margin-bottom: 1rem; flex-wrap: wrap;">
+                <a href="../pages/privacy.html" style="color: white; text-decoration: none;"><i class="fas fa-shield-alt"></i> Privacy Policy</a>
+                <a href="../pages/about.html" style="color: white; text-decoration: none;"><i class="fas fa-info-circle"></i> About</a>
+                <a href="../pages/contact.html" style="color: white; text-decoration: none;"><i class="fas fa-envelope"></i> Contact</a>
+                <a href="../pages/terms.html" style="color: white; text-decoration: none;"><i class="fas fa-file-contract"></i> Terms & Policy</a>
+            </div>
+            <p style="color: #7f8c8d;"><i class="fas fa-heart"></i> Next Gen Learning Myanmar - Sports in Japan / ဂျပန်နိုင်ငံ၏ အားကစားများ</p>
+        </footer>
+    </div>
+    
+    <script>
+        function addBackToTopButton() {
+            if (document.querySelector('.back-to-top-btn')) return;
+            const btn = document.createElement('button');
+            btn.className = 'back-to-top-btn';
+            btn.innerHTML = '<i class="fas fa-arrow-up"></i><span>TOP</span>';
+            document.body.appendChild(btn);
+            window.addEventListener('scroll', () => btn.classList.toggle('show', window.scrollY > 300));
+            btn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+        }
+        addBackToTopButton();
+        
+        document.querySelectorAll('.gk-list li').forEach(item => {
+            item.addEventListener('click', () => {
+                const jpTextElement = item.querySelector('strong');
+                if (jpTextElement && window.speechSynthesis) {
+                    let japaneseOnly = jpTextElement.innerText.split('(')[0].trim();
+                    if (japaneseOnly) {
+                        window.speechSynthesis.cancel();
+                        const utterance = new SpeechSynthesisUtterance(japaneseOnly);
+                        utterance.lang = 'ja-JP';
+                        utterance.rate = 0.7;
+                        window.speechSynthesis.speak(utterance);
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>

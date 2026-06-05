@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Japanese Language - Next Gen Learning Myanmar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Myanmar:wght@400;500;700&family=Noto+Sans+JP:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .gk-detail-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 1rem;
+        }
+        
+        .gk-detail-header {
+            background: white;
+            border-radius: 20px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .gk-detail-header h1 {
+            font-size: 1.8rem;
+            color: #2c3e50;
+            text-align: center;
+        }
+        
+        .gk-detail-header h1 i {
+            color: #e67e22;
+            margin-right: 10px;
+        }
+        
+        .gk-detail-header h1 span {
+            font-size: 1rem;
+            color: #e67e22;
+            display: block;
+            margin-top: 0.3rem;
+        }
+        
+        .gk-detail-header p {
+            text-align: center;
+            color: #7f8c8d;
+            margin-top: 0.5rem;
+        }
+        
+        .gk-info-card {
+            background: white;
+            border-radius: 20px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .gk-info-card h2 {
+            color: #e67e22;
+            border-left: 4px solid #e67e22;
+            padding-left: 1rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        
+        .gk-info-card h2 .jp-head {
+            font-size: 0.9rem;
+            color: #7f8c8d;
+            font-weight: normal;
+        }
+        
+        .gk-info-card p {
+            line-height: 1.6;
+            color: #2c3e50;
+            margin-bottom: 0.8rem;
+        }
+        
+        .gk-list {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .gk-list li {
+            margin: 0.8rem 0;
+            padding: 0.8rem;
+            background: #f8f9fa;
+            border-radius: 10px;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+        
+        .gk-list li:hover {
+            background: #e67e22;
+            color: white;
+            transform: translateX(5px);
+        }
+        
+        .gk-list li strong {
+            color: #e67e22;
+            font-size: 1rem;
+        }
+        
+        .gk-list li .jp-term {
+            font-family: 'Noto Sans JP', sans-serif;
+            font-size: 0.85rem;
+            color: #7f8c8d;
+            margin-left: 5px;
+        }
+        
+        .gk-list li .mm-meaning {
+            display: block;
+            font-size: 0.8rem;
+            color: #7f8c8d;
+            margin-top: 5px;
+            font-family: 'Noto Sans Myanmar', sans-serif;
+        }
+        
+        .gk-list li:hover strong,
+        .gk-list li:hover .jp-term,
+        .gk-list li:hover .mm-meaning {
+            color: white;
+        }
+        
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #e67e22;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: 0.3s;
+            margin-bottom: 1rem;
+        }
+        
+        .back-btn:hover {
+            background: #d35400;
+            transform: translateX(-3px);
+        }
+        
+        .bilingual-text {
+            margin: 0.5rem 0;
+        }
+        
+        .english-text {
+            color: #2c3e50;
+        }
+        
+        .burmese-text {
+            color: #7f8c8d;
+            font-family: 'Noto Sans Myanmar', sans-serif;
+            font-size: 0.9rem;
+            margin-top: 0.3rem;
+        }
+        
+        .language-note {
+            background: #fff3e0;
+            border-left: 4px solid #e67e22;
+            padding: 1rem;
+            border-radius: 12px;
+            margin-top: 1rem;
+            font-size: 0.9rem;
+        }
+        
+        .script-demo {
+            font-family: 'Noto Sans JP', sans-serif;
+            font-size: 1.3rem;
+            background: #f8f9fa;
+            padding: 0.8rem;
+            border-radius: 12px;
+            text-align: center;
+            margin: 1rem 0;
+            letter-spacing: 4px;
+        }
+        
+        @media (max-width: 768px) {
+            .gk-detail-header h1 {
+                font-size: 1.4rem;
+            }
+            
+            .gk-info-card h2 {
+                font-size: 1.2rem;
+            }
+            
+            .script-demo {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="gk-detail-container">
+        <a href="../general-knowledge.html" class="back-btn">
+            <i class="fas fa-arrow-left"></i> Back to General Knowledge / နောက်သို့
+        </a>
+        
+        <div class="gk-detail-header">
+            <h1>
+                <i class="fas fa-language"></i> 
+                Japanese Language
+                <span>にほんご</span>
+            </h1>
+            <p>Writing systems, dialects, honorifics, and unique expressions / အရေးအသားစနစ်များ၊ ဒေသိယစကားများ၊ ရိုသေစကားများနှင့် ထူးခြားသောအသုံးအနှုန်းများ</p>
+        </div>
+        
+        <div class="gk-info-card">
+            <h2>
+                <i class="fas fa-pen-fancy"></i> 
+                Three Writing Systems
+                <span class="jp-head">(みっつの もじ たいけい)</span>
+            </h2>
+            <div class="bilingual-text">
+                <p class="english-text">Japanese uses three scripts: Hiragana (phonetic for native words), Katakana (phonetic for foreign words), and Kanji (Chinese characters representing meaning).</p>
+                <p class="burmese-text">ဂျပန်စာတွင် စာလုံးသုံးမျိုး သုံးသည်။ ဟီရဂန (ဂျပန်စကားလုံးများအတွက် အသံထွက်)၊ ခတကန (နိုင်ငံခြားစကားလုံးများအတွက်)၊ ကန်ဂျိ (အဓိပ္ပါယ်ကိုယ်စားပြုသော တရုတ်စာလုံးများ)။</p>
+            </div>
+            <div class="script-demo">
+                <span style="color:#e67e22;">ひらがな</span> · <span style="color:#2980b9;">カタカナ</span> · <span style="color:#27ae60;">漢字</span>
+            </div>
+            <ul class="gk-list">
+                <li><strong>ひらがな (Hiragana)</strong> <span class="jp-term">- 46 basic characters, used for grammar and native words</span><span class="mm-meaning">အခြေခံစာလုံး ၄၆ လုံး (သဒ္ဒါနှင့် ဂျပန်စကားလုံးများအတွက်)</span></li>
+                <li><strong>カタカナ (Katakana)</strong> <span class="jp-term">- 46 characters, used for foreign loanwords (e.g., コーヒー = coffee)</span><span class="mm-meaning">နိုင်ငံခြားမှ မွေးစားစကားလုံးများအတွက် (ဥပမာ - ကော်ဖီ)</span></li>
+                <li><strong>漢字 (Kanji)</strong> <span class="jp-term">- Chinese characters (2,000+ for daily use, 50,000+ total)</span><span class="mm-meaning">တရုတ်စာလုံးများ (နေ့စဉ်သုံး ၂၀၀၀ ကျော်၊ စုစုပေါင်း ၅၀၀၀၀ ကျော်)</span></li>
+                <li><strong>ローマ字 (Rōmaji)</strong> <span class="jp-term">- Roman alphabet (used for keyboards, signs)</span><span class="mm-meaning">ရောမအက္ခရာ (ကီးဘုတ်၊ ဆိုင်းဘုတ်များတွင် သုံး)</span></li>
+            </ul>
+            <div class="language-note">
+                <i class="fas fa-info-circle"></i> <strong>Example / ဥပမာ:</strong> "I eat sushi" = 「私は寿司を食べます」(Watashi wa sushi o tabemasu)<br>
+                Breakdown: 私 (kanji) + は (hiragana) + 寿司 (kanji) + を (hiragana) + 食べ (kanji) + ます (hiragana)
+                <div class="burmese-text" style="margin-top: 8px;">ဤစာကြောင်းတွင် စာလုံးသုံးမျိုးလုံး ရောနှောပါဝင်သည်။</div>
+            </div>
+        </div>
+        
+        <div class="gk-info-card">
+            <h2>
+                <i class="fas fa-comments"></i> 
+                Basic Greetings & Phrases
+                <span class="jp-head">(あいさつ と きほん ふれーず)</span>
+            </h2>
+            <ul class="gk-list">
+                <li><strong>おはようございます (Ohayō Gozaimasu)</strong> <span class="jp-term">- Good morning (polite)</span><span class="mm-meaning">မင်္ဂလာနံနက်ခင်းပါ</span></li>
+                <li><strong>こんにちは (Konnichiwa)</strong> <span class="jp-term">- Hello / Good afternoon</span><span class="mm-meaning">မင်္ဂလာပါ</span></li>
+                <li><strong>こんばんは (Konbanwa)</strong> <span class="jp-term">- Good evening</span><span class="mm-meaning">မင်္ဂလာညချမ်းပါ</span></li>
+                <li><strong>おやすみなさい (Oyasuminasai)</strong> <span class="jp-term">- Good night</span><span class="mm-meaning">မင်္ဂလာညပါ</span></li>
+                <li><strong>ありがとうございます (Arigatō Gozaimasu)</strong> <span class="jp-term">- Thank you (polite)</span><span class="mm-meaning">ကျေးဇူးတင်ပါတယ်</span></li>
+                <li><strong>すみません (Sumimasen)</strong> <span class="jp-term">- Excuse me / I'm sorry (very versatile)</span><span class="mm-meaning">တောင်းပန်ပါတယ် / ခွင့်လွှတ်ပါ (အသုံးများဆုံး)</span></li>
+                <li><strong>ごめんなさい (Gomennasai)</strong> <span class="jp-term">- I'm sorry (more apologetic)</span><span class="mm-meaning">တောင်းပန်ပါတယ် (ပို၍ နောင်တရသော)</span></li>
+                <li><strong>いただきます (Itadakimasu)</strong> <span class="jp-term">- Said before meals ("I humbly receive")</span><span class="mm-meaning">မစားမီ ပြောသော စကား (ကျေးဇူးတင်စကား)</span></li>
+                <li><strong>ごちそうさまでした (Gochisōsama Deshita)</strong> <span class="jp-term">- Said after meals ("Thank you for the meal")</span><span class="mm-meaning">စားပြီးနောက် ပြောသော စကား</span></li>
+                <li><strong>はい (Hai) / いいえ (Iie)</strong> <span class="jp-term">- Yes / No</span><span class="mm-meaning">ဟုတ်ကဲ့ / မဟုတ်ပါ</span></li>
+            </ul>
+        </div>
+        
+        <div class="gk-info-card">
+            <h2>
+                <i class="fas fa-crown"></i> 
+                Honorifics (Keigo) - Respect Language
+                <span class="jp-head">(けいご)</span>
+            </h2>
+            <div class="bilingual-text">
+                <p class="english-text">Japanese has a complex honorific system to show respect based on social hierarchy. There are three main levels.</p>
+                <p class="burmese-text">ဂျပန်တွင် လူမှုအဆင့်အတန်းအလိုက် ရိုသေမှုပြသရန် ရှုပ်ထွေးသော ဂုဏ်ပြုစကားလုံးစနစ်ရှိသည်။ အဆင့်သုံးဆင့်ရှိသည်။</p>
+            </div>
+            <ul class="gk-list">
+                <li><strong>尊敬語 (Sonkeigo)</strong> <span class="jp-term">- Respectful language (raising others)</span><span class="mm-meaning">သူတစ်ပါးကို မြှင့်တင်သော စကား (ဥပမာ - いらっしゃる = to go/come/be)</span></li>
+                <li><strong>謙譲語 (Kenjōgo)</strong> <span class="jp-term">- Humble language (lowering oneself)</span><span class="mm-meaning">ကိုယ့်ကိုယ်ကို နှိမ့်ချသော စကား (ဥပမာ - 参る = to go)</span></li>
+                <li><strong>丁寧語 (Teineigo)</strong> <span class="jp-term">- Polite language (です/ます forms)</span><span class="mm-meaning">ယဉ်ကျေးသောစကား (です/ます ပုံစံများ)</span></li>
+                <li><strong>～さん (~san)</strong> <span class="jp-term">- Most common honorific suffix (Mr./Ms.)</span><span class="mm-meaning">အသုံးအများဆုံး ရိုသေမှုနောက်ဆက် (မစ္စတာ/မစ္စ)</span></li>
+                <li><strong>～様 (~sama)</strong> <span class="jp-term">- Very respectful (customers, deities, letters)</span><span class="mm-meaning">အလွန်ရိုသေသော (ဖောက်သည်များ၊ နတ်ဘုရားများ၊ စာများ)</span></li>
+                <li><strong>～君 (~kun)</strong> <span class="jp-term">- For young men / juniors (informal)</span><span class="mm-meaning">လူငယ်ယောက်ျားများ/အဆင့်နိမ့်သူများအတွက်</span></li>
+                <li><strong>～ちゃん (~chan)</strong> <span class="jp-term">- For children, girls, close friends (cute)</span><span class="mm-meaning">ကလေးများ၊ မိန်းကလေးများ၊ ရင်းနှီးသောသူငယ်ချင်းများအတွက် (ချစ်စရာ)</span></li>
+            </ul>
+        </div>
+        
+        <div class="gk-info-card">
+            <h2>
+                <i class="fas fa-map-marker-alt"></i> 
+                Dialects (Hōgen)
+                <span class="jp-head">(ほうげん)</span>
+            </h2>
+            <ul class="gk-list">
+                <li><strong>標準語 (Hyōjungo)</strong> <span class="jp-term">- Standard Japanese (based on Tokyo dialect)</span><span class="mm-meaning">စံဂျပန်စကား (တိုကျိုဒေသိယကို အခြေခံ)</span></li>
+                <li><strong>関西弁 (Kansai-ben)</strong> <span class="jp-term">- Kansai dialect (Osaka, Kyoto, Kobe - famous for comedy)</span><span class="mm-meaning">ခန်ဆိုင်းဒေသိယ (အိုဆာကာ၊ ကျိုတို၊ ကိုဘီ - ဟာသအတွက် ကျော်ကြား)</span></li>
+                <li><strong>大阪弁 (Ōsaka-ben)</strong> <span class="jp-term">- Osaka dialect (very distinctive, "ookini" = thank you)</span><span class="mm-meaning">အိုဆာကာဒေသိယ (အလွန်ထူးခြား)</span></li>
+                <li><strong>広島弁 (Hiroshima-ben)</strong> <span class="jp-term">- Hiroshima dialect (different verb endings)</span><span class="mm-meaning">ဟီရိုရှီးမားဒေသိယ</span></li>
+                <li><strong>博多弁 (Hakata-ben)</strong> <span class="jp-term">- Hakata dialect (Fukuoka, soft and melodic)</span><span class="mm-meaning">ဖူကုအိုကာဒေသိယ (ပျော့ပျောင်းပြီး သာယာ)</span></li>
+                <li><strong>東北弁 (Tōhoku-ben)</strong> <span class="jp-term">- Tohoku dialect (northern, considered rustic)</span><span class="mm-meaning">တိုဟိုကုဒေသိယ (မြောက်ပိုင်း)</span></li>
+            </ul>
+        </div>
+        
+        <div class="gk-info-card">
+            <h2>
+                <i class="fas fa-smile"></i> 
+                Unique Japanese Expressions
+                <span class="jp-head">(とくべつな ひょうげん)</span>
+            </h2>
+            <ul class="gk-list">
+                <li><strong>頑張って (Ganbatte)</strong> <span class="jp-term">- "Do your best!" / "Good luck!"</span><span class="mm-meaning">"ကြိုးစားပါ!" / "ကံကောင်းပါစေ!"</span></li>
+                <li><strong>もったいない (Mottainai)</strong> <span class="jp-term">- "What a waste!" (regret over wastefulness)</span><span class="mm-meaning">"ဖြုန်းတီးလိုက်တာ!" (အလေအလွင့်အတွက် နောင်တရခြင်း)</span></li>
+                <li><strong>仕方がない (Shikata ga nai)</strong> <span class="jp-term">- "It can't be helped" (acceptance of unavoidable)</span><span class="mm-meaning">"ဘာမှမတတ်နိုင်ဘူး" (ရှောင်လွှဲ၍မရသောအရာကို လက်ခံခြင်း)</span></li>
+                <li><strong>お疲れ様です (Otsukaresama desu)</strong> <span class="jp-term">- "Thank you for your hard work" (used at work)</span><span class="mm-meaning">"ကြိုးစားအားထုတ်မှုအတွက် ကျေးဇူးတင်ပါတယ်" (အလုပ်ခွင်၌ သုံး)</span></li>
+                <li><strong>よろしくお願いします (Yoroshiku onegai shimasu)</strong> <span class="jp-term">- "Please treat me well" / "Nice to meet you" (very versatile)</span><span class="mm-meaning">"ကောင်းမွန်စွာ ဆက်ဆံပါရန်" (အလွန်အသုံးများ)</span></li>
+                <li><strong>いただきます (Itadakimasu)</strong> <span class="jp-term">- Gratitude before eating (literally "I humbly receive")</span><span class="mm-meaning">မစားမီ ကျေးဇူးတင်စကား</span></li>
+                <li><strong>お邪魔します (Ojama shimasu)</strong> <span class="jp-term">- "Sorry for intruding" (when entering someone's home)</span><span class="mm-meaning">"ဝင်ရောက်နှောက်ယှက်သည့်အတွက် တောင်းပန်ပါတယ်" (အိမ်သို့ဝင်စဉ်)</span></li>
+            </ul>
+        </div>
+        
+        <div class="gk-info-card">
+            <h2>
+                <i class="fas fa-genderless"></i> 
+                Personal Pronouns & Gender
+                <span class="jp-head">(だいめいし と せいべつ)</span>
+            </h2>
+            <ul class="gk-list">
+                <li><strong>私 (Watashi)</strong> <span class="jp-term">- Most common "I" (neutral/polite, used by both genders)</span><span class="mm-meaning">အသုံးအများဆုံး "ငါ/ကျွန်တော်/ကျွန်မ" (ကြားနေ/ယဉ်ကျေး�)</span></li>
+                <li><strong>僕 (Boku)</strong> <span class="jp-term">- "I" (casual, typically male)</span><span class="mm-meaning">"ငါ" (ပေါ့ပေါ့ပါးပါး၊ အများအားဖြင့် ယောက်ျား)</span></li>
+                <li><strong>俺 (Ore)</strong> <span class="jp-term">- "I" (very casual, masculine, sometimes rude)</span><span class="mm-meaning">"ငါ" (အလွန်ပေါ့ပေါ့ပါးပါး၊ ယောက်ျားဆန်သော၊ တစ်ခါတစ်ရံ ရိုင်း)</span></li>
+                <li><strong>あたし (Atashi)</strong> <span class="jp-term">- "I" (casual, feminine)</span><span class="mm-meaning">"ငါ" (ပေါ့ပေါ့ပါးပါး၊ မိန်းမဆန်)</span></li>
+                <li><strong>あなた (Anata)</strong> <span class="jp-term">- "You" (polite, but often avoided; can sound distant)</span><span class="mm-meaning">"ခင်ဗျား/မင်း" (ယဉ်ကျေးသော်လည်း မကြာခဏ ရှောင်ရှား)</span></li>
+                <li><strong>君 (Kimi)</strong> <span class="jp-term">- "You" (casual, usually male to female or to juniors)</span><span class="mm-meaning">"မင်း" (ပေါ့ပေါ့ပါးပါး)</span></li>
+                <li><strong>お前 (Omae)</strong> <span class="jp-term">- "You" (very casual, can be rude or familiar)</span><span class="mm-meaning">"မင်း" (အလွန်ပေါ့ပေါ့ပါးပါး၊ ရိုင်းနိုင်)</span></li>
+            </ul>
+            <div class="language-note">
+                <i class="fas fa-lightbulb"></i> <strong>Tip / အကြံပြုချက်:</strong> In Japanese, it's common to use a person's name + honorific instead of "you." For example, "Tanaka-san" instead of "anata." Also, subjects are often omitted when context makes them clear.
+                <div class="burmese-text" style="margin-top: 8px;">ဂျပန်တွင် "သင်ယောက်ျား" အစား လူ၏အမည် + ရိုသေမှုနောက်ဆက်ကို သုံးလေ့ရှိသည်။ ဥပမာ - "အနတ" အစား "တာနာကာဆန်"။ ထို့ပြင် ဆက်စပ်မှုရှင်းလင်းပါက စကားစုများကို မကြာခဏ ချန်လှပ်လေ့ရှိသည်။</div>
+            </div>
+        </div>
+        
+        <footer style="background: rgba(0, 0, 0, 0.85); border-radius: 20px; padding: 1.2rem; margin-top: 2rem; text-align: center;">
+            <div class="footer-links" style="display: flex; justify-content: center; gap: 1.5rem; margin-bottom: 1rem; flex-wrap: wrap;">
+                <a href="../pages/privacy.html" style="color: white; text-decoration: none;"><i class="fas fa-shield-alt"></i> Privacy Policy</a>
+                <a href="../pages/about.html" style="color: white; text-decoration: none;"><i class="fas fa-info-circle"></i> About</a>
+                <a href="../pages/contact.html" style="color: white; text-decoration: none;"><i class="fas fa-envelope"></i> Contact</a>
+                <a href="../pages/terms.html" style="color: white; text-decoration: none;"><i class="fas fa-file-contract"></i> Terms & Policy</a>
+            </div>
+            <p style="color: #7f8c8d;"><i class="fas fa-heart"></i> Next Gen Learning Myanmar - Japanese Language / ဂျပန်ဘာသာစကား</p>
+        </footer>
+    </div>
+    
+    <script>
+        function addBackToTopButton() {
+            if (document.querySelector('.back-to-top-btn')) return;
+            const btn = document.createElement('button');
+            btn.className = 'back-to-top-btn';
+            btn.innerHTML = '<i class="fas fa-arrow-up"></i><span>TOP</span>';
+            document.body.appendChild(btn);
+            window.addEventListener('scroll', () => btn.classList.toggle('show', window.scrollY > 300));
+            btn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+        }
+        addBackToTopButton();
+        
+        document.querySelectorAll('.gk-list li').forEach(item => {
+            item.addEventListener('click', () => {
+                const jpTextElement = item.querySelector('strong');
+                if (jpTextElement && window.speechSynthesis) {
+                    let japaneseOnly = jpTextElement.innerText.split('(')[0].trim();
+                    if (japaneseOnly) {
+                        window.speechSynthesis.cancel();
+                        const utterance = new SpeechSynthesisUtterance(japaneseOnly);
+                        utterance.lang = 'ja-JP';
+                        utterance.rate = 0.7;
+                        window.speechSynthesis.speak(utterance);
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>

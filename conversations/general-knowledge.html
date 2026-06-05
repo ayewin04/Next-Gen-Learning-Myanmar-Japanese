@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>General Knowledge - Next Gen Learning Myanmar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Myanmar:wght@400;500;700&family=Noto+Sans+JP:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 1rem;
+        }
+        
+        .app-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        /* Header Styles */
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            position: relative;
+        }
+        
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #e67e22;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: 0.3s;
+            margin-bottom: 1rem;
+        }
+        
+        .back-btn:hover {
+            background: #d35400;
+            transform: translateX(-3px);
+        }
+        
+        header h1 {
+            text-align: center;
+            font-size: 1.8rem;
+            color: #2c3e50;
+        }
+        
+        header h1 i {
+            color: #e67e22;
+            margin-right: 10px;
+        }
+        
+        header p {
+            text-align: center;
+            color: #7f8c8d;
+            margin-top: 0.5rem;
+        }
+        
+        /* Category Grid */
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .category-card {
+            background: white;
+            border-radius: 20px;
+            padding: 1.5rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        
+        .category-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(230, 126, 34, 0.2);
+            border: 1px solid #e67e22;
+        }
+        
+        .category-card i {
+            font-size: 2.5rem;
+            color: #e67e22;
+            margin-bottom: 1rem;
+        }
+        
+        .category-card h3 {
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+        }
+        
+        .category-card p {
+            color: #7f8c8d;
+            font-size: 0.85rem;
+            line-height: 1.4;
+        }
+        
+        /* Footer */
+        footer {
+            background: rgba(0, 0, 0, 0.85);
+            border-radius: 20px;
+            padding: 1.2rem;
+            margin-top: 2rem;
+            text-align: center;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+        }
+        
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 0.8rem;
+            transition: 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .footer-links a:hover {
+            color: #f5b042;
+        }
+        
+        footer p {
+            color: #7f8c8d;
+            font-size: 0.7rem;
+        }
+        
+        /* Back to Top Button */
+        .back-to-top-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #e67e22, #d35400);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 2px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease;
+            opacity: 0;
+            visibility: hidden;
+            z-index: 1000;
+        }
+        
+        .back-to-top-btn.show {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .back-to-top-btn:hover {
+            transform: translateY(-3px);
+            background: linear-gradient(135deg, #d35400, #e67e22);
+        }
+        
+        .back-to-top-btn i {
+            font-size: 1.2rem;
+        }
+        
+        .back-to-top-btn span {
+            font-size: 0.6rem;
+        }
+        
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.3rem;
+            }
+            
+            .category-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+            
+            .back-to-top-btn {
+                bottom: 20px;
+                right: 20px;
+                width: 45px;
+                height: 45px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <a href="index.html" class="back-btn">
+                <i class="fas fa-arrow-left"></i> Back to Home
+            </a>
+            <h1>
+                <i class="fas fa-landmark"></i>
+                General Knowledge - Japan
+            </h1>
+            <p>にほんの ちしき - Learn about Japanese culture, history, laws, and famous things</p>
+        </header>
+        
+        <div class="category-grid">
+            <div class="category-card" onclick="location.href='gk-culture.html'">
+                <i class="fas fa-festival"></i>
+                <h3>Culture & Traditions</h3>
+                <p>Festivals, tea ceremony, kimono, kabuki, and Japanese customs</p>
+            </div>
+            
+            <div class="category-card" onclick="location.href='gk-history.html'">
+                <i class="fas fa-history"></i>
+                <h3>History</h3>
+                <p>Samurai, shogun, Meiji Restoration, World War II, and modern Japan</p>
+            </div>
+            
+            <div class="category-card" onclick="location.href='gk-law.html'">
+                <i class="fas fa-gavel"></i>
+                <h3>Laws & Rules</h3>
+                <p>Important laws, regulations, and social rules in Japan</p>
+            </div>
+            
+            <div class="category-card" onclick="location.href='gk-famous.html'">
+                <i class="fas fa-mountain"></i>
+                <h3>Famous Places & Things</h3>
+                <p>Mount Fuji, Tokyo Tower, Shibuya, sushi, anime, and more</p>
+            </div>
+            
+            <div class="category-card" onclick="location.href='gk-food.html'">
+                <i class="fas fa-utensils"></i>
+                <h3>Japanese Food</h3>
+                <p>Sushi, ramen, tempura, sake, and regional specialties</p>
+            </div>
+            
+            <div class="category-card" onclick="location.href='gk-etiquette.html'">
+                <i class="fas fa-hand-peace"></i>
+                <h3>Etiquette & Manners</h3>
+                <p>Bowing, shoes off, gift-giving, onsen rules, and dining etiquette</p>
+            </div>
+            
+            <div class="category-card" onclick="location.href='gk-holidays.html'">
+                <i class="fas fa-calendar-alt"></i>
+                <h3>Holidays & Festivals</h3>
+                <p>New Year, Golden Week, Obon, Cherry blossom festivals, and more</p>
+            </div>
+            
+            <div class="category-card" onclick="location.href='gk-inventions.html'">
+                <i class="fas fa-microchip"></i>
+                <h3>Inventions & Technology</h3>
+                <p>Bullet trains, robots, Nintendo, Sony, and Japanese innovations</p>
+            </div>
+        </div>
+        
+        <footer>
+            <div class="footer-links">
+                <a href="pages/privacy.html"><i class="fas fa-shield-alt"></i> Privacy Policy</a>
+                <a href="pages/about.html"><i class="fas fa-info-circle"></i> About</a>
+                <a href="pages/contact.html"><i class="fas fa-envelope"></i> Contact</a>
+                <a href="pages/terms.html"><i class="fas fa-file-contract"></i> Terms & Policy</a>
+            </div>
+            <p><i class="fas fa-heart"></i> Next Gen Learning Myanmar - General Knowledge</p>
+        </footer>
+    </div>
+    
+    <script>
+        function addBackToTopButton() {
+            if (document.querySelector('.back-to-top-btn')) return;
+            const btn = document.createElement('button');
+            btn.className = 'back-to-top-btn';
+            btn.innerHTML = '<i class="fas fa-arrow-up"></i><span>TOP</span>';
+            document.body.appendChild(btn);
+            window.addEventListener('scroll', () => btn.classList.toggle('show', window.scrollY > 300));
+            btn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+        }
+        addBackToTopButton();
+    </script>
+</body>
+</html>

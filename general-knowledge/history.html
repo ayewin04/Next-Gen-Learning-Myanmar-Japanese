@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Japanese History - Next Gen Learning Myanmar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Myanmar:wght@400;500;700&family=Noto+Sans+JP:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .gk-detail-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 1rem;
+        }
+        
+        .gk-detail-header {
+            background: white;
+            border-radius: 20px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .gk-detail-header h1 {
+            font-size: 1.8rem;
+            color: #2c3e50;
+            text-align: center;
+        }
+        
+        .gk-detail-header h1 i {
+            color: #e67e22;
+            margin-right: 10px;
+        }
+        
+        .gk-detail-header h1 span {
+            font-size: 1rem;
+            color: #e67e22;
+            display: block;
+            margin-top: 0.3rem;
+        }
+        
+        .gk-detail-header p {
+            text-align: center;
+            color: #7f8c8d;
+            margin-top: 0.5rem;
+        }
+        
+        .gk-info-card {
+            background: white;
+            border-radius: 20px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .gk-info-card h2 {
+            color: #e67e22;
+            border-left: 4px solid #e67e22;
+            padding-left: 1rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        
+        .gk-info-card h2 .jp-head {
+            font-size: 0.9rem;
+            color: #7f8c8d;
+            font-weight: normal;
+        }
+        
+        .gk-info-card p {
+            line-height: 1.6;
+            color: #2c3e50;
+            margin-bottom: 0.8rem;
+        }
+        
+        .gk-list {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .gk-list li {
+            margin: 0.8rem 0;
+            padding: 0.8rem;
+            background: #f8f9fa;
+            border-radius: 10px;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+        
+        .gk-list li:hover {
+            background: #e67e22;
+            color: white;
+            transform: translateX(5px);
+        }
+        
+        .gk-list li strong {
+            color: #e67e22;
+            font-size: 1rem;
+        }
+        
+        .gk-list li .jp-term {
+            font-family: 'Noto Sans JP', sans-serif;
+            font-size: 0.85rem;
+            color: #7f8c8d;
+            margin-left: 5px;
+        }
+        
+        .gk-list li .mm-meaning {
+            display: block;
+            font-size: 0.8rem;
+            color: #7f8c8d;
+            margin-top: 5px;
+            font-family: 'Noto Sans Myanmar', sans-serif;
+        }
+        
+        .gk-list li:hover strong,
+        .gk-list li:hover .jp-term,
+        .gk-list li:hover .mm-meaning {
+            color: white;
+        }
+        
+        .timeline-item {
+            margin: 1rem 0;
+            padding: 1rem;
+            background: #f8f9fa;
+            border-radius: 10px;
+            border-left: 4px solid #e67e22;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        
+        .timeline-item:hover {
+            background: #e67e22;
+            color: white;
+            transform: translateX(5px);
+        }
+        
+        .timeline-item .year {
+            font-weight: bold;
+            font-size: 1.2rem;
+            color: #e67e22;
+        }
+        
+        .timeline-item:hover .year {
+            color: white;
+        }
+        
+        .timeline-item .event-en {
+            margin: 0.3rem 0;
+        }
+        
+        .timeline-item .event-mm {
+            font-size: 0.85rem;
+            font-family: 'Noto Sans Myanmar', sans-serif;
+            color: #7f8c8d;
+        }
+        
+        .timeline-item:hover .event-mm {
+            color: white;
+        }
+        
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #e67e22;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: 0.3s;
+            margin-bottom: 1rem;
+        }
+        
+        .back-btn:hover {
+            background: #d35400;
+            transform: translateX(-3px);
+        }
+        
+        .bilingual-text {
+            margin: 0.5rem 0;
+        }
+        
+        .english-text {
+            color: #2c3e50;
+        }
+        
+        .burmese-text {
+            color: #7f8c8d;
+            font-family: 'Noto Sans Myanmar', sans-serif;
+            font-size: 0.9rem;
+            margin-top: 0.3rem;
+        }
+        
+        @media (max-width: 768px) {
+            .gk-detail-header h1 {
+                font-size: 1.4rem;
+            }
+            
+            .gk-info-card h2 {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="gk-detail-container">
+        <a href="../general-knowledge.html" class="back-btn">
+            <i class="fas fa-arrow-left"></i> Back to General Knowledge / ဗဟုသုတစာမျက်နှာသို့
+        </a>
+        
+        <div class="gk-detail-header">
+            <h1>
+                <i class="fas fa-history"></i> 
+                Japanese History
+                <span>にほんの れきし - ဂျပန်သမိုင်း</span>
+            </h1>
+            <p>Learn about Japan's fascinating journey through time / ဂျပန်၏ စိတ်ဝင်စားဖွယ် သမိုင်းခရီးကို လေ့လာပါ</p>
+        </div>
+        
+        <div class="gk-info-card">
+            <h2>
+                <i class="fas fa-clock"></i> 
+                Major Historical Periods 
+                <span class="jp-head">(じだい)</span>
+            </h2>
+            <div class="bilingual-text">
+                <p class="english-text">Japan's history is divided into distinct periods, each with unique cultural and political developments.</p>
+                <p class="burmese-text">ဂျပန်သမိုင်းသည် ထူးခြားသော ယဉ်ကျေးမှုနှင့် နိုင်ငံရေး ဖွံ့ဖြိုးတိုးတက်မှုများရှိသည့် ကာလများအဖြစ် ပိုင်းခြားထားသည်။</p>
+            </div>
+            <ul class="gk-list">
+                <li>
+                    <strong>縄文時代 (Jōmon period)</strong> 
+                    <span class="jp-term">- 14,000 BCE – 300 BCE</span>
+                    <span class="mm-meaning">ဂျပန်၏ အစောဆုံး ယဉ်ကျေးမှု၊ ရွှံ့စေးအိုးများဖြင့် ကျော်ကြား</span>
+                </li>
+                <li>
+                    <strong>弥生時代 (Yayoi period)</strong> 
+                    <span class="jp-term">- 300 BCE – 300 CE</span>
+                    <span class="mm-meaning">စပါးစိုက်ပျိုးခြင်းနှင့် သတ္တုလုပ်ငန်း စတင်ခြင်း</span>
+                </li>
+                <li>
+                    <strong>古墳時代 (Kofun period)</strong> 
+                    <span class="jp-term">- 300 – 538 CE</span>
+                    <span class="mm-meaning">ဧရာမ သင်္ချိုင်းကုန်းများ တည်ဆောက်ခြင်း</span>
+                </li>
+                <li>
+                    <strong>飛鳥時代 (Asuka period)</strong> 
+                    <span class="jp-term">- 538 – 710 CE</span>
+                    <span class="mm-meaning">ဗုဒ္ဓဘာသာ မိတ်ဆက်ခြင်းနှင့် ဗဟိုအစိုးရ စတင်ခြင်း</span>
+                </li>
+                <li>
+                    <strong>奈良時代 (Nara period)</strong> 
+                    <span class="jp-term">- 710 – 794 CE</span>
+                    <span class="mm-meaning">ပထမဆုံး အမြဲတမ်းမြို့တော် နာရာ</span>
+                </li>
+                <li>
+                    <strong>平安時代 (Heian period)</strong> 
+                    <span class="jp-term">- 794 – 1185 CE</span>
+                    <span class="mm-meaning">ဂျပန်ဂန္ထဝင် ယဉ်ကျေးမှု၏ ရွှေခေတ်</span>
+                </li>
+                <li>
+                    <strong>鎌倉時代 (Kamakura period)</strong> 
+                    <span class="jp-term">- 1185 – 1333 CE</span>
+                    <span class="mm-meaning">ဆာမူရိုင်းအုပ်ချုပ်မှု စတင်ခြင်း</span>
+                </li>
+                <li>
+                    <strong>室町時代 (Muromachi period)</strong> 
+                    <span class="jp-term">- 1336 – 1573 CE</span>
+                    <span class="mm-meaning">ဇင်ဗုဒ္ဓဘာသာနှင့် လက်ဖက်ရည်ပွဲ ဖွံ့ဖြိုးခြင်း</span>
+                </li>
+                <li>
+                    <strong>安土桃山時代 (Azuchi-Momoyama period)</strong> 
+                    <span class="jp-term">- 1568 – 1600 CE</span>
+                    <span class="mm-meaning">ဂျပန်ပေါင်းစည်းရေးကာလ</span>
+                </li>
+                <li>
+                    <strong>江戸時代 (Edo period)</strong> 
+                    <span class="jp-term">- 1603 – 1868 CE</span>
+                    <span class="mm-meaning">ငြိမ်းချမ်းရေး၊ အထီးကျန်မှုနှင့် မြို့ပြယဉ်ကျေးမှု ဖွံ့ဖြိုးခြင်း</span>
+                </li>
+                <li>
+                    <strong>明治時代 (Meiji period)</strong> 
+                    <span class="jp-term">- 1868 – 1912 CE</span>
+                    <span class="mm-meaning">ဂျပန်၏ ခေတ်မီရေးနှင့် စက်မှုတော်လှန်ရေး</span>
+                </li>
+                <li>
+                    <strong>大正時代 (Taishō period)</strong> 
+                    <span class="jp-term">- 1912 – 1926 CE</span>
+                    <span class="mm-meaning">တိုတောင်းသော ဒီမိုကရေစီခေတ်</span>
+                </li>
+                <li>
+                    <strong>昭和時代 (Shōwa period)</strong> 
+                    <span class="jp-term">- 1926 – 1989 CE</span>
+                    <span class="mm-meaning">ဒုတိယကမ္ဘာစစ်နှင့် စီးပွားရေးအံ့ဖွယ်ကာလ</span>
+                </li>
+                <li>
+                    <strong>平成時代 (Heisei period)</strong> 
+                    <span class="jp-term">- 1989 – 2019 CE</span>
+                    <span class="mm-meaning">ခေတ်သစ်ဂျပန်နှင့် နည်းပညာတိုးတက်မှု</span>
+                </li>
+                <li>
+                    <strong>令和時代 (Reiwa period)</strong> 
+                    <span class="jp-term">- 2019 – present</span>
+                    <span class="mm-meaning">ဂျပန်၏ လက်ရှိခေတ်</span>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="gk-info-card">
+            <h2>
+                <i class="fas fa-landmark"></i> 
+                Key Historical Events 
+                <span class="jp-head">(じゅうよう な できごと)</span>
+            </h2>
+            <div class="timeline-item" onclick="speakJapanese('Genpei War')">
+                <div class="year">1180-1185</div>
+                <div class="event-en"><strong>Genpei War</strong> - Civil war between Taira and Minamoto clans</div>
+                <div class="event-mm">ဂျန်ပေစစ်ပွဲ - တိုင်ရာနှင့် မီနာမိုတိုမျိုးနွယ်များကြား ပြည်တွင်းစစ်</div>
+            </div>
+            <div class="timeline-item" onclick="speakJapanese('Onin War')">
+                <div class="year">1467-1477</div>
+                <div class="event-en"><strong>Ōnin War</strong> - Triggered the Sengoku period of civil war</div>
+                <div class="event-mm">အိုနင်စစ်ပွဲ - ပြည်တွင်းစစ်ကာလကို စတင်ခဲ့သည်</div>
+            </div>
+            <div class="timeline-item" onclick="speakJapanese('Battle of Sekigahara')">
+                <div class="year">1600</div>
+                <div class="event-en"><strong>Battle of Sekigahara</strong> - Unified Japan under Tokugawa shogunate</div>
+                <div class="event-mm">ဆဲကီဂါဟာရတိုက်ပွဲ - တိုကူဂါဝါရှိုးဂန်းအောက်တွင် ဂျပန်ကို ပေါင်းစည်းခဲ့သည်</div>
+            </div>
+            <div class="timeline-item" onclick="speakJapanese('Meiji Restoration')">
+                <div class="year">1868</div>
+                <div class="event-en"><strong>Meiji Restoration</strong> - End of samurai rule, modernization begins</div>
+                <div class="event-mm">မေဂျီပြုပြင်ပြောင်းလဲမှု - ဆာမူရိုင်းအုပ်ချုပ်မှုအဆုံး၊ ခေတ်မီရေးစတင်</div>
+            </div>
+            <div class="timeline-item" onclick="speakJapanese('Russo-Japanese War')">
+                <div class="year">1904-1905</div>
+                <div class="event-en"><strong>Russo-Japanese War</strong> - First Asian power to defeat a European power</div>
+                <div class="event-mm">ရုရှား-ဂျပန်စစ်ပွဲ - ဥရောပအင်အားကြီးကို အနိုင်ယူသည့် ပထမဆုံးအာရှအင်အားကြီး</div>
+            </div>
+            <div class="timeline-item" onclick="speakJapanese('World War II')">
+                <div class="year">1939-1945</div>
+                <div class="event-en"><strong>World War II</strong> - Japan's surrender after atomic bombings of Hiroshima and Nagasaki</div>
+                <div class="event-mm">ဒုတိယကမ္ဘာစစ် - ဟီရိုရှီးမားနှင့် နာဂါဆာကီတွင် အဏုမြူဗုံးကြဲခံရပြီးနောက် ဂျပန်လက်နက်ချခဲ့သည်</div>
+            </div>
+            <div class="timeline-item" onclick="speakJapanese('Post-war economic miracle')">
+                <div class="year">1950s-1980s</div>
+                <div class="event-en"><strong>Post-war economic miracle</strong> - Rapid economic growth made Japan world's second-largest economy</div>
+                <div class="event-mm">စစ်ပြီးခေတ် စီးပွားရေးအံ့ဖွယ် - ဂျပန်ကို ကမ္ဘာ့ဒုတိယအကြီးဆုံးစီးပွားရေးအဖြစ် ဖန်တီးခဲ့သည်</div>
+            </div>
+            <div class="timeline-item" onclick="speakJapanese('Great Hanshin Earthquake')">
+                <div class="year">1995</div>
+                <div class="event-en"><strong>Great Hanshin Earthquake</strong> - Major earthquake in Kobe region</div>
+                <div class="event-mm">ဟန်ရှင်ငလျင်ကြီး - ကိုဘေးဒေသရှိ ငလျင်ကြီး</div>
+            </div>
+            <div class="timeline-item" onclick="speakJapanese('Tōhoku earthquake and tsunami')">
+                <div class="year">2011</div>
+                <div class="event-en"><strong>Tōhoku earthquake and tsunami</strong> - Caused Fukushima nuclear disaster</div>
+                <div class="event-mm">တိုဟိုကုငလျင်နှင့် ဆူနာမီ - ဖူကူရှီးမားနျူကလီးယားဘေးအန္တရာယ်ကို ဖြစ်စေခဲ့သည်</div>
+            </div>
+        </div>
+        
+        <div class="gk-info-card">
+            <h2>
+                <i class="fas fa-crown"></i> 
+                Famous Historical Figures 
+                <span class="jp-head">(ゆうめいな れきし じんぶつ)</span>
+            </h2>
+            <ul class="gk-list">
+                <li>
+                    <strong>源頼朝 (Minamoto no Yoritomo)</strong> 
+                    <span class="jp-term">- First shogun of the Kamakura shogunate</span>
+                    <span class="mm-meaning">ကမာကူရာရှိုးဂန်းနိတ်၏ ပထမဆုံးရှိုးဂန်း</span>
+                </li>
+                <li>
+                    <strong>織田信長 (Oda Nobunaga)</strong> 
+                    <span class="jp-term">- First "Great Unifier" of Japan</span>
+                    <span class="mm-meaning">ဂျပန်၏ ပထမဆုံး "ပေါင်းစည်းသူကြီး"</span>
+                </li>
+                <li>
+                    <strong>豊臣秀吉 (Toyotomi Hideyoshi)</strong> 
+                    <span class="jp-term">- Second "Great Unifier"</span>
+                    <span class="mm-meaning">ဒုတိယ "ပေါင်းစည်းသူကြီး"</span>
+                </li>
+                <li>
+                    <strong>徳川家康 (Tokugawa Ieyasu)</strong> 
+                    <span class="jp-term">- Founder of the Tokugawa shogunate</span>
+                    <span class="mm-meaning">တိုကူဂါဝါရှိုးဂန်းနိတ်ကို တည်ထောင်သူ</span>
+                </li>
+                <li>
+                    <strong>坂本龍馬 (Sakamoto Ryōma)</strong> 
+                    <span class="jp-term">- Key figure in the Meiji Restoration</span>
+                    <span class="mm-meaning">မေဂျီပြုပြင်ပြောင်းလဲမှုတွင် အဓိကပုဂ္ဂိုလ်</span>
+                </li>
+                <li>
+                    <strong>明治天皇 (Emperor Meiji)</strong> 
+                    <span class="jp-term">- Led Japan's modernization</span>
+                    <span class="mm-meaning">ဂျပန်၏ ခေတ်မီရေးကို ဦးဆောင်ခဲ့သော ဧကရာဇ်</span>
+                </li>
+            </ul>
+        </div>
+        
+        <footer style="background: rgba(0, 0, 0, 0.85); border-radius: 20px; padding: 1.2rem; margin-top: 2rem; text-align: center;">
+            <div class="footer-links" style="display: flex; justify-content: center; gap: 1.5rem; margin-bottom: 1rem; flex-wrap: wrap;">
+                <a href="../pages/privacy.html" style="color: white; text-decoration: none;"><i class="fas fa-shield-alt"></i> Privacy Policy</a>
+                <a href="../pages/about.html" style="color: white; text-decoration: none;"><i class="fas fa-info-circle"></i> About</a>
+                <a href="../pages/contact.html" style="color: white; text-decoration: none;"><i class="fas fa-envelope"></i> Contact</a>
+                <a href="../pages/terms.html" style="color: white; text-decoration: none;"><i class="fas fa-file-contract"></i> Terms & Policy</a>
+            </div>
+            <p style="color: #7f8c8d;"><i class="fas fa-heart"></i> Next Gen Learning Myanmar - Japanese History / ဂျပန်သမိုင်း</p>
+        </footer>
+    </div>
+    
+    <script>
+        function speakJapanese(text) {
+            if (!window.speechSynthesis) return;
+            window.speechSynthesis.cancel();
+            const utterance = new SpeechSynthesisUtterance(text);
+            utterance.lang = 'ja-JP';
+            utterance.rate = 0.7;
+            window.speechSynthesis.speak(utterance);
+        }
+        
+        function addBackToTopButton() {
+            if (document.querySelector('.back-to-top-btn')) return;
+            const btn = document.createElement('button');
+            btn.className = 'back-to-top-btn';
+            btn.innerHTML = '<i class="fas fa-arrow-up"></i><span>TOP / အပေါ်သို့</span>';
+            document.body.appendChild(btn);
+            window.addEventListener('scroll', () => btn.classList.toggle('show', window.scrollY > 300));
+            btn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+        }
+        addBackToTopButton();
+        
+        // Add click-to-speak for list items
+        document.querySelectorAll('.gk-list li').forEach(item => {
+            item.addEventListener('click', () => {
+                const jpText = item.querySelector('strong')?.innerText || '';
+                if (jpText) speakJapanese(jpText);
+            });
+        });
+    </script>
+</body>
+</html>

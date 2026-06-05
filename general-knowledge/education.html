@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Japanese Education System - Next Gen Learning Myanmar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Myanmar:wght@400;500;700&family=Noto+Sans+JP:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .gk-detail-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 1rem;
+        }
+        
+        .gk-detail-header {
+            background: white;
+            border-radius: 20px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .gk-detail-header h1 {
+            font-size: 1.8rem;
+            color: #2c3e50;
+            text-align: center;
+        }
+        
+        .gk-detail-header h1 i {
+            color: #e67e22;
+            margin-right: 10px;
+        }
+        
+        .gk-detail-header h1 span {
+            font-size: 1rem;
+            color: #e67e22;
+            display: block;
+            margin-top: 0.3rem;
+        }
+        
+        .gk-detail-header p {
+            text-align: center;
+            color: #7f8c8d;
+            margin-top: 0.5rem;
+        }
+        
+        .gk-info-card {
+            background: white;
+            border-radius: 20px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .gk-info-card h2 {
+            color: #e67e22;
+            border-left: 4px solid #e67e22;
+            padding-left: 1rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        
+        .gk-info-card h2 .jp-head {
+            font-size: 0.9rem;
+            color: #7f8c8d;
+            font-weight: normal;
+        }
+        
+        .gk-info-card p {
+            line-height: 1.6;
+            color: #2c3e50;
+            margin-bottom: 0.8rem;
+        }
+        
+        .gk-list {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .gk-list li {
+            margin: 0.8rem 0;
+            padding: 0.8rem;
+            background: #f8f9fa;
+            border-radius: 10px;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+        
+        .gk-list li:hover {
+            background: #e67e22;
+            color: white;
+            transform: translateX(5px);
+        }
+        
+        .gk-list li strong {
+            color: #e67e22;
+            font-size: 1rem;
+        }
+        
+        .gk-list li .jp-term {
+            font-family: 'Noto Sans JP', sans-serif;
+            font-size: 0.85rem;
+            color: #7f8c8d;
+            margin-left: 5px;
+        }
+        
+        .gk-list li .mm-meaning {
+            display: block;
+            font-size: 0.8rem;
+            color: #7f8c8d;
+            margin-top: 5px;
+            font-family: 'Noto Sans Myanmar', sans-serif;
+        }
+        
+        .gk-list li:hover strong,
+        .gk-list li:hover .jp-term,
+        .gk-list li:hover .mm-meaning {
+            color: white;
+        }
+        
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #e67e22;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: 0.3s;
+            margin-bottom: 1rem;
+        }
+        
+        .back-btn:hover {
+            background: #d35400;
+            transform: translateX(-3px);
+        }
+        
+        .bilingual-text {
+            margin: 0.5rem 0;
+        }
+        
+        .english-text {
+            color: #2c3e50;
+        }
+        
+        .burmese-text {
+            color: #7f8c8d;
+            font-family: 'Noto Sans Myanmar', sans-serif;
+            font-size: 0.9rem;
+            margin-top: 0.3rem;
+        }
+        
+        .education-note {
+            background: #fff3e0;
+            border-left: 4px solid #e67e22;
+            padding: 1rem;
+            border-radius: 12px;
+            margin-top: 1rem;
+            font-size: 0.9rem;
+        }
+        
+        @media (max-width: 768px) {
+            .gk-detail-header h1 {
+                font-size: 1.4rem;
+            }
+            
+            .gk-info-card h2 {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="gk-detail-container">
+        <a href="../general-knowledge.html" class="back-btn">
+            <i class="fas fa-arrow-left"></i> Back to General Knowledge / နောက်သို့
+        </a>
+        
+        <div class="gk-detail-header">
+            <h1>
+                <i class="fas fa-graduation-cap"></i> 
+                Japanese Education System
+                <span>にほんの きょういく</span>
+            </h1>
+            <p>Schools, universities, and academic culture in Japan / ဂျပန်ရှိ ကျောင်းများ၊ တက္ကသိုလ်များနှင့် ပညာရေးယဉ်ကျေးမှု</p>
+        </div>
+        
+        <div class="gk-info-card">
+            <h2>
+                <i class="fas fa-school"></i> 
+                School Structure (6-3-3-4 System)
+                <span class="jp-head">(がっこう せいど)</span>
+            </h2>
+            <div class="bilingual-text">
+                <p class="english-text">Japan follows a 6-3-3-4 structure: 6 years elementary, 3 years junior high, 3 years high school, 4 years university (or 2 years junior college).</p>
+                <p class="burmese-text">ဂျပန်သည် ၆-၃-၃-၄ ပုံစံကို လိုက်နာသည်။ မူလတန်း ၆ နှစ်၊ အလယ်တန်း ၃ နှစ်၊ အထက်တန်း ၃ နှစ်၊ တက္ကသိုလ် ၄ နှစ် (သို့ ၂ နှစ် အငယ်တန်းကောလိပ်)။</p>
+            </div>
+            <ul class="gk-list">
+                <li><strong>小学校 (Shōgakkō)</strong> <span class="jp-term">- Elementary school (ages 6-12, grades 1-6)</span><span class="mm-meaning">မူလတန်းကျောင်း (မဖြစ်မနေ)</span></li>
+                <li><strong>中学校 (Chūgakkō)</strong> <span class="jp-term">- Junior high school (ages 12-15, grades 7-9)</span><span class="mm-meaning">အလယ်တန်းကျောင်း (မဖြစ်မနေ)</span></li>
+                <li><strong>高校 (Kōkō)</strong> <span class="jp-term">- High school (ages 15-18, grades 10-12)</span><span class="mm-meaning">အထက်တန်းကျောင်း (မဖြစ်မနေမဟုတ်၊ ၉၈% တက်ရောက်)</span></li>
+                <li><strong>大学 (Daigaku)</strong> <span class="jp-term">- University (4 years, undergraduate)</span><span class="mm-meaning">တက္ကသိုလ် (ဘွဲ့ကြို)</span></li>
+                <li><strong>短期大学 (Tanki Daigaku)</strong> <span class="jp-term">- Junior college (2 years, often for women)</span><span class="mm-meaning">အငယ်တန်းကောလိပ်</span></li>
+                <li><strong>専門学校 (Senmon Gakkō)</strong> <span class="jp-term">- Vocational school (trade skills)</span><span class="mm-meaning">အသက်မွေးဝမ်းကျောင်းကျောင်း</span></li>
+            </ul>
+        </div>
+        
+        <div class="gk-info-card">
+            <h2>
+                <i class="fas fa-calendar-alt"></i> 
+                School Year & Daily Life
+                <span class="jp-head">(がくねん と にちじょうせいかつ)</span>
+            </h2>
+            <ul class="gk-list">
+                <li><strong>始業式 (Shigyōshiki)</strong> <span class="jp-term">- Opening ceremony (April, start of school year)</span><span class="mm-meaning">စာသင်နှစ်အဖွင့်အခမ်းအနား (ဧပြီလ)</span></li>
+                <li><strong>終業式 (Shūgyōshiki)</strong> <span class="jp-term">- Closing ceremony (March, end of school year)</span><span class="mm-meaning">စာသင်နှစ်ပိတ်အခမ်းအနား (မတ်လ)</span></li>
+                <li><strong>夏休み (Natsuyasumi)</strong> <span class="jp-term">- Summer vacation (late July - August)</span><span class="mm-meaning">နွေရာသီအားလပ်ရက် (ဇူလိုင်လနှောင်းပိုင်း - သြဂုတ်လ)</span></li>
+                <li><strong>冬休み (Fuyuyasumi)</strong> <span class="jp-term">- Winter vacation (Dec 25 - Jan 7)</span><span class="mm-meaning">ဆောင်းရာသီအားလပ်ရက်</span></li>
+                <li><strong>春休み (Haruyasumi)</strong> <span class="jp-term">- Spring vacation (late March - early April)</span><span class="mm-meaning">နွေဦးအားလပ်ရက်</span></li>
+                <li><strong>掃除の時間 (Sōji no Jikan)</strong> <span class="jp-term">- Cleaning time (students clean school)</span><span class="mm-meaning">ကျောင်းသန့်ရှင်းရေးချိန် (ကျောင်းသားများ ကျောင်းသန့်ရှင်းရေး လုပ်သည်)</span></li>
+                <li><strong>給食 (Kyūshoku)</strong> <span class="jp-term">- School lunch (provided in elementary/junior high)</span><span class="mm-meaning">ကျောင်းနေ့လယ်စာ</span></li>
+                <li><strong>部活動 (Bukatsudō)</strong> <span class="jp-term">- Club activities (sports, culture, music)</span><span class="mm-meaning">ကလပ်လှုပ်ရှားမှုများ (အလွန်အရေးကြီး)</span></li>
+            </ul>
+        </div>
+        
+        <div class="gk-info-card">
+            <h2>
+                <i class="fas fa-pencil-alt"></i> 
+                Examination Hell (Juken)
+                <span class="jp-head">(じゅけん じごく)</span>
+            </h2>
+            <div class="bilingual-text">
+                <p class="english-text">"Juken jigoku" (exam hell) refers to the intense pressure students face for high school and university entrance exams, which largely determine their future.</p>
+                <p class="burmese-text">"ဂျုခန်ဂျီဂိုကု" (စာမေးပွဲငရဲ) သည် ကျောင်းသားများ အထက်တန်းကျောင်းနှင့် တက္ကသိုလ်ဝင်ခွင့်စာမေးပွဲများအတွက် ရင်ဆိုင်ရသော ပြင်းထန်သောဖိအားကို ရည်ညွှန်းသည်။</p>
+            </div>
+            <ul class="gk-list">
+                <li><strong>受験 (Juken)</strong> <span class="jp-term">- Entrance examination</span><span class="mm-meaning">ဝင်ခွင့်စာမေးပွဲ</span></li>
+                <li><strong>塾 (Juku)</strong> <span class="jp-term">- Cram school (after regular school)</span><span class="mm-meaning">ကျူရှင်ကျောင်း (ပုံမှန်ကျောင်းပြီးနောက်)</span></li>
+                <li><strong>予備校 (Yobikō)</strong> <span class="jp-term">- Prep school for university entrance</span><span class="mm-meaning">တက္ကသိုလ်ဝင်ခွင့်အတွက် ကြိုတင်ပြင်ဆင်ကျောင်း</span></li>
+                <li><strong>センター試験 (Sentā Shiken)</strong> <span class="jp-term">- National Center Test (former standardized exam)</span><span class="mm-meaning">အမျိုးသားဗဟိုစာမေးပွဲ (ယခင်)</span></li>
+                <li><strong>共通テスト (Kyōtsū Tesuto)</strong> <span class="jp-term">- Common Test (current standardized exam, 2021-)</span><span class="mm-meaning">ဘုံစာမေးပွဲ (လက်ရှိ)</span></li>
+                <li><strong>偏差値 (Hensachi)</strong> <span class="jp-term">- Deviation score (ranking system for schools)</span><span class="mm-meaning">ကျောင်းအဆင့်သတ်မှတ်ရန် ကိန်းဂဏန်းစနစ်</span></li>
+                <li><strong>浪人 (Rōnin)</strong> <span class="jp-term">- Student who didn't pass, studying another year</span><span class="mm-meaning">မအောင်မြင်သော ကျောင်းသား (နောက်တစ်နှစ်ထပ်လေ့လာ)</span></li>
+            </ul>
+            <div class="education-note">
+                <i class="fas fa-university"></i> <strong>Top Universities / ထိပ်တန်းတက္ကသိုလ်များ:</strong> The most prestigious universities are the "National Seven" including University of Tokyo (Todai) and Kyoto University (Kyodai). Private top schools include Waseda and Keio.
+                <div class="burmese-text" style="margin-top: 8px;">ဂုဏ်သိက္ခာအရှိဆုံးတက္ကသိုလ်များမှာ တိုကျိုတက္ကသိုလ် (တိုဒိုင်း) နှင့် ကျိုတိုတက္ကသိုလ် (ခယိုဒိုင်း) အပါအဝင် "အမျိုးသား ခုနစ်တန်း" ဖြစ်သည်။ ပုဂ္ဂလိက ထိပ်တန်းကျောင်းများမှာ ဝါဆဲဒါနှင့် ခေအို တို့ဖြစ်သည်။</div>
+            </div>
+        </div>
+        
+        <div class="gk-info-card">
+            <h2>
+                <i class="fas fa-chalkboard-teacher"></i> 
+                Unique Features of Japanese Schools
+                <span class="jp-head">(にほんの がっこう の とくちょう)</span>
+            </h2>
+            <ul class="gk-list">
+                <li><strong>制服 (Seifuku)</strong> <span class="jp-term">- School uniform (common in junior high/high school)</span><span class="mm-meaning">ကျောင်းဝတ်စုံ (အလယ်တန်း/အထက်တန်းတွင် အဖြစ်များ)</span></li>
+                <li><strong>上履き (Uwabaki)</strong> <span class="jp-term">- Indoor shoes (changed at entrance)</span><span class="mm-meaning">အိမ်တွင်းဖိနပ် (ကျောင်းဝင်လက်စတွင် လဲလှယ်)</span></li>
+                <li><strong>ランドセル (Randoseru)</strong> <span class="jp-term">- Hard backpack for elementary students</span><span class="mm-meaning">မူလတန်းကျောင်းသားများအတွက် မာကျောသော ကျောပိုးအိတ်</span></li>
+                <li><strong>学級委員 (Gakkyū Iin)</strong> <span class="jp-term">- Class representative (elected by students)</span><span class="mm-meaning">အတန်းကိုယ်စားလှယ် (ကျောင်းသားများက ရွေးချယ်)</span></li>
+                <li><strong>日直 (Nitchoku)</strong> <span class="jp-term">- Daily class helper (rotating duty)</span><span class="mm-meaning">နေ့စဉ် အတန်းအကူ (အလှည့်ကျတာဝန်)</span></li>
+                <li><strong>文化祭 (Bunkasai)</strong> <span class="jp-term">- School culture festival (open to public)</span><span class="mm-meaning">ကျောင်းယဉ်ကျေးမှုပွဲတော် (အများပြည်သူဖွင့်)</span></li>
+                <li><strong>体育祭 (Taikusai)</strong> <span class="jp-term">- Sports day (whole school competition)</span><span class="mm-meaning">အားကစားနေ့ (ကျောင်းတစ်ကျောင်းလုံး ပြိုင်ဆိုင်)</span></li>
+                <li><strong>修学旅行 (Shūgaku Ryokō)</strong> <span class="jp-term">- School trip (often Kyoto, Nara, or Tokyo)</span><span class="mm-meaning">ကျောင်းခရီးစဉ် (များသောအားဖြင့် ကျိုတို၊ နာရာ၊ တိုကျို)</span></li>
+            </ul>
+        </div>
+        
+        <div class="gk-info-card">
+            <h2>
+                <i class="fas fa-book"></i> 
+                Subjects & Curriculum
+                <span class="jp-head">(きょうか もくろく)</span>
+            </h2>
+            <ul class="gk-list">
+                <li><strong>国語 (Kokugo)</strong> <span class="jp-term">- Japanese language (reading, writing, literature)</span><span class="mm-meaning">ဂျပန်စာ</span></li>
+                <li><strong>算数 / 数学 (Sansū / Sūgaku)</strong> <span class="jp-term">- Mathematics</span><span class="mm-meaning">သင်္ချာ</span></li>
+                <li><strong>理科 (Rika)</strong> <span class="jp-term">- Science (biology, chemistry, physics)</span><span class="mm-meaning">သိပ္ပံ</span></li>
+                <li><strong>社会 (Shakai)</strong> <span class="jp-term">- Social studies (history, geography, civics)</span><span class="mm-meaning">လူမှုရေးပညာ</span></li>
+                <li><strong>英語 (Eigo)</strong> <span class="jp-term">- English (compulsory from 5th grade)</span><span class="mm-meaning">အင်္ဂလိပ်စာ (၅ တန်းမှ စတင်)</span></li>
+                <li><strong>体育 (Taiiku)</strong> <span class="jp-term">- Physical education (P.E.)</span><span class="mm-meaning">ကာယပညာ</span></li>
+                <li><strong>音楽 (Ongaku)</strong> <span class="jp-term">- Music (singing, instruments)</span><span class="mm-meaning">ဂီတ</span></li>
+                <li><strong>図工 (Zukō)</strong> <span class="jp-term">- Arts and crafts</span><span class="mm-meaning">အနုပညာနှင့် လက်မှုပညာ</span></li>
+                <li><strong>家庭科 (Kateika)</strong> <span class="jp-term">- Home economics (cooking, sewing)</span><span class="mm-meaning">အိမ်တွင်းစီးပွားရေး</span></li>
+                <li><strong>道徳 (Dōtoku)</strong> <span class="jp-term">- Moral education (character, ethics)</span><span class="mm-meaning">ကျင့်ဝတ်ပညာ</span></li>
+            </ul>
+        </div>
+        
+        <div class="gk-info-card">
+            <h2>
+                <i class="fas fa-chart-line"></i> 
+                Recent Education Reforms & Challenges
+                <span class="jp-head">(さいきんの きょういく かいかく と ちょうせん)</span>
+            </h2>
+            <ul class="gk-list">
+                <li><strong>ゆとり教育 (Yutori Kyōiku)</strong> <span class="jp-term">- "Relaxed education" (1990s-2000s, reduced curriculum)</span><span class="mm-meaning">ပေါ့ပေါ့ပါးပါး ပညာရေး (သင်ရိုးလျှော့ချခြင်း)</span></li>
+                <li><strong>アクティブラーニング (Akutibu Rāningu)</strong> <span class="jp-term">- Active learning (modern teaching method)</span><span class="mm-meaning">တက်ကြွသင်ယူခြင်း</span></li>
+                <li><strong>ICT教育 (ICT Kyōiku)</strong> <span class="jp-term">- ICT education (tablets, computers in class)</span><span class="mm-meaning">အိုင်စီတီပညာရေး (တက်ဘလက်၊ ကွန်ပျူတာ)</span></li>
+                <li><strong>いじめ (Ijime)</strong> <span class="jp-term">- Bullying (serious issue in schools)</span><span class="mm-meaning">အနိုင်ကျင့်ခြင်း (ကျောင်းများတွင် ပြင်းထန်သောပြဿနာ)</span></li>
+                <li><strong>不登校 (Futōkō)</strong> <span class="jp-term">- School refusal / truancy (growing problem)</span><span class="mm-meaning">ကျောင်းမသွားခြင်း (ကြီးထွားလာသောပြဿနာ)</span></li>
+                <li><strong>英語教育強化 (Eigo Kyōiku Kyōka)</strong> <span class="jp-term">- English education strengthening</span><span class="mm-meaning">အင်္ဂလိပ်ပညာရေး အားကောင်းစေခြင်း</span></li>
+            </ul>
+        </div>
+        
+        <footer style="background: rgba(0, 0, 0, 0.85); border-radius: 20px; padding: 1.2rem; margin-top: 2rem; text-align: center;">
+            <div class="footer-links" style="display: flex; justify-content: center; gap: 1.5rem; margin-bottom: 1rem; flex-wrap: wrap;">
+                <a href="../pages/privacy.html" style="color: white; text-decoration: none;"><i class="fas fa-shield-alt"></i> Privacy Policy</a>
+                <a href="../pages/about.html" style="color: white; text-decoration: none;"><i class="fas fa-info-circle"></i> About</a>
+                <a href="../pages/contact.html" style="color: white; text-decoration: none;"><i class="fas fa-envelope"></i> Contact</a>
+                <a href="../pages/terms.html" style="color: white; text-decoration: none;"><i class="fas fa-file-contract"></i> Terms & Policy</a>
+            </div>
+            <p style="color: #7f8c8d;"><i class="fas fa-heart"></i> Next Gen Learning Myanmar - Japanese Education System / ဂျပန်ပညာရေးစနစ်</p>
+        </footer>
+    </div>
+    
+    <script>
+        function addBackToTopButton() {
+            if (document.querySelector('.back-to-top-btn')) return;
+            const btn = document.createElement('button');
+            btn.className = 'back-to-top-btn';
+            btn.innerHTML = '<i class="fas fa-arrow-up"></i><span>TOP</span>';
+            document.body.appendChild(btn);
+            window.addEventListener('scroll', () => btn.classList.toggle('show', window.scrollY > 300));
+            btn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+        }
+        addBackToTopButton();
+        
+        document.querySelectorAll('.gk-list li').forEach(item => {
+            item.addEventListener('click', () => {
+                const jpTextElement = item.querySelector('strong');
+                if (jpTextElement && window.speechSynthesis) {
+                    let japaneseOnly = jpTextElement.innerText.split('(')[0].trim();
+                    if (japaneseOnly) {
+                        window.speechSynthesis.cancel();
+                        const utterance = new SpeechSynthesisUtterance(japaneseOnly);
+                        utterance.lang = 'ja-JP';
+                        utterance.rate = 0.7;
+                        window.speechSynthesis.speak(utterance);
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>

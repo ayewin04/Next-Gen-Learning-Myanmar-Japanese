@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Japanese Laws & Rules - Next Gen Learning Myanmar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Myanmar:wght@400;500;700&family=Noto+Sans+JP:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .gk-detail-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 1rem;
+        }
+        
+        .gk-detail-header {
+            background: white;
+            border-radius: 20px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .gk-detail-header h1 {
+            font-size: 1.8rem;
+            color: #2c3e50;
+            text-align: center;
+        }
+        
+        .gk-detail-header h1 i {
+            color: #e67e22;
+            margin-right: 10px;
+        }
+        
+        .gk-detail-header h1 span {
+            font-size: 1rem;
+            color: #e67e22;
+            display: block;
+            margin-top: 0.3rem;
+        }
+        
+        .gk-detail-header p {
+            text-align: center;
+            color: #7f8c8d;
+            margin-top: 0.5rem;
+        }
+        
+        .gk-detail-header .jp-text {
+            font-family: 'Noto Sans JP', sans-serif;
+            color: #e67e22;
+            font-size: 0.9rem;
+        }
+        
+        .gk-info-card {
+            background: white;
+            border-radius: 20px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .gk-info-card h2 {
+            color: #e67e22;
+            border-left: 4px solid #e67e22;
+            padding-left: 1rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        
+        .gk-info-card h2 .jp-head {
+            font-size: 0.9rem;
+            color: #7f8c8d;
+            font-weight: normal;
+        }
+        
+        .gk-info-card p {
+            line-height: 1.6;
+            color: #2c3e50;
+            margin-bottom: 0.8rem;
+        }
+        
+        .gk-list {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .gk-list li {
+            margin: 0.8rem 0;
+            padding: 0.8rem;
+            background: #f8f9fa;
+            border-radius: 10px;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+        
+        .gk-list li:hover {
+            background: #e67e22;
+            color: white;
+            transform: translateX(5px);
+        }
+        
+        .gk-list li strong {
+            color: #e67e22;
+            font-size: 1rem;
+        }
+        
+        .gk-list li .jp-term {
+            font-family: 'Noto Sans JP', sans-serif;
+            font-size: 0.85rem;
+            color: #7f8c8d;
+            margin-left: 5px;
+        }
+        
+        .gk-list li .mm-meaning {
+            display: block;
+            font-size: 0.8rem;
+            color: #7f8c8d;
+            margin-top: 5px;
+            font-family: 'Noto Sans Myanmar', sans-serif;
+        }
+        
+        .gk-list li:hover strong,
+        .gk-list li:hover .jp-term,
+        .gk-list li:hover .mm-meaning {
+            color: white;
+        }
+        
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #e67e22;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: 0.3s;
+            margin-bottom: 1rem;
+        }
+        
+        .back-btn:hover {
+            background: #d35400;
+            transform: translateX(-3px);
+        }
+        
+        .bilingual-text {
+            margin: 0.5rem 0;
+        }
+        
+        .english-text {
+            color: #2c3e50;
+        }
+        
+        .burmese-text {
+            color: #7f8c8d;
+            font-family: 'Noto Sans Myanmar', sans-serif;
+            font-size: 0.9rem;
+            margin-top: 0.3rem;
+        }
+        
+        /* rule badge for special notes */
+        .rule-note {
+            background: #fff3e0;
+            border-left: 4px solid #e67e22;
+            padding: 1rem;
+            border-radius: 12px;
+            margin-top: 1rem;
+            font-size: 0.9rem;
+        }
+        
+        .rule-note i {
+            color: #e67e22;
+            margin-right: 6px;
+        }
+        
+        @media (max-width: 768px) {
+            .gk-detail-header h1 {
+                font-size: 1.4rem;
+            }
+            
+            .gk-info-card h2 {
+                font-size: 1.2rem;
+            }
+            
+            .gk-list li strong {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="gk-detail-container">
+        <a href="../general-knowledge.html" class="back-btn">
+            <i class="fas fa-arrow-left"></i> Back to General Knowledge / နောက်သို့
+        </a>
+        
+        <div class="gk-detail-header">
+            <h1>
+                <i class="fas fa-gavel"></i> 
+                Japanese Laws & Social Rules
+                <span>にほんの ほうりつ と ルール</span>
+            </h1>
+            <p>Understand the legal system and important regulations in Japan / ဂျပန်နိုင်ငံ၏ ဥပဒေစနစ်နှင့် အရေးကြီး စည်းမျဉ်းများကို နားလည်ပါ</p>
+        </div>
+        
+        <div class="gk-info-card">
+            <h2>
+                <i class="fas fa-balance-scale"></i> 
+                Fundamental Laws & Legal System
+                <span class="jp-head">(きほんてきな ほうりつ と ほうせい)</span>
+            </h2>
+            <div class="bilingual-text">
+                <p class="english-text">Japan's legal framework is based on civil law, influenced by German and French systems. The Constitution of Japan (1947) is the supreme law.</p>
+                <p class="burmese-text">ဂျပန်၏ ဥပဒေမူဘောင်သည် ဂျာမန်နှင့် ပြင်သစ်စနစ်များ၏ လွှမ်းမိုးမှုဖြင့် ပြည်သူ့ဥပဒေကို အခြေခံသည်။ ဂျပန်ဖွဲ့စည်းပုံ အခြေခံဥပဒေ (၁၉၄၇) သည် အမြင့်ဆုံးဥပဒေဖြစ်သည်။</p>
+            </div>
+            <ul class="gk-list">
+                <li>
+                    <strong>日本国憲法 (Nihonkoku Kenpō)</strong> 
+                    <span class="jp-term">- Constitution of Japan</span>
+                    <span class="mm-meaning">ဂျပန်ဖွဲ့စည်းပုံ အခြေခံဥပဒေ (ငြိမ်းချမ်းရေးပုဒ်မ ၉ ပါရှိ)</span>
+                </li>
+                <li>
+                    <strong>民法 (Minpō)</strong> 
+                    <span class="jp-term">- Civil Code</span>
+                    <span class="mm-meaning">ပြည်သူ့ဥပဒေ (စာချုပ်၊ အိမ်ထောင်ရေး၊ အိမ်ခြံမြေ)</span>
+                </li>
+                <li>
+                    <strong>刑法 (Keihō)</strong> 
+                    <span class="jp-term">- Penal Code</span>
+                    <span class="mm-meaning">ရာဇဝတ်ကျင့်ထုံးဥပဒေ</span>
+                </li>
+                <li>
+                    <strong>会社法 (Kaishahō)</strong> 
+                    <span class="jp-term">- Companies Act</span>
+                    <span class="mm-meaning">ကုမ္ပဏီများအက်ဥပဒေ</span>
+                </li>
+                <li>
+                    <strong>道路交通法 (Dōro Kōtsūhō)</strong> 
+                    <span class="jp-term">- Road Traffic Act</span>
+                    <span class="mm-meaning">လမ်းယာဉ်စည်းမျဉ်းဥပဒေ</span>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="gk-info-card">
+            <h2>
+                <i class="fas fa-handcuffs"></i> 
+                Important Criminal Laws & Offenses
+                <span class="jp-head">(じゅうような けいじほう と いはん)</span>
+            </h2>
+            <div class="bilingual-text">
+                <p class="english-text">Japan has strict laws regarding drugs, violence, and theft. Penalties can include heavy fines, imprisonment, or deportation for foreigners.</p>
+                <p class="burmese-text">ဂျပန်တွင် မူးယစ်ဆေးဝါး၊ အကြမ်းဖက်မှုနှင့် ခိုးမှုတို့နှင့် ပတ်သက်၍ တင်းကျပ်သော ဥပဒေများရှိသည်။ ပြစ်ဒဏ်များတွင် ငွေဒဏ်ကြီးများ၊ ထောင်ဒဏ် သို့မဟုတ် နိုင်ငံခြားသားများအတွက် ပြည်နှင်ဒဏ် ပါဝင်နိုင်သည်။</p>
+            </div>
+            <ul class="gk-list">
+                <li>
+                    <strong>薬物取締法 (Yakubutsu Torishimarihō)</strong> 
+                    <span class="jp-term">- Narcotics Control Law</span>
+                    <span class="mm-meaning">မူးယစ်ဆေးဝါးထိန်းချုပ်ရေးဥပဒေ (ဆေးခြောက်၊ MDMA အပါအဝင် တင်းကျပ်ဆုံး)</span>
+                </li>
+                <li>
+                    <strong>銃刀法 (Jūtōhō)</strong> 
+                    <span class="jp-term">- Firearm and Sword Control Law</span>
+                    <span class="mm-meaning">သေနတ်နှင့်ဓားထိန်းချုပ်ရေးဥပဒေ (ဓားများပင် လိုင်စင်လိုအပ်)</span>
+                </li>
+                <li>
+                    <strong>窃盗罪 (Settōzai)</strong> 
+                    <span class="jp-term">- Theft</span>
+                    <span class="mm-meaning">ခိုးမှုပြစ်မှု (စတိုးဆိုင်ခိုးခြင်းကို အလွန်အမင်း တင်းကျပ်)</span>
+                </li>
+                <li>
+                    <strong>暴行罪 (Bōkōzai)</strong> 
+                    <span class="jp-term">- Assault</span>
+                    <span class="mm-meaning">ရိုက်နှက်မှု/ကျူးလွန်မှု</span>
+                </li>
+                <li>
+                    <strong>ストーカー規制法 (Sutōkā Kiseihō)</strong> 
+                    <span class="jp-term">- Anti-Stalking Law</span>
+                    <span class="mm-meaning">လိုက်လံစောင့်ရှောက်မှု တားဆီးရေးဥပဒေ</span>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="gk-info-card">
+            <h2>
+                <i class="fas fa-id-card"></i> 
+                Laws for Residents & Foreigners
+                <span class="jp-head">(じゅうみん と がいこくじん の ための ほうりつ)</span>
+            </h2>
+            <div class="bilingual-text">
+                <p class="english-text">Special regulations apply to foreign residents: visa compliance, residence card (Zairyū Card) obligations, and work restrictions.</p>
+                <p class="burmese-text">နိုင်ငံခြားသားနေထိုင်သူများအတွက် အထူးစည်းမျဉ်းများ ကျင့်သုံးသည်- ဗီဇာလိုက်နာမှု၊ နေထိုင်ခွင့်ကတ် (Zairyū Card) တာဝန်များနှင့် အလုပ်ကန့်သတ်ချက်များ။</p>
+            </div>
+            <ul class="gk-list">
+                <li>
+                    <strong>入管法 (Nyūkanhō)</strong> 
+                    <span class="jp-term">- Immigration Control Act</span>
+                    <span class="mm-meaning">လူဝင်မှုကြီးကြပ်ရေးဥပဒေ (ဗီဇာကြာရှည်နေခြင်း၊ အလုပ်လုပ်ခွင့်)</span>
+                </li>
+                <li>
+                    <strong>在留カード携帯義務 (Zairyū Kādo Keitai Gimu)</strong> 
+                    <span class="jp-term">- Obligation to carry residence card</span>
+                    <span class="mm-meaning">နေထိုင်ခွင့်ကတ် အမြဲဆောင်ထားရန်တာဝန် (ရဲတောင်းဆိုပါက ပြသရန်)</span>
+                </li>
+                <li>
+                    <strong>資格外活動許可 (Shikaku-gai Katsudō Kyoka)</strong> 
+                    <span class="jp-term">- Permission for activities outside visa status</span>
+                    <span class="mm-meaning">ဗီဇာအဆင့်အတန်းပြင်ပ လုပ်ငန်းခွင့်ပြုချက် (ကျောင်းသားများ အချိန်ပိုင်းအလုပ်)</span>
+                </li>
+                <li>
+                    <strong>住民登録法 (Jūmin Tōrokuhō)</strong> 
+                    <span class="jp-term">- Resident Registration Law</span>
+                    <span class="mm-meaning">နေထိုင်သူမှတ်ပုံတင်ဥပဒေ (လိပ်စာပြောင်းလျှင် ၁၄ ရက်အတွင်း အကြောင်းကြား)</span>
+                </li>
+                <li>
+                    <strong>出国命令 (Shukkoku Meirei)</strong> 
+                    <span class="jp-term">- Deportation order</span>
+                    <span class="mm-meaning">ပြည်နှင်ဒေသ အမိန့် (ဥပဒေချိုးဖောက်ပါက ပြန်လည်ဝင်ရောက်ခွင့် ပိတ်ပင်ခြင်း)</span>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="gk-info-card">
+            <h2>
+                <i class="fas fa-bicycle"></i> 
+                Everyday Social Rules & Local Ordinances
+                <span class="jp-head">(にちじょうせいかつ の ルール と じょうれい)</span>
+            </h2>
+            <div class="bilingual-text">
+                <p class="english-text">Japan has many unspoken social rules and local ordinances that may surprise visitors. Respecting these keeps daily life harmonious.</p>
+                <p class="burmese-text">ဂျပန်တွင် လူမှုရေးဆိုင်ရာ မပြောလိုက်သော စည်းမျဉ်းများနှင့် ဧည့်သည်များကို အံ့အားသင့်စေနိုင်သော ဒေသဆိုင်ရာ စည်းမျဉ်းများ ရှိသည်။ ယင်းတို့ကို လေးစားခြင်းသည် နေ့စဉ်ဘဝ သဟဇာတဖြစ်စေသည်။</p>
+            </div>
+            <ul class="gk-list">
+                <li>
+                    <strong>路上喫煙禁止 (Rojō Kitsuen Kinshi)</strong> 
+                    <span class="jp-term">- No smoking on most streets</span>
+                    <span class="mm-meaning">လမ်းများပေါ်တွင် ဆေးလိပ်မသောက်ရ (သတ်မှတ်နေရာများသာ)</span>
+                </li>
+                <li>
+                    <strong>ポイ捨て禁止 (Poisute Kinshi)</strong> 
+                    <span class="jp-term">- Littering prohibition</span>
+                    <span class="mm-meaning">အမှိုက်ပစ်ခြင်း တားမြစ်ချက် (ဒဏ်ငွေ ¥1,000-¥100,000 အထိ)</span>
+                </li>
+                <li>
+                    <strong>歩きスマホ禁止 (Aruki Sumaho Kinshi)</strong> 
+                    <span class="jp-term">- No walking while using phone (some cities)</span>
+                    <span class="mm-meaning">လမ်းလျှောက်ရင်း ဖုန်းသုံးခြင်း တားမြစ်ချက် (မြို့အချို့တွင်)</span>
+                </li>
+                <li>
+                    <strong>ゴミ分別義務 (Gomi Bunbetsu Gimu)</strong> 
+                    <span class="jp-term">- Mandatory trash sorting</span>
+                    <span class="mm-meaning">မီးရှို့နိုင်သော၊ ပလတ်စတစ်၊ ဖန်ဗူးစသည်ဖြင့် အမှိုက်ခွဲရန် ပြဌာန်းချက်</span>
+                </li>
+                <li>
+                    <strong>迷惑防止条例 (Meiwaku Bōshi Jōrei)</strong> 
+                    <span class="jp-term">- Nuisance prevention ordinance</span>
+                    <span class="mm-meaning">အနှောင့်အယှက်ဖြစ်စေသော အပြုအမူများ (လမ်းပေါ်တွင် အရက်မူးခြင်း၊ ကျယ်လောင်စွာ အော်ဟစ်ခြင်း) တားမြစ်ချက်</span>
+                </li>
+            </ul>
+            <div class="rule-note">
+                <i class="fas fa-exclamation-triangle"></i> <strong>Important / အရေးကြီး:</strong> Japanese police have the right to stop and question anyone (職務質問). You must carry your residence card (if foreigner) or ID. Always cooperate politely.
+                <div class="burmese-text" style="margin-top: 8px;">ဂျပန်ရဲများသည် မည်သူ့ကိုမဆို ရပ်တန့်မေးမြန်းပိုင်ခွင့် (Shokumu Shitsumon) ရှိသည်။ သင်သည် နေထိုင်ခွင့်ကတ် (နိုင်ငံခြားသားဖြစ်ပါက) သို့မဟုတ် မှတ်ပုံတင်ကတ် ဆောင်ထားရမည်။ အမြဲ ယဉ်ကျေးစွာ ပူးပေါင်းဆောင်ရွက်ပါ။</div>
+            </div>
+        </div>
+        
+        <div class="gk-info-card">
+            <h2>
+                <i class="fas fa-school"></i> 
+                Work & Labor Laws
+                <span class="jp-head">(ろうどうほう と はたらく きそく)</span>
+            </h2>
+            <div class="bilingual-text">
+                <p class="english-text">Japan's Labor Standards Act protects workers' rights. Overtime, minimum wage, and safe work environments are regulated.</p>
+                <p class="burmese-text">ဂျပန်အလုပ်သမားစံချိန်စံညွှန်းဥပဒေသည် အလုပ်သမားအခွင့်အရေးများကို ကာကွယ်ပေးသည်။ အချိန်ပို၊ အနိမ့်ဆုံးလုပ်ခလစာနှင့် ဘေးကင်းသော လုပ်ငန်းခွင်ပတ်ဝန်းကျင်တို့ကို စည်းမျဉ်းသတ်မှတ်ထားသည်။</p>
+            </div>
+            <ul class="gk-list">
+                <li>
+                    <strong>労働基準法 (Rōdō Kijunhō)</strong> 
+                    <span class="jp-term">- Labor Standards Act</span>
+                    <span class="mm-meaning">အလုပ်သမားစံချိန်စံညွှန်းဥပဒေ (အလုပ်ချိန် ၄၀/ပတ်၊ အနားရက်၊ overtime ခွင့်)</span>
+                </li>
+                <li>
+                    <strong>最低賃金法 (Saitei Chinginhō)</strong> 
+                    <span class="jp-term">- Minimum Wage Act</span>
+                    <span class="mm-meaning">အနိမ့်ဆုံးလုပ်ခလစာဥပဒေ (စီရင်စုအလိုက် ကွဲပြား၊ 2025 တွင် တစ်နိုင်ငံလုံး ပျမ်းမျှ ¥1,000+ ဝန်းကျင်)</span>
+                </li>
+                <li>
+                    <strong>働き方改革関連法 (Hatarakikata Kaikaku Kanrenhō)</strong> 
+                    <span class="jp-term">- Work Style Reform Law</span>
+                    <span class="mm-meaning">လုပ်ငန်းခွင်ပုံစံ ပြုပြင်ပြောင်းလဲရေးဥပဒေ (အချိန်ပိုကန့်သတ်၊ အားလပ်ရက်သုံးစွဲမှု)</span>
+                </li>
+                <li>
+                    <strong>ハラスメント防止法 (Harasumento Bōshihō)</strong> 
+                    <span class="jp-term">- Harassment Prevention Law</span>
+                    <span class="mm-meaning">လုပ်ငန်းခွင်အနိုင်ကျင့်မှု တားဆီးရေးဥပဒေ (အာဏာအလွဲသုံးစားမှု၊ လိင်ပိုင်းဆိုင်ရာ စော်ကားမှု)</span>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="gk-info-card">
+            <h2>
+                <i class="fas fa-car"></i> 
+                Traffic Laws & Penalties
+                <span class="jp-head">(こうつうきそく と ばっきん)</span>
+            </h2>
+            <div class="bilingual-text">
+                <p class="english-text">Japan enforces strict traffic rules. Driving under influence (DUI) leads to severe fines and imprisonment.</p>
+                <p class="burmese-text">ဂျပန်သည် တင်းကျပ်သော ယာဉ်စည်းကမ်းများကို ပြဌာန်းထားသည်။ အရက်မူးပြီး မောင်းနှင်ခြင်း (DUI) သည် ပြင်းထန်သော ဒဏ်ငွေများနှင့် ထောင်ဒဏ်ကို ဖြစ်ပေါ်စေသည်။</p>
+            </div>
+            <ul class="gk-list">
+                <li>
+                    <strong>酒気帯び運転 (Shukioobi Unten)</strong> 
+                    <span class="jp-term">- Drunk driving</span>
+                    <span class="mm-meaning">အရက်မူးမောင်းနှင်ခြင်း (ထောင်ဒဏ် ၃နှစ်၊ ဒဏ်ငွေ ¥500,000 အထိ)</span>
+                </li>
+                <li>
+                    <strong>速度違反 (Sokudo Ihan)</strong> 
+                    <span class="jp-term">- Speeding</span>
+                    <span class="mm-meaning">အရှိန်လွန်မောင်းနှင်ခြင်း (အချက်အလက်ပေါ်မူတည်၍ 벌점နှင့် ဒဏ်ငွေ)</span>
+                </li>
+                <li>
+                    <strong>駐車違反 (Chūsha Ihan)</strong> 
+                    <span class="jp-term">- Illegal parking</span>
+                    <span class="mm-meaning">တရားမဝင် ကားရပ်နားခြင်း (ဒဏ်ငွေ ¥10,000 ~ ¥30,000)</span>
+                </li>
+                <li>
+                    <strong>ながら運転 (Nagara Unten)</strong> 
+                    <span class="jp-term">- Using phone while driving</span>
+                    <span class="mm-meaning">မောင်းနှင်ရင်း ဖုန်းသုံးခြင်း (ဒဏ်ငွေ၊ အမှတ်ပေါင်း)</span>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="gk-info-card">
+            <h2>
+                <i class="fas fa-flag-checkered"></i> 
+                Unique Laws You Should Know
+                <span class="jp-head">(しっておくべき とくべつな ほうりつ)</span>
+            </h2>
+            <div class="bilingual-text">
+                <p class="english-text">Some laws may seem unusual but are strictly enforced in Japan to maintain order and respect.</p>
+                <p class="burmese-text">အချို့သောဥပဒေများသည် ပုံမှန်မဟုတ်ဟု ထင်ရသော်လည်း ဂျပန်တွင် စနစ်နှင့် လေးစားမှုကို ထိန်းသိမ်းရန် တင်းကျပ်စွာ ကျင့်သုံးသည်။</p>
+            </div>
+            <ul class="gk-list">
+                <li>
+                    <strong>軽犯罪法 (Keihanzaihō)</strong> 
+                    <span class="jp-term">- Minor Offenses Law</span>
+                    <span class="mm-meaning">အသေးအဖွဲ ပြစ်မှုဥပဒေ (အလုပ်လက်မဲ့ လှည့်လည်ခြင်း၊ အိမ်နီးချင်းကို အနှောင့်အယှက်ပေးခြင်း စသည်တို့အတွက် အရေးယူ)</span>
+                </li>
+                <li>
+                    <strong>迷惑電話防止条例 (Meiwaku Denwa Bōshi Jōrei)</strong> 
+                    <span class="jp-term">- Nuisance phone call ordinance</span>
+                    <span class="mm-meaning">မလိုလားအပ်သော ဖုန်းခေါ်ဆိုမှု တားမြစ်ချက် (အကြိမ်ကြိမ် စိတ်အနှောင့်အယှက်ဖြစ်စေလျှင် ဒဏ်ငွေ)</span>
+                </li>
+                <li>
+                    <strong>公共迷惑防止条例 (Kōkyō Meiwaku Bōshi Jōrei)</strong> 
+                    <span class="jp-term">- Public nuisance ordinance</span>
+                    <span class="mm-meaning">အများပြည်သူ အနှောင့်အယှက်ဖြစ်စေမှု တားဆီးရေး အမိန့် (ဥပမာ - အဝတ်အစားမပါဘဲ အများပြည်သူသို့ သွားခြင်း၊ အော်ဟစ်ခြင်း)</span>
+                </li>
+                <li>
+                    <strong>古物営業法 (Kobutsu Eigyōhō)</strong> 
+                    <span class="jp-term">- Second-hand goods law</span>
+                    <span class="mm-meaning">အသုံးအဆောင်ဟောင်းရောင်းဝယ်ဥပဒေ (ပစ္စည်းရောင်းချပါက ID ပြသရန် လိုအပ်)</span>
+                </li>
+            </ul>
+            <div class="rule-note">
+                <i class="fas fa-lightbulb"></i> <strong>Cultural tip / ယဉ်ကျေးမှု အကြံပြုချက်:</strong> Japan's legal system emphasizes rehabilitation and social harmony. Even minor infractions can affect your visa status. When in doubt, ask a local or check official sources.
+                <div class="burmese-text" style="margin-top: 8px;">ဂျပန်၏ ဥပဒေစနစ်သည် ပြန်လည်ထူထောင်ရေးနှင့် လူမှုသဟဇာတဖြစ်မှုကို အလေးပေးသည်။ အသေးအဖွဲ ချိုးဖောက်မှုများပင်လျှင် သင်၏ ဗီဇာအခြေအနေကို ထိခိုက်နိုင်သည်။ သံသယရှိပါက ဒေသခံများကို မေးမြန်းပါ သို့မဟုတ် တရားဝင်ရင်းမြစ်များကို စစ်ဆေးပါ။</div>
+            </div>
+        </div>
+        
+        <footer style="background: rgba(0, 0, 0, 0.85); border-radius: 20px; padding: 1.2rem; margin-top: 2rem; text-align: center;">
+            <div class="footer-links" style="display: flex; justify-content: center; gap: 1.5rem; margin-bottom: 1rem; flex-wrap: wrap;">
+                <a href="../pages/privacy.html" style="color: white; text-decoration: none;"><i class="fas fa-shield-alt"></i> Privacy Policy</a>
+                <a href="../pages/about.html" style="color: white; text-decoration: none;"><i class="fas fa-info-circle"></i> About</a>
+                <a href="../pages/contact.html" style="color: white; text-decoration: none;"><i class="fas fa-envelope"></i> Contact</a>
+                <a href="../pages/terms.html" style="color: white; text-decoration: none;"><i class="fas fa-file-contract"></i> Terms & Policy</a>
+            </div>
+            <p style="color: #7f8c8d;"><i class="fas fa-heart"></i> Next Gen Learning Myanmar - Japanese Laws & Social Rules / ဂျပန်ဥပဒေနှင့် လူမှုစည်းမျဉ်းများ</p>
+        </footer>
+    </div>
+    
+    <script>
+        function addBackToTopButton() {
+            if (document.querySelector('.back-to-top-btn')) return;
+            const btn = document.createElement('button');
+            btn.className = 'back-to-top-btn';
+            btn.innerHTML = '<i class="fas fa-arrow-up"></i><span>TOP</span>';
+            document.body.appendChild(btn);
+            window.addEventListener('scroll', () => btn.classList.toggle('show', window.scrollY > 300));
+            btn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+        }
+        addBackToTopButton();
+        
+        // Add click-to-speak for list items (Japanese text)
+        document.querySelectorAll('.gk-list li').forEach(item => {
+            item.addEventListener('click', () => {
+                const jpTextElement = item.querySelector('strong');
+                if (jpTextElement && window.speechSynthesis) {
+                    const rawText = jpTextElement.innerText || '';
+                    // Extract Japanese part before any parenthesis or line break
+                    let japaneseOnly = rawText.split('(')[0].trim();
+                    if (japaneseOnly) {
+                        window.speechSynthesis.cancel();
+                        const utterance = new SpeechSynthesisUtterance(japaneseOnly);
+                        utterance.lang = 'ja-JP';
+                        utterance.rate = 0.7;
+                        window.speechSynthesis.speak(utterance);
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Japanese Inventions & Technology - Next Gen Learning Myanmar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Myanmar:wght@400;500;700&family=Noto+Sans+JP:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .gk-detail-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 1rem;
+        }
+        
+        .gk-detail-header {
+            background: white;
+            border-radius: 20px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .gk-detail-header h1 {
+            font-size: 1.8rem;
+            color: #2c3e50;
+            text-align: center;
+        }
+        
+        .gk-detail-header h1 i {
+            color: #e67e22;
+            margin-right: 10px;
+        }
+        
+        .gk-detail-header h1 span {
+            font-size: 1rem;
+            color: #e67e22;
+            display: block;
+            margin-top: 0.3rem;
+        }
+        
+        .gk-detail-header p {
+            text-align: center;
+            color: #7f8c8d;
+            margin-top: 0.5rem;
+        }
+        
+        .gk-info-card {
+            background: white;
+            border-radius: 20px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .gk-info-card h2 {
+            color: #e67e22;
+            border-left: 4px solid #e67e22;
+            padding-left: 1rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        
+        .gk-info-card h2 .jp-head {
+            font-size: 0.9rem;
+            color: #7f8c8d;
+            font-weight: normal;
+        }
+        
+        .gk-info-card p {
+            line-height: 1.6;
+            color: #2c3e50;
+            margin-bottom: 0.8rem;
+        }
+        
+        .gk-list {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .gk-list li {
+            margin: 0.8rem 0;
+            padding: 0.8rem;
+            background: #f8f9fa;
+            border-radius: 10px;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+        
+        .gk-list li:hover {
+            background: #e67e22;
+            color: white;
+            transform: translateX(5px);
+        }
+        
+        .gk-list li strong {
+            color: #e67e22;
+            font-size: 1rem;
+        }
+        
+        .gk-list li .jp-term {
+            font-family: 'Noto Sans JP', sans-serif;
+            font-size: 0.85rem;
+            color: #7f8c8d;
+            margin-left: 5px;
+        }
+        
+        .gk-list li .mm-meaning {
+            display: block;
+            font-size: 0.8rem;
+            color: #7f8c8d;
+            margin-top: 5px;
+            font-family: 'Noto Sans Myanmar', sans-serif;
+        }
+        
+        .gk-list li:hover strong,
+        .gk-list li:hover .jp-term,
+        .gk-list li:hover .mm-meaning {
+            color: white;
+        }
+        
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #e67e22;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: 0.3s;
+            margin-bottom: 1rem;
+        }
+        
+        .back-btn:hover {
+            background: #d35400;
+            transform: translateX(-3px);
+        }
+        
+        .bilingual-text {
+            margin: 0.5rem 0;
+        }
+        
+        .english-text {
+            color: #2c3e50;
+        }
+        
+        .burmese-text {
+            color: #7f8c8d;
+            font-family: 'Noto Sans Myanmar', sans-serif;
+            font-size: 0.9rem;
+            margin-top: 0.3rem;
+        }
+        
+        .invention-note {
+            background: #fff3e0;
+            border-left: 4px solid #e67e22;
+            padding: 1rem;
+            border-radius: 12px;
+            margin-top: 1rem;
+            font-size: 0.9rem;
+        }
+        
+        @media (max-width: 768px) {
+            .gk-detail-header h1 {
+                font-size: 1.4rem;
+            }
+            
+            .gk-info-card h2 {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="gk-detail-container">
+        <a href="../general-knowledge.html" class="back-btn">
+            <i class="fas fa-arrow-left"></i> Back to General Knowledge / နောက်သို့
+        </a>
+        
+        <div class="gk-detail-header">
+            <h1>
+                <i class="fas fa-microchip"></i> 
+                Japanese Inventions & Technology
+                <span>にほんの はつめい と テクノロジー</span>
+            </h1>
+            <p>Innovations from Japan that changed the world / ကမ္ဘာကြီးကို ပြောင်းလဲစေခဲ့သော ဂျပန်နိုင်ငံမှ တီထွင်ဆန်းသစ်မှုများ</p>
+        </div>
+        
+        <div class="gk-info-card">
+            <h2>
+                <i class="fas fa-train"></i> 
+                Transportation & Infrastructure
+                <span class="jp-head">(こうつう と インフラ)</span>
+            </h2>
+            <ul class="gk-list">
+                <li><strong>新幹線 (Shinkansen)</strong> <span class="jp-term">- Bullet Train (1964)</span><span class="mm-meaning">ကမ္ဘာ့ပထမဆုံး အမြန်နှုန်းမြင့်ရထားစနစ် (တစ်နာရီ ၂၁၀ ကီလိုမီတာ)</span></li>
+                <li><strong>リニアモーターカー (Rinia Mōtākā)</strong> <span class="jp-term">- Maglev train (magnetic levitation)</span><span class="mm-meaning">သံလိုက်အားဖြင့် ပျံတက်သော ရထား (အမြန်ဆုံး ၆၀၃ ကီလိုမီတာ)</span></li>
+                <li><strong>電動式信号機 (Dendōshiki Shingōki)</strong> <span class="jp-term">- First electric traffic signal (1930)</span><span class="mm-meaning">ပထမဆုံး လျှပ်စစ်မီးပွိုင့်စနစ်</span></li>
+                <li><strong>エスカレーター (Eskarētā)</strong> <span class="jp-term">- Modern escalator (improved design)</span><span class="mm-meaning">ဂျပန်က စီးပွားဖြစ် စက်လှေကားများကို ပိုမိုကောင်းမွန်အောင် တီထွင်</span></li>
+            </ul>
+        </div>
+        
+        <div class="gk-info-card">
+            <h2>
+                <i class="fas fa-tv"></i> 
+                Electronics & Consumer Tech
+                <span class="jp-head">(でんかせいひん と テクノロジー)</span>
+            </h2>
+            <ul class="gk-list">
+                <li><strong>トランジスタラジオ (Toranjisuta Rajio)</strong> <span class="jp-term">- Transistor radio (Sony, 1955)</span><span class="mm-meaning">ဆိုနီမှ ပထမဆုံး အိတ်ဆောင်ရေဒီယို</span></li>
+                <li><strong>トリニトロンテレビ (Torinitron Terebi)</strong> <span class="jp-term">- Trinitron color TV (Sony, 1968)</span><span class="mm-meaning">ကမ္ဘာ့အကောင်းဆုံး ရောင်စုံတီဗွီစနစ်</span></li>
+                <li><strong>ウォークマン (Wōkuman)</strong> <span class="jp-term">- Walkman portable cassette player (Sony, 1979)</span><span class="mm-meaning">ခရီးဆောင် တေးသံဖမ်းစက် (ကမ္ဘာ့ပထမဆုံး)</span></li>
+                <li><strong>ビデオテープレコーダー (Bideotēpu Rekōdā)</strong> <span class="jp-term">- VHS (JVC, 1976)</span><span class="mm-meaning">ဗွီအိတ်ချ်အက်စ် ဗီဒီယိုတိပ်စနစ်</span></li>
+                <li><strong>ブルーレイ (Burūrei)</strong> <span class="jp-term">- Blu-ray (Sony & Panasonic, 2000s)</span><span class="mm-meaning">ဘလူးရေး အလွှာမြင့် ဒေတာသိုလှောင်မှု</span></li>
+                <li><strong>デジタルカメラ (Dejitaru Kamera)</strong> <span class="jp-term">- Digital camera (Nikon, Canon, Sony)</span><span class="mm-meaning">ဂျပန်ကုမ္ပဏီများက ဒီဂျစ်တယ်ဓာတ်ပုံခေတ်ကို စတင်ခဲ့သည်</span></li>
+                <li><strong>QRコード (QR Kōdo)</strong> <span class="jp-term">- QR Code (Denso Wave, 1994)</span><span class="mm-meaning">ကမ္ဘာ့အသုံးအများဆုံး နှစ်ဖက်မြင် ဘားကုတ်</span></li>
+            </ul>
+        </div>
+        
+        <div class="gk-info-card">
+            <h2>
+                <i class="fas fa-robot"></i> 
+                Robotics & AI
+                <span class="jp-head">(ロボット と じんこうちのう)</span>
+            </h2>
+            <ul class="gk-list">
+                <li><strong>ヒューマノイドロボット (Hyūmanoido Robotto)</strong> <span class="jp-term">- Humanoid robots (ASIMO by Honda, 2000)</span><span class="mm-meaning">ဟွန်ဒါမှ အာဆီမို (လမ်းလျှောက်၊ ပြေး၊ လှေခါးတက်)</span></li>
+                <li><strong>産業用ロボット (Sangyōyō Robotto)</strong> <span class="jp-term">- Industrial robots (Fanuc, Yaskawa)</span><span class="mm-meaning">ကားစက်ရုံများအတွက် စက်ရုပ်လက်မောင်း ရှေ့ဆောင်</span></li>
+                <li><strong>AIBO (Aibo)</strong> <span class="jp-term">- Robot pet dog (Sony, 1999)</span><span class="mm-meaning">အိမ်မွေးတိရစ္ဆာန် စက်ရုပ်ခွေး</span></li>
+                <li><strong>Pepper (Pepper)</strong> <span class="jp-term">- Emotional recognition robot (SoftBank)</span><span class="mm-meaning">စိတ်ခံစားမှုကို သိရှိနိုင်သော စက်ရုပ်</span></li>
+            </ul>
+        </div>
+        
+        <div class="gk-info-card">
+            <h2>
+                <i class="fas fa-gamepad"></i> 
+                Video Games & Entertainment
+                <span class="jp-head">(ゲーム と エンターテインメント)</span>
+            </h2>
+            <ul class="gk-list">
+                <li><strong>ファミリーコンピュータ (Famirī Konpyūta)</strong> <span class="jp-term">- Nintendo Famicom / NES (1983)</span><span class="mm-meaning">ခေတ်မီ အိမ်သုံးဗီဒီယိုဂိမ်းစနစ် စတင်ခဲ့ခြင်း</span></li>
+                <li><strong>ゲームボーイ (Gēmu Bōi)</strong> <span class="jp-term">- Game Boy (Nintendo, 1989)</span><span class="mm-meaning">ကမ္ဘာ့အောင်မြင်ဆုံး ခရီးဆောင်ဂိမ်းစက်များထဲမှ တစ်ခု</span></li>
+                <li><strong>プレイステーション (Pureisutēshon)</strong> <span class="jp-term">- PlayStation (Sony, 1994)</span><span class="mm-meaning">ဆိုနီမှ အောင်မြင်သော ဂိမ်းကွန်ဆိုးလ်</span></li>
+                <li><strong>スーパーマリオ (Sūpā Mario)</strong> <span class="jp-term">- Super Mario (Nintendo, 1985)</span><span class="mm-meaning">ကမ္ဘာ့အရောင်းရဆုံးသော ဂိမ်းဖရန်ချိုင်ဇ်</span></li>
+                <li><strong>カラオケ (Karaoke)</strong> <span class="jp-term">- Karaoke (Daisuke Inoue, 1971)</span><span class="mm-meaning">ဂျပန်တီထွင်မှု (စကားအရ "လွတ်လပ်သောသံစုံတီးဝိုင်း")</span></li>
+            </ul>
+        </div>
+        
+        <div class="gk-info-card">
+            <h2>
+                <i class="fas fa-camera"></i> 
+                Photography & Optics
+                <span class="jp-head">(しゃしん と オプティクス)</span>
+            </h2>
+            <ul class="gk-list">
+                <li><strong>一眼レフカメラ (Ichigan Refu Kamera)</strong> <span class="jp-term">- SLR cameras (Nikon, Canon)</span><span class="mm-meaning">ကမ္ဘာ့ထိပ်တန်း အက်စ်အယ်အာစ် ကင်မရာများ</span></li>
+                <li><strong>ミラーレスカメラ (Mirāresu Kamera)</strong> <span class="jp-term">- Mirrorless cameras (Olympus, Panasonic, Sony)</span><span class="mm-meaning">မှန်ပြောင်မဲ့ ကင်မရာစနစ် (ပေါ့ပါး၊ အရည်အသွေးမြင့်)</span></li>
+                <li><strong>電子レンジ (Denshi Renji)</strong> <span class="jp-term">- Compact microwave oven (Sharp, 1962)</span><span class="mm-meaning">ရှပ်ကုမ္ပဏီမှ အိမ်သုံးမိုက်ခရိုဝေ့မီးဖို စတင်ထုတ်လုပ်</span></li>
+            </ul>
+        </div>
+        
+        <div class="gk-info-card">
+            <h2>
+                <i class="fas fa-medkit"></i> 
+                Medical & Scientific Innovations
+                <span class="jp-head">(いがく と かがく の かくしん)</span>
+            </h2>
+            <ul class="gk-list">
+                <li><strong>胃カメラ (Ikamera)</strong> <span class="jp-term">- Gastric camera (endoscope, 1950)</span><span class="mm-meaning">အစာအိမ်မှန်ပြောင်းကြည့်ကိရိယာ (ဂျပန်တီထွင်)</span></li>
+                <li><strong>iPS細胞 (iPS Saibō)</strong> <span class="jp-term">- Induced pluripotent stem cells (Shinya Yamanaka, 2006)</span><span class="mm-meaning">ရှင်းယာယာမနာကာ ၏ နိုဘယ်ဆုရ တီထွင်မှု</span></li>
+                <li><strong>青色LED (Aoiro LED)</strong> <span class="jp-term">- Blue LED (Nakamura, 1990s)</span><span class="mm-meaning">နာကမ်မုရာ ၏ နိုဘယ်ဆုရ အပြာရောင် LED တီထွင်မှု</span></li>
+                <li><strong>液体シリコン (Ekitai Shirikon)</strong> <span class="jp-term">- Liquid silicone rubber</span><span class="mm-meaning">ဆေးဘက်ဆိုင်ရာ အသုံးပြုသော ပစ္စည်း</span></li>
+            </ul>
+            <div class="invention-note">
+                <i class="fas fa-award"></i> <strong>Nobel Prize Winners / နိုဘယ်ဆုရရှိသူများ:</strong> Japan has over 25 Nobel laureates including Hideki Yukawa (Physics 1949), Shinya Yamanaka (Medicine 2012), and Takaaki Kajita (Physics 2015).
+                <div class="burmese-text" style="margin-top: 8px;">ဂျပန်နိုင်ငံတွင် ဟီဒီကီယူကာဝါ (ရူပဗေဒ ၁၉၄၉)၊ ရှင်းယာယာမနာကာ (ဆေးပညာ ၂၀၁၂) နှင့် တာကာအာကီ ခါဂျီတာ (ရူပဗေဒ ၂၀၁၅) အပါအဝင် နိုဘယ်ဆုရှင် ၂၅ ဦးကျော် ရှိသည်။</div>
+            </div>
+        </div>
+        
+        <div class="gk-info-card">
+            <h2>
+                <i class="fas fa-home"></i> 
+                Everyday Inventions from Japan
+                <span class="jp-head">(にちじょうせいかつ の はつめい)</span>
+            </h2>
+            <ul class="gk-list">
+                <li><strong>インスタントラーメン (Insutanto Rāmen)</strong> <span class="jp-term">- Instant noodles (Momofuku Ando, 1958)</span><span class="mm-meaning">မိုမိုဖုခူအန်ဒို၏ အကြော်ခေါက်ဆွဲ (ကမ္ဘာ့ထိပ်တန်း တီထွင်မှုတစ်ခု)</span></li>
+                <li><strong>電子レンジ用容器 (Denshi Renji-yō Yōki)</strong> <span class="jp-term">- Microwave-safe containers</span><span class="mm-meaning">မိုက်ခရိုဝေ့မီးဖိုသုံး ပန်းကန်များ</span></li>
+                <li><strong>使い捨てカイロ (Tsukaisute Kairo)</strong> <span class="jp-term">- Disposable hand warmers</span><span class="mm-meaning">အသုံးပစ် လက်အပူပေးအိတ်</span></li>
+                <li><strong>電子マネー (Denshi Manē)</strong> <span class="jp-term">- Electronic money / IC cards (Suica, Pasmo)</span><span class="mm-meaning">ဂျပန်၏ အစောဆုံးသုံးသော ကတ်ပြားငွေပေးချေစနစ်</span></li>
+                <li><strong>トイレのウォシュレット (Toire no Woshuretto)</strong> <span class="jp-term">- Washlet (bidet toilet seat, Toto, 1980)</span><span class="mm-meaning">တိုတိုမှ စတင်တီထွင်သော စအိုနှင့် အမျိုးသမီးသန့်ရှင်းရေး အိမ်သာခုံ</span></li>
+                <li><strong>ノートPC (Nōto PC)</strong> <span class="jp-term">- First laptops (Toshiba Dynabook, 1989)</span><span class="mm-meaning">တိုရှီဘာမှ ကမ္ဘာ့ပထမဆုံး လက်ပ်တော့</span></li>
+            </ul>
+        </div>
+        
+        <footer style="background: rgba(0, 0, 0, 0.85); border-radius: 20px; padding: 1.2rem; margin-top: 2rem; text-align: center;">
+            <div class="footer-links" style="display: flex; justify-content: center; gap: 1.5rem; margin-bottom: 1rem; flex-wrap: wrap;">
+                <a href="../pages/privacy.html" style="color: white; text-decoration: none;"><i class="fas fa-shield-alt"></i> Privacy Policy</a>
+                <a href="../pages/about.html" style="color: white; text-decoration: none;"><i class="fas fa-info-circle"></i> About</a>
+                <a href="../pages/contact.html" style="color: white; text-decoration: none;"><i class="fas fa-envelope"></i> Contact</a>
+                <a href="../pages/terms.html" style="color: white; text-decoration: none;"><i class="fas fa-file-contract"></i> Terms & Policy</a>
+            </div>
+            <p style="color: #7f8c8d;"><i class="fas fa-heart"></i> Next Gen Learning Myanmar - Japanese Inventions & Technology / ဂျပန်တီထွင်မှုများနှင့် နည်းပညာ</p>
+        </footer>
+    </div>
+    
+    <script>
+        function addBackToTopButton() {
+            if (document.querySelector('.back-to-top-btn')) return;
+            const btn = document.createElement('button');
+            btn.className = 'back-to-top-btn';
+            btn.innerHTML = '<i class="fas fa-arrow-up"></i><span>TOP</span>';
+            document.body.appendChild(btn);
+            window.addEventListener('scroll', () => btn.classList.toggle('show', window.scrollY > 300));
+            btn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+        }
+        addBackToTopButton();
+        
+        document.querySelectorAll('.gk-list li').forEach(item => {
+            item.addEventListener('click', () => {
+                const jpTextElement = item.querySelector('strong');
+                if (jpTextElement && window.speechSynthesis) {
+                    let japaneseOnly = jpTextElement.innerText.split('(')[0].trim();
+                    if (japaneseOnly) {
+                        window.speechSynthesis.cancel();
+                        const utterance = new SpeechSynthesisUtterance(japaneseOnly);
+                        utterance.lang = 'ja-JP';
+                        utterance.rate = 0.7;
+                        window.speechSynthesis.speak(utterance);
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>

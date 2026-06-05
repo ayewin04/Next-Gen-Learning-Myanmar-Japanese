@@ -113,6 +113,14 @@ function createFlashcard(item, type) {
     return card;
 }
 
+    // ========== GENERAL KNOWLEDGE NAVIGATION ==========
+    const generalKnowledgeCard = document.querySelector('.conversation-card[data-page="general-knowledge"]');
+    if (generalKnowledgeCard) {
+        generalKnowledgeCard.addEventListener('click', () => {
+            window.location.href = 'general-knowledge.html';
+        });
+    }
+
 // ========== BACK TO TOP FUNCTIONALITY ==========
 function addBackToTopButton() {
     // Check if button already exists

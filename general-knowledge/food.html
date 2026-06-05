@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Japanese Food - Next Gen Learning Myanmar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Myanmar:wght@400;500;700&family=Noto+Sans+JP:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .gk-detail-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 1rem;
+        }
+        
+        .gk-detail-header {
+            background: white;
+            border-radius: 20px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .gk-detail-header h1 {
+            font-size: 1.8rem;
+            color: #2c3e50;
+            text-align: center;
+        }
+        
+        .gk-detail-header h1 i {
+            color: #e67e22;
+            margin-right: 10px;
+        }
+        
+        .gk-detail-header h1 span {
+            font-size: 1rem;
+            color: #e67e22;
+            display: block;
+            margin-top: 0.3rem;
+        }
+        
+        .gk-detail-header p {
+            text-align: center;
+            color: #7f8c8d;
+            margin-top: 0.5rem;
+        }
+        
+        .gk-info-card {
+            background: white;
+            border-radius: 20px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .gk-info-card h2 {
+            color: #e67e22;
+            border-left: 4px solid #e67e22;
+            padding-left: 1rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        
+        .gk-info-card h2 .jp-head {
+            font-size: 0.9rem;
+            color: #7f8c8d;
+            font-weight: normal;
+        }
+        
+        .gk-info-card p {
+            line-height: 1.6;
+            color: #2c3e50;
+            margin-bottom: 0.8rem;
+        }
+        
+        .gk-list {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .gk-list li {
+            margin: 0.8rem 0;
+            padding: 0.8rem;
+            background: #f8f9fa;
+            border-radius: 10px;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+        
+        .gk-list li:hover {
+            background: #e67e22;
+            color: white;
+            transform: translateX(5px);
+        }
+        
+        .gk-list li strong {
+            color: #e67e22;
+            font-size: 1rem;
+        }
+        
+        .gk-list li .jp-term {
+            font-family: 'Noto Sans JP', sans-serif;
+            font-size: 0.85rem;
+            color: #7f8c8d;
+            margin-left: 5px;
+        }
+        
+        .gk-list li .mm-meaning {
+            display: block;
+            font-size: 0.8rem;
+            color: #7f8c8d;
+            margin-top: 5px;
+            font-family: 'Noto Sans Myanmar', sans-serif;
+        }
+        
+        .gk-list li:hover strong,
+        .gk-list li:hover .jp-term,
+        .gk-list li:hover .mm-meaning {
+            color: white;
+        }
+        
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #e67e22;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: 0.3s;
+            margin-bottom: 1rem;
+        }
+        
+        .back-btn:hover {
+            background: #d35400;
+            transform: translateX(-3px);
+        }
+        
+        .bilingual-text {
+            margin: 0.5rem 0;
+        }
+        
+        .english-text {
+            color: #2c3e50;
+        }
+        
+        .burmese-text {
+            color: #7f8c8d;
+            font-family: 'Noto Sans Myanmar', sans-serif;
+            font-size: 0.9rem;
+            margin-top: 0.3rem;
+        }
+        
+        .food-note {
+            background: #fff3e0;
+            border-left: 4px solid #e67e22;
+            padding: 1rem;
+            border-radius: 12px;
+            margin-top: 1rem;
+            font-size: 0.9rem;
+        }
+        
+        @media (max-width: 768px) {
+            .gk-detail-header h1 {
+                font-size: 1.4rem;
+            }
+            
+            .gk-info-card h2 {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="gk-detail-container">
+        <a href="../general-knowledge.html" class="back-btn">
+            <i class="fas fa-arrow-left"></i> Back to General Knowledge / နောက်သို့
+        </a>
+        
+        <div class="gk-detail-header">
+            <h1>
+                <i class="fas fa-utensils"></i> 
+                Japanese Food
+                <span>にほんりょうり</span>
+            </h1>
+            <p>Explore the delicious world of Japanese cuisine / ဂျပန်အစားအစာ၏ အရသာရှိသော ကမ္ဘာကို ရှာဖွေလေ့လာပါ</p>
+        </div>
+        
+        <div class="gk-info-card">
+            <h2>
+                <i class="fas fa-fish"></i> 
+                Sushi & Seafood Dishes
+                <span class="jp-head">(すし と かいせん りょうり)</span>
+            </h2>
+            <ul class="gk-list">
+                <li><strong>寿司 (Sushi)</strong> <span class="jp-term">- Sushi (vinegared rice with toppings)</span><span class="mm-meaning">ရှာလကာရည်ချက်ဆန်ပေါ်တွင် ငါးအစိမ်း၊ ဟင်းသီးဟင်းရွက်တို့ဖြင့် ပြုလုပ်သော ဂျပန်ဟင်း</span></li>
+                <li><strong>刺身 (Sashimi)</strong> <span class="jp-term">- Fresh raw fish slices</span><span class="mm-meaning">ငါးအစိမ်းလွှာများ (ဆန်မပါ)</span></li>
+                <li><strong>握り寿司 (Nigirizushi)</strong> <span class="jp-term">- Hand-pressed sushi</span><span class="mm-meaning">လက်ဖြင့်ဖိထားသော ဆန်ပေါ်တွင် ငါးအစိမ်းတပ်ထားသော ဆူရှီ</span></li>
+                <li><strong>巻き寿司 (Makizushi)</strong> <span class="jp-term">- Rolled sushi</span><span class="mm-meaning">ရေညှိခြောက်ဖြင့် လိပ်ထားသော ဆူရှီအလိပ်</span></li>
+                <li><strong>海鮮丼 (Kaisendon)</strong> <span class="jp-term">- Seafood rice bowl</span><span class="mm-meaning">ဆန်ဇလုံပေါ်တွင် ပင်လယ်စာအထပ်လိုက် တပ်ထားသော ဟင်း</span></li>
+            </ul>
+        </div>
+        
+        <div class="gk-info-card">
+            <h2>
+                <i class="fas fa-egg"></i> 
+                Noodle Dishes
+                <span class="jp-head">(めんるい)</span>
+            </h2>
+            <ul class="gk-list">
+                <li><strong>ラーメン (Rāmen)</strong> <span class="jp-term">- Ramen (Chinese-style noodles in broth)</span><span class="mm-meaning">ဂျပန်ခေါက်ဆွဲဟင်း (ဝက်သားဟင်းရည်၊ ဆိုဒီယမ်ဟင်းရည်၊ ဆိုယာဟင်းရည်)</span></li>
+                <li><strong>うどん (Udon)</strong> <span class="jp-term">- Thick wheat noodles</span><span class="mm-meaning">ဂျပန်ဂျုံခေါက်ဆွဲထူထူ</span></li>
+                <li><strong>そば (Soba)</strong> <span class="jp-term">- Buckwheat noodles</span><span class="mm-meaning">ဂျပန်ဂျုံခေါက်ဆွဲပါးပါး (ပီကေ၊ ဆောင်းဦးတွင် အထူးစားသုံး)</span></li>
+                <li><strong>焼きそば (Yakisoba)</strong> <span class="jp-term">- Fried noodles</span><span class="mm-meaning">ဂျပန်ကြော်ခေါက်ဆွဲ (မုန်လာဥ၊ အသားတို့ဖြင့်)</span></li>
+                <li><strong>そうめん (Sōmen)</strong> <span class="jp-term">- Thin wheat noodles (served cold)</span><span class="mm-meaning">နွေရာသီတွင် အေးအေးဆေးဆေး စားသော အမျှင်ပါးပါး ဂျုံခေါက်ဆွဲ</span></li>
+            </ul>
+        </div>
+        
+        <div class="gk-info-card">
+            <h2>
+                <i class="fas fa-drumstick-bite"></i> 
+                Meat & Hot Pot Dishes
+                <span class="jp-head">(にく と なべ りょうり)</span>
+            </h2>
+            <ul class="gk-list">
+                <li><strong>すき焼き (Sukiyaki)</strong> <span class="jp-term">- Sukiyaki (hot pot with beef & vegetables)</span><span class="mm-meaning">အသားကင်အိုး (အသားလွှာများ၊ ဟင်းသီးဟင်းရွက်များ ပါသော အိုးကင်)</span></li>
+                <li><strong>しゃぶしゃぶ (Shabushabu)</strong> <span class="jp-term">- Shabu-shabu (swish-swish hot pot)</span><span class="mm-meaning">အသားပြုတ်အိုး (အသားလွှာများကို ဟင်းရည်တွင်နှစ်ပြီးစားသော ဟင်း)</span></li>
+                <li><strong>焼き鳥 (Yakitori)</strong> <span class="jp-term">- Grilled chicken skewers</span><span class="mm-meaning">ကြက်သားတုတ်ထိုးကင်</span></li>
+                <li><strong>トンカツ (Tonkatsu)</strong> <span class="jp-term">- Breaded deep-fried pork cutlet</span><span class="mm-meaning">ပေါင်မုန့့်နှင့်ကြက်ဥသုတ်ထားသော ဝက်သားကြော်</span></li>
+                <li><strong>和牛ステーキ (Wagyū Sutēki)</strong> <span class="jp-term">- Wagyu beef steak</span><span class="mm-meaning">ဂျပန်အသားကြက်သွန်အသား အရည်ပျော်သော အရသာ</span></li>
+            </ul>
+        </div>
+        
+        <div class="gk-info-card">
+            <h2>
+                <i class="fas fa-egg"></i> 
+                Rice & Breakfast Dishes
+                <span class="jp-head">(ごはんもの と あさごはん)</span>
+            </h2>
+            <ul class="gk-list">
+                <li><strong>カレーライス (Karē Raisu)</strong> <span class="jp-term">- Japanese curry rice</span><span class="mm-meaning">ဂျပန်ဟင်းခတ်ဆန်ဟင်း (အိန္ဒိယဟင်းခတ်မှ ဆင်းသက်)</span></li>
+                <li><strong>おむすび (Onigiri)</strong> <span class="jp-term">- Rice balls</span><span class="mm-meaning">ဆန်လုံးထုပ် (ဆူရှီမဟုတ်)၊ အဆာပလာ (ဆယ်လ်မွန်၊ ဆူးမီး)</span></li>
+                <li><strong>丼物 (Donburi)</strong> <span class="jp-term">- Rice bowl dishes</span><span class="mm-meaning">ဆန်ဇလုံပေါ် အသားဟင်းတပ်ထားသော ဟင်း (ဂီရှီဒွန်၊ အိုယာကိုဒွန်)</span></li>
+                <li><strong>納豆 (Nattō)</strong> <span class="jp-term">- Fermented soybeans (breakfast staple)</span><span class="mm-meaning">ဂျပန်နံနက်စာ ထုံးစံ ပဲပုပ်အချဉ်</span></li>
+                <li><strong>焼き魚 (Yakizakana)</strong> <span class="jp-term">- Grilled fish</span><span class="mm-meaning">ငါးကင် (ဆာဆာမန်မိုနို၊ အလွန်ရေပန်းစား)</span></li>
+            </ul>
+        </div>
+        
+        <div class="gk-info-card">
+            <h2>
+                <i class="fas fa-cookie-bite"></i> 
+                Sweets, Snacks & Drinks
+                <span class="jp-head">(おかし と のみもの)</span>
+            </h2>
+            <ul class="gk-list">
+                <li><strong>抹茶 (Matcha)</strong> <span class="jp-term">- Matcha green tea powder</span><span class="mm-meaning">ဂျပန်လက်ဖက်စိမ်းမှုန့် (အဖျော်ရည်၊ ကိတ်မုန့်)</span></li>
+                <li><strong>団子 (Dango)</strong> <span class="jp-term">- Sweet rice dumplings on skewer</span><span class="mm-meaning">ချိုမြိန်သော ဆန်လုံးထိုးတုတ် (တိုရှီ၊ မီတာရာရှီ)</span></li>
+                <li><strong>大福 (Daifuku)</strong> <span class="jp-term">- Rice cake with sweet bean filling</span><span class="mm-meaning">မုန့်ကြွပ်အပြင် ပဲအနှစ်ထည့်ထားသော အချို</span></li>
+                <li><strong>どら焼き (Dorayaki)</strong> <span class="jp-term">- Dorayaki (pancake sandwich with red bean)</span><span class="mm-meaning">ဒိုရာယာကီ (ဒိုရေးမွန်၏ အကြိုက်ဆုံး မုန့်)</span></li>
+                <li><strong>日本酒 (Nihonshu)</strong> <span class="jp-term">- Sake (rice wine)</span><span class="mm-meaning">ဂျပန်ဆန်အရက်</span></li>
+                <li><strong>焼酎 (Shōchū)</strong> <span class="jp-term">- Shochu (distilled spirit)</span><span class="mm-meaning">ဂျပန်ပေါင်းခံအရက် (မုယောစပါး၊ အာလူး)</span></li>
+            </ul>
+            <div class="food-note">
+                <i class="fas fa-chopsticks"></i> <strong>Did you know? / သိပါသလား:</strong> Japanese cuisine (Washoku) is recognized as UNESCO Intangible Cultural Heritage. The philosophy emphasizes seasonal ingredients, balanced nutrition, and beautiful presentation.
+                <div class="burmese-text" style="margin-top: 8px;">ဂျပန်အစားအစာ (ဝါရှောကု) သည် ယူနက်စကို လက်မြောက်မဟုတ်သော ယဉ်ကျေးမှုအမွေအနှစ်အဖြစ် အသိအမှတ်ပြုခံရသည်။ ရာသီအလိုက် ပါဝင်ပစ္စည်းများ၊ ဟန်ချက်ညီသော အာဟာရနှင့် လှပသော တင်ဆက်မှုကို အလေးပေးသည်။</div>
+            </div>
+        </div>
+        
+        <footer style="background: rgba(0, 0, 0, 0.85); border-radius: 20px; padding: 1.2rem; margin-top: 2rem; text-align: center;">
+            <div class="footer-links" style="display: flex; justify-content: center; gap: 1.5rem; margin-bottom: 1rem; flex-wrap: wrap;">
+                <a href="../pages/privacy.html" style="color: white; text-decoration: none;"><i class="fas fa-shield-alt"></i> Privacy Policy</a>
+                <a href="../pages/about.html" style="color: white; text-decoration: none;"><i class="fas fa-info-circle"></i> About</a>
+                <a href="../pages/contact.html" style="color: white; text-decoration: none;"><i class="fas fa-envelope"></i> Contact</a>
+                <a href="../pages/terms.html" style="color: white; text-decoration: none;"><i class="fas fa-file-contract"></i> Terms & Policy</a>
+            </div>
+            <p style="color: #7f8c8d;"><i class="fas fa-heart"></i> Next Gen Learning Myanmar - Japanese Food / ဂျပန်အစားအစာ</p>
+        </footer>
+    </div>
+    
+    <script>
+        function addBackToTopButton() {
+            if (document.querySelector('.back-to-top-btn')) return;
+            const btn = document.createElement('button');
+            btn.className = 'back-to-top-btn';
+            btn.innerHTML = '<i class="fas fa-arrow-up"></i><span>TOP</span>';
+            document.body.appendChild(btn);
+            window.addEventListener('scroll', () => btn.classList.toggle('show', window.scrollY > 300));
+            btn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+        }
+        addBackToTopButton();
+        
+        document.querySelectorAll('.gk-list li').forEach(item => {
+            item.addEventListener('click', () => {
+                const jpTextElement = item.querySelector('strong');
+                if (jpTextElement && window.speechSynthesis) {
+                    let japaneseOnly = jpTextElement.innerText.split('(')[0].trim();
+                    if (japaneseOnly) {
+                        window.speechSynthesis.cancel();
+                        const utterance = new SpeechSynthesisUtterance(japaneseOnly);
+                        utterance.lang = 'ja-JP';
+                        utterance.rate = 0.7;
+                        window.speechSynthesis.speak(utterance);
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>

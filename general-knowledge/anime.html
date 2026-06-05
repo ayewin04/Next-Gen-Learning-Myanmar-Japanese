@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Anime & Manga - Next Gen Learning Myanmar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Myanmar:wght@400;500;700&family=Noto+Sans+JP:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .gk-detail-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 1rem;
+        }
+        
+        .gk-detail-header {
+            background: white;
+            border-radius: 20px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .gk-detail-header h1 {
+            font-size: 1.8rem;
+            color: #2c3e50;
+            text-align: center;
+        }
+        
+        .gk-detail-header h1 i {
+            color: #e67e22;
+            margin-right: 10px;
+        }
+        
+        .gk-detail-header h1 span {
+            font-size: 1rem;
+            color: #e67e22;
+            display: block;
+            margin-top: 0.3rem;
+        }
+        
+        .gk-detail-header p {
+            text-align: center;
+            color: #7f8c8d;
+            margin-top: 0.5rem;
+        }
+        
+        .gk-info-card {
+            background: white;
+            border-radius: 20px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .gk-info-card h2 {
+            color: #e67e22;
+            border-left: 4px solid #e67e22;
+            padding-left: 1rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        
+        .gk-info-card h2 .jp-head {
+            font-size: 0.9rem;
+            color: #7f8c8d;
+            font-weight: normal;
+        }
+        
+        .gk-info-card p {
+            line-height: 1.6;
+            color: #2c3e50;
+            margin-bottom: 0.8rem;
+        }
+        
+        .gk-list {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .gk-list li {
+            margin: 0.8rem 0;
+            padding: 0.8rem;
+            background: #f8f9fa;
+            border-radius: 10px;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+        
+        .gk-list li:hover {
+            background: #e67e22;
+            color: white;
+            transform: translateX(5px);
+        }
+        
+        .gk-list li strong {
+            color: #e67e22;
+            font-size: 1rem;
+        }
+        
+        .gk-list li .jp-term {
+            font-family: 'Noto Sans JP', sans-serif;
+            font-size: 0.85rem;
+            color: #7f8c8d;
+            margin-left: 5px;
+        }
+        
+        .gk-list li .mm-meaning {
+            display: block;
+            font-size: 0.8rem;
+            color: #7f8c8d;
+            margin-top: 5px;
+            font-family: 'Noto Sans Myanmar', sans-serif;
+        }
+        
+        .gk-list li:hover strong,
+        .gk-list li:hover .jp-term,
+        .gk-list li:hover .mm-meaning {
+            color: white;
+        }
+        
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #e67e22;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: 0.3s;
+            margin-bottom: 1rem;
+        }
+        
+        .back-btn:hover {
+            background: #d35400;
+            transform: translateX(-3px);
+        }
+        
+        .bilingual-text {
+            margin: 0.5rem 0;
+        }
+        
+        .english-text {
+            color: #2c3e50;
+        }
+        
+        .burmese-text {
+            color: #7f8c8d;
+            font-family: 'Noto Sans Myanmar', sans-serif;
+            font-size: 0.9rem;
+            margin-top: 0.3rem;
+        }
+        
+        .anime-note {
+            background: #fff3e0;
+            border-left: 4px solid #e67e22;
+            padding: 1rem;
+            border-radius: 12px;
+            margin-top: 1rem;
+            font-size: 0.9rem;
+        }
+        
+        @media (max-width: 768px) {
+            .gk-detail-header h1 {
+                font-size: 1.4rem;
+            }
+            
+            .gk-info-card h2 {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="gk-detail-container">
+        <a href="../general-knowledge.html" class="back-btn">
+            <i class="fas fa-arrow-left"></i> Back to General Knowledge / နောက်သို့
+        </a>
+        
+        <div class="gk-detail-header">
+            <h1>
+                <i class="fas fa-tv"></i> 
+                Anime & Manga
+                <span>アニメ と まんが</span>
+            </h1>
+            <p>The world of Japanese animation and comics / ဂျပန်ကာတွန်းနှင့် မန်ဂါကမ္ဘာ</p>
+        </div>
+        
+        <div class="gk-info-card">
+            <h2>
+                <i class="fas fa-book"></i> 
+                What are Manga & Anime?
+                <span class="jp-head">(まんが と アニメ とは？)</span>
+            </h2>
+            <div class="bilingual-text">
+                <p class="english-text">Manga are Japanese comics or graphic novels, read from right to left. Anime is animated adaptation of manga or original stories. Both are major cultural exports.</p>
+                <p class="burmese-text">မန်ဂါသည် ဂျပန်ကာတွန်းစာအုပ် သို့မဟုတ် ရုပ်ပြောင်ဝတ္ထုဖြစ်ပြီး ညာမှဘယ်သို့ ဖတ်ရသည်။ အန်နီမီးသည် မန်ဂါ သို့မဟုတ် မူရင်းဇာတ်လမ်းများကို ကာတွန်းအဖြစ် ပြောင်းလဲခြင်းဖြစ်သည်။</p>
+            </div>
+            <ul class="gk-list">
+                <li><strong>漫画 (Manga)</strong> <span class="jp-term">- Japanese comics/comic books</span><span class="mm-meaning">ဂျပန်ရုပ်ပြောင်စာအုပ် (အမျိုးအစားအားဖြင့် အလွန်ကျယ်ပြန့်)</span></li>
+                <li><strong>アニメ (Anime)</strong> <span class="jp-term">- Japanese animation</span><span class="mm-meaning">ဂျပန်ကာတွန်း (ရုပ်ရှင်၊ စီးရီး၊ အွန်လိုင်း)</span></li>
+                <li><strong>声優 (Seiyū)</strong> <span class="jp-term">- Voice actor/actress</span><span class="mm-meaning">အသံသရုပ်ဆောင် (ဂျပန်တွင် နာမည်ကြီးအဆင့်)</span></li>
+                <li><strong>原作 (Gensaku)</strong> <span class="jp-term">- Original work / source material</span><span class="mm-meaning">မူရင်းဇာတ်လမ်း (များသောအားဖြင့် မန်ဂါ)</span></li>
+                <li><strong>週刊少年ジャンプ (Shūkan Shōnen Janpu)</strong> <span class="jp-term">- Weekly Shonen Jump (famous manga magazine)</span><span class="mm-meaning">နာမည်ကျော် မန်ဂါမဂ္ဂဇင်း</span></li>
+            </ul>
+        </div>
+        
+        <div class="gk-info-card">
+            <h2>
+                <i class="fas fa-crown"></i> 
+                Most Famous Anime Series (Globally)
+                <span class="jp-head">(せかいで いちばん ゆうめいな アニメ)</span>
+            </h2>
+            <ul class="gk-list">
+                <li><strong>ドラゴンボール (Doragon Bōru)</strong> <span class="jp-term">- Dragon Ball (Akira Toriyama, 1984)</span><span class="mm-meaning">ဂျပန်၏ အကြီးကျယ်ဆုံး အန်နီမီးများထဲမှ တစ်ခု</span></li>
+                <li><strong>ワンピース (Wan Pīsu)</strong> <span class="jp-term">- One Piece (Eiichiro Oda, 1997)</span><span class="mm-meaning">ကမ္ဘာ့အရောင်းရဆုံး မန်ဂာစီးရီး (အတွဲ ၁၀၀+)</span></li>
+                <li><strong>ナルト (Naruto)</strong> <span class="jp-term">- Naruto (Masashi Kishimoto, 1999)</span><span class="mm-meaning">နင်ဂျာစွန့်စားခန်း (ကမ္ဘာတစ်ဝှမ်း အလွန်ရေပန်းစား)</span></li>
+                <li><strong>鬼滅の刃 (Kimetsu no Yaiba)</strong> <span class="jp-term">- Demon Slayer (Koyoharu Gotouge, 2016)</span><span class="mm-meaning">ခေတ်သစ်အန်နီမီး ဖြစ်စဉ် (၂၀၂၀ ရုပ်ရှင် ဂျပန်တွင် စံချိန်တင်)</span></li>
+                <li><strong>進撃の巨人 (Shingeki no Kyojin)</strong> <span class="jp-term">- Attack on Titan (Hajime Isayama, 2009)</span><span class="mm-meaning">ကမ္ဘာ့ထိပ်တန်း ဒရာမာဇာတ်လမ်း</span></li>
+                <li><strong>ポケットモンスター (Poketto Monsutā)</strong> <span class="jp-term">- Pokémon (1997)</span><span class="mm-meaning">ကမ္ဘာ့အကြီးဆုံး မီဒီယာ ဖရန်ချိုင်ဇ်</span></li>
+                <li><strong>ジョジョの奇妙な冒険 (Jojo no Kimyō na Bōken)</strong> <span class="jp-term">- JoJo's Bizarre Adventure</span><span class="mm-meaning">ထူးခြားဆန်းပြားသော စတိုင်ကျသော အန်နီမီး</span></li>
+            </ul>
+        </div>
+        
+        <div class="gk-info-card">
+            <h2>
+                <i class="fas fa-film"></i> 
+                Legendary Anime Films & Studio Ghibli
+                <span class="jp-head">(でんせつてきな アニメえいが と ジブリ)</span>
+            </h2>
+            <ul class="gk-list">
+                <li><strong>千と千尋の神隠し (Sen to Chihiro no Kamikakushi)</strong> <span class="jp-term">- Spirited Away (2001, Oscar winner)</span><span class="mm-meaning">အော်စကာဆုရ ဂျိဘလီရုပ်ရှင် (မီယာဇာကီ)</span></li>
+                <li><strong>となりのトトロ (Tonari no Totoro)</strong> <span class="jp-term">- My Neighbor Totoro (1988)</span><span class="mm-meaning">ဂျိဘလီ၏ သင်္ကေတဇာတ်ကောင်</span></li>
+                <li><strong>もののけ姫 (Mononoke Hime)</strong> <span class="jp-term">- Princess Mononoke (1997)</span><span class="mm-meaning">သဘာဝနှင့် စက်မှုတို့၏ ထိပ်တိုက်ရင်ဆိုင်မှု</span></li>
+                <li><strong>ハウルの動く城 (Hauru no Ugoku Shiro)</strong> <span class="jp-term">- Howl's Moving Castle (2004)</span><span class="mm-meaning">စိတ်ကူးယဉ်ဇာတ်လမ်း အော်စကာဆု အမည်စာရင်းတင်</span></li>
+                <li><strong>君の名は。 (Kimi no Na wa.)</strong> <span class="jp-term">- Your Name (Makoto Shinkai, 2016)</span><span class="mm-meaning">ခေတ်သစ်အန်နီမီး အံ့ဖွယ် (ကမ္ဘာတစ်ဝှမ်း အလွန်အောင်မြင်)</span></li>
+                <li><strong>天気の子 (Tenki no Ko)</strong> <span class="jp-term">- Weathering With You (2019)</span><span class="mm-meaning">ရှင်းကိုင်း၏ နောက်ထပ်အောင်မြင်သော ရုပ်ရှင်</span></li>
+            </ul>
+            <div class="anime-note">
+                <i class="fas fa-dragon"></i> <strong>Studio Ghibli / စတူဒီယို ဂျိဘလီ:</strong> Founded by Hayao Miyazaki and Isao Takahata in 1985. Known for beautiful animation, strong stories, and environmental themes. The studio's symbol is Totoro.
+                <div class="burmese-text" style="margin-top: 8px;">၁၉၈၅ ခုနှစ်တွင် မီယာဇာကီဟာယာအိုနှင့် အီဆာအိုတာကာဟာတာတို့က တည်ထောင်ခဲ့သည်။ လှပသောကာတွန်း၊ ခိုင်မာသောဇာတ်လမ်းနှင့် သဘာဝပတ်ဝန်းကျင် အကြောင်းအရာများဖြင့် ကျော်ကြားသည်။</div>
+            </div>
+        </div>
+        
+        <div class="gk-info-card">
+            <h2>
+                <i class="fas fa-user-astronaut"></i> 
+                Famous Manga Artists (Mangaka)
+                <span class="jp-head">(ゆうめいな まんがか)</span>
+            </h2>
+            <ul class="gk-list">
+                <li><strong>鳥山明 (Toriyama Akira)</strong> <span class="jp-term">- Dragon Ball, Dr. Slump</span><span class="mm-meaning">ဒရာဂွန်ဘောလ် ဖန်တီးရှင် (ကမ္ဘာ့အကျော်ကြားဆုံးမန်ဂါဆရာများထဲမှ တစ်ဦး)</span></li>
+                <li><strong>尾田栄一郎 (Oda Eiichirō)</strong> <span class="jp-term">- One Piece</span><span class="mm-meaning">ဝမ်ပီးစ် မန်ဂါဆရာ (စံချိန်တင် ရောင်းအား)</span></li>
+                <li><strong>岸本斉史 (Kishimoto Masashi)</strong> <span class="jp-term">- Naruto</span><span class="mm-meaning">နာရူတို မန်ဂါဆရာ</span></li>
+                <li><strong>宮崎駿 (Miyazaki Hayao)</strong> <span class="jp-term">- Founder of Studio Ghibli</span><span class="mm-meaning">အော်စကာဆုရ ကာတွန်းဒါရိုက်တာ (စတူဒီယိုဂျိဘလီ)</span></li>
+                <li><strong>手塚治虫 (Tezuka Osamu)</strong> <span class="jp-term">- "God of Manga" (Astro Boy, 1928-1989)</span><span class="mm-meaning">"မန်ဂါနတ်ဘုရား" (Astro Boy ဖန်တီးသူ)</span></li>
+                <li><strong>荒木飛呂彦 (Araki Hirohiko)</strong> <span class="jp-term">- JoJo's Bizarre Adventure</span><span class="mm-meaning">ထူးခြားသော ပုံစံနှင့် ဖက်ရှင်ဒီဇိုင်း</span></li>
+            </ul>
+        </div>
+        
+        <div class="gk-info-card">
+            <h2>
+                <i class="fas fa-chart-line"></i> 
+                Anime Genres (Popular Demographics)
+                <span class="jp-head">(アニメの ジャンル)</span>
+            </h2>
+            <ul class="gk-list">
+                <li><strong>少年 (Shōnen)</strong> <span class="jp-term">- For young boys (action, adventure)</span><span class="mm-meaning">လူငယ်ယောက်ျားလေးများအတွက် (နာရူတို၊ ဝမ်ပီးစ်၊ ဒရာဂွန်ဘောလ်)</span></li>
+                <li><strong>少女 (Shōjo)</strong> <span class="jp-term">- For young girls (romance, drama)</span><span class="mm-meaning">မိန်းကလေးများအတွက် (ဆေလာမွန် မွန်း၊ ဖရုတ်စကတ်)</span></li>
+                <li><strong>青年 (Seinen)</strong> <span class="jp-term">- For adult men (mature themes)</span><span class="mm-meaning">အရွယ်ရောက်ယောက်ျားများအတွက် (အက်တက်ခ် အွန်တိုက်တန်၊ ဘာဆာကာ)</span></li>
+                <li><strong>女性 (Josei)</strong> <span class="jp-term">- For adult women (slice of life)</span><span class="mm-meaning">အရွယ်ရောက်မိန်းမများအတွက်</span></li>
+                <li><strong>異世界 (Isekai)</strong> <span class="jp-term">- "Another world" (transported to fantasy world)</span><span class="mm-meaning">အခြားကမ္ဘာသို့ ရောက်ရှိသွားသော အမျိုးအစား</span></li>
+                <li><strong>メカ (Meka)</strong> <span class="jp-term">- Mecha (giant robots)</span><span class="mm-meaning">ဧရာမစက်ရုပ်များ (ဂန်ဒမ်၊ အီဗန်ဂဲလီယွန်)</span></li>
+            </ul>
+        </div>
+        
+        <div class="gk-info-card">
+            <h2>
+                <i class="fas fa-globe"></i> 
+                Anime's Global Impact
+                <span class="jp-head">(アニメの せかいえきょう)</span>
+            </h2>
+            <div class="bilingual-text">
+                <p class="english-text">Anime has influenced global pop culture, inspiring Hollywood films (The Matrix, Inception), fashion, music, and art. Conventions like Anime Expo draw hundreds of thousands of fans.</p>
+                <p class="burmese-text">အန်နီမီးသည် ကမ္ဘာ့ပေါ့ပ်ယဉ်ကျေးမှုကို လွှမ်းမိုးခဲ့ပြီး ဟောလီးဝုဒ်ရုပ်ရှင်များ (The Matrix, Inception)၊ ဖက်ရှင်၊ ဂီတနှင့် အနုပညာကို လှုံ့ဆော်ပေးခဲ့သည်။ Anime Expo ကဲ့သို့ ပွဲများသည် ပရိသတ် သိန်းနှင့်ချီ၍ ဆွဲဆောင်သည်။</p>
+            </div>
+            <ul class="gk-list">
+                <li><strong>コスプレ (Kosupure)</strong> <span class="jp-term">- Cosplay (costume play)</span><span class="mm-meaning">အန်နီမီး ဇာတ်ကောင်များအဖြစ် ၀တ်စားဆင်ယင်ခြင်း</span></li>
+                <li><strong>オタク (Otaku)</strong> <span class="jp-term">- Anime/manga enthusiast</span><span class="mm-meaning">အန်နီမီး/မန်ဂါ ဝါသနာရှင် (ဂျပန်တွင် အဓိပ္ပါယ်ကွဲပြား)</span></li>
+                <li><strong>聖地巡礼 (Seichi Junrei)</strong> <span class="jp-term">- Pilgrimage to real-life anime locations</span><span class="mm-meaning">အန်နီမီးတွင်ပါသော နေရာအစစ်များသို့ သွားရောက်ခြင်း</span></li>
+                <li><strong>フィギュア (Figyua)</strong> <span class="jp-term">- Anime figures/collectibles</span><span class="mm-meaning">အန်နီမီး ရုပ်တုများ စုဆောင်းခြင်း</span></li>
+            </ul>
+        </div>
+        
+        <footer style="background: rgba(0, 0, 0, 0.85); border-radius: 20px; padding: 1.2rem; margin-top: 2rem; text-align: center;">
+            <div class="footer-links" style="display: flex; justify-content: center; gap: 1.5rem; margin-bottom: 1rem; flex-wrap: wrap;">
+                <a href="../pages/privacy.html" style="color: white; text-decoration: none;"><i class="fas fa-shield-alt"></i> Privacy Policy</a>
+                <a href="../pages/about.html" style="color: white; text-decoration: none;"><i class="fas fa-info-circle"></i> About</a>
+                <a href="../pages/contact.html" style="color: white; text-decoration: none;"><i class="fas fa-envelope"></i> Contact</a>
+                <a href="../pages/terms.html" style="color: white; text-decoration: none;"><i class="fas fa-file-contract"></i> Terms & Policy</a>
+            </div>
+            <p style="color: #7f8c8d;"><i class="fas fa-heart"></i> Next Gen Learning Myanmar - Anime & Manga / အန်နီမီးနှင့် မန်ဂါ</p>
+        </footer>
+    </div>
+    
+    <script>
+        function addBackToTopButton() {
+            if (document.querySelector('.back-to-top-btn')) return;
+            const btn = document.createElement('button');
+            btn.className = 'back-to-top-btn';
+            btn.innerHTML = '<i class="fas fa-arrow-up"></i><span>TOP</span>';
+            document.body.appendChild(btn);
+            window.addEventListener('scroll', () => btn.classList.toggle('show', window.scrollY > 300));
+            btn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+        }
+        addBackToTopButton();
+        
+        document.querySelectorAll('.gk-list li').forEach(item => {
+            item.addEventListener('click', () => {
+                const jpTextElement = item.querySelector('strong');
+                if (jpTextElement && window.speechSynthesis) {
+                    let japaneseOnly = jpTextElement.innerText.split('(')[0].trim();
+                    if (japaneseOnly) {
+                        window.speechSynthesis.cancel();
+                        const utterance = new SpeechSynthesisUtterance(japaneseOnly);
+                        utterance.lang = 'ja-JP';
+                        utterance.rate = 0.7;
+                        window.speechSynthesis.speak(utterance);
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>

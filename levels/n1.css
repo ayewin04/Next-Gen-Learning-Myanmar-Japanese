@@ -1,0 +1,807 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #1a1a2e, #16213e);
+    min-height: 100vh;
+    padding: 1rem;
+}
+
+.app-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header Styles */
+header {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+.back-btn {
+    position: absolute;
+    top: 1.5rem;
+    left: 1.5rem;
+    background: #c0392b;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: 0.3s;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.back-btn:hover {
+    background: #922b21;
+    transform: translateX(-3px);
+}
+
+header h1 {
+    text-align: center;
+    font-size: 1.8rem;
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+}
+
+header h1 i {
+    color: #c0392b;
+    margin-right: 10px;
+}
+
+header h1 span {
+    font-size: 0.9rem;
+    color: #7f8c8d;
+    display: block;
+    margin-top: 5px;
+}
+
+header p {
+    text-align: center;
+    color: #7f8c8d;
+    font-size: 0.9rem;
+}
+
+/* Level Info Bar */
+.level-info {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.info-card {
+    flex: 1;
+    background: white;
+    padding: 1rem;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.info-card.active {
+    background: linear-gradient(135deg, #c0392b, #922b21);
+    color: white;
+}
+
+.info-card.active i,
+.info-card.active strong,
+.info-card.active span,
+.info-card.active small {
+    color: white;
+}
+
+.info-card:hover {
+    transform: translateY(-3px);
+}
+
+.info-card i {
+    font-size: 1.5rem;
+    color: #c0392b;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.info-card span {
+    display: block;
+    font-size: 0.8rem;
+    color: #7f8c8d;
+    margin-bottom: 0.3rem;
+}
+
+.info-card strong {
+    font-size: 1.5rem;
+    color: #2c3e50;
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.info-card small {
+    font-size: 0.7rem;
+    color: #7f8c8d;
+}
+
+/* Search and Filter Bar */
+.search-filter-bar {
+    background: white;
+    border-radius: 15px;
+    padding: 0.8rem 1.2rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.search-bar i {
+    color: #7f8c8d;
+    font-size: 1rem;
+}
+
+.search-bar input {
+    flex: 1;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    padding: 0.5rem 0;
+    background: transparent;
+}
+
+.clear-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #7f8c8d;
+    padding: 0.3rem;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+.clear-btn:hover {
+    background: #ecf0f1;
+    color: #e74c3c;
+}
+
+.result-info {
+    text-align: right;
+    font-size: 0.8rem;
+    color: #7f8c8d;
+    border-top: 1px solid #ecf0f1;
+    padding-top: 0.5rem;
+}
+
+.result-info span:first-child {
+    font-weight: bold;
+    color: #c0392b;
+    font-size: 1rem;
+}
+
+/* Category Tabs */
+.category-tabs {
+    display: flex;
+    gap: 0.8rem;
+    margin-bottom: 1.5rem;
+    background: white;
+    padding: 0.5rem;
+    border-radius: 50px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.tab-btn {
+    flex: 1;
+    padding: 0.8rem;
+    border: none;
+    background: transparent;
+    border-radius: 40px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    color: #7f8c8d;
+    position: relative;
+}
+
+.tab-btn i {
+    font-size: 1rem;
+}
+
+.tab-count {
+    background: #ecf0f1;
+    color: #7f8c8d;
+    padding: 2px 8px;
+    border-radius: 20px;
+    font-size: 0.7rem;
+    font-weight: normal;
+}
+
+.tab-btn.active {
+    background: #c0392b;
+    color: white;
+    box-shadow: 0 5px 10px rgba(192, 57, 43, 0.3);
+}
+
+.tab-btn.active .tab-count {
+    background: rgba(255, 255, 255, 0.3);
+    color: white;
+}
+
+.tab-btn:hover:not(.active) {
+    background: #ecf0f1;
+    color: #2c3e50;
+}
+
+/* Flashcard Container - 2 cards per row */
+.flashcard-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+/* Flashcard Styles */
+.flashcard {
+    background: transparent;
+    perspective: 1500px;
+    cursor: pointer;
+    min-height: 350px;
+}
+
+.flashcard-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.flashcard.flipped .flashcard-inner {
+    transform: rotateY(180deg);
+}
+
+.flashcard-front, .flashcard-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 20px;
+    padding: 1.5rem;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.flashcard-front {
+    background: linear-gradient(135deg, #ffffff, #f8f9fa);
+    transform: rotateY(0deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 2px solid #c0392b;
+}
+
+.flashcard-back {
+    background: linear-gradient(135deg, #1a1a2e, #16213e);
+    color: white;
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow-y: auto;
+}
+
+/* Audio Indicator */
+.audio-indicator {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: rgba(192, 57, 43, 0.9);
+    color: white;
+    padding: 4px 8px;
+    border-radius: 20px;
+    font-size: 0.7rem;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+/* Front Card Content */
+.japanese-word {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #c0392b;
+    margin-bottom: 1rem;
+    font-family: 'Noto Sans JP', 'Segoe UI', sans-serif;
+}
+
+.pronunciation {
+    font-size: 1rem;
+    color: #7f8c8d;
+    margin-bottom: 0.5rem;
+}
+
+.pronunciation i {
+    margin-right: 5px;
+    color: #c0392b;
+}
+
+.meaning {
+    margin-top: 1rem;
+}
+
+.meaning p {
+    margin: 0.5rem 0;
+    font-size: 0.95rem;
+}
+
+.burmese-mean {
+    background: #f5e9d7;
+    padding: 0.5rem;
+    border-radius: 10px;
+    color: #3d280b;
+    font-family: 'Noto Sans Myanmar', sans-serif;
+}
+
+.english-mean {
+    color: #2c3e50;
+}
+
+/* Back Card Content */
+.back-content {
+    text-align: left;
+    width: 100%;
+}
+
+.back-content h4 {
+    color: #f5b042;
+    margin-bottom: 0.8rem;
+    font-size: 1rem;
+    border-bottom: 2px solid #f5b042;
+    display: inline-block;
+}
+
+.example {
+    margin: 1rem 0;
+    padding: 0.8rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+}
+
+.example p {
+    margin: 0.3rem 0;
+    font-size: 0.85rem;
+    line-height: 1.4;
+}
+
+.example .jp-ex {
+    font-weight: bold;
+    color: #f5b042;
+}
+
+.example .en-ex, .example .mm-ex, .example .romaji-ex {
+    font-size: 0.8rem;
+    opacity: 0.9;
+}
+
+.instruction {
+    margin-top: 1rem;
+    text-align: center;
+    font-size: 0.7rem;
+    opacity: 0.7;
+}
+
+.romaji {
+    font-size: 0.9rem;
+    color: #7f8c8d;
+    margin-bottom: 0.8rem;
+    font-style: italic;
+    letter-spacing: 0.5px;
+}
+
+.romaji-ex {
+    font-size: 0.8rem;
+    color: #a8c8e8;
+    margin: 0.3rem 0;
+    font-style: italic;
+}
+
+/* Empty State */
+.empty-state {
+    grid-column: span 2;
+    text-align: center;
+    padding: 3rem;
+    background: white;
+    border-radius: 20px;
+    color: #7f8c8d;
+}
+
+.empty-state i {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: #c0392b;
+}
+
+/* Footer */
+footer {
+    background: rgba(0, 0, 0, 0.85);
+    border-radius: 20px;
+    padding: 1.2rem;
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.8rem;
+    transition: 0.3s;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.footer-links a:hover {
+    color: #f5b042;
+}
+
+footer p {
+    color: #7f8c8d;
+    font-size: 0.7rem;
+}
+
+footer p i {
+    color: #e74c3c;
+    margin-right: 5px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    body {
+        padding: 0.5rem;
+    }
+    
+    header {
+        padding: 1rem;
+    }
+    
+    .back-btn {
+        position: static;
+        margin-bottom: 1rem;
+        display: inline-block;
+    }
+    
+    header h1 {
+        font-size: 1.3rem;
+    }
+    
+    .flashcard-container {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .flashcard {
+        min-height: 300px;
+    }
+    
+    .japanese-word {
+        font-size: 2rem;
+    }
+    
+    .meaning p {
+        font-size: 0.85rem;
+    }
+    
+    .info-card strong {
+        font-size: 1.2rem;
+    }
+    
+    .tab-btn {
+        font-size: 0.8rem;
+        padding: 0.6rem;
+    }
+    
+    .empty-state {
+        grid-column: span 1;
+    }
+}
+
+@media (max-width: 480px) {
+    .level-info {
+        flex-direction: column;
+    }
+    
+    .flashcard-front, .flashcard-back {
+        padding: 1rem;
+    }
+    
+    .japanese-word {
+        font-size: 1.6rem;
+    }
+    
+    .example p {
+        font-size: 0.75rem;
+    }
+}
+
+/* Category Filter Bar */
+.category-filter {
+    background: white;
+    border-radius: 15px;
+    padding: 0.8rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.category-bar {
+    display: flex;
+    gap: 0.8rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.category-btn {
+    padding: 0.6rem 1.2rem;
+    border: none;
+    background: #ecf0f1;
+    border-radius: 25px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #2c3e50;
+}
+
+.category-btn i {
+    font-size: 0.85rem;
+}
+
+.category-btn:hover {
+    background: #c0392b;
+    color: white;
+    transform: translateY(-2px);
+}
+
+.category-btn.active-category {
+    background: #c0392b;
+    color: white;
+    box-shadow: 0 3px 8px rgba(192, 57, 43, 0.3);
+}
+
+.category-count {
+    background: rgba(0, 0, 0, 0.1);
+    padding: 2px 8px;
+    border-radius: 20px;
+    font-size: 0.7rem;
+    font-weight: normal;
+    margin-left: 4px;
+}
+
+.category-btn.active-category .category-count {
+    background: rgba(255, 255, 255, 0.3);
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .category-bar {
+        gap: 0.5rem;
+    }
+    
+    .category-btn {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.7rem;
+    }
+}
+
+/* Speak Example Buttons */
+.speak-example-btn {
+    background: rgba(245, 176, 66, 0.2);
+    border: 1px solid #f5b042;
+    border-radius: 20px;
+    padding: 6px 14px;
+    margin: 8px 0;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #f5b042;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.speak-example-btn:hover {
+    background: #f5b042;
+    color: #2c3e50;
+    transform: scale(1.02);
+}
+
+.speak-example-btn i {
+    font-size: 0.7rem;
+}
+
+.flashcard-back .speak-example-btn {
+    background: rgba(245, 176, 66, 0.15);
+    border-color: rgba(245, 176, 66, 0.5);
+    color: #f5b042;
+}
+
+.flashcard-back .speak-example-btn:hover {
+    background: #f5b042;
+    color: #2c3e50;
+}
+
+/* PDF Download Section */
+.pdf-download-section {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 20px 0;
+    flex-wrap: wrap;
+}
+
+.pdf-download-btn {
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 50px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.pdf-download-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+}
+
+.pdf-download-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.pdf-download-btn.grammar-pdf {
+    background: linear-gradient(135deg, #2e7d32 0%, #1b5e20 100%);
+}
+
+.pdf-download-btn.grammar-pdf:hover {
+    background: linear-gradient(135deg, #1b5e20 0%, #2e7d32 100%);
+}
+
+.pdf-download-btn.kanji-pdf {
+    background: linear-gradient(135deg, #e65100 0%, #bf360c 100%);
+}
+
+.pdf-download-btn.kanji-pdf:hover {
+    background: linear-gradient(135deg, #bf360c 0%, #e65100 100%);
+}
+
+/* Back to Top Button */
+.back-to-top-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, #c0392b, #922b21);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1000;
+}
+
+.back-to-top-btn.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.back-to-top-btn:hover {
+    transform: translateY(-3px);
+    background: linear-gradient(135deg, #922b21, #c0392b);
+}
+
+.back-to-top-btn i {
+    font-size: 1.2rem;
+}
+
+.back-to-top-btn span {
+    font-size: 0.6rem;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .back-to-top-btn {
+        bottom: 20px;
+        right: 20px;
+        width: 45px;
+        height: 45px;
+    }
+}
+
+/* Loading Overlay */
+#pdfLoadingOverlay div {
+    min-width: 300px;
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%) !important;
+}
+
+/* Empty state */
+.empty-state {
+    text-align: center;
+    padding: 60px 20px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+.empty-state i {
+    font-size: 48px;
+    color: #c0392b;
+    margin-bottom: 15px;
+}
+
+.empty-state p {
+    font-size: 18px;
+    color: #2c3e50;
+    margin-bottom: 8px;
+}
+
+.empty-state small {
+    color: #7f8c8d;
+    font-size: 14px;
+}
+
+/* Font imports for PDF */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap');
+
+.pdf-export-container {
+    font-family: 'Noto Sans JP', 'MS Gothic', 'Meiryo', 'Noto Sans Myanmar', sans-serif;
+}
+
+.japanese-text {
+    font-family: 'Noto Sans JP', 'MS Gothic', 'Meiryo', monospace;
+}

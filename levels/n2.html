@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.31/jspdf.plugin.autotable.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>N2 Level - Next Gen Learning Myanmar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Myanmar:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="n2.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header>
+            <a href="../index.html" class="back-btn">
+                <i class="fas fa-arrow-left"></i> Home
+            </a>
+            <h1>
+                <i class="fas fa-crown"></i> 
+                N2 Level - Upper Intermediate
+                <span>日本語能力試験 N2</span>
+            </h1>
+            <p>Master Vocabulary, Grammar & Kanji for JLPT N2</p>
+        </header>
+
+        <!-- Level Info Bar with Dynamic Counts -->
+        <div class="level-info">
+            <div class="info-card" id="vocabInfoCard">
+                <i class="fas fa-book"></i>
+                <span>Vocabulary</span>
+                <strong id="vocabCount">0</strong>
+                <small>words</small>
+            </div>
+            <div class="info-card" id="grammarInfoCard">
+                <i class="fas fa-spell-check"></i>
+                <span>Grammar</span>
+                <strong id="grammarCount">0</strong>
+                <small>rules</small>
+            </div>
+            <div class="info-card" id="kanjiInfoCard">
+                <i class="fas fa-font"></i>
+                <span>Kanji</span>
+                <strong id="kanjiCount">0</strong>
+                <small>characters</small>
+            </div>
+        </div>
+
+        <!-- Search and Filter Bar -->
+        <div class="search-filter-bar">
+            <div class="search-bar">
+                <i class="fas fa-search"></i>
+                <input type="text" id="searchInput" placeholder="Search English, Japanese, or Burmese...">
+                <button id="clearSearch" class="clear-btn">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+
+            <div class="result-info">
+                <span id="resultCount">0</span>
+                <span id="resultLabel">items</span>
+            </div>
+        </div>
+
+        <!-- Category Filter Bar (Topic-based) -->
+        <div class="category-filter">
+            <div class="category-bar" id="categoryBar">
+                <!-- Category buttons will be injected here -->
+            </div>
+        </div>
+
+        <!-- Category Tabs with Counters -->
+        <div class="category-tabs">
+            <button class="tab-btn active" data-category="vocab">
+                <i class="fas fa-book-open"></i> Vocabulary
+                <span class="tab-count" id="vocabTabCount">0</span>
+            </button>
+            <button class="tab-btn" data-category="grammar">
+                <i class="fas fa-spell-check"></i> Grammar
+                <span class="tab-count" id="grammarTabCount">0</span>
+            </button>
+            <button class="tab-btn" data-category="kanji">
+                <i class="fas fa-font"></i> Kanji
+                <span class="tab-count" id="kanjiTabCount">0</span>
+            </button>
+        </div>
+
+        <!-- PDF Download Section -->
+        <div class="pdf-download-section">
+            <!-- Buttons will be injected by JavaScript -->
+        </div>
+
+        <!-- Flashcard Container -->
+        <div class="flashcard-container" id="flashcardContainer">
+            <!-- Cards will be injected here -->
+        </div>
+
+        <!-- Footer Navigation -->
+        <footer>
+            <div class="footer-links">
+                <a href="../pages/privacy.html"><i class="fas fa-shield-alt"></i> Privacy</a>
+                <a href="../pages/about.html"><i class="fas fa-info-circle"></i> About</a>
+                <a href="../pages/contact.html"><i class="fas fa-envelope"></i> Contact</a>
+                <a href="../pages/terms.html"><i class="fas fa-file-contract"></i> Terms</a>
+            </div>
+            <p><i class="fas fa-heart"></i> Next Gen Learning Myanmar - N2 Level</p>
+        </footer>
+    </div>
+
+    <script src="n2.js"></script>
+</body>
+</html>

@@ -1,0 +1,1064 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JLPT Mock Tests | Next Gen Learning Myanmar</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans Myanmar', sans-serif;
+            background: #f7fafc;
+        }
+
+        .test-container {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 1rem;
+        }
+
+        /* Level & Test Selector */
+        .selector-panel {
+            background: white;
+            border-radius: 20px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .level-tabs {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            margin-bottom: 1.5rem;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 1rem;
+        }
+
+        .level-tab {
+            padding: 10px 24px;
+            background: #edf2f7;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+
+        .level-tab.active {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+        }
+
+        .test-buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .test-btn-select {
+            flex: 1;
+            min-width: 120px;
+            padding: 15px;
+            background: white;
+            border: 2px solid #e2e8f0;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-align: center;
+        }
+
+        .test-btn-select:hover {
+            border-color: #667eea;
+            background: #f7fafc;
+        }
+
+        .test-btn-select.active {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            border-color: #667eea;
+            color: white;
+        }
+
+        .test-btn-select .test-number {
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        .test-btn-select .test-status {
+            font-size: 0.8rem;
+            margin-top: 5px;
+            opacity: 0.8;
+        }
+
+        /* Test Header */
+        .test-header {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 1.5rem;
+            border-radius: 15px;
+            margin-bottom: 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .test-info {
+            flex: 1;
+        }
+
+        .timer-box {
+            background: rgba(0,0,0,0.3);
+            padding: 0.8rem 1.5rem;
+            border-radius: 50px;
+            font-size: 1.5rem;
+            font-weight: bold;
+            font-family: monospace;
+        }
+
+        .timer-box.warning {
+            background: #e53e3e;
+            animation: pulse 1s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
+
+        .progress-bar {
+            background: #e2e8f0;
+            height: 10px;
+            border-radius: 5px;
+            margin: 1rem 0;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            background: linear-gradient(90deg, #48bb78, #38a169);
+            height: 100%;
+            width: 0%;
+            transition: width 0.3s;
+        }
+
+        /* Question Card */
+        .question-card {
+            background: white;
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            margin-bottom: 1.5rem;
+        }
+
+        .question-number {
+            color: #667eea;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+        }
+
+        .question-text {
+            font-size: 1.3rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .question-text.japanese {
+            font-size: 1.5rem;
+            font-weight: 500;
+        }
+
+        .options {
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
+        }
+
+        .option {
+            display: flex;
+            align-items: center;
+            padding: 1rem;
+            border: 2px solid #e2e8f0;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .option:hover {
+            background: #f7fafc;
+            border-color: #cbd5e0;
+        }
+
+        .option.selected {
+            background: #ebf8ff;
+            border-color: #3182ce;
+        }
+
+        .option-letter {
+            font-weight: bold;
+            width: 35px;
+            height: 35px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #e2e8f0;
+            border-radius: 50%;
+            margin-right: 1rem;
+        }
+
+        .option.selected .option-letter {
+            background: #3182ce;
+            color: white;
+        }
+
+        .option-text {
+            flex: 1;
+        }
+
+        .nav-buttons {
+            display: flex;
+            justify-content: space-between;
+            gap: 1rem;
+            margin-top: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .nav-btn {
+            padding: 12px 24px;
+            border: none;
+            border-radius: 10px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        .nav-btn.primary {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+        }
+
+        .nav-btn.secondary {
+            background: #cbd5e0;
+            color: #4a5568;
+        }
+
+        .nav-btn.danger {
+            background: #e53e3e;
+            color: white;
+        }
+
+        /* Results Modal */
+        .results-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.8);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .results-content {
+            background: white;
+            border-radius: 20px;
+            padding: 2rem;
+            max-width: 500px;
+            width: 90%;
+            text-align: center;
+            max-height: 90vh;
+            overflow-y: auto;
+        }
+
+        .score-circle {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            margin: 1rem auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2.5rem;
+            font-weight: bold;
+        }
+
+        .result-badge {
+            display: inline-block;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-weight: bold;
+            margin: 1rem 0;
+        }
+
+        .result-badge.pass { background: #c6f6d5; color: #22543d; }
+        .result-badge.fail { background: #fed7d7; color: #742a2a; }
+
+        .review-item {
+            padding: 1rem;
+            border-bottom: 1px solid #e2e8f0;
+            text-align: left;
+        }
+
+        .review-item.correct-review { background: #f0fff4; }
+        .review-item.wrong-review { background: #fff5f5; }
+
+        .back-btn {
+            display: inline-block;
+            margin: 1rem;
+            padding: 10px 20px;
+            background: #4299e1;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+        }
+
+        footer {
+            margin-top: 3rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="../index.html" class="back-btn"><i class="fas fa-arrow-left"></i> Back to Home</a>
+        <h1><i class="fas fa-pencil-alt"></i> JLPT Mock Tests</h1>
+        <p>3 full practice tests for each level | Real exam format</p>
+    </header>
+
+    <main>
+        <div class="test-container">
+            <div class="selector-panel">
+                <div class="level-tabs">
+                    <button class="level-tab active" data-level="n5">N5 (60 min)</button>
+                    <button class="level-tab" data-level="n4">N4 (70 min)</button>
+                    <button class="level-tab" data-level="n3">N3 (80 min)</button>
+                    <button class="level-tab" data-level="n2">N2 (90 min)</button>
+                    <button class="level-tab" data-level="n1">N1 (110 min)</button>
+                </div>
+                <div class="test-buttons" id="testButtons">
+                    <!-- Test buttons will be generated here -->
+                </div>
+            </div>
+
+            <div class="test-header">
+                <div class="test-info">
+                    <i class="fas fa-file-alt"></i> 
+                    <strong id="testName">Mock Test 1</strong>
+                    <div style="font-size: 0.8rem;">Question <span id="currentQ">1</span>/<span id="totalQ">25</span></div>
+                </div>
+                <div class="timer-box" id="timer">60:00</div>
+            </div>
+
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressFill"></div>
+            </div>
+
+            <div id="questionContainer"></div>
+
+            <div class="nav-buttons">
+                <button class="nav-btn secondary" id="prevBtn" disabled><i class="fas fa-chevron-left"></i> Previous</button>
+                <button class="nav-btn danger" id="resetBtn"><i class="fas fa-redo"></i> Reset Test</button>
+                <button class="nav-btn primary" id="nextBtn">Next <i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </main>
+
+    <div class="results-modal" id="resultsModal">
+        <div class="results-content">
+            <i class="fas fa-check-circle" style="font-size: 3rem; color: #48bb78;"></i>
+            <h2>Test Completed!</h2>
+            <div class="score-circle" id="scoreCircle">0/0</div>
+            <div id="resultBadge"></div>
+            <p id="scoreMessage"></p>
+            <button class="nav-btn primary" id="closeResults">View Answers →</button>
+            <button class="nav-btn secondary" id="retakeBtn"><i class="fas fa-sync"></i> Retake Test</button>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-tabs">
+            <a href="privacy.html"><i class="fas fa-shield-alt"></i> Privacy Policy</a>
+            <a href="about.html"><i class="fas fa-info-circle"></i> About</a>
+            <a href="contact.html"><i class="fas fa-envelope"></i> Contact</a>
+            <a href="terms.html"><i class="fas fa-file-contract"></i> Terms & Policy</a>
+        </div>
+        <p><i class="fas fa-heart"></i> © 2025 Next Gen Learning Myanmar. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Complete question database for 3 mock tests per level (N5-N1)
+        const questionBank = {
+    n5: {
+        test1: [
+            { text: "わたしは まいにち 7じに _______。", options: ["ねます", "おきます", "たべます", "いきます"], correct: 1, explanation: "起きます = wake up" },
+            { text: "これは なん _______ ですか。", options: ["を", "が", "の", "で"], correct: 1, explanation: "なん + が = what (subject)" },
+            { text: "What does 「ありがとう」 mean?", options: ["Goodbye", "Hello", "Thank you", "Sorry"], correct: 2, explanation: "Thank you" },
+            { text: "きのう、えいがを _______。", options: ["みます", "みて", "みよう", "みた"], correct: 3, explanation: "Past tense of 見る" },
+            { text: "すしを たべに いきましょう。", options: ["I ate sushi", "Let's eat sushi", "Eating sushi", "Sushi is delicious"], correct: 1, explanation: "〜ましょう = let's" },
+            { text: "あの ひとは せんせい _______。", options: ["ます", "です", "します", "います"], correct: 1, explanation: "です = is/am/are" },
+            { text: "How do you say 'I am a student'?", options: ["せんせいです", "がくせいです", "かいしゃいんです", "にほんじんです"], correct: 1, explanation: "学生 = student" },
+            { text: "おちゃと コーヒーと どちらが _______ ですか。", options: ["よい", "いく", "いい", "いか"], correct: 2, explanation: "いい = good" },
+            { text: "かぞくは さんにん _______。", options: ["います", "あります", "です", "します"], correct: 2, explanation: "です = is/are" },
+            { text: "What is 「おはようございます」?", options: ["Good afternoon", "Good morning", "Good evening", "Good night"], correct: 1, explanation: "Good morning" },
+            { text: "わたしは コーヒー _______ のみます。", options: ["が", "を", "に", "で"], correct: 1, explanation: "を = direct object marker" },
+            { text: "Meaning of 「やすい」?", options: ["Expensive", "Cheap", "High", "Low"], correct: 1, explanation: "安い = cheap" },
+            { text: "きょうは あついですね。", options: ["cold", "warm", "hot", "cool"], correct: 2, explanation: "暑い = hot" },
+            { text: "ともだちと えいがを _______ いきました。", options: ["みに", "みて", "みる", "みた"], correct: 0, explanation: "verb stem + に = go to do" },
+            { text: "What is 「おなかがすいた」?", options: ["I'm thirsty", "I'm sleepy", "I'm hungry", "I'm tired"], correct: 2, explanation: "お腹が空いた = hungry" },
+            { text: "にほんごの べんきょうは たのしい _______。", options: ["です", "ます", "いました", "でした"], correct: 0, explanation: "い-adjective + です" },
+            { text: "How do you say 'please give me'?", options: ["ください", "どうぞ", "おねがい", "ありがとう"], correct: 0, explanation: "ください = please give me" },
+            { text: "あしたは どようび _______。", options: ["です", "ます", "でした", "でしょう"], correct: 0, explanation: "です = is" },
+            { text: "Meaning of 「ひるごはん」?", options: ["Breakfast", "Lunch", "Dinner", "Snack"], correct: 1, explanation: "昼ごはん = lunch" },
+            { text: "わたしの しゅみは おんがくを _______ ことです。", options: ["きく", "きいて", "きいた", "きこう"], correct: 0, explanation: "Dictionary form + こと = noun phrase" }
+        ],
+        test2: [
+            { text: "あした ともだちに _______ つもりです。", options: ["あいます", "あった", "あう", "あって"], correct: 2, explanation: "Dictionary form + つもり = intend to" },
+            { text: "This pen is expensive: このペンは _______ です。", options: ["やすい", "おおきい", "たかい", "ちいさい"], correct: 2, explanation: "高い = expensive/tall" },
+            { text: "にほんごは むずかしいですが、おもしろい _______。", options: ["ます", "です", "いました", "でした"], correct: 1, explanation: "い-adjective + です" },
+            { text: "Meaning of 「ねこ」?", options: ["Dog", "Bird", "Fish", "Cat"], correct: 3, explanation: "猫 = cat" },
+            { text: "コーヒーに さとうを いれました。", options: ["added milk", "put sugar", "mixed tea", "poured water"], correct: 1, explanation: "入れる = to put in" },
+            { text: "でんわばんごうを おしえて _______。", options: ["ます", "ください", "ました", "ません"], correct: 1, explanation: "てください = please do" },
+            { text: "I like sushi: わたしは すしが _______。", options: ["きらいです", "すきです", "じょうずです", "へたです"], correct: 1, explanation: "好き = like" },
+            { text: "きょうは さむいですね。", options: ["hot", "warm", "cold", "cool"], correct: 2, explanation: "寒い = cold" },
+            { text: "What is 「さようなら」?", options: ["Hello", "Thank you", "Sorry", "Goodbye"], correct: 3, explanation: "Goodbye" },
+            { text: "ともだちと テニスを _______。", options: ["しますか", "しました", "します", "しません"], correct: 2, explanation: "をする = to play" },
+            { text: "これは わたしの ほん _______。", options: ["です", "ます", "だ", "ですよ"], correct: 0, explanation: "です = is" },
+            { text: "Meaning of 「のみもの」?", options: ["Food", "Drink", "Snack", "Meal"], correct: 1, explanation: "飲み物 = drink" },
+            { text: "あさごはんを _______ から がっこうに いきます。", options: ["たべる", "たべて", "たべた", "たべ"], correct: 1, explanation: "てから = after doing" },
+            { text: "How do you say 'excuse me / sorry'?", options: ["ありがとう", "こんにちは", "すみません", "おやすみ"], correct: 2, explanation: "すみません = excuse me/sorry" },
+            { text: "こうえんで おにごっこを _______。", options: ["した", "する", "します", "しよう"], correct: 2, explanation: "をする = to play" },
+            { text: "What does 「たのしい」 mean?", options: ["Sad", "Fun/enjoyable", "Boring", "Difficult"], correct: 1, explanation: "楽しい = fun" },
+            { text: "わたしの うちは えき _______ ちかいです。", options: ["に", "を", "が", "へ"], correct: 0, explanation: "に = location particle" },
+            { text: "かれは まいにち 8じに _______。", options: ["ねます", "おきます", "たべます", "いきます"], correct: 1, explanation: "起きます = wake up" },
+            { text: "Meaning of 「はやい」?", options: ["Slow", "Late", "Fast/early", "Far"], correct: 2, explanation: "早い/速い = fast/early" },
+            { text: "テストは むずかしくなかったです。", options: ["was difficult", "was easy", "wasn't easy", "wasn't difficult"], correct: 3, explanation: "くなかった = past negative" }
+        ],
+        test3: [
+            { text: "くるまが ほしいです。", options: ["I have a car", "I want a car", "I like cars", "I drive a car"], correct: 1, explanation: "ほしい = want" },
+            { text: "ごはんを たべてから、テレビを _______。", options: ["みる", "みます", "みた", "みて"], correct: 1, explanation: "Non-past after から" },
+            { text: "Meaning of 「あおい」?", options: ["Red", "Yellow", "Green", "Blue"], correct: 3, explanation: "青い = blue" },
+            { text: "この とりは _______ とべます。", options: ["たかい", "たかく", "たかくて", "たかかった"], correct: 1, explanation: "い-adjective adverb form" },
+            { text: "How to say 'please wait'?", options: ["いってください", "まってください", "みてください", "きいてください"], correct: 1, explanation: "待つ = wait" },
+            { text: "かれは がくせいじゃ ありません。", options: ["is a student", "is not a student", "was a student", "is a teacher"], correct: 1, explanation: "じゃありません = is not" },
+            { text: "What is 「こんばんは」?", options: ["Good morning", "Good afternoon", "Good evening", "Good night"], correct: 2, explanation: "Good evening" },
+            { text: "わたしは まいにち ランニングを _______。", options: ["する", "して", "します", "した"], correct: 2, explanation: "をする = to do" },
+            { text: "かぞくは よにんいます。", options: ["3 people", "5 people", "2 people", "4 people"], correct: 3, explanation: "四人 = 4 people" },
+            { text: "Meaning of 「びょういん」?", options: ["School", "Library", "Hospital", "Post office"], correct: 2, explanation: "病院 = hospital" },
+            { text: "きのう なにを _______ か。", options: ["します", "した", "する", "して"], correct: 1, explanation: "Past tense question" },
+            { text: "この りょうりは おいしい _______。", options: ["です", "ます", "だ", "でしょう"], correct: 0, explanation: "い-adjective + です" },
+            { text: "Meaning of 「しごと」?", options: ["School", "Home", "Work/Job", "Shop"], correct: 2, explanation: "仕事 = work" },
+            { text: "あには せが たかいです。", options: ["short", "tall", "small", "big"], correct: 1, explanation: "背が高い = tall" },
+            { text: "What does 「ちょっと」 mean?", options: ["A lot", "Very", "A little", "Not at all"], correct: 2, explanation: "ちょっと = a little" },
+            { text: "にほんごを べんきょうして _______。", options: ["います", "いますか", "いました", "いましょう"], correct: 0, explanation: "ている = ongoing action" },
+            { text: "あしたは はれ _______ でしょう。", options: ["だ", "です", "な", "の"], correct: 0, explanation: "Noun + だ + でしょう" },
+            { text: "Meaning of 「くるま」?", options: ["Bicycle", "Train", "Car", "Bus"], correct: 2, explanation: "車 = car" },
+            { text: "えいがを みに いきませんか。", options: ["Let's go", "Don't go", "Went", "Will go"], correct: 0, explanation: "ませんか = invitation" },
+            { text: "この かばんは いくらですか。", options: ["How many", "How much", "What color", "What size"], correct: 1, explanation: "いくら = how much" }
+        ]
+    },
+    n4: {
+        test1: [
+            { text: "かぜをひいて、あたまがいたいです。", options: ["broke a leg", "caught a cold", "got fever", "sore throat"], correct: 1, explanation: "風邪を引く = catch cold" },
+            { text: "What does 「だいじょうぶ」 mean?", options: ["Sorry", "Thank you", "Okay/alright", "Excuse me"], correct: 2, explanation: "大丈夫 = okay" },
+            { text: "テレビをみないで、べんきょうしてください。", options: ["Watch TV", "Don't watch TV", "Study while watching", "Don't study"], correct: 1, explanation: "ないでください = please don't" },
+            { text: "Meaning of 「ちかい」?", options: ["Far", "Fast", "Slow", "Near"], correct: 3, explanation: "近い = near" },
+            { text: "にほんごが すこし わかります。", options: ["don't understand", "understand well", "understand a little", "speak fluently"], correct: 2, explanation: "少し = a little" },
+            { text: "あめが ふっています。かさを _______。", options: ["もってきます", "もっていきます", "もちます", "もった"], correct: 1, explanation: "持っていく = take along" },
+            { text: "この しょくどうは 7じから 9じまで です。", options: ["closed", "open", "busy", "empty"], correct: 1, explanation: "から〜まで = from~to" },
+            { text: "Meaning of 「つめたい」?", options: ["Hot (objects)", "Warm", "Cold (objects)", "Cool"], correct: 2, explanation: "冷たい = cold to touch" },
+            { text: "ともだちに てがみを かきました。", options: ["sent a package", "wrote a letter", "called a friend", "received email"], correct: 1, explanation: "手紙 = letter" },
+            { text: "にほんに りゅうがくしたいです。", options: ["want to travel", "want to study abroad", "want to work", "want to live"], correct: 1, explanation: "留学 = study abroad" },
+            { text: "What is 「れんしゅう」?", options: ["Practice", "Study", "Work", "Play"], correct: 0, explanation: "練習 = practice" },
+            { text: "あめがふったので、うんどうしませんでした。", options: ["although it rained", "before it rained", "because it rained", "while it rained"], correct: 2, explanation: "ので = because" },
+            { text: "Meaning of 「きをつけて」?", options: ["Hurry up", "Be careful", "Listen carefully", "Look out"], correct: 1, explanation: "気をつけて = take care" },
+            { text: "この CDを かりても いいですか。", options: ["buy", "sell", "borrow", "lend"], correct: 2, explanation: "借りる = borrow" },
+            { text: "やまださんは まいあさ ジョギングをします。", options: ["every morning", "every day", "sometimes", "usually"], correct: 0, explanation: "毎朝 = every morning" },
+            { text: "What does 「まっすぐ」 mean?", options: ["Left", "Right", "Back", "Straight"], correct: 3, explanation: "まっすぐ = straight" },
+            { text: "でんきを けしてください。", options: ["turn on", "turn off", "fix", "buy"], correct: 1, explanation: "消す = turn off" },
+            { text: "ともだちの けっこんしきに いきます。", options: ["birthday party", "wedding ceremony", "graduation", "funeral"], correct: 1, explanation: "結婚式 = wedding" },
+            { text: "Meaning of 「しんせつ」?", options: ["Kind", "Mean", "Smart", "Stupid"], correct: 0, explanation: "親切 = kind" },
+            { text: "あした てんきが よければ、かいものに いきます。", options: ["if bad", "if good", "when bad", "when good"], correct: 1, explanation: "よければ = if good" }
+        ],
+        test2: [
+            { text: "しごとが おわってから、のみにいきます。", options: ["before work starts", "after work finishes", "during work", "instead of work"], correct: 1, explanation: "てから = after doing" },
+            { text: "かれは けっこんしています。", options: ["is single", "will marry", "divorced", "is married"], correct: 3, explanation: "結婚している = is married" },
+            { text: "Meaning of 「ゆっくり」?", options: ["Quickly", "Slowly", "Loudly", "Quietly"], correct: 1, explanation: "ゆっくり = slowly" },
+            { text: "もっと やさいを たべた ほうが いいです。", options: ["should eat", "shouldn't eat", "must eat", "don't eat"], correct: 0, explanation: "たほうがいい = should do" },
+            { text: "にほんごで えいがを みました。", options: ["in Japanese", "in English", "with subtitles", "without sound"], correct: 0, explanation: "で = language/instrument" },
+            { text: "What is 「しゅうかん」?", options: ["Month", "Week", "Day", "Year"], correct: 1, explanation: "週間 = week" },
+            { text: "へやを そうじして います。", options: ["will clean", "cleaned", "is cleaning", "should clean"], correct: 2, explanation: "ている = ongoing action" },
+            { text: "ともだちに プレゼントを あげました。", options: ["received", "bought", "gave", "found"], correct: 2, explanation: "あげる = give" },
+            { text: "Meaning of 「つごう」?", options: ["Time", "Schedule", "Convenience", "Trouble"], correct: 2, explanation: "都合 = convenience" },
+            { text: "でんしゃに おくれました。", options: ["caught the train", "missed the train", "rode the train", "left the train"], correct: 1, explanation: "遅れる = to be late" },
+            { text: "かんぱいしましょう。", options: ["Let's eat", "Let's cheers", "Let's go", "Let's sing"], correct: 1, explanation: "乾杯 = cheers" },
+            { text: "Meaning of 「まねく」?", options: ["Invite", "Visit", "Meet", "Call"], correct: 0, explanation: "招く = to invite" },
+            { text: "この しゃしんを とっても いいですか。", options: ["take a picture", "draw a picture", "buy a picture", "see a picture"], correct: 0, explanation: "写真を撮る = take a photo" },
+            { text: "にほんごで はなせますか。", options: ["read", "write", "speak", "listen"], correct: 2, explanation: "話す = to speak" },
+            { text: "くるまの うんてんが できます。", options: ["can drive", "can ride", "can buy", "can sell"], correct: 0, explanation: "できる = can do" },
+            { text: "What does 「もしもし」 mean?", options: ["Hello (phone)", "Goodbye", "Thank you", "Sorry"], correct: 0, explanation: "もしもし = hello on phone" },
+            { text: "もうすぐ ふゆやすみです。", options: ["spring break", "summer break", "winter break", "autumn break"], correct: 2, explanation: "冬休み = winter break" },
+            { text: "にもつは ここに おいてください。", options: ["take", "move", "put/place", "throw"], correct: 2, explanation: "置く = to put/place" },
+            { text: "Meaning of 「あんしん」?", options: ["Anxiety", "Relief", "Happiness", "Sadness"], correct: 1, explanation: "安心 = relief" },
+            { text: "この バスは えきを とおります。", options: ["stops at", "passes through", "starts from", "ends at"], correct: 1, explanation: "通る = to pass through" }
+        ],
+        test3: [
+            { text: "にほんの たべものは おいしいです。", options: ["Japanese people", "Japanese food", "Japanese language", "Japanese culture"], correct: 1, explanation: "食べ物 = food" },
+            { text: "What does 「まいにち」 mean?", options: ["Every week", "Every month", "Every day", "Every year"], correct: 2, explanation: "毎日 = every day" },
+            { text: "てんきが わるいので、やめました。", options: ["good", "bad", "hot", "cold"], correct: 1, explanation: "悪い = bad" },
+            { text: "おふろに はいります。", options: ["get out of bath", "take a bath", "clean bath", "fill bath"], correct: 1, explanation: "風呂に入る = take a bath" },
+            { text: "Meaning of 「じゅうぶん」?", options: ["Enough", "Too much", "Little", "Plenty"], correct: 0, explanation: "十分 = enough" },
+            { text: "あねは イタリアに すんでいます。", options: ["visits", "works", "lives", "studies"], correct: 2, explanation: "住む = to live" },
+            { text: "かぜの ひきはじめが たいせつです。", options: ["important", "unimportant", "dangerous", "safe"], correct: 0, explanation: "大切 = important" },
+            { text: "What is 「けいけん」?", options: ["Knowledge", "Experience", "Practice", "Study"], correct: 1, explanation: "経験 = experience" },
+            { text: "かれは まいばん おそくまで べんきょうします。", options: ["early", "late", "fast", "slow"], correct: 1, explanation: "遅く = late" },
+            { text: "ちょっと まってください。", options: ["go away", "come here", "wait a moment", "hurry up"], correct: 2, explanation: "待つ = to wait" },
+            { text: "おちゃを いれましょうか。", options: ["Shall I pour tea?", "Shall we drink tea?", "Is tea ready?", "Do you want tea?"], correct: 0, explanation: "入れましょうか = shall I pour" },
+            { text: "Meaning of 「しっぱい」?", options: ["Success", "Failure", "Try", "Learn"], correct: 1, explanation: "失敗 = failure" },
+            { text: "この ボタンを おしてください。", options: ["pull", "push/press", "turn", "hold"], correct: 1, explanation: "押す = to press" },
+            { text: "しんかんせんは とても はやいです。", options: ["slow", "fast", "expensive", "cheap"], correct: 1, explanation: "速い = fast" },
+            { text: "What does 「けっこん」 mean?", options: ["Divorce", "Marriage", "Birth", "Death"], correct: 1, explanation: "結婚 = marriage" },
+            { text: "わたしは きのう アルバイトを しました。", options: ["full-time job", "part-time job", "volunteer", "internship"], correct: 1, explanation: "アルバイト = part-time job" },
+            { text: "ともだちに かさを かりました。", options: ["lent umbrella", "borrowed umbrella", "bought umbrella", "lost umbrella"], correct: 1, explanation: "借りる = borrow" },
+            { text: "この みちは せまいです。", options: ["wide", "narrow", "long", "short"], correct: 1, explanation: "狭い = narrow" },
+            { text: "Meaning of 「りょこう」?", options: ["Business trip", "Travel", "Commute", "Walk"], correct: 1, explanation: "旅行 = travel" },
+            { text: "あしたの よる、コンサートに いきます。", options: ["tomorrow morning", "tomorrow afternoon", "tomorrow night", "tomorrow evening"], correct: 2, explanation: "夜 = night" }
+        ]
+    },
+    n3: {
+        test1: [
+            { text: "たとえ むずかしくても、あきらめないつもりです。", options: ["Because it's difficult", "Even if it's difficult", "Although it's easy", "When it's difficult"], correct: 1, explanation: "ても = even if" },
+            { text: "What does 「むしろ」 mean?", options: ["Very", "Rather", "Sometimes", "Always"], correct: 1, explanation: "むしろ = rather" },
+            { text: "にほんごを ならいたいとおもっています。", options: ["I'm learning", "I want to learn", "I learned", "I will learn"], correct: 1, explanation: "たいと思う = want to" },
+            { text: "この アニメは こどもに にんきがある。", options: ["popular with children", "hated by children", "made for children", "watched by children"], correct: 0, explanation: "人気がある = popular" },
+            { text: "Meaning of 「たしか」?", options: ["Maybe", "Certainly/sure", "Probably", "Hopefully"], correct: 1, explanation: "確か = certain/sure" },
+            { text: "かれは せんせい と けんかしてしまった。", options: ["started fighting", "ended up fighting", "avoided fighting", "enjoyed fighting"], correct: 1, explanation: "てしまう = regrettably" },
+            { text: "What is 「とりあえず」?", options: ["Finally", "Suddenly", "For now", "Carefully"], correct: 2, explanation: "とりあえず = for now" },
+            { text: "そろそろ しつれいします。", options: ["I'm sorry", "Thank you", "I'll be leaving now", "Nice to meet you"], correct: 2, explanation: "失礼します = excuse me/leaving" },
+            { text: "ひつような ものを かいにいきました。", options: ["expensive things", "necessary things", "big things", "small things"], correct: 1, explanation: "必要な = necessary" },
+            { text: "Meaning of 「だんだん」?", options: ["Suddenly", "Gradually", "Immediately", "Completely"], correct: 1, explanation: "だんだん = gradually" },
+            { text: "かれは こうちょうせんせいに ほめられた。", options: ["scolded", "praised", "ignored", "called"], correct: 1, explanation: "褒められた = was praised" },
+            { text: "What does 「わざと」 mean?", options: ["Accidentally", "On purpose", "Naturally", "Easily"], correct: 1, explanation: "わざと = intentionally" },
+            { text: "にほんの ぶんかを まなぶのは おもしろい。", options: ["history", "economy", "culture", "politics"], correct: 2, explanation: "文化 = culture" },
+            { text: "しゅくだいを わすれてしまいました。", options: ["remembered homework", "forgot homework", "finished homework", "lost homework"], correct: 1, explanation: "忘れてしまった = regrettably forgot" },
+            { text: "Meaning of 「きょうみ」?", options: ["Interest", "Boredom", "Excitement", "Fear"], correct: 0, explanation: "興味 = interest" },
+            { text: "かれの えは みんなに すかれる。", options: ["hated", "ignored", "liked", "criticized"], correct: 2, explanation: "好かれる = be liked" },
+            { text: "いましばらく おまちください。", options: ["Long time", "Short while", "Never", "Forever"], correct: 1, explanation: "しばらく = for a while" },
+            { text: "What is 「あきらか」?", options: ["Unclear", "Obvious/clear", "Hidden", "Secret"], correct: 1, explanation: "明らか = obvious" },
+            { text: "わすれない うちに メモを しました。", options: ["after forgetting", "while remembering", "before forgetting", "without forgetting"], correct: 2, explanation: "うちに = while/before" },
+            { text: "その ニュースを きいて びっくりした。", options: ["happy", "excited", "surprised", "sad"], correct: 2, explanation: "びっくり = surprised" }
+        ],
+        test2: [
+            { text: "かれは あたらしい アプリを かいはつした。", options: ["bought", "developed", "downloaded", "deleted"], correct: 1, explanation: "開発 = development" },
+            { text: "What does 「もっとも」 mean?", options: ["Least", "Most", "Some", "Any"], correct: 1, explanation: "最も = the most" },
+            { text: "てんきが これから わるくなる だろう。", options: ["will become", "has become", "might become", "won't become"], correct: 0, explanation: "だろう = probably" },
+            { text: "この もんだいは かいけつが むずかしい。", options: ["solution", "problem", "question", "answer"], correct: 0, explanation: "解決 = solution" },
+            { text: "Meaning of 「とくに」?", options: ["Especially", "Generally", "Normally", "Occasionally"], correct: 0, explanation: "特に = especially" },
+            { text: "しゃちょうに よろしく おつたえください。", options: ["give a message", "give my regards", "give a gift", "give a report"], correct: 1, explanation: "よろしく伝える = give regards" },
+            { text: "What does 「やむをえない」 mean?", options: ["Impossible", "Inevitable", "Unnecessary", "Unbelievable"], correct: 1, explanation: "やむを得ない = unavoidable" },
+            { text: "けいたいは せいかつに かかせない ものです。", options: ["unnecessary", "indispensable", "expensive", "cheap"], correct: 1, explanation: "欠かせない = indispensable" },
+            { text: "かれのせつめいは きわめて りかいしやすい。", options: ["very hard to understand", "extremely easy to understand", "somewhat confusing", "completely wrong"], correct: 1, explanation: "極めて = extremely" },
+            { text: "Meaning of 「一石二鳥」?", options: ["One bird two stones", "Kill two birds with one stone", "Stone throwing", "Bird hunting"], correct: 1, explanation: "Idiom for getting two benefits" },
+            { text: "この ドラマは めちゃくちゃ おもしろい。", options: ["a little", "extremely/super", "not very", "somewhat"], correct: 1, explanation: "めちゃくちゃ = super/extremely" },
+            { text: "What is 「べんり」?", options: ["Inconvenient", "Convenient", "Difficult", "Easy"], correct: 1, explanation: "便利 = convenient" },
+            { text: "そんないうのは やめた ほうがいい。", options: ["saying that", "doing that", "thinking that", "hearing that"], correct: 0, explanation: "言う = to say" },
+            { text: "かれは その プロジェクトを にないてきた。", options: ["has been avoiding", "has been leading", "has been supporting", "has been watching"], correct: 1, explanation: "担う = to bear/take charge" },
+            { text: "Meaning of 「念のため」?", options: ["For memory", "Just in case", "For safety", "For sure"], correct: 1, explanation: "念のため = to be sure" },
+            { text: "けいざいが せいちょうしている。", options: ["declining", "growing", "stagnant", "stable"], correct: 1, explanation: "成長 = growth" },
+            { text: "この ルールは すべての ひとに あてはまる。", options: ["excludes", "applies to", "ignores", "rejects"], correct: 1, explanation: "当てはまる = applies to" },
+            { text: "What does 「とくちょう」 mean?", options: ["Characteristic", "Problem", "Solution", "Result"], correct: 0, explanation: "特徴 = characteristic" },
+            { text: "かれらは かくしんてきな せいひんを うみだした。", options: ["traditional", "innovative", "cheap", "expensive"], correct: 1, explanation: "革新的 = innovative" },
+            { text: "せつめいが たりなくて こまっている。", options: ["too much", "enough", "not enough", "plenty"], correct: 2, explanation: "足りない = insufficient" }
+        ],
+        test3: [
+            { text: "こうつうじこが おきて、どんぜんこうつうが とまった。", options: ["started", "stopped/completely halted", "slowed down", "sped up"], correct: 1, explanation: "どんぜん = completely" },
+            { text: "What does 「あいまい」 mean?", options: ["Clear", "Vague/ambiguous", "Certain", "Definite"], correct: 1, explanation: "曖昧 = vague" },
+            { text: "かれの たいどには まったく ふまんが ある。", options: ["satisfaction", "dissatisfaction", "excitement", "calmness"], correct: 1, explanation: "不満 = dissatisfaction" },
+            { text: "この もんだいは いちおう かんせいした。", options: ["completely", "tentatively/for now", "permanently", "finally"], correct: 1, explanation: "一応 = tentatively" },
+            { text: "Meaning of 「あっさり」?", options: ["Heavily", "Lightly/simply", "Loudly", "Quietly"], correct: 1, explanation: "あっさり = simply/easily" },
+            { text: "かれは せんせいの いけんを さしおさえた。", options: ["accepted", "rejected/overruled", "considered", "ignored"], correct: 1, explanation: "差し押さえる = to overrule" },
+            { text: "What is 「きびしい」?", options: ["Easy", "Harsh/strict", "Simple", "Fun"], correct: 1, explanation: "厳しい = strict/harsh" },
+            { text: "その はつめいは おおきな せいこうを おさめた。", options: ["failure", "achieved success", "started", "ended"], correct: 1, explanation: "成功を収めた = achieved success" },
+            { text: "かのじょの えいごは なめらかだ。", options: ["rough", "smooth/fluent", "slow", "fast"], correct: 1, explanation: "なめらか = fluent/smooth" },
+            { text: "Meaning of 「たにん」?", options: ["Family", "Friend", "Other person", "Relative"], correct: 2, explanation: "他人 = other person" },
+            { text: "しゃいんは かいしゃの めいよを まもらなければならない。", options: ["profit", "honor/reputation", "product", "employee"], correct: 1, explanation: "名誉 = honor/reputation" },
+            { text: "What does 「もはや」 mean?", options: ["Still", "Already/no longer", "Now", "Soon"], correct: 1, explanation: "もはや = no longer" },
+            { text: "この りろんは いっぱんてきに みとめられている。", options: ["rejected", "generally accepted", "doubted", "proven wrong"], correct: 1, explanation: "認められている = accepted" },
+            { text: "かれの こうどうは ひじょうに ごうりてきだ。", options: ["irrational", "rational/logical", "emotional", "random"], correct: 1, explanation: "合理的 = rational" },
+            { text: "Meaning of 「せいび」?", options: ["Maintenance", "Destruction", "Creation", "Ignoring"], correct: 0, explanation: "整備 = maintenance" },
+            { text: "この きかいの しょきちょうせいは かんたんだ。", options: ["initial adjustment", "final check", "regular use", "complete overhaul"], correct: 0, explanation: "初期調整 = initial adjustment" },
+            { text: "What is 「とりひき」?", options: ["Transaction", "Travel", "Conversation", "Transport"], correct: 0, explanation: "取引 = transaction" },
+            { text: "かんきょうほぜんは きんきゅうの かだいだ。", options: ["slow", "urgent/immediate", "future", "past"], correct: 1, explanation: "緊急 = urgent" },
+            { text: "かれの えいぞうを かいせんして みた。", options: ["fast forward", "rewind", "play", "stop"], correct: 0, explanation: "早送り = fast forward" },
+            { text: "Meaning of 「ふつう」?", options: ["Special", "Normal/ordinary", "Strange", "Unique"], correct: 1, explanation: "普通 = normal" }
+        ]
+    },
+    n2: {
+        test1: [
+            { text: "しゃちょうに よろしく おつたえください。", options: ["give a message", "give my regards", "give a gift", "give a report"], correct: 1, explanation: "よろしく伝える = give regards" },
+            { text: "What does 「やむをえない」 mean?", options: ["Inevitable", "Impossible", "Unnecessary", "Unbelievable"], correct: 0, explanation: "やむを得ない = unavoidable" },
+            { text: "けいたいは せいかつに かかせない ものです。", options: ["unnecessary", "indispensable", "expensive", "cheap"], correct: 1, explanation: "欠かせない = indispensable" },
+            { text: "かれのせつめいは きわめて りかいしやすい。", options: ["very hard to understand", "extremely easy to understand", "somewhat confusing", "completely wrong"], correct: 1, explanation: "極めて = extremely" },
+            { text: "Meaning of 「一石二鳥」?", options: ["One bird two stones", "Kill two birds with one stone", "Stone throwing", "Bird hunting"], correct: 1, explanation: "Idiom for getting two benefits" },
+            { text: "かれは その プロジェクトを にないてきた。", options: ["has been avoiding", "has been leading", "has been supporting", "has been watching"], correct: 1, explanation: "担う = to bear/take charge" },
+            { text: "Meaning of 「念のため」?", options: ["For memory", "Just in case", "For safety", "For sure"], correct: 1, explanation: "念のため = to be sure" },
+            { text: "あの せいじかは ひじょうに ゆうめいだ。", options: ["businessman", "politician", "actor", "scientist"], correct: 1, explanation: "政治家 = politician" },
+            { text: "かれの いけんは りろんてきに ふかのうだ。", options: ["possible", "impossible/theoretically", "practical", "useless"], correct: 1, explanation: "不可能 = impossible" },
+            { text: "What does 「じっし」 mean?", options: ["Cancel", "Implement", "Delay", "Stop"], correct: 1, explanation: "実施 = implementation" },
+            { text: "けんりが あらたに せいていされた。", options: ["rights", "laws", "rules", "duties"], correct: 0, explanation: "権利 = rights" },
+            { text: "この きかいは じどうてきに うごく。", options: ["manually", "automatically", "slowly", "quickly"], correct: 1, explanation: "自動的 = automatic" },
+            { text: "Meaning of 「ぼうちょう」?", options: ["Stagnation", "Expansion/growth", "Decline", "Stability"], correct: 1, explanation: "膨張 = expansion" },
+            { text: "しゃいんの こうふくを ささえる。", options: ["happiness", "sadness", "anger", "fear"], correct: 0, explanation: "幸福 = happiness" },
+            { text: "この けいかくは ひなんを かった。", options: ["praise", "criticism", "support", "ignore"], correct: 1, explanation: "批判 = criticism" },
+            { text: "What is 「ふきんこう」?", options: ["Balance", "Imbalance", "Stability", "Harmony"], correct: 1, explanation: "不均衡 = imbalance" },
+            { text: "せいふの たいおうが おそすぎる。", options: ["response", "plan", "budget", "policy"], correct: 0, explanation: "対応 = response" },
+            { text: "その せつめいは いわゆる ほうほう これだ。", options: ["so-called", "new", "old", "strange"], correct: 0, explanation: "いわゆる = so-called" },
+            { text: "かれは ふへいを くちにした。", options: ["satisfaction", "dissatisfaction/complaint", "happiness", "excitement"], correct: 1, explanation: "不満 = dissatisfaction" },
+            { text: "Meaning of 「しんちょう」?", options: ["Careful/cautious", "Fast", "Slow", "Reckless"], correct: 0, explanation: "慎重 = cautious" }
+        ],
+        test2: [
+            { text: "せいふは あらたな せいさくを すいこうする。", options: ["cancel old policy", "implement new policy", "review existing policy", "ignore policy"], correct: 1, explanation: "施行する = implement" },
+            { text: "Meaning of 「多角的」?", options: ["Single-sided", "Multilateral", "Bilateral", "Unilateral"], correct: 1, explanation: "多角的 = many angles" },
+            { text: "この けんきゅうは いまだ かんせいしていない。", options: ["already complete", "not yet complete", "nearly complete", "just started"], correct: 1, explanation: "未だ = still/yet" },
+            { text: "What does 「相次ぐ」 mean?", options: ["Together", "Occur one after another", "Separately", "Suddenly"], correct: 1, explanation: "相次ぐ = successive" },
+            { text: "その もんだいは いぜんとして みかいけつだ。", options: ["already solved", "still unsolved", "partially solved", "being solved"], correct: 1, explanation: "未解決 = unsolved" },
+            { text: "かれは かいしゃを かいこされた。", options: ["promoted", "fired/laid off", "hired", "transferred"], correct: 1, explanation: "解雇 = firing" },
+            { text: "Meaning of 「かくにん」?", options: ["Confirmation", "Denial", "Question", "Answer"], correct: 0, explanation: "確認 = confirmation" },
+            { text: "この ルールは すべてに さきだって いる。", options: ["precedes/comes before", "follows after", "equals to", "ignores"], correct: 0, explanation: "先立つ = to precede" },
+            { text: "けいえいしゃの せきにんは おもい。", options: ["manager/executive", "employee", "customer", "supplier"], correct: 0, explanation: "経営者 = manager/executive" },
+            { text: "What is 「ふへい」?", options: ["Agreement", "Dissatisfaction", "Happiness", "Joy"], correct: 1, explanation: "不平 = complaint" },
+            { text: "この ページを さんしょうしてください。", options: ["delete", "reference", "ignore", "copy"], correct: 1, explanation: "参照 = reference" },
+            { text: "かのじょは しんぽてきな いけんを だした。", options: ["regressive", "progressive/advanced", "old-fashioned", "backward"], correct: 1, explanation: "進歩的 = progressive" },
+            { text: "Meaning of 「かくじつ」?", options: ["Uncertain", "Certain/sure", "Possible", "Impossible"], correct: 1, explanation: "確実 = certain" },
+            { text: "この さくひんは たいへん せいみつだ。", options: ["rough", "precise", "simple", "complex"], correct: 1, explanation: "精密 = precise" },
+            { text: "かれは きょうみを もよおした。", options: ["lost interest", "felt interest", "showed boredom", "expressed dislike"], correct: 1, explanation: "催す = to feel" },
+            { text: "What does 「へんせん」 mean?", options: ["Same", "Change/transition", "Stop", "Start"], correct: 1, explanation: "変遷 = transition" },
+            { text: "この おかねは きょういくに とうにゅうされる。", options: ["withdrawn", "invested", "wasted", "saved"], correct: 1, explanation: "投入 = investment" },
+            { text: "しゃいんを はいよしなければならない。", options: ["fire", "hire", "ignore", "promote"], correct: 1, explanation: "配慮 = to hire" },
+            { text: "Meaning of 「じゅうじつ」?", options: ["Empty", "Fulfillment", "Boredom", "Lack"], correct: 1, explanation: "充実 = fulfillment" },
+            { text: "その けっていは ななめに みられている。", options: ["directly", "indirectly/obliquely", "clearly", "openly"], correct: 1, explanation: "斜め = obliquely" }
+        ],
+        test3: [
+            { text: "しゃしゃいんは れんしゅうに かいぞくした。", options: ["participated", "skipped", "watched", "ignored"], correct: 0, explanation: "介錯 = participation" },
+            { text: "What does 「あえて」 mean?", options: ["Avoid", "Dare to", "Never", "Always"], correct: 1, explanation: "あえて = dare to" },
+            { text: "この プランは いってんかいけつを ひている。", options: ["complete solution", "partial solution", "no solution", "wrong solution"], correct: 0, explanation: "一旦解決 = once solved" },
+            { text: "その ほんは こうはんされた。", options: ["published", "banned", "ignored", "lost"], correct: 1, explanation: "公判 = published/released" },
+            { text: "Meaning of 「たしょう」?", options: ["No", "Some/a bit", "Many", "Few"], correct: 1, explanation: "多少 = some amount" },
+            { text: "かれは まわりの はんたいを おしきって いった。", options: ["followed", "ignored/pushed aside", "accepted", "considered"], correct: 1, explanation: "押し切る = to push aside" },
+            { text: "What is 「ふべん」?", options: ["Convenient", "Inconvenient", "Helpful", "Useful"], correct: 1, explanation: "不便 = inconvenient" },
+            { text: "この きょうかしょは ひじょうに ないようが あさい。", options: ["deep", "shallow/superficial", "wide", "narrow"], correct: 1, explanation: "浅い = shallow" },
+            { text: "かのじょの せいせきは たいした ものだ。", options: ["poor", "remarkable/considerable", "average", "bad"], correct: 1, explanation: "たいした = considerable" },
+            { text: "Meaning of 「とうぜん」?", options: ["Impossible", "Natural/of course", "Strange", "Unusual"], correct: 1, explanation: "当然 = natural/of course" },
+            { text: "その けいざいは せんでんされて いない。", options: ["advertised", "not advertised", "known", "unknown"], correct: 1, explanation: "宣伝 = advertisement" },
+            { text: "What does 「めいかく」 mean?", options: ["Vague", "Clear", "Confusing", "Hidden"], correct: 1, explanation: "明確 = clear" },
+            { text: "かれは しゅっしんして きじになった。", options: ["demoted", "promoted", "fired", "transferred"], correct: 1, explanation: "出世 = success/promotion" },
+            { text: "この そうさは ひかくてき かんたんだ。", options: ["absolutely", "relatively", "extremely", "not very"], correct: 1, explanation: "比較的 = relatively" },
+            { text: "Meaning of 「らいせき」?", options: ["Past", "History/background", "Future", "Present"], correct: 1, explanation: "来歴 = history" },
+            { text: "しゃいんは まんぞくを かんじている。", options: ["satisfaction", "dissatisfaction", "excitement", "boredom"], correct: 0, explanation: "満足 = satisfaction" },
+            { text: "What is 「ひんぱつ」?", options: ["Rare", "Frequent", "Never", "Sometimes"], correct: 1, explanation: "頻発 = frequent" },
+            { text: "この ルールの てきようは ひとそれぞれだ。", options: ["application", "removal", "creation", "destruction"], correct: 0, explanation: "適用 = application" },
+            { text: "かれらは おたがいに りかいしあっている。", options: ["misunderstand", "understand each other", "ignore each other", "fight each other"], correct: 1, explanation: "理解し合う = mutual understanding" },
+            { text: "Meaning of 「もうける」?", options: ["Lose", "Make/profit", "Spend", "Save"], correct: 1, explanation: "儲ける = to profit" }
+        ]
+    },
+    n1: {
+        test1: [
+            { text: "それに かんしては なんとも いえません。", options: ["Despite that", "Regarding that", "Because of that", "Instead of that"], correct: 1, explanation: "に関して = regarding" },
+            { text: "What does 「一触即発」 mean?", options: ["Peaceful", "Explosive situation", "Immediate action", "Delayed response"], correct: 1, explanation: "Tense situation ready to explode" },
+            { text: "この もんだいは さいきんの けいこうを あらわしている。", options: ["hides", "shows/represents", "ignores", "creates"], correct: 1, explanation: "表す = to represent" },
+            { text: "かれの せいこうは ひたむきな どりょくの けっかだ。", options: ["lazy", "diligent/single-minded", "careless", "random"], correct: 1, explanation: "ひたむき = single-minded" },
+            { text: "Meaning of 「ねんがん」?", options: ["Wish/dream", "Fear", "Anger", "Sadness"], correct: 0, explanation: "念願 = long-cherished wish" },
+            { text: "この こころみは いろいろな ぶんやで おこなわれている。", options: ["field/area", "time", "place", "person"], correct: 0, explanation: "分野 = field" },
+            { text: "What is 「きぼう」?", options: ["Despair", "Hope", "Fear", "Anger"], correct: 1, explanation: "希望 = hope" },
+            { text: "かれの せつめいは ひつぜんてきな けっかだ。", options: ["accidental", "inevitable/necessary", "random", "planned"], correct: 1, explanation: "必然的 = inevitable" },
+            { text: "この もんだいは てったいてきに けんとうする ひつようがある。", options: ["partially", "thoroughly", "quickly", "slowly"], correct: 1, explanation: "徹底的 = thorough" },
+            { text: "Meaning of 「しゅうい」?", options: ["Inside", "Surroundings", "Center", "Edge"], correct: 1, explanation: "周囲 = surroundings" },
+            { text: "その けっていは ひがいしゃに つうこくされた。", options: ["informed", "hidden", "celebrated", "ignored"], correct: 0, explanation: "通告 = notification" },
+            { text: "What does 「ひっし」 mean?", options: ["Lazy", "Desperate/determined", "Happy", "Sad"], correct: 1, explanation: "必死 = desperate" },
+            { text: "かれは じぶんの てきたを かんがえる。", options: ["future", "past/background", "present", "dream"], correct: 1, explanation: "来歴 = background" },
+            { text: "この さくひんは いっさいの きょうちょうを さけている。", options: ["emphasis", "mention", "criticism", "praise"], correct: 0, explanation: "強調 = emphasis" },
+            { text: "Meaning of 「ゆうき」?", options: ["Fear", "Courage", "Cowardice", "Anger"], correct: 1, explanation: "勇気 = courage" },
+            { text: "その へんこうは おおきな はんのうを よんだ。", options: ["ignored", "received reaction", "caused problem", "solved issue"], correct: 1, explanation: "反応 = reaction" },
+            { text: "What is 「かんしゅう」?", options: ["Supervision", "Ignoring", "Leaving", "Destroying"], correct: 0, explanation: "監修 = supervision" },
+            { text: "かれらは しんさいの へいおんを いのっている。", options: ["war", "peace/tranquility", "chaos", "disaster"], correct: 1, explanation: "平穏 = peace" },
+            { text: "この こうほうは さゆうする よしが ない。", options: ["left and right", "hesitation/choice", "up and down", "forward and back"], correct: 1, explanation: "左右 = influence" },
+            { text: "Meaning of 「かいはつ」?", options: ["Development", "Destruction", "Stagnation", "Decline"], correct: 0, explanation: "開発 = development" }
+        ],
+        test2: [
+            { text: "この けいかくは いっこうに すすまない。", options: ["gradually", "not at all", "quickly", "partially"], correct: 1, explanation: "一向に = not at all" },
+            { text: "What does 「せいさん」 mean?", options: ["Consumption", "Production", "Distribution", "Marketing"], correct: 1, explanation: "生産 = production" },
+            { text: "かれの こうどうは すうがくてきに せつめいできる。", options: ["illogical", "mathematically", "emotionally", "randomly"], correct: 1, explanation: "数学的 = mathematical" },
+            { text: "その みなさんは しゅざいを うけている。", options: ["interview", "ignored", "praised", "criticized"], correct: 0, explanation: "取材 = interview/coverage" },
+            { text: "Meaning of 「いちじるしい」?", options: ["Insignificant", "Remarkable/noticeable", "Small", "Hidden"], correct: 1, explanation: "著しい = remarkable" },
+            { text: "この きかいは うんてんが ふくざつだ。", options: ["simple", "complex", "easy", "basic"], correct: 1, explanation: "複雑 = complex" },
+            { text: "What is 「さかん」?", options: ["Rare", "Active/thriving", "Quiet", "Slow"], correct: 1, explanation: "盛ん = thriving" },
+            { text: "その しりょうは しんの しょうこを あたえている。", options: ["proof/evidence", "opinion", "guess", "rumor"], correct: 0, explanation: "証拠 = evidence" },
+            { text: "かれの しょくぎょうは いしゃだ。", options: ["lawyer", "doctor", "teacher", "engineer"], correct: 1, explanation: "医者 = doctor" },
+            { text: "Meaning of 「たんき」?", options: ["Long term", "Short term", "Medium term", "Permanent"], correct: 1, explanation: "短期 = short term" },
+            { text: "この もんだいは しゅうりょうへ むかっている。", options: ["completion", "start", "middle", "pause"], correct: 0, explanation: "終了 = end/completion" },
+            { text: "What does 「きょうじゅ」 mean?", options: ["Student", "Professor", "Doctor", "Lawyer"], correct: 1, explanation: "教授 = professor" },
+            { text: "この けいけんは みらいの ために やくだつ。", options: ["useless", "useful", "harmful", "neutral"], correct: 1, explanation: "役立つ = to be useful" },
+            { text: "かれは じっけんに せいこうした。", options: ["failed", "succeeded", "started", "ended"], correct: 1, explanation: "成功 = success" },
+            { text: "Meaning of 「ようき」?", options: ["Cheerful", "Sad", "Angry", "Fearful"], correct: 0, explanation: "陽気 = cheerful" },
+            { text: "その ほうほうは ひじょうに ゆうこうだ。", options: ["ineffective", "effective", "dangerous", "safe"], correct: 1, explanation: "有効 = effective" },
+            { text: "What is 「はんえい」?", options: ["Decline", "Prosperity", "Stagnation", "Crisis"], correct: 1, explanation: "繁栄 = prosperity" },
+            { text: "かれらは ぶんめいの はってんを かんがえる。", options: ["civilization", "nature", "economy", "politics"], correct: 0, explanation: "文明 = civilization" },
+            { text: "この さくひんは こころに しみる。", options: ["touches the heart", "hurts the heart", "ignores feeling", "creates hate"], correct: 0, explanation: "心に染みる = touching" },
+            { text: "Meaning of 「ぶんせき」?", options: ["Ignore", "Analysis", "Create", "Destroy"], correct: 1, explanation: "分析 = analysis" }
+        ],
+        test3: [
+            { text: "その けいかくは ひなんを あびている。", options: ["praise", "criticism", "support", "ignorance"], correct: 1, explanation: "批判を浴びる = receive criticism" },
+            { text: "What does 「たのむ」 mean?", options: ["Refuse", "Request/ask", "Ignore", "Give"], correct: 1, explanation: "頼む = to request" },
+            { text: "かれは けっして あきらめない。", options: ["always", "never", "sometimes", "usually"], correct: 1, explanation: "決して = never" },
+            { text: "この もんだいは すでに かいけつした。", options: ["not yet", "already", "partially", "never"], correct: 1, explanation: "既に = already" },
+            { text: "Meaning of 「とくべつ」?", options: ["Ordinary", "Special", "Normal", "Common"], correct: 1, explanation: "特別 = special" },
+            { text: "その はなしは ぜんぜん うそではない。", options: ["lie", "not a lie at all", "exaggeration", "truth"], correct: 1, explanation: "全然 = at all" },
+            { text: "What is 「ぐうぜん」?", options: ["On purpose", "Accident/by chance", "Intentionally", "Surely"], correct: 1, explanation: "偶然 = by chance" },
+            { text: "かれの いけんは いわゆる ただしい。", options: ["so-called", "completely", "partially", "never"], correct: 0, explanation: "いわゆる = so-called" },
+            { text: "この さいむは じつげんかのうだ。", options: ["impossible", "feasible", "difficult", "easy"], correct: 1, explanation: "実現可能 = feasible" },
+            { text: "Meaning of 「ちゅうし」?", options: ["Continuation", "Suspension/stop", "Start", "Restart"], correct: 1, explanation: "中止 = suspension" },
+            { text: "その けんきゅうは みためいりょうだ。", options: ["unclear", "ambiguous/not definitive", "clear", "obvious"], correct: 1, explanation: "未定 = undecided" },
+            { text: "What does 「かいぜん」 mean?", options: ["Worsen", "Improvement", "Destroy", "Create"], correct: 1, explanation: "改善 = improvement" },
+            { text: "かれは はんざいの ひとだ。", options: ["victim", "criminal", "witness", "judge"], correct: 1, explanation: "犯人 = criminal" },
+            { text: "この きかいの せいのうは たかい。", options: ["performance", "price", "size", "color"], correct: 0, explanation: "性能 = performance" },
+            { text: "Meaning of 「とりけす」?", options: ["Cancel", "Confirm", "Continue", "Start"], correct: 0, explanation: "取り消す = cancel" },
+            { text: "その けつろんは まだ はやい。", options: ["late", "early/premature", "good", "bad"], correct: 1, explanation: "早い = early" },
+            { text: "What is 「たいど」?", options: ["Attitude", "Height", "Weight", "Length"], correct: 0, explanation: "態度 = attitude" },
+            { text: "かれらは ちゅうもくを あつめている。", options: ["ignorance", "attention", "criticism", "praise"], correct: 1, explanation: "注目 = attention" },
+            { text: "この はんだんは きけんだ。", options: ["safe", "dangerous", "normal", "special"], correct: 1, explanation: "危険 = dangerous" },
+            { text: "Meaning of 「ようするに」?", options: ["In short", "In detail", "Sometimes", "Never"], correct: 0, explanation: "要するに = in short" }
+        ]
+    }
+};
+ let currentLevel = 'n5';
+    let currentTest = 'test1';
+    let questions = [];
+    let userAnswers = [];
+    let currentIndex = 0;
+    let timeRemaining = 60 * 60;
+    let timerInterval = null;
+    let testCompleted = false;
+
+    const timeLimits = { n5: 3600, n4: 4200, n3: 4800, n2: 5400, n1: 6600 };
+    const testNames = { test1: 'Mock Test 1', test2: 'Mock Test 2', test3: 'Mock Test 3' };
+
+    // Generate test buttons
+    function generateTestButtons() {
+        const container = document.getElementById('testButtons');
+        container.innerHTML = '';
+        for (let i = 1; i <= 3; i++) {
+            const testKey = `test${i}`;
+            const btn = document.createElement('div');
+            btn.className = `test-btn-select ${currentTest === testKey ? 'active' : ''}`;
+            btn.innerHTML = `
+                <div class="test-number">📝 Test ${i}</div>
+                <div class="test-status">${getTestStatus(currentLevel, testKey)}</div>
+            `;
+            btn.onclick = () => switchTest(testKey);
+            container.appendChild(btn);
+        }
+    }
+
+    function getTestStatus(level, test) {
+        const saved = localStorage.getItem(`jlpt_test_${level}_${test}_score`);
+        if (saved) return `⭐ ${saved}%`;
+        return '⚪ Not taken';
+    }
+
+    function switchTest(testKey) {
+        if (confirm('Switching tests will reset current progress. Continue?')) {
+            // Stop current timer
+            if (timerInterval) clearInterval(timerInterval);
+            currentTest = testKey;
+            loadTest();
+            generateTestButtons();
+        }
+    }
+
+    // Load questions for current level + test
+    function loadTest() {
+        if (timerInterval) clearInterval(timerInterval);
+        
+        const bank = questionBank[currentLevel];
+        if (bank && bank[currentTest]) {
+            questions = [...bank[currentTest]];
+        } else {
+            questions = generateFallbackQuestions();
+        }
+        
+        // Reset all test state
+        userAnswers = new Array(questions.length).fill(-1);
+        currentIndex = 0;
+        testCompleted = false;
+        timeRemaining = timeLimits[currentLevel];
+        
+        // Clear any saved progress for this test
+        localStorage.removeItem(`jlpt_test_${currentLevel}_${currentTest}`);
+        localStorage.removeItem(`jlpt_test_${currentLevel}_${currentTest}_answers`);
+        
+        // Update UI
+        updateTimerDisplay();
+        startTimer();
+        renderQuestion();
+        updateProgress();
+        
+        document.getElementById('totalQ').textContent = questions.length;
+        document.getElementById('testName').textContent = testNames[currentTest];
+        document.getElementById('nextBtn').disabled = false;
+        document.getElementById('prevBtn').disabled = true;
+        document.getElementById('timer').classList.remove('warning');
+    }
+
+    function generateFallbackQuestions() {
+        const fallback = [];
+        for (let i = 0; i < 20; i++) {
+            fallback.push({
+                text: `Question ${i+1}: Please select the correct answer.`,
+                japanese: false,
+                options: ["Option A", "Option B", "Option C", "Option D"],
+                correct: 0,
+                explanation: "This is a sample question."
+            });
+        }
+        return fallback;
+    }
+
+    function startTimer() {
+        timerInterval = setInterval(() => {
+            if (testCompleted) return;
+            if (timeRemaining <= 0) {
+                clearInterval(timerInterval);
+                submitTest();
+            } else {
+                timeRemaining--;
+                updateTimerDisplay();
+                if (timeRemaining <= 60) {
+                    document.getElementById('timer').classList.add('warning');
+                }
+            }
+        }, 1000);
+    }
+
+    function updateTimerDisplay() {
+        const minutes = Math.floor(timeRemaining / 60);
+        const seconds = timeRemaining % 60;
+        document.getElementById('timer').textContent = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+    }
+
+    function renderQuestion() {
+        if (!questions.length || currentIndex >= questions.length) return;
+        
+        const q = questions[currentIndex];
+        const container = document.getElementById('questionContainer');
+        
+        container.innerHTML = `
+            <div class="question-card">
+                <div class="question-number">Question ${currentIndex + 1} of ${questions.length}</div>
+                <div class="question-text ${q.japanese ? 'japanese' : ''}">${q.text}</div>
+                <div class="options">
+                    ${q.options.map((opt, idx) => `
+                        <div class="option ${userAnswers[currentIndex] === idx ? 'selected' : ''}" data-opt-index="${idx}">
+                            <div class="option-letter">${String.fromCharCode(65 + idx)}</div>
+                            <div class="option-text">${opt}</div>
+                        </div>
+                    `).join('')}
+                </div>
+                ${userAnswers[currentIndex] !== -1 ? `<div style="margin-top: 1rem; padding: 0.8rem; background: #e2e8f0; border-radius: 8px;">
+                    <i class="fas fa-info-circle"></i> <small>${q.explanation}</small>
+                </div>` : ''}
+            </div>
+        `;
+        
+        document.querySelectorAll('.option').forEach(opt => {
+            opt.addEventListener('click', () => {
+                if (testCompleted) return;
+                const idx = parseInt(opt.dataset.optIndex);
+                selectAnswer(currentIndex, idx);
+                renderQuestion();
+            });
+        });
+        
+        document.getElementById('currentQ').textContent = currentIndex + 1;
+        document.getElementById('prevBtn').disabled = currentIndex === 0;
+    }
+
+    function selectAnswer(qIndex, answerIndex) {
+        userAnswers[qIndex] = answerIndex;
+        updateProgress();
+    }
+
+    function updateProgress() {
+        const answered = userAnswers.filter(a => a !== -1).length;
+        const percent = (answered / questions.length) * 100;
+        document.getElementById('progressFill').style.width = `${percent}%`;
+    }
+
+    // FIXED RESET FUNCTION - THIS IS THE ONLY ONE
+    function resetTest() {
+        if (confirm('Reset all answers and start over? This will clear all your progress for this test.')) {
+            // Stop the timer
+            if (timerInterval) {
+                clearInterval(timerInterval);
+            }
+            
+            // Reset all answers to -1 (not answered)
+            userAnswers = new Array(questions.length).fill(-1);
+            
+            // Reset current index to first question
+            currentIndex = 0;
+            
+            // Reset test completed flag
+            testCompleted = false;
+            
+            // Reset time to full time for this level
+            timeRemaining = timeLimits[currentLevel];
+            
+            // Clear any warning class
+            document.getElementById('timer').classList.remove('warning');
+            
+            // Update timer display
+            updateTimerDisplay();
+            
+            // Restart the timer
+            startTimer();
+            
+            // Re-render the first question
+            renderQuestion();
+            
+            // Update progress bar (should be 0%)
+            updateProgress();
+            
+            // Enable/disable navigation buttons correctly
+            document.getElementById('prevBtn').disabled = true;
+            document.getElementById('nextBtn').disabled = false;
+            
+            // Clear saved progress for this test from localStorage
+            localStorage.removeItem(`jlpt_test_${currentLevel}_${currentTest}`);
+            localStorage.removeItem(`jlpt_test_${currentLevel}_${currentTest}_answers`);
+            
+            // Close results modal if open
+            const modal = document.getElementById('resultsModal');
+            if (modal) {
+                modal.style.display = 'none';
+            }
+            
+            // Update test buttons to show not taken
+            generateTestButtons();
+            
+            // Show confirmation message
+            alert('Test has been reset! You can start over now.');
+        }
+    }
+
+    function submitTest() {
+        if (testCompleted) return;
+        testCompleted = true;
+        clearInterval(timerInterval);
+        
+        let correct = 0;
+        questions.forEach((q, idx) => {
+            if (userAnswers[idx] === q.correct) correct++;
+        });
+        
+        const total = questions.length;
+        const percentage = Math.round((correct / total) * 100);
+        const passed = percentage >= 70;
+        
+        // Save score
+        localStorage.setItem(`jlpt_test_${currentLevel}_${currentTest}_score`, percentage);
+        generateTestButtons();
+        
+        document.getElementById('scoreCircle').innerHTML = `${correct}/${total}`;
+        document.getElementById('resultBadge').innerHTML = `<div class="result-badge ${passed ? 'pass' : 'fail'}">${passed ? '✓ PASSED' : '✗ FAILED'}</div>`;
+        document.getElementById('scoreMessage').innerHTML = passed ? 
+            `Congratulations! ${percentage}% - You passed ${currentLevel.toUpperCase()} ${testNames[currentTest]}!` : 
+            `${percentage}% - You need 70% to pass. Keep practicing!`;
+        
+        document.getElementById('resultsModal').style.display = 'flex';
+    }
+
+    function showReview() {
+        document.getElementById('resultsModal').style.display = 'none';
+        const container = document.getElementById('questionContainer');
+        
+        let reviewHtml = '<div class="question-card"><h3>📝 Answer Review</h3></div>';
+        questions.forEach((q, idx) => {
+            const isCorrect = userAnswers[idx] === q.correct;
+            reviewHtml += `
+                <div class="review-item ${isCorrect ? 'correct-review' : 'wrong-review'}">
+                    <strong>Q${idx + 1}:</strong> ${q.text}<br>
+                    <strong>Your answer:</strong> ${userAnswers[idx] !== -1 ? String.fromCharCode(65 + userAnswers[idx]) + '. ' + q.options[userAnswers[idx]] : 'Not answered'}
+                    ${!isCorrect ? `<br><strong>Correct:</strong> ${String.fromCharCode(65 + q.correct)}. ${q.options[q.correct]}` : ''}
+                    <br><small><i class="fas fa-lightbulb"></i> ${q.explanation}</small>
+                </div>
+            `;
+        });
+        
+        reviewHtml += `<div class="nav-buttons"><button class="nav-btn primary" id="retakeFromReview"> Retake This Test</button></div>`;
+        container.innerHTML = reviewHtml;
+        
+        document.getElementById('retakeFromReview').addEventListener('click', () => {
+            resetTest();
+        });
+    }
+
+    // Event listeners
+    document.addEventListener('DOMContentLoaded', () => {
+        generateTestButtons();
+        loadTest();
+        
+        document.getElementById('nextBtn').addEventListener('click', () => {
+            if (currentIndex < questions.length - 1) {
+                currentIndex++;
+                renderQuestion();
+            } else if (userAnswers.every(a => a !== -1)) {
+                submitTest();
+            } else {
+                alert(`Please answer all ${questions.length} questions before submitting.`);
+            }
+        });
+        
+        document.getElementById('prevBtn').addEventListener('click', () => {
+            if (currentIndex > 0) {
+                currentIndex--;
+                renderQuestion();
+            }
+        });
+        
+        // FIXED: Reset button event listener
+        const resetBtn = document.getElementById('resetBtn');
+        if (resetBtn) {
+            resetBtn.addEventListener('click', resetTest);
+        }
+        
+        document.getElementById('closeResults').addEventListener('click', showReview);
+        document.getElementById('retakeBtn').addEventListener('click', () => {
+            document.getElementById('resultsModal').style.display = 'none';
+            resetTest();
+        });
+        
+        document.querySelectorAll('.level-tab').forEach(tab => {
+            tab.addEventListener('click', () => {
+                if (confirm('Changing level will reset current test. Continue?')) {
+                    if (timerInterval) clearInterval(timerInterval);
+                    document.querySelectorAll('.level-tab').forEach(t => t.classList.remove('active'));
+                    tab.classList.add('active');
+                    currentLevel = tab.dataset.level;
+                    currentTest = 'test1';
+                    loadTest();
+                    generateTestButtons();
+                }
+            });
+        });
+    });
+</script>

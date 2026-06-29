@@ -6805,7 +6805,19 @@ function createFlashcard(item) {
     card.addEventListener('click', (e) => { if (e.target.closest('.speak-example-btn')) return; if (!isFlipped) { if (currentCategory === 'vocab') speakJapaneseText(item.japanese); else if (currentCategory === 'grammar') speakJapaneseText(item.title); else speakJapaneseText(item.kanji); } card.classList.toggle('flipped'); isFlipped = !isFlipped; });
     return card;
 }
-
+// Virtual scroll implementation
+function renderWithVirtualScroll(items) {
+    const container = document.getElementById('flashcardContainer');
+    const virtualScroll = new VirtualScroll({
+        element: container,
+        totalItems: items.length,
+        itemHeight: 400, // Adjust based on card height
+        renderItem: (index) => {
+            const card = createFlashcard(items[index]);
+            return card;
+        }
+    });
+}
 function renderFlashcards() {
     const container = document.getElementById('flashcardContainer');
     const filteredItems = getFilteredItems();
